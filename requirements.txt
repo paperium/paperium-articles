@@ -1,7 +1,0 @@
-# requirements.txt
-fastapi
-uvicorn
-jinja2
-python-slugify
-httpx
-# Add any other libraries your app uses (e.g., python-dotenv)
