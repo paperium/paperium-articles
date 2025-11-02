@@ -17,4 +17,5 @@ EXPOSE 7860
 
 # Define the command to run the application using Uvicorn
 # Uvicorn MUST bind to 0.0.0.0 and port 7860, as required by Hugging Face Spaces.
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
