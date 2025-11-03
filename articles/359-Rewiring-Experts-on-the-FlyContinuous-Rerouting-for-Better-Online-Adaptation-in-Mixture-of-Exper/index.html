@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Rewiring Experts on the Fly:Continuous Rerouting for Better </title>
+
+<meta name="keywords" content="Mixture-of-Experts (MoE) models,  MoE routing decisions,  Online test-time adaptation (TTA),  Data-free MoE adaptation,  Self-supervised routing optim">
+
+<meta name="description" content="Mixture-of-Experts (MoE) models,  MoE routing decisions,  Online test-time adaptation (TTA),  Data-free MoE adaptation,  Self-supervised routing optim">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Guinan Su, Yanwu Yang, Li Shen, Lu Yin, Shiwei Liu, Jonas Geiping
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              20 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/379_309e0743-f6c8-4b12-9388-f9e051122816.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>AI That Reroutes Its Own Thoughts While Writing</h3>
+<p>
+Ever wondered how a chatbot could get smarter *while* it’s answering you, without any extra data? <strong>Scientists have discovered</strong> a clever trick for a type of AI called a Mixture‑of‑Experts model. Instead of waiting for a big update, the model constantly fine‑tunes which “expert” brain‑cell it should use, based only on the words it has already written. Think of it like a GPS that keeps re‑calculating the best route as traffic shifts, but it does this using only the road it’s already on. This <strong>online adaptation</strong> happens in two short bursts: first while the AI is setting up its answer, and then at regular pauses during the conversation. The result? The AI solves tricky reasoning puzzles up to 6 % better, and even improves code‑writing tasks by more than 5 %. <strong>What matters most</strong> is that this boost comes without any extra data or heavy computing—just a tiny, plug‑and‑play tweak. As AI learns to steer itself in real time, the line between static software and truly adaptive intelligence keeps blurring, promising smarter assistants for everyone.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Mixture-of-Experts (MoE) Routing for Enhanced LLM Performance</h2>
+<p>This article introduces a novel, <strong>data-free</strong>, and <strong>online test-time rerouting framework</strong> designed to address the suboptimal routing decisions prevalent in Mixture-of-Experts (MoE) models, particularly under distribution shifts during deployment. The core innovation lies in its continuous adaptation of expert selection, leveraging <strong>self-supervision</strong> based solely on the input context during text generation. The method cycles between optimizing routing decisions using lightweight additive vectors in selected layers and normal text generation, ensuring both computational efficiency and robustness. Experimental results consistently demonstrate significant <strong>performance gains</strong> on challenging reasoning tasks, alongside enhanced robustness to context shifts, making it a promising advancement for dynamic language models.</p>
+
+<h2>Critical Evaluation of Online MoE Adaptation</h2>
+<h3>Strengths of Data-Free MoE Rerouting</h3>
+<p>A significant strength of this framework is its <strong>data-free</strong> nature, eliminating the need for external reference data, which is a common limitation for existing test-time adaptation methods. The <strong>online adaptation</strong> capability allows for continuous optimization of expert selection during inference, directly addressing the issue of distribution shifts in real-world scenarios. The use of <strong>lightweight additive vectors</strong> and selective layer updates ensures computational efficiency, preventing substantial overhead while maintaining performance. The method consistently achieves <strong>performance gains</strong> on benchmarks like HumanEval and AIME, demonstrating its effectiveness. Furthermore, its <strong>plug-and-play property</strong> allows seamless integration with other test-time scaling techniques, such as In-Context Learning (ICL) and Self-Consistency, amplifying their benefits and improving overall model performance and <strong>router confidence</strong>.</p>
+
+<h3>Potential Challenges in MoE Online Adaptation</h3>
+<p>While the framework effectively mitigates potential issues, a general challenge in continuous online adaptation is the risk of <strong>over-adaptation</strong> to immediate context, which could potentially degrade performance on subsequent, different inputs if not carefully controlled. The reliance on "selected layers" and "high-confidence layers" for router logit updates, while efficient, might introduce a dependency on the initial confidence estimation or layer selection heuristic, potentially impacting <strong>generalizability</strong> across highly diverse MoE architectures or tasks. Although computationally efficient, any additional processing during inference, however minimal, still represents a slight increase in <strong>computational overhead</strong> compared to a static router.</p>
+
+<h3>Implications for Adaptive LLM Development</h3>
+<p>This research offers profound implications for the development and deployment of more robust and efficient <strong>Large Language Models (LLMs)</strong>. By providing a practical solution to MoE routing challenges, it enhances the <strong>real-world utility</strong> of sparse expert models, making them more adaptable to dynamic environments. The framework's ability to improve expert pathways and increase router confidence suggests a pathway towards more intelligent and context-aware AI systems. This innovative approach could inspire further research into <strong>dynamic LLMs</strong> and adaptive inference strategies, ultimately leading to more powerful and resource-efficient AI applications across various domains.</p>
+
+<h2>Conclusion: The Impact of Dynamic MoE Routing</h2>
+<p>The proposed data-free, online test-time rerouting framework represents a significant and <strong>transformative approach</strong> to enhancing Mixture-of-Experts models. By intelligently adapting routing decisions during inference, it effectively overcomes critical limitations of traditional MoE architectures, delivering consistent <strong>performance improvements</strong> and robust operation. This work not only advances the state-of-the-art in MoE research but also provides a highly practical and efficient solution for deploying more adaptive and reliable <strong>AI systems</strong>, paving the way for future innovations in dynamic and context-aware language models.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Mixture-of-Experts (MoE) models</li><li> MoE routing decisions</li><li> Online test-time adaptation (TTA)</li><li> Data-free MoE adaptation</li><li> Self-supervised routing optimization</li><li> Sparse expert activation</li><li> Distribution shifts in MoE</li><li> Dynamic expert selection</li><li> Lightweight additive vectors</li><li> Text generation adaptation</li><li> Reasoning tasks performance</li><li> HumanEval benchmark</li><li> Plug-and-play MoE techniques</li><li> Computational efficiency in MoE</li><li> Context shifts robustness</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/359/rewiring-experts-on-the-flycontinuous-rerouting-for-better-online-adaptation-inmixture-of-expert-mod" target="_blank" title=" Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models">
+    Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/523_f961027c-a9ad-4dc7-9e72-595554355e06.jpg" class="card-img-top" alt="Directional Reasoning Injection for Fine-Tuning MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chao Huang
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/633-Directional-Reasoning-Injection-for-Fine-Tuning-MLLMs/index.html"  title="Directional Reasoning Injection for Fine-Tuning MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Directional Reasoning Injection for Fine-Tuning MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/633-Directional-Reasoning-Injection-for-Fine-Tuning-MLLMs/index.html"
+          title="Directional Reasoning Injection for Fine-Tuning MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/255_d774cc05-f67a-430f-a785-41908fd8eb51.jpg" class="card-img-top" alt="Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Pasin Buakhaw
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/243-Deflanderization-for-Game-Dialogue-Balancing-Character-Authenticity-with-Task-Execution-in-LLM-b/index.html"  title="Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs">
+          <h3 class="card-title pb-2" itemprop="headline">Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/243-Deflanderization-for-Game-Dialogue-Balancing-Character-Authenticity-with-Task-Execution-in-LLM-b/index.html"
+          title="Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/310_d85e7e45-972e-466c-ab02-a5e1678b58d3.jpg" class="card-img-top" alt="COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yunwen Li
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/294-COIG-Writer-A-High-Quality-Dataset-for-Chinese-Creative-Writing-with-Thought-Processes/index.html"  title="COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes">
+          <h3 class="card-title pb-2" itemprop="headline">COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/294-COIG-Writer-A-High-Quality-Dataset-for-Chinese-Creative-Writing-with-Thought-Processes/index.html"
+          title="COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/256_f5d83f22-e656-495c-a5c1-ef98fd9d231a.jpg" class="card-img-top" alt="Universal Image Restoration Pre-training via Masked Degradation Classification" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            JiaKui Hu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/244-Universal-Image-Restoration-Pre-training-via-Masked-Degradation-Classification/index.html"  title="Universal Image Restoration Pre-training via Masked Degradation Classification">
+          <h3 class="card-title pb-2" itemprop="headline">Universal Image Restoration Pre-training via Masked Degradation Classification</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/244-Universal-Image-Restoration-Pre-training-via-Masked-Degradation-Classification/index.html"
+          title="Universal Image Restoration Pre-training via Masked Degradation Classification"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/281_9e979a3e-e2fa-4f4b-9dba-a124ab03697f.jpg" class="card-img-top" alt="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shaowei Liu
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"  title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation">
+          <h3 class="card-title pb-2" itemprop="headline">Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"
+          title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/266_3686c090-eeb8-4465-8cc9-a52f8fbc2dff.jpg" class="card-img-top" alt="Attention Is All You Need for KV Cache in Diffusion LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Quan Nguyen-Tri
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/253-Attention-Is-All-You-Need-for-KV-Cache-in-Diffusion-LLMs/index.html"  title="Attention Is All You Need for KV Cache in Diffusion LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Attention Is All You Need for KV Cache in Diffusion LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/253-Attention-Is-All-You-Need-for-KV-Cache-in-Diffusion-LLMs/index.html"
+          title="Attention Is All You Need for KV Cache in Diffusion LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
