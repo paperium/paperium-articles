@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>PEAR: Phase Entropy Aware Reward for Efficient Reasoning</title>
+
+<meta name="keywords" content="Large Reasoning Models,  Chain-of-thought explanations,  Response length control,  Model entropy,  Phase Entropy Aware Reward,  Concise reasoning trac">
+
+<meta name="description" content="Large Reasoning Models,  Chain-of-thought explanations,  Response length control,  Model entropy,  Phase Entropy Aware Reward,  Concise reasoning trac">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                PEAR: Phase Entropy Aware Reward for Efficient Reasoning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Chen Huang, Wei Lu, Wenxuan Zhang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/176_31d7b5d7-2dfc-4bbf-bbd9-1c94edcea17d.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learns to Think Faster Without Losing Smarts</h3>
+<p>
+Ever wondered why some AI answers sound like a never‑ending lecture? <strong>Researchers discovered</strong> that the longer the AI “thinks,” the more uncertain it becomes, which makes it spill out extra words. By watching this “uncertainty meter,” they created a new trick called <strong>PEAR – Phase Entropy Aware Reward</strong>. Think of it like a driver who speeds up on an open road (exploring ideas) but slows down and locks the wheel when reaching the destination (giving the final answer). PEAR gently nudges the AI to keep its brainstorming short while still allowing enough creativity to solve the problem. The result? Chatbots that give concise, clear explanations without sacrificing accuracy, even on tricky questions they haven’t seen before. <strong>This breakthrough</strong> means faster responses, lower computing costs, and smarter assistants that feel more natural in our daily chats. The future of AI reasoning just got a lot more efficient—and a lot more human‑friendly. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents the Phase Entropy Aware Reward (PEAR) mechanism, aimed at enhancing reasoning efficiency in Large Reasoning Models (LRMs). It identifies a significant correlation between model entropy and response length, revealing distinct entropy patterns during the thinking and final answer phases. Through systematic empirical analysis, the authors demonstrate that PEAR effectively reduces verbosity while maintaining accuracy across various benchmarks. The method employs Group Relative Policy Optimization (GRPO) to optimize model responses, allowing for adaptive control of response length without rigid truncation rules.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The introduction of the PEAR mechanism is a notable advancement in optimizing reasoning efficiency in LRMs. By correlating <strong>model entropy</strong> with response length, the authors provide a novel approach to managing verbosity without compromising accuracy. The empirical evidence supporting PEAR's effectiveness across multiple datasets is compelling, showcasing its potential to enhance model performance in real-world applications. Additionally, the use of GRPO to normalize rewards across responses adds robustness to the reinforcement learning framework.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article could benefit from a more detailed exploration of the limitations of the PEAR mechanism. For instance, while the results are promising, the generalizability of the findings across different model architectures and tasks remains to be fully established. Furthermore, the reliance on empirical data without extensive theoretical backing may raise questions about the underlying principles driving the observed correlations between entropy and response length.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the field of natural language processing. By providing a mechanism to control reasoning efficiency, PEAR could lead to more user-friendly applications of LRMs, particularly in scenarios where concise communication is essential. The ability to balance <strong>exploratory</strong> and <strong>conclusive</strong> reasoning phases may also pave the way for future research into adaptive learning systems that can dynamically adjust their output based on context.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article presents a valuable contribution to the optimization of reasoning in LRMs through the PEAR mechanism. By effectively managing response length while maintaining accuracy, this approach holds promise for enhancing the usability of large models in various applications. The findings underscore the importance of understanding <strong>entropy</strong> in reasoning processes, suggesting avenues for further research and development in the field.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and accessible, making it suitable for a professional audience. The clear presentation of findings and implications enhances engagement, while the use of concise language aids in comprehension. Overall, the narrative flows smoothly, encouraging readers to explore the complexities of reasoning in LRMs without overwhelming them with jargon.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large Reasoning Models</li><li> Chain-of-thought explanations</li><li> Response length control</li><li> Model entropy</li><li> Phase Entropy Aware Reward</li><li> Concise reasoning traces</li><li> Inference cost reduction</li><li> Exploratory behavior in reasoning</li><li> Deterministic solutions in AI</li><li> Adaptive control of response length</li><li> Out-of-distribution robustness</li><li> Empirical analysis of LRMs</li><li> Reward mechanism design</li><li> Benchmark experiments in AI</li><li> AI reasoning efficiency</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/165/pear-phase-entropy-aware-reward-for-efficient-reasoning" target="_blank" title=" PEAR: Phase Entropy Aware Reward for Efficient Reasoning">
+    PEAR: Phase Entropy Aware Reward for Efficient Reasoning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/368_5fdf687a-6395-4b65-9409-15390877e963.jpg" class="card-img-top" alt="Language Models Model Language" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Łukasz Borchmann
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"  title="Language Models Model Language">
+          <h3 class="card-title pb-2" itemprop="headline">Language Models Model Language</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"
+          title="Language Models Model Language"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/239_786010af-15d9-4e5d-a394-cd6850c1c67d.jpg" class="card-img-top" alt="LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Senyu Fei
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/227-LIBERO-Plus-In-depth-Robustness-Analysis-of-Vision-Language-Action-Models/index.html"  title="LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models">
+          <h3 class="card-title pb-2" itemprop="headline">LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/227-LIBERO-Plus-In-depth-Robustness-Analysis-of-Vision-Language-Action-Models/index.html"
+          title="LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/329_3a865099-be09-47ea-81af-e690f1fdfc93.jpg" class="card-img-top" alt="AnyUp: Universal Feature Upsampling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Thomas Wimmer
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/313-AnyUp-Universal-Feature-Upsampling/index.html"  title="AnyUp: Universal Feature Upsampling">
+          <h3 class="card-title pb-2" itemprop="headline">AnyUp: Universal Feature Upsampling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/313-AnyUp-Universal-Feature-Upsampling/index.html"
+          title="AnyUp: Universal Feature Upsampling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/234_d38e195d-f742-4a8f-b77f-c53917bed265.jpg" class="card-img-top" alt="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wenwen Tong
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/222-InteractiveOmni-A-Unified-Omni-modal-Model-for-Audio-Visual-Multi-turn-Dialogue/index.html"  title="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue">
+          <h3 class="card-title pb-2" itemprop="headline">InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/222-InteractiveOmni-A-Unified-Omni-modal-Model-for-Audio-Visual-Multi-turn-Dialogue/index.html"
+          title="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/194_79a6cdca-a014-44fe-9804-a0aef4af8789.jpg" class="card-img-top" alt="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yinan Chen
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/183-IVEBench-Modern-Benchmark-Suite-for-Instruction-Guided-Video-Editing-Assessment/index.html"  title="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment">
+          <h3 class="card-title pb-2" itemprop="headline">IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/183-IVEBench-Modern-Benchmark-Suite-for-Instruction-Guided-Video-Editing-Assessment/index.html"
+          title="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/249_3e54fa4e-6fa3-47bc-a71e-d8b0c9b63f11.jpg" class="card-img-top" alt="CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoji Zheng
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/237-CoIRL-AD-Collaborative-Competitive-Imitation-Reinforcement-Learning-in-Latent-World-Models-for-A/index.html"  title="CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving">
+          <h3 class="card-title pb-2" itemprop="headline">CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/237-CoIRL-AD-Collaborative-Competitive-Imitation-Reinforcement-Learning-in-Latent-World-Models-for-A/index.html"
+          title="CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
