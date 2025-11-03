@@ -30,7 +30,7 @@ body {
 }
 
 .article-container {
-     max-width: 900px; /* Centered narrow column for good readability */
+  
     margin: 30px auto;
     padding: 0 15px;
 }
@@ -201,5 +201,6 @@ margin-bottom: 0 !important;
 #similarWrapper h3{
   
 }
+
 
 
