@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>CodePlot-CoT: Mathematical Visual Reasoning by Thinking with</title>
+
+<meta name="keywords" content="Large Language Models,  Vision Language Models,  mathematical reasoning,  multimodal unified models,  CodePlot-CoT,  visual reasoning in mathematics, ">
+
+<meta name="description" content="Large Language Models,  Vision Language Models,  mathematical reasoning,  multimodal unified models,  CodePlot-CoT,  visual reasoning in mathematics, ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Chengqi Duan, Kaiyue Sun, Rongyao Fang, Manyuan Zhang, Yan Feng, Ying Luo, Yufang Liu, Ke Wang, Peng Pei, Xunliang Cai, Hongsheng Li, Yi Ma, Xihui Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/171_15c9f6be-7fcc-40fc-a036-0d8c3f6cea4f.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learns to Draw Its Way Through Math Problems</h3>
+<p>
+Ever wondered how a computer can actually <strong>sketch a picture</strong> to crack a tricky math puzzle? Researchers have created a new system called <strong>CodePlot‑CoT</strong> that lets artificial intelligence think with images, just like we do when we doodle a graph on a napkin. Instead of only talking in words, the AI writes tiny bits of code that instantly turn into a plot or diagram—its own “visual thought.” Imagine a student who, before solving a geometry question, quickly draws the shape on paper; the AI does the same thing, but with perfect precision and speed. This breakthrough means machines can now handle math problems that need a visual step, boosting their accuracy by up to 21 % on a brand‑new test set. As AI learns to combine words and pictures, everyday tools—from homework helpers to smart calculators—could become far more intuitive. The future may see computers that not only calculate, but also <strong>draw their way</strong> to solutions, making math feel a little less mysterious for all of us. <strong>Exciting times ahead!</strong>
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents <strong>CodePlot-CoT</strong>, an innovative approach to enhance mathematical reasoning by integrating visual and textual elements. It addresses the limitations of existing models that primarily rely on text-based reasoning, particularly in tasks requiring visual assistance. The authors introduce <strong>Math-VR</strong>, a comprehensive bilingual dataset comprising 178,000 samples designed for visual reasoning in mathematics. The proposed method demonstrates a significant performance improvement of up to 21% over baseline models, validating the effectiveness of a code-driven reasoning paradigm. This work not only contributes a new dataset and benchmark but also sets a foundation for future research in multimodal mathematical reasoning.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>A notable strength of this study is the development of <strong>Math-VR</strong>, which provides a robust framework for evaluating visual reasoning in mathematics. The dataset's bilingual nature and extensive sample size enhance its applicability across diverse linguistic contexts. Additionally, the introduction of <strong>MatplotCode</strong>, an image-to-code converter, effectively addresses the challenges of translating complex mathematical figures into executable code, thereby improving the precision of visual reasoning tasks.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study has some limitations. The reliance on a two-stage training process may introduce complexities that could hinder reproducibility. Furthermore, while the performance metrics are promising, the article does not extensively discuss the potential biases inherent in the dataset or the models, which could affect the generalizability of the findings. Additionally, the computational costs associated with inference, although reduced, may still pose challenges for broader implementation.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the field of <strong>multimodal reasoning</strong>. By providing a new dataset and a novel approach, the authors pave the way for future advancements in integrating visual and textual reasoning in mathematical contexts. This work encourages further exploration of code-driven paradigms, potentially leading to more sophisticated models capable of tackling complex reasoning tasks.</p>
+
+<h3>Conclusion</h3>
+<p>In summary, the article makes a valuable contribution to the field of mathematical reasoning by introducing <strong>CodePlot-CoT</strong> and the <strong>Math-VR</strong> dataset. The demonstrated improvements in performance highlight the potential of integrating visual and textual reasoning. Overall, this research not only addresses existing limitations but also opens new avenues for exploration in multimodal reasoning, making it a significant addition to the literature.</p>
+
+<h3>Readability</h3>
+<p>The article is well-structured and presents its findings in a clear and engaging manner. The use of concise paragraphs and straightforward language enhances accessibility for a professional audience. By focusing on key concepts and avoiding excessive jargon, the authors ensure that the content is both informative and easy to digest, promoting greater engagement and understanding among readers.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large Language Models</li><li> Vision Language Models</li><li> mathematical reasoning</li><li> multimodal unified models</li><li> CodePlot-CoT</li><li> visual reasoning in mathematics</li><li> image-to-code converter</li><li> Math-VR dataset</li><li> bilingual dataset for mathematics</li><li> plotting functions in math</li><li> Chain-of-Thought paradigm</li><li> visual thought generation</li><li> mathematical problem-solving</li><li> training data for LLMs</li><li> multimodal mathematical reasoning</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/160/codeplot-cot-mathematical-visual-reasoning-by-thinking-with-code-driven-images" target="_blank" title=" CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images">
+    CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/246_f86dfd37-9da4-48fe-a232-47cace4813d1.jpg" class="card-img-top" alt="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhenyu Liu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"  title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE">
+          <h3 class="card-title pb-2" itemprop="headline">UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"
+          title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/239_786010af-15d9-4e5d-a394-cd6850c1c67d.jpg" class="card-img-top" alt="LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Senyu Fei
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/227-LIBERO-Plus-In-depth-Robustness-Analysis-of-Vision-Language-Action-Models/index.html"  title="LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models">
+          <h3 class="card-title pb-2" itemprop="headline">LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/227-LIBERO-Plus-In-depth-Robustness-Analysis-of-Vision-Language-Action-Models/index.html"
+          title="LIBERO-Plus: In-depth Robustness Analysis of Vision-Language-Action Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/368_5fdf687a-6395-4b65-9409-15390877e963.jpg" class="card-img-top" alt="Language Models Model Language" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Łukasz Borchmann
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"  title="Language Models Model Language">
+          <h3 class="card-title pb-2" itemprop="headline">Language Models Model Language</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"
+          title="Language Models Model Language"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/242_e21d3dd3-89ac-4537-bd15-a13c6e085ce4.jpg" class="card-img-top" alt="Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kai Zou
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/230-Uni-MMMU-A-Massive-Multi-discipline-Multimodal-Unified-Benchmark/index.html"  title="Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark">
+          <h3 class="card-title pb-2" itemprop="headline">Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/230-Uni-MMMU-A-Massive-Multi-discipline-Multimodal-Unified-Benchmark/index.html"
+          title="Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/196_6f142900-a549-4b2d-b199-d871c17ba49c.jpg" class="card-img-top" alt="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqi Liu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"  title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"
+          title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/231_490a73ed-998e-40ca-baca-51f16f835156.jpg" class="card-img-top" alt="Attention Illuminates LLM Reasoning: The Preplan-and-Anchor Rhythm Enables
+Fine-Grained Policy Optimization" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yang Li
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/219-Attention-Illuminates-LLM-Reasoning-The-Preplan-and-Anchor-Rhythm-Enables-Fine-Grained-Policy-Op/index.html"  title="Attention Illuminates LLM Reasoning: The Preplan-and-Anchor Rhythm Enables
+Fine-Grained Policy Optimization">
+          <h3 class="card-title pb-2" itemprop="headline">Attention Illuminates LLM Reasoning: The Preplan-and-Anchor Rhythm Enables
+Fine-Grained Policy Optimization</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/219-Attention-Illuminates-LLM-Reasoning-The-Preplan-and-Anchor-Rhythm-Enables-Fine-Grained-Policy-Op/index.html"
+          title="Attention Illuminates LLM Reasoning: The Preplan-and-Anchor Rhythm Enables
+Fine-Grained Policy Optimization"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
