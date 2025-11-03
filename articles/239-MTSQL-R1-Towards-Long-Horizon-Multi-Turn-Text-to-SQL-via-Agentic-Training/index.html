@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Ag</title>
+
+<meta name="keywords" content="Multi-turn Text-to-SQL,  Conversational Text-to-SQL,  Agentic training framework,  Long-horizon Text-to-SQL,  Markov Decision Process (MDP),  Dialogue">
+
+<meta name="description" content="Multi-turn Text-to-SQL,  Conversational Text-to-SQL,  Agentic training framework,  Long-horizon Text-to-SQL,  Markov Decision Process (MDP),  Dialogue">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Taicheng Guo, Hai Wang, ChaoChun Liu, Mohsen Golalikhani, Xin Chen, Xiangliang Zhang, Chandan K. Reddy
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              16 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/251_3429cf80-50c6-4796-84d2-88bf8d3cb04c.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>AI Agent Learns to Talk to Databases Over Long Conversations</h3>
+<p>
+Ever wondered how a chatbot could actually fetch the right data from a huge database after a back‑and‑forth chat? <strong>Scientists have built</strong> a new system called MTSQL‑R1 that does just that. Instead of guessing the answer in one go, the AI works like a diligent assistant: it proposes a query, checks the database’s reply, verifies if the answer makes sense, and then tweaks the query until everything lines up. Think of it as a chef tasting a sauce, adjusting the seasoning, and tasting again until the flavor is perfect. This “propose‑execute‑verify‑refine” loop lets the AI handle long, multi‑turn conversations without getting lost or giving nonsensical results. The breakthrough means future voice assistants could help you pull exact sales numbers, schedule reports, or answer complex questions just by chatting naturally. <strong>This discovery</strong> brings us closer to truly conversational data tools that understand context and correct themselves on the fly. <strong>Imagine</strong> asking your phone for the latest weather trends over several questions and getting precise, reliable answers every time. The future of smart dialogue is here, and it’s learning to listen and improve, one step at a time.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Multi-Turn Text-to-SQL with Agentic Reinforcement Learning</h2>
+
+<p>This article introduces MTSQL-R1, an innovative <strong>agentic training framework</strong> designed to tackle the complexities of multi-turn Text-to-SQL tasks. It addresses the limitations of conventional short-horizon methods that often produce non-executable or incoherent SQL queries. By framing the task as a <strong>Markov Decision Process (MDP)</strong>, MTSQL-R1 employs an iterative propose-execute-verify-refine cycle. This approach leverages both database execution feedback and a persistent dialogue memory to ensure query coherence and accuracy. The framework integrates Supervised Fine-Tuning (SFT) and Reinforcement Learning (RL) within a long-horizon training pipeline. Experimental results consistently demonstrate that MTSQL-R1 significantly outperforms strong baselines, marking a substantial improvement in conversational semantic parsing.</p>
+
+<h3>Critical Evaluation of MTSQL-R1</h3>
+
+<h3>Strengths</h3>
+<p>MTSQL-R1's primary strength lies in its novel formulation of multi-turn Text-to-SQL as an MDP, enabling a more robust and adaptive system. The iterative propose-execute-verify-refine cycle, incorporating both <strong>environment-driven verification</strong> and <strong>memory-guided refinement</strong>, is a significant methodological advancement. This design ensures higher logical correctness and executability of generated SQL queries. The multi-level reward system in the RL phase, combining outcome-based and process-level rewards, further enhances the agent's learning capabilities. This comprehensive approach leads to superior performance and generalization across complex, multi-turn tasks.</p>
+
+<h3>Weaknesses</h3>
+<p>While MTSQL-R1 achieves impressive results, the analysis highlights some persistent challenges. The framework still encounters issues such as <strong>Aggregation Drift</strong> and struggles with certain <strong>extra-hard cases</strong>. These limitations suggest that while the iterative refinement significantly improves performance, there remains room for enhancing the agent's understanding of complex aggregation logic and highly nuanced conversational turns. Further research could focus on refining these specific areas to achieve even greater robustness.</p>
+
+<h3>Implications</h3>
+<p>The development of MTSQL-R1 has profound implications for the field of <strong>conversational semantic parsing</strong> and database interaction. By demonstrating the effectiveness of an agentic, long-horizon approach, it paves the way for more intelligent and reliable Text-to-SQL systems. This framework could significantly enhance user experience in natural language interfaces for databases, reducing errors and improving the efficiency of data retrieval. It also provides a strong foundation for future research into more sophisticated reasoning agents capable of handling increasingly complex dialogue contexts.</p>
+
+<h3>Conclusion</h3>
+<p>MTSQL-R1 represents a significant leap forward in multi-turn Text-to-SQL, offering a sophisticated agentic framework that addresses critical limitations of prior methods. Its innovative use of an MDP, iterative verification, and memory-guided refinement leads to demonstrably superior performance in generating <strong>robust SQL queries</strong> with improved <strong>dialogue coherence</strong>. Despite minor challenges, the article's findings underscore the immense value of environment-driven feedback and memory in developing advanced conversational AI. This work provides a compelling blueprint for future research in long-horizon reasoning and semantic parsing.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Multi-turn Text-to-SQL</li><li> Conversational Text-to-SQL</li><li> Agentic training framework</li><li> Long-horizon Text-to-SQL</li><li> Markov Decision Process (MDP)</li><li> Dialogue coherence</li><li> SQL query verification</li><li> Database execution feedback</li><li> Memory-guided refinement</li><li> Conversational semantic parsing</li><li> COSQL dataset</li><li> SPARC dataset</li><li> Text-to-SQL challenges</li><li> Executable SQL generation</li><li> Persistent dialogue memory</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/239/mtsql-r1-towards-long-horizon-multi-turn-text-to-sql-via-agentic-training" target="_blank" title=" MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training">
+    MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/194_79a6cdca-a014-44fe-9804-a0aef4af8789.jpg" class="card-img-top" alt="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yinan Chen
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/183-IVEBench-Modern-Benchmark-Suite-for-Instruction-Guided-Video-Editing-Assessment/index.html"  title="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment">
+          <h3 class="card-title pb-2" itemprop="headline">IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/183-IVEBench-Modern-Benchmark-Suite-for-Instruction-Guided-Video-Editing-Assessment/index.html"
+          title="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/234_d38e195d-f742-4a8f-b77f-c53917bed265.jpg" class="card-img-top" alt="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wenwen Tong
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/222-InteractiveOmni-A-Unified-Omni-modal-Model-for-Audio-Visual-Multi-turn-Dialogue/index.html"  title="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue">
+          <h3 class="card-title pb-2" itemprop="headline">InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/222-InteractiveOmni-A-Unified-Omni-modal-Model-for-Audio-Visual-Multi-turn-Dialogue/index.html"
+          title="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/280_fd278fe1-dd83-49c4-86ad-3dc78e7f2f97.jpg" class="card-img-top" alt="RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aashiq Muhamed
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/267-RefusalBench-Generative-Evaluation-of-Selective-Refusal-in-Grounded-Language-Models/index.html"  title="RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models">
+          <h3 class="card-title pb-2" itemprop="headline">RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/267-RefusalBench-Generative-Evaluation-of-Selective-Refusal-in-Grounded-Language-Models/index.html"
+          title="RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/150_3368e2e1-0c85-483c-8780-5dd185bd5010.jpg" class="card-img-top" alt="QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wei Huang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/139-QeRL-Beyond-Efficiency-Quantization-enhanced-Reinforcement-Learning-for-LLMs/index.html"  title="QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/139-QeRL-Beyond-Efficiency-Quantization-enhanced-Reinforcement-Learning-for-LLMs/index.html"
+          title="QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/92_8fca9457-a912-47f9-bb0b-fff470e0cf6f.jpg" class="card-img-top" alt="Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chi Yan
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/88-Progressive-Gaussian-Transformer-with-Anisotropy-aware-Sampling-for-Open-Vocabulary-Occupancy-Pre/index.html"  title="Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction">
+          <h3 class="card-title pb-2" itemprop="headline">Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/88-Progressive-Gaussian-Transformer-with-Anisotropy-aware-Sampling-for-Open-Vocabulary-Occupancy-Pre/index.html"
+          title="Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/240_654c6317-b436-4bef-a708-bef86ddcce1f.jpg" class="card-img-top" alt="The Role of Computing Resources in Publishing Foundation Model Research" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuexing Hao
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"  title="The Role of Computing Resources in Publishing Foundation Model Research">
+          <h3 class="card-title pb-2" itemprop="headline">The Role of Computing Resources in Publishing Foundation Model Research</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"
+          title="The Role of Computing Resources in Publishing Foundation Model Research"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
