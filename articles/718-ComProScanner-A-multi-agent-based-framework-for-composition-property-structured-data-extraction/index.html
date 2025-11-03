@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>ComProScanner: A multi-agent based framework for composition</title>
+
+<meta name="keywords" content="large language model based literature mining,  automated chemical composition extraction,  multi‑agent data extraction platform,  ComProScanner tool f">
+
+<meta name="description" content="large language model based literature mining,  automated chemical composition extraction,  multi‑agent data extraction platform,  ComProScanner tool f">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Aritra Roy, Enrico Grisan, John Buckeridge, Chiara Gattinoni
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              26 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/614_ac12d968-230a-4537-80dc-289337201891.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How an AI “Librarian” Turns Complex Science Papers into Easy‑to‑Use Data</h3>
+<p>
+What if you could pull hidden numbers and formulas from a research article with just a click? <strong>ComProScanner</strong> makes that possible. This new AI‑powered platform works like a team of tiny librarians, each one scanning a paper, checking the facts, and neatly filing the chemical recipes and their performance numbers into a tidy spreadsheet. Imagine trying to bake a perfect cake without a recipe—ComProScanner gives scientists the exact “ingredients” and “baking times” they need, but for advanced materials like piezoelectric ceramics.<br><br>
+The tool was tested on a hundred journal articles and beat ten other AI models, achieving an impressive 82% accuracy. That means researchers can now build huge, reliable databases in hours instead of months, speeding up the discovery of new technologies that could power everything from medical devices to clean‑energy sensors. <strong>Scientists found</strong> that this breakthrough not only saves time but also opens the door for anyone to create machine‑learning models without being a data‑science expert. <strong>It’s a game‑changing step</strong> toward making cutting‑edge science accessible to all.<br><br>
+The next time you hear about a “new material,” remember there’s a quiet AI team turning dense papers into simple, usable knowledge—bringing the future a little closer to our fingertips.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Scientific Data Extraction with ComProScanner</h2>
+
+<p>The advent of advanced large language models (LLMs) has significantly transformed the landscape of knowledge extraction from scientific literature. Despite these breakthroughs, a notable gap persists in accessible, automated tools capable of constructing, validating, and visualizing structured datasets from complex scientific texts. This article introduces <strong>ComProScanner</strong>, an innovative autonomous multi-agent platform designed to bridge this gap. Leveraging a sophisticated blend of LLM agents, Retrieval-Augmented Generation (RAG), and deep learning, ComProScanner facilitates the extraction, validation, classification, and visualization of machine-readable chemical compositions and properties, seamlessly integrated with synthesis data from journal articles. The framework was rigorously evaluated using 100 journal articles, testing its efficacy across 10 diverse LLMs, both open-source and proprietary, for extracting highly complex compositions associated with ceramic piezoelectric materials and their corresponding piezoelectric strain coefficients (d33). A key finding revealed that <strong>DeepSeek-V3-0324</strong> emerged as the top performer, achieving a significant overall accuracy of 0.82, underscoring ComProScanner's potential to revolutionize scientific data compilation.</p>
+
+<h2>Critical Evaluation of ComProScanner</h2>
+
+<h3>Strengths</h3>
+<p>ComProScanner represents a substantial leap forward in <strong>automated scientific data extraction</strong>, addressing a critical need for structured knowledge in materials science. Its multi-agent framework, integrating LLMs, RAG, and deep learning, offers a robust and adaptable solution for handling the intricacies of scientific text. The platform's comprehensive evaluation framework, which includes custom weight-based, conventional (Precision, Recall, F1-score), and normalized classification metrics, provides a thorough assessment of its performance. The demonstrated high accuracy, particularly with DeepSeek-V3-0324, highlights its effectiveness in extracting complex material compositions and properties. Furthermore, its availability as a user-friendly Python package via PyPI significantly enhances accessibility for researchers, accelerating <strong>materials discovery</strong> and database construction. The inclusion of extensive visualization capabilities and superior variable parsing compared to existing material-parsers further solidifies its utility.</p>
+
+<h3>Weaknesses</h3>
+<p>While ComProScanner achieves an impressive 0.82 overall accuracy, there remains a margin for improvement, especially when considering applications requiring near-perfect data fidelity. The evaluation, though comprehensive, was conducted on 100 journal articles, and the framework's scalability and performance on extremely large, diverse datasets beyond this scope warrant further investigation. The generalizability of its high performance to other scientific domains outside of materials science, particularly those with different data structures or terminologies, is also an area for future exploration. Additionally, while some LLMs performed competitively, others like Gemini underperformed, suggesting that the choice of underlying LLM significantly impacts results, which could be a consideration for users without access to top-performing proprietary models.</p>
+
+<h2>Conclusion</h2>
+<p>ComProScanner stands out as a highly valuable and timely contribution to the field of scientific data management. By providing a simple, user-friendly, and readily-usable package, it effectively bridges the gap between unstructured scientific literature and the creation of structured, <strong>machine-readable datasets</strong> essential for machine learning and deep learning applications. Its robust multi-agent architecture and demonstrated high accuracy in extracting complex materials data position it as a powerful tool for researchers. This framework holds immense potential to accelerate <strong>materials discovery</strong> and innovation, significantly impacting the efficiency of scientific research and the construction of comprehensive scientific databases.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>large language model based literature mining</li><li> automated chemical composition extraction</li><li> multi‑agent data extraction platform</li><li> ComProScanner tool for scientific text</li><li> ceramic piezoelectric material dataset generation</li><li> piezoelectric strain coefficient d33 extraction</li><li> LLM evaluation for materials informatics</li><li> open‑source vs proprietary LLM performance</li><li> machine‑readable synthesis data integration</li><li> validation and classification of experimental data</li><li> visualisation of chemical property datasets</li><li> deep learning dataset creation from journal articles</li><li> DeepSeek‑V3‑0324 accuracy in materials extraction</li><li> user‑friendly scientific data pipeline</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/718/comproscanner-a-multi-agent-based-framework-for-composition-property-structureddata-extraction-from" target="_blank" title=" ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature">
+    ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/627_be77541e-c22a-42dc-99d1-98b7db52d89f.jpg" class="card-img-top" alt="Model Merging with Functional Dual Anchors" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kexuan Shi
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/733-Model-Merging-with-Functional-Dual-Anchors/index.html"  title="Model Merging with Functional Dual Anchors">
+          <h3 class="card-title pb-2" itemprop="headline">Model Merging with Functional Dual Anchors</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/733-Model-Merging-with-Functional-Dual-Anchors/index.html"
+          title="Model Merging with Functional Dual Anchors"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/618_61e800eb-c35c-49cd-94a5-3dadd3b404ec.jpg" class="card-img-top" alt="DeepAgent: A General Reasoning Agent with Scalable Toolsets" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoxi Li
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/723-DeepAgent-A-General-Reasoning-Agent-with-Scalable-Toolsets/index.html"  title="DeepAgent: A General Reasoning Agent with Scalable Toolsets">
+          <h3 class="card-title pb-2" itemprop="headline">DeepAgent: A General Reasoning Agent with Scalable Toolsets</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/723-DeepAgent-A-General-Reasoning-Agent-with-Scalable-Toolsets/index.html"
+          title="DeepAgent: A General Reasoning Agent with Scalable Toolsets"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/517_c37fd5cc-a5d3-493b-a64f-57cfb56e2c8a.jpg" class="card-img-top" alt="Language Models are Injective and Hence Invertible" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Giorgos Nikolaou
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/627-Language-Models-are-Injective-and-Hence-Invertible/index.html"  title="Language Models are Injective and Hence Invertible">
+          <h3 class="card-title pb-2" itemprop="headline">Language Models are Injective and Hence Invertible</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/627-Language-Models-are-Injective-and-Hence-Invertible/index.html"
+          title="Language Models are Injective and Hence Invertible"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/544_c6350bc9-7949-4e26-828e-8d5bb26f2c08.jpg" class="card-img-top" alt="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yanhong Li
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"  title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"
+          title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/632_95824998-9c58-4b3a-ad19-4312243720e8.jpg" class="card-img-top" alt="PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yu Yang
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/738-PhysWorld-From-Real-Videos-to-World-Models-of-Deformable-Objects-via-Physics-Aware-Demonstration/index.html"  title="PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis">
+          <h3 class="card-title pb-2" itemprop="headline">PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/738-PhysWorld-From-Real-Videos-to-World-Models-of-Deformable-Objects-via-Physics-Aware-Demonstration/index.html"
+          title="PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/491_6adaca6a-6045-45c0-a314-a726f54a2b0d.jpg" class="card-img-top" alt="Expanding the Action Space of LLMs to Reason Beyond Language" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhongqi Yue
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/495-Expanding-the-Action-Space-of-LLMs-to-Reason-Beyond-Language/index.html"  title="Expanding the Action Space of LLMs to Reason Beyond Language">
+          <h3 class="card-title pb-2" itemprop="headline">Expanding the Action Space of LLMs to Reason Beyond Language</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/495-Expanding-the-Action-Space-of-LLMs-to-Reason-Beyond-Language/index.html"
+          title="Expanding the Action Space of LLMs to Reason Beyond Language"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
