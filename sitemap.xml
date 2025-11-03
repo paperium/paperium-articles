@@ -2887,4 +2887,16 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://paperium.github.io/paperium-articles/articles/894-The-End-of-Manual-Decoding-Towards-Truly-End-to-End-Language-Models/index.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://paperium.github.io/paperium-articles/articles/895-Surfer-2-The-Next-Generation-of-Cross-Platform-Computer-Use-Agents/index.html</loc>
+    <lastmod>2025-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
