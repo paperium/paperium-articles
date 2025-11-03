@@ -1,0 +1,247 @@
+﻿
+.article-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: #fff;
+    /* === NEW STYLES FOR EQUAL HEIGHT === */
+    min-height: 550px; /* Set a consistent minimum height for the whole card */
+    max-height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card img {
+    width: 100%;
+    height: 300px; /* Fixed height for images */
+    object-fit: cover;
+    object-position: top; /* Ensures cropping is from the top */
+    border-bottom: 1px solid #eee;
+}
+
+.article-card-body {
+    padding: 15px;
+    flex-grow: 1; /* Allows the body to take up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+    .article-card-body h5 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+        color: #333;
+        /* === NEW STYLE FOR TITLE CLIPPING (1 line) === */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .article-card-body .card-text { /* Target the p tag specifically */
+        /* === NEW STYLE FOR DESCRIPTION CLIPPING (2 lines) === */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* Limit to 2 lines */
+        min-height: 3em; /* Reserve space for two lines */
+        margin-bottom: 10px;
+        flex-shrink: 0; /* Prevent it from shrinking */
+    }
+ .article-card-body a  {
+        text-decoration: none;
+         
+    }
+    .article-card-body a h3 {
+        color: rgb(26, 26, 28);
+    }
+
+        .article-card-body a:hover h3 {
+            color: #0056b3;
+        }
+
+.btn-read-more {
+    /* Updated background color */
+    background-color: #864ffe;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: auto !important;
+    align-self: flex-start;
+}
+
+    .btn-read-more:hover {
+        /* Updated hover color */
+        background-color: #6a34d0;
+        color: white;
+    }
+
+/* --- Search Bar Styling --- */
+.search-form {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Updated Shadow Color */
+    box-shadow: 0 4px 12px rgba(134, 79, 254, 0.3); /* Using #864ffe with opacity */
+    transition: box-shadow 0.3s;
+}
+
+    .search-form:focus-within {
+        /* Updated Focus Shadow Color */
+        box-shadow: 0 4px 15px rgba(134, 79, 254, 0.5); /* Stronger shadow on focus */
+    }
+
+.search-input {
+    border: none;
+    padding: 1rem 1.5rem;
+}
+
+    .search-input:focus {
+        box-shadow: none !important;
+        border-color: transparent !important;
+    }
+
+.search-button {
+    /* Updated Button Background Color */
+    background-color: #864ffe; /* The new main color */
+    border: none;
+    color: white;
+    padding: 0 1.5rem;
+    transition: background-color 0.3s;
+}
+
+    .search-button:hover {
+        /* Updated Hover Color (slightly darker purple) */
+        background-color: #6a34d0; /* A darker shade of #864ffe */
+    }
+/* --- End Search Bar Styling --- */
+
+
+/* --- Pagination (Pager) Button Styling --- */
+
+/* 1. Default Link Color */
+.pagination .page-item:not(.active) .page-link {
+    color: #864ffe; /* Text color for non-active links */
+}
+
+    /* 2. Hover State */
+    .pagination .page-item:not(.active) .page-link:hover {
+        color: #fff;
+        background-color: #864ffe; /* New main color background on hover */
+        border-color: #864ffe;
+    }
+
+/* 3. Active State (Current Page) */
+.pagination .page-item.active .page-link,
+.pagination .page-item.active .page-link:hover {
+    z-index: 3;
+    color: #fff;
+    background-color: #864ffe; /* New main color for active state */
+    border-color: #864ffe;
+}
+
+/* 4. Focus State (for accessibility outlines) */
+.pagination .page-item .page-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(134, 79, 254, 0.5); /* #864ffe at 50% opacity */
+}
+
+/* 5. Disabled State (Keep text light and border subtle) */
+.pagination .page-item.disabled .page-link {
+    color: #6c757d; /* Standard Bootstrap disabled text */
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.card-title {
+    /* Existing style may look like this: */
+    /* font-size: 1.75rem; */ 
+    
+    /* NEW smaller font size */
+    font-size: 1.25rem; 
+    
+    /* You can also adjust the margin below the title if needed */
+    padding-bottom: 0.5rem; 
+}
+
+/* Example of a slightly larger size than the new one, but smaller than default h3 */
+h3 {
+    font-size: 1.5rem;
+}
+.pager { 
+    margin-top: 20px; 
+    text-align: center; 
+}
+
+/* --- Article Metadata Row Styles --- */
+.article-meta {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 10px;
+    padding: 5px 15px 5px 15px; /* Add internal padding */
+    border-bottom: 1px solid #eee;
+}
+
+/* Style for the Category/Field Badge */
+.article-category-badge {
+    background-color: rgb(232, 251, 198); /* Changed to your primary purple */
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 12px; /* Increased border-radius for a more rounded/pill shape */
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: inline-block; /* Ensures padding and border-radius render correctly */
+}
+
+/* Style for Date and Author text */
+.article-meta-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+/* assets/styles.css */
+
+/* --- Search Input Container Styles --- */
+.search-input-container {
+    /* Required to position the clear button absolutely within it */
+    position: relative; 
+    display: flex; /* Keeps input and button inline */
+    align-items: center;
+}
+
+.search-input-field {
+    /* Adjust width and basic padding */
+    padding: 8px 30px 8px 8px; /* Added extra right padding for the cross */
+    width: 300px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* --- Clear Button (The Cross) Styles --- */
+.search-clear-btn {
+    /* Absolute position relative to the container */
+    position: absolute;
+    right: 100px; /* Position it just before the search button */
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Styling for the cross */
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 5px; /* Makes it easier to click */
+    z-index: 10; /* Ensures it is above the input field */
+}
+
+.search-clear-btn:hover {
+    color: #333;
+}
