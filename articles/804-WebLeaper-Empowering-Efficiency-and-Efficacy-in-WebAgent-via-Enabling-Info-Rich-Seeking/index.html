@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>WebLeaper: Empowering Efficiency and Efficacy in WebAgent vi</title>
+
+<meta name="keywords" content="LLM-based information seeking agents,  tree-structured reasoning for search,  high-coverage IS task generation,  target entity sparsity in training da">
+
+<meta name="description" content="LLM-based information seeking agents,  tree-structured reasoning for search,  high-coverage IS task generation,  target entity sparsity in training da">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich
+Seeking
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Zhengwei Tao, Haiyang Shen, Baixuan Li, Wenbiao Yin, Jialong Wu, Kuan Li, Zhongwang Zhang, Huifeng Yin, Rui Ye, Liwen Zhang, Xinyu Wang, Pengjun Xie, Jingren Zhou, Yong Jiang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              29 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/719_962ae7be-449d-4a34-8f52-a62c8ab4e94d.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>WebLeaper: How AI Agents Learn to Search the Web Faster</h3>
+<p>
+Ever wondered why some AI helpers seem to wander endlessly before finding the right answer? <strong>WebLeaper</strong> changes that by teaching digital assistants to hop straight to the useful bits of information. Imagine a librarian who knows exactly which shelf holds the book you need, instead of scanning every aisle – that’s the kind of shortcut these agents now use. By turning the search task into a simple “choose‑your‑own‑adventure” map, the system can pack many possible answers into a tiny space, letting the AI pick the right path in seconds. The team built clever practice puzzles from Wikipedia tables, so the agents learn both to be <strong>accurate</strong> and to find answers <strong>quickly</strong>. Tests on real‑world search challenges showed the new method consistently beats older bots, delivering faster, smarter results. As we hand over more everyday decisions to AI, tools like WebLeaper promise a future where our digital helpers are not just clever, but also lightning‑quick. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing LLM Agent Efficiency in Information Seeking with WebLeaper</h2>
+
+<p>Large Language Model (LLM)-based agents are transforming open-ended problem solving, with <strong>information seeking (IS)</strong> being a crucial capability for autonomous reasoning. However, current IS agents often struggle with low search efficiency, primarily due to the sparsity of target entities in their training tasks. This limitation constrains overall performance and generalization. To address these challenges, the WebLeaper framework is introduced, aiming to construct high-coverage IS tasks and generate efficient solution trajectories. It formulates IS as a <strong>tree-structured reasoning</strong> problem, enabling a significantly larger set of target entities to be embedded within a constrained context. Leveraging curated Wikipedia tables, WebLeaper proposes three variants—Basic, Union, and Reverse-Union—to systematically enhance both IS efficiency and efficacy. The framework curates training trajectories by retaining only those that are simultaneously accurate and efficient, optimizing models for both correctness and search performance. Extensive experiments across five diverse IS benchmarks, including BrowserComp and GAIA, consistently demonstrate WebLeaper's superior improvements in both effectiveness and efficiency over strong baselines.</p>
+
+<h2>Critical Evaluation of WebLeaper's Approach</h2>
+
+<h3>Strengths</h3>
+<p>WebLeaper presents a robust solution to a critical problem in LLM agent development: the inefficiency stemming from sparse training data in information-seeking tasks. Its innovative formulation of IS as a <strong>tree-structured reasoning</strong> problem, coupled with the novel Basic, Union, and Reverse-Union task synthesis methods, significantly enhances training data coverage and complexity. The framework's comprehensive evaluation across five diverse benchmarks, including xbench-DeepSearch and WideSearch, provides strong evidence of its consistent improvements in both <strong>effectiveness and efficiency</strong>. Furthermore, the integration of metrics like Information-Seeking Rate (ISR) and Information-Seeking Efficiency (ISE) for trajectory filtering, alongside a hybrid reward system for Reinforcement Learning (RL), showcases a sophisticated, multi-faceted approach to optimization. The combination of Supervised Fine-Tuning (SFT) and RL for superior joint optimization is a particularly strong methodological aspect.</p>
+
+<h3>Weaknesses</h3>
+<p>While highly effective, WebLeaper's reliance on curated Wikipedia tables for task generation might limit its direct applicability or generalizability to domains where structured data is less readily available or differs significantly in format. The intricate nature of its methodology, involving tree-structured reasoning, multiple task variants, information-guided trajectory construction, and a hybrid reward system, suggests a potentially high computational cost and complexity in implementation and fine-tuning. This complexity could pose a barrier for researchers or practitioners with limited computational resources or expertise in such advanced hybrid learning paradigms.</p>
+
+<h3>Implications</h3>
+<p>WebLeaper represents a significant advancement in the field of <strong>autonomous LLM agents</strong>, particularly for tasks requiring extensive information retrieval and complex reasoning. By effectively addressing the long-standing challenge of search inefficiency and data sparsity, it paves the way for developing more capable, reliable, and practical AI systems. The framework's success in generating high-coverage tasks and optimizing agent trajectories has profound implications for real-world applications, from advanced search engines to intelligent assistants and automated research tools. This work also sets a new standard for evaluating IS agents, emphasizing the joint optimization of both effectiveness and efficiency, and opens exciting avenues for future research into data synthesis and trajectory optimization across various LLM agent capabilities.</p>
+
+<h2>Conclusion</h2>
+<p>WebLeaper stands out as a highly impactful contribution to the development of <strong>Large Language Model agents</strong>, offering a sophisticated and empirically validated framework for enhancing information-seeking efficiency and effectiveness. Its innovative approach to task generation and trajectory optimization effectively tackles critical limitations in current systems. The consistent, state-of-the-art performance across multiple benchmarks underscores its potential to significantly advance autonomous reasoning and decision-making capabilities in LLMs. This research provides a valuable blueprint for creating more robust and intelligent AI agents, marking a crucial step forward in the pursuit of truly capable artificial intelligence.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>LLM-based information seeking agents</li><li> tree-structured reasoning for search</li><li> high-coverage IS task generation</li><li> target entity sparsity in training data</li><li> WebLeaper framework for efficient search</li><li> Wikipedia table-driven task synthesis</li><li> Basic/Union/Reverse-Union IS task variants</li><li> efficient solution trajectory curation</li><li> search efficiency vs retrieval depth trade‑off</li><li> benchmark evaluation on BrowserComp and GAIA</li><li> xbench‑DeepSearch performance analysis</li><li> WideSearch and Seal‑0 benchmark results</li><li> autonomous reasoning and decision‑making in LLM agents</li><li> sparse entity learning for search optimization</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/804/webleaper-empowering-efficiency-and-efficacy-in-webagent-via-enabling-info-richseeking" target="_blank" title=" WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich
+Seeking">
+    WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich
+Seeking
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/707_d8f9d363-310e-4ca4-84de-371e4b1d7317.jpg" class="card-img-top" alt="STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio 4D Intelligence" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zihan Liu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/792-STAR-Bench-Probing-Deep-Spatio-Temporal-Reasoning-as-Audio-4D-Intelligence/index.html"  title="STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio 4D Intelligence">
+          <h3 class="card-title pb-2" itemprop="headline">STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio 4D Intelligence</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/792-STAR-Bench-Probing-Deep-Spatio-Temporal-Reasoning-as-Audio-4D-Intelligence/index.html"
+          title="STAR-Bench: Probing Deep Spatio-Temporal Reasoning as Audio 4D Intelligence"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/701_afa892c0-3c77-44d8-abd0-4ff42ecc1f56.jpg" class="card-img-top" alt="Uniform Discrete Diffusion with Metric Path for Video Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haoge Deng
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/827-Uniform-Discrete-Diffusion-with-Metric-Path-for-Video-Generation/index.html"  title="Uniform Discrete Diffusion with Metric Path for Video Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Uniform Discrete Diffusion with Metric Path for Video Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/827-Uniform-Discrete-Diffusion-with-Metric-Path-for-Video-Generation/index.html"
+          title="Uniform Discrete Diffusion with Metric Path for Video Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/813_cb956f20-4f49-4b0a-80d0-569221b41689.jpg" class="card-img-top" alt="PORTool: Tool-Use LLM Training with Rewarded Tree" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Feijie Wu
+          </div>
+          <div class="article-meta-text">
+            02 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/904-PORTool-Tool-Use-LLM-Training-with-Rewarded-Tree/index.html"  title="PORTool: Tool-Use LLM Training with Rewarded Tree">
+          <h3 class="card-title pb-2" itemprop="headline">PORTool: Tool-Use LLM Training with Rewarded Tree</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/904-PORTool-Tool-Use-LLM-Training-with-Rewarded-Tree/index.html"
+          title="PORTool: Tool-Use LLM Training with Rewarded Tree"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/790_b2b43901-e15a-4bb1-a2f4-510e7fa74b06.jpg" class="card-img-top" alt="Remote Labor Index: Measuring AI Automation of Remote Work" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Mantas Mazeika
+          </div>
+          <div class="article-meta-text">
+            01 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/885-Remote-Labor-Index-Measuring-AI-Automation-of-Remote-Work/index.html"  title="Remote Labor Index: Measuring AI Automation of Remote Work">
+          <h3 class="card-title pb-2" itemprop="headline">Remote Labor Index: Measuring AI Automation of Remote Work</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/885-Remote-Labor-Index-Measuring-AI-Automation-of-Remote-Work/index.html"
+          title="Remote Labor Index: Measuring AI Automation of Remote Work"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/624_21dca981-b593-4a49-8131-3e97f41b8d61.jpg" class="card-img-top" alt="A Definition of AGI" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Dan Hendrycks
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/727-A-Definition-of-AGI/index.html"  title="A Definition of AGI">
+          <h3 class="card-title pb-2" itemprop="headline">A Definition of AGI</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/727-A-Definition-of-AGI/index.html"
+          title="A Definition of AGI"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/680_ff40ef24-7325-49a8-9c0e-83c899445678.jpg" class="card-img-top" alt="LimRank: Less is More for Reasoning-Intensive Information Reranking" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tingyu Song
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/776-LimRank-Less-is-More-for-Reasoning-Intensive-Information-Reranking/index.html"  title="LimRank: Less is More for Reasoning-Intensive Information Reranking">
+          <h3 class="card-title pb-2" itemprop="headline">LimRank: Less is More for Reasoning-Intensive Information Reranking</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/776-LimRank-Less-is-More-for-Reasoning-Intensive-Information-Reranking/index.html"
+          title="LimRank: Less is More for Reasoning-Intensive Information Reranking"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
