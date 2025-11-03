@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>LiveResearchBench: A Live Benchmark for User-Centric Deep Re</title>
+
+<meta name="keywords" content="Deep research agentic systems,  Citation-grounded report generation,  LiveResearchBench benchmark,  DeepEval evaluation suite,  AI information synthes">
+
+<meta name="description" content="Deep research agentic systems,  Citation-grounded report generation,  LiveResearchBench benchmark,  DeepEval evaluation suite,  AI information synthes">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                LiveResearchBench: A Live Benchmark for User-Centric Deep Research in the Wild
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Jiayu Wang, Yifei Ming, Riya Dulepet, Qinglin Chen, Austin Xu, Zixuan Ke, Frederic Sala, Aws Albarghouthi, Caiming Xiong, Shafiq Joty
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              18 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/314_17f0d612-1bc6-4601-a6e6-0f1eb06c9a62.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>LiveResearchBench: Putting AI Researchers to the Real‑World Test</h3>
+<p>
+Ever wondered if an AI can dig up the latest news, facts, and expert opinions just like you do on a busy morning? <strong>Scientists have built</strong> a new challenge called LiveResearchBench that asks AI systems to answer everyday questions by searching the live web, not just relying on old data. Imagine giving a student a surprise pop‑quiz that changes every day – that’s the kind of dynamic test these AIs face. <strong>The goal</strong> is simple: see if a digital assistant can gather up‑to‑date info from dozens of sites, stitch it together into a clear report, and point out exactly where each fact came from. This matters because it moves us closer to AI that can help with real tasks like planning a trip, checking the latest market trends, or summarizing new research for a project. <strong>It’s a breakthrough</strong> that shows where current AI shines and where it still trips up, guiding developers to build smarter, more reliable helpers. As we watch these digital detectives improve, the future of everyday problem‑solving looks brighter than ever. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Agentic Deep Research: A Comprehensive Evaluation Framework</h2>
+<p>This scientific analysis delves into a novel framework designed to rigorously evaluate <strong>agentic deep research systems</strong>, which are crucial for generating comprehensive, citation-grounded reports from live web sources. The article introduces LiveResearchBench, a benchmark of 100 expert-curated, user-centric tasks spanning diverse domains, and DeepEval, a sophisticated evaluation suite. These tools address the limitations of existing benchmarks by focusing on dynamic, unambiguous, and multi-faceted information needs. The research comprehensively assesses 17 frontier deep research systems, revealing their current capabilities, persistent failure modes, and essential components for future advancement.</p>
+
+<h2>Critical Evaluation of Agentic Research Systems</h2>
+<h3>Strengths</h3>
+<p>The article's primary strength lies in its innovative and robust methodological contributions. The development of LiveResearchBench provides a much-needed, realistic benchmark, meticulously constructed through a multi-stage pipeline involving expert curation and LLM refinement. This ensures tasks are user-centric, dynamic, and unambiguous, reflecting real-world information needs. Furthermore, DeepEval offers a comprehensive, multi-faceted approach to evaluating long-form reports, assessing both content and report-level quality, including critical aspects like citation accuracy and analytical depth. The integration of an LLM-as-a-Judge ensemble protocol, validated for high human agreement, significantly enhances the scalability and reliability of the evaluation process.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite the robust evaluation framework, the study highlights significant limitations in current agentic systems. A recurring weakness is the pervasive issue of citation errors, including invalid links, irrelevant associations, and unsupported claims, indicating a gap in factual grounding. The analysis reveals that while systems can gather information effectively, they often function as "deep searchers" rather than true "deep researchers," lacking sufficient analytical depth and insightful reasoning. Moreover, the study found that report length does not correlate with quality, and strong presentation often coexists with poor factual consistency, underscoring a critical trade-off in current model capabilities.</p>
+
+<h3>Implications</h3>
+<p>The findings carry substantial implications for the future development of AI agents and long-form content generation. The identified failure modes, particularly in citation accuracy and analytical depth, underscore the urgent need for advancements in core system components. Future research must prioritize enhancing memory, compression, and synthesis capabilities to enable agents to move beyond mere information retrieval towards genuine insightful analysis. This rigorous evaluation framework provides a clear roadmap for developers to benchmark progress and focus on critical areas for improving the reliability and intelligence of deep research systems.</p>
+
+<h2>Conclusion</h2>
+<p>This article makes a significant contribution to the field by establishing a rigorous and comprehensive framework for evaluating agentic deep research systems. Through LiveResearchBench and DeepEval, it not only exposes the current limitations of state-of-the-art models but also provides a clear direction for future research and development. The insights gained are invaluable for advancing the capabilities of AI agents to produce truly reliable, insightful, and citation-grounded reports, bridging the gap between advanced search and genuine scientific inquiry.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Deep research agentic systems</li><li> Citation-grounded report generation</li><li> LiveResearchBench benchmark</li><li> DeepEval evaluation suite</li><li> AI information synthesis</li><li> Real-time web search evaluation</li><li> Multi-agent system performance</li><li> Report quality assessment</li><li> AI research benchmarks</li><li> User-centric AI tasks</li><li> Dynamic information retrieval</li><li> Citation accuracy evaluation</li><li> Agentic system failure modes</li><li> Comprehensive report analysis</li><li> AI system evaluation protocols</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/298/liveresearchbench-a-live-benchmark-for-user-centric-deep-research-in-the-wild" target="_blank" title=" LiveResearchBench: A Live Benchmark for User-Centric Deep Research in the Wild">
+    LiveResearchBench: A Live Benchmark for User-Centric Deep Research in the Wild
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/255_d774cc05-f67a-430f-a785-41908fd8eb51.jpg" class="card-img-top" alt="Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Pasin Buakhaw
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/243-Deflanderization-for-Game-Dialogue-Balancing-Character-Authenticity-with-Task-Execution-in-LLM-b/index.html"  title="Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs">
+          <h3 class="card-title pb-2" itemprop="headline">Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/243-Deflanderization-for-Game-Dialogue-Balancing-Character-Authenticity-with-Task-Execution-in-LLM-b/index.html"
+          title="Deflanderization for Game Dialogue: Balancing Character Authenticity with Task
+Execution in LLM-based NPCs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/276_3cf9a7f0-59fc-4085-a8ff-d0105e95e2e0.jpg" class="card-img-top" alt="MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Weikang Shi
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/263-MathCanvas-Intrinsic-Visual-Chain-of-Thought-for-Multimodal-Mathematical-Reasoning/index.html"  title="MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/263-MathCanvas-Intrinsic-Visual-Chain-of-Thought-for-Multimodal-Mathematical-Reasoning/index.html"
+          title="MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/265_aabfbffb-ab8e-4172-a9bd-ebda1f8c4118.jpg" class="card-img-top" alt="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Cheng Cui
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/252-PaddleOCR-VL-Boosting-Multilingual-Document-Parsing-via-a-09B-Ultra-Compact-Vision-Language-Mode/index.html"  title="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model">
+          <h3 class="card-title pb-2" itemprop="headline">PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/252-PaddleOCR-VL-Boosting-Multilingual-Document-Parsing-via-a-09B-Ultra-Compact-Vision-Language-Mode/index.html"
+          title="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/328_11ece2f8-e1c1-4544-99c0-e01b21145396.jpg" class="card-img-top" alt="Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shrey Pandit
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/312-Synthesizing-Agentic-Data-for-Web-Agents-with-Progressive-Difficulty-Enhancement-Mechanisms/index.html"  title="Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms">
+          <h3 class="card-title pb-2" itemprop="headline">Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/312-Synthesizing-Agentic-Data-for-Web-Agents-with-Progressive-Difficulty-Enhancement-Mechanisms/index.html"
+          title="Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/333_1b77f938-e121-476b-b1e4-ddb1fb787026.jpg" class="card-img-top" alt="RAGCap-Bench: Benchmarking Capabilities of LLMs in Agentic Retrieval Augmented
+Generation Systems" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jingru Lin
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/317-RAGCap-Bench-Benchmarking-Capabilities-of-LLMs-in-Agentic-Retrieval-Augmented-Generation-Systems/index.html"  title="RAGCap-Bench: Benchmarking Capabilities of LLMs in Agentic Retrieval Augmented
+Generation Systems">
+          <h3 class="card-title pb-2" itemprop="headline">RAGCap-Bench: Benchmarking Capabilities of LLMs in Agentic Retrieval Augmented
+Generation Systems</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/317-RAGCap-Bench-Benchmarking-Capabilities-of-LLMs-in-Agentic-Retrieval-Augmented-Generation-Systems/index.html"
+          title="RAGCap-Bench: Benchmarking Capabilities of LLMs in Agentic Retrieval Augmented
+Generation Systems"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/379_309e0743-f6c8-4b12-9388-f9e051122816.jpg" class="card-img-top" alt="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Guinan Su
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/359-Rewiring-Experts-on-the-FlyContinuous-Rerouting-for-Better-Online-Adaptation-in-Mixture-of-Exper/index.html"  title="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models">
+          <h3 class="card-title pb-2" itemprop="headline">Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/359-Rewiring-Experts-on-the-FlyContinuous-Rerouting-for-Better-Online-Adaptation-in-Mixture-of-Exper/index.html"
+          title="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
