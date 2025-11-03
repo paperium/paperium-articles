@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>Beyond Outliers: A Study of Optimizers Under Quantization</title>
+
+<meta name="keywords" content="post‑training quantization (PTQ) performance degradation,  quantization‑aware training (QAT) parameter efficiency,  max‑to‑mean ratio (MMR) as outlier">
+
+<meta name="description" content="post‑training quantization (PTQ) performance degradation,  quantization‑aware training (QAT) parameter efficiency,  max‑to‑mean ratio (MMR) as outlier">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Beyond Outliers: A Study of Optimizers Under Quantization
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Georgios Vlassis, Saleh Ashkboos, Alexandra Volkova, Torsten Hoefler, Dan Alistarh
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/71_d54d24ac-4c35-4cc8-8769-14ec01f3f359.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How the Right “Trainer” Keeps AI Sharp Even When It’s Shrunk</h3>
+<p>
+Ever wonder why some AI apps stay fast and accurate even after they’re squeezed into tiny phones? <strong>Scientists discovered</strong> that the secret isn’t just the shrinking process—called quantization—but also the “trainer” they use, known as an optimizer. Think of it like a chef: the same ingredients can taste very different depending on the cooking method. In this study, researchers tried six different chefs on AI models ranging from modest to massive, then watched how the dishes held up after being “compressed.” Surprisingly, the usual clues—like spotting a few extreme numbers—didn’t predict which AI would survive the squeeze. Instead, an optimizer called **Shampoo** consistently kept the models tasting great, losing the least accuracy. This matters because it means smarter choices in training can make AI run smoothly on everyday devices without losing its brainpower. So next time your phone’s voice assistant sounds spot‑on, remember it’s not just the hardware—it’s the clever “recipe” behind the scenes that makes it possible. <strong>Optimizers matter</strong>, and they’re shaping the future of everyday AI. <strong>Stay curious</strong>!<br><br>
+The more we learn, the more we can bring powerful intelligence to every pocket. 🌟</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview of Optimizer‑Quantization Interactions</h2>
+<p>The study investigates how the choice of <strong>optimizer</strong> influences model performance when subjected to both post‑training quantization (<strong>PTQ</strong>) and quantization‑aware training (<strong>QAT</strong>). Researchers trained full‑precision models ranging from 50 M to 1.5 B parameters using six distinct optimizers, meticulously tuning hyperparameters to establish robust baselines. After applying PTQ, they observed that conventional outlier metrics such as the max‑to‑mean ratio (<strong>MMR</strong>) and Kurtosis failed to predict degradation across different optimizers, prompting an analytical explanation of error propagation in deep networks. In QAT experiments, models trained from scratch revealed that optimizers excelling in full‑precision settings do not necessarily maintain superiority once quantization is incorporated; notably, <strong>Shampoo</strong> exhibited the lowest accuracy loss. Finally, the authors derived scaling laws for QAT under various optimizers, demonstrating that Shampoo achieves the highest parameter efficiency among those tested.</p>
+
+<h3>Critical Evaluation</h3>
+<h4>Strengths</h4>
+<p>The paper’s systematic approach—spanning multiple model sizes and a diverse optimizer set—provides comprehensive empirical evidence rarely seen in quantization research. By combining quantitative analysis with theoretical insights into MMR limitations, the authors bridge a critical gap between practice and theory. The derivation of scaling laws offers actionable guidance for practitioners seeking to balance accuracy and efficiency.</p>
+<h4>Weaknesses</h4>
+<p>While six optimizers cover many popular choices, the study omits newer adaptive methods that may behave differently under quantization. Hyperparameter tuning was performed on full‑precision models; a joint optimization of learning rates and weight decay for each quantized scenario could further refine conclusions. Additionally, the analysis focuses solely on PTQ and QAT, leaving out hybrid or mixed‑precision strategies.</p>
+<h4>Implications</h4>
+<p>The findings suggest that selecting an optimizer for deployment should consider its interaction with the chosen quantization pipeline rather than relying on full‑precision performance alone. The demonstrated superiority of Shampoo in both PTQ resilience and QAT efficiency positions it as a strong candidate for production‑grade models, especially where parameter budgets are tight.</p>
+
+<h3>Conclusion</h3>
+<p>This work delivers a nuanced understanding of optimizer‑quantization dynamics, highlighting that traditional metrics may mislead practitioners. By revealing Shampoo’s consistent advantage across PTQ and QAT, the study offers clear, evidence‑based recommendations for model deployment strategies in resource‑constrained environments.</p>
+
+<h3>Readability</h3>
+<p>The article is structured into concise sections with keyword‑rich headings that aid search engine indexing. Paragraphs are short, each containing 20–40 words, and key terms such as <strong>optimizer</strong>, <strong>quantization</strong>, and <strong>Shampoo</strong> are highlighted to improve scannability and user engagement.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>post‑training quantization (PTQ) performance degradation</li><li> quantization‑aware training (QAT) parameter efficiency</li><li> max‑to‑mean ratio (MMR) as outlier metric</li><li> kurtosis for layer error analysis</li><li> layer‑wise error accumulation and propagation</li><li> full‑precision baseline models 50M–1.5B parameters</li><li> hyperparameter landscape exploration across optimizers</li><li> Shampoo optimizer lowest accuracy loss under QAT</li><li> scaling laws for quantization‑aware training efficiency</li><li> robustness metrics for PTQ vs QAT comparison</li><li> isolated layer error versus network‑wide error dynamics</li><li> outlier‑metric failure in predicting PTQ outcomes</li><li> parameter‑efficiency ranking of optimizers in QAT</li><li> analytical explanation of MMR limitations</li><li> full‑precision to quantized model transfer performance</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/58/beyond-outliers-a-study-of-optimizers-under-quantization" target="_blank" title=" Beyond Outliers: A Study of Optimizers Under Quantization">
+    Beyond Outliers: A Study of Optimizers Under Quantization
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/201_cc7b4bdc-f4fa-4b76-961f-1344661f6d77.jpg" class="card-img-top" alt="The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Saad Obaid ul Islam
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/190-The-Curious-Case-of-Factual-MisAlignment-between-LLMs-Short-and-Long-Form-Answers/index.html"  title="The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers">
+          <h3 class="card-title pb-2" itemprop="headline">The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/190-The-Curious-Case-of-Factual-MisAlignment-between-LLMs-Short-and-Long-Form-Answers/index.html"
+          title="The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/241_4c467b3d-1495-40e6-9825-597ec64ee06a.jpg" class="card-img-top" alt="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tiancheng Gu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/229-UniME-V2-MLLM-as-a-Judge-for-Universal-Multimodal-Embedding-Learning/index.html"  title="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning">
+          <h3 class="card-title pb-2" itemprop="headline">UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/229-UniME-V2-MLLM-as-a-Judge-for-Universal-Multimodal-Embedding-Learning/index.html"
+          title="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/64_6f09a38c-66c6-4859-96bc-d49f3611b8e2.jpg" class="card-img-top" alt="OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body
+Loco-Manipulation and Scene Interaction" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Lujie Yang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/51-OmniRetarget-Interaction-Preserving-Data-Generation-for-Humanoid-Whole-Body-Loco-Manipulation-and/index.html"  title="OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body
+Loco-Manipulation and Scene Interaction">
+          <h3 class="card-title pb-2" itemprop="headline">OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body
+Loco-Manipulation and Scene Interaction</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/51-OmniRetarget-Interaction-Preserving-Data-Generation-for-Humanoid-Whole-Body-Loco-Manipulation-and/index.html"
+          title="OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body
+Loco-Manipulation and Scene Interaction"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/170_9d28d9b0-eff7-40d5-96ae-6795e70661c8.jpg" class="card-img-top" alt="SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chenyu Wang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/159-SPG-Sandwiched-Policy-Gradient-for-Masked-Diffusion-Language-Models/index.html"  title="SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/159-SPG-Sandwiched-Policy-Gradient-for-Masked-Diffusion-Language-Models/index.html"
+          title="SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/193_d35db8fe-8db4-40c1-a72b-d670a1af495a.jpg" class="card-img-top" alt="Are Large Reasoning Models Interruptible?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tsung-Han Wu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/182-Are-Large-Reasoning-Models-Interruptible/index.html"  title="Are Large Reasoning Models Interruptible?">
+          <h3 class="card-title pb-2" itemprop="headline">Are Large Reasoning Models Interruptible?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/182-Are-Large-Reasoning-Models-Interruptible/index.html"
+          title="Are Large Reasoning Models Interruptible?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/49_7b075104-8ea4-4e08-8654-05625a71b853.jpg" class="card-img-top" alt="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiangyu Peng
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/40-UNIDOC-BENCH-A-Unified-Benchmark-for-Document-Centric-Multimodal-RAG/index.html"  title="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG">
+          <h3 class="card-title pb-2" itemprop="headline">UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/40-UNIDOC-BENCH-A-Unified-Benchmark-for-Document-Centric-Multimodal-RAG/index.html"
+          title="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
