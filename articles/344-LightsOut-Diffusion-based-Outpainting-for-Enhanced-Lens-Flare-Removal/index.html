@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>LightsOut: Diffusion-based Outpainting for Enhanced Lens Fla</title>
+
+<meta name="keywords" content="Lens flare removal,  Single Image Flare Removal (SIFR),  Diffusion-based outpainting,  Off-frame light source reconstruction,  Computer vision image d">
+
+<meta name="description" content="Lens flare removal,  Single Image Flare Removal (SIFR),  Diffusion-based outpainting,  Off-frame light source reconstruction,  Computer vision image d">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Shr-Ruei Tsai, Wei-Cheng Chang, Jie-Ying Lee, Chih-Hai Su, Yu-Lun Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              20 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/364_ded26fcd-3ce3-454c-bbee-9b7e31302bc0.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>LightsOut: How AI Erases Blinding Glare From Your Photos</h3>
+<p>
+Ever taken a perfect picture only to have a bright glare ruin it? <strong>Scientists have created</strong> a clever AI tool called <strong>LightsOut</strong> that magically “paints” the missing light sources back into the scene, wiping out those annoying lens flares. Imagine a painter filling in the missing pieces of a puzzle so the whole image looks seamless—that’s what this diffusion‑based outpainting does, but in a split second. By guessing what the hidden light would have looked like, the system restores the photo’s true colors, making objects easier for self‑driving cars and phone cameras to recognize. The best part? It works as a simple plug‑in, boosting any existing flare‑removal app without extra training. <strong>This breakthrough</strong> means clearer street‑view maps, safer autonomous rides, and sharper vacation snaps for everyone. Next time you snap a shot, let LightsOut handle the glare, and see the world just as it should be—bright, clear, and flare‑free. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Lens Flare Removal with LightsOut: A Diffusion-Based Outpainting Solution</h2>
+
+<p>Lens flare significantly degrades <strong>image quality</strong>, posing substantial challenges for critical <strong>computer vision tasks</strong> such as object detection and autonomous driving. Traditional Single Image Flare Removal (SIFR) methods often falter when off-frame light sources are incomplete or entirely absent. This article introduces LightsOut, an innovative <strong>diffusion-based outpainting framework</strong> specifically designed to overcome these limitations. By reconstructing missing off-frame light sources, LightsOut leverages a sophisticated <strong>multitask regression module</strong> and a <strong>LoRA fine-tuned diffusion model</strong> to ensure realistic and physically consistent outpainting results. The framework acts as a universally applicable <strong>plug-and-play preprocessing solution</strong>, consistently boosting the performance of existing SIFR methods across challenging scenarios without requiring additional retraining.</p>
+
+<h2>Critical Evaluation</h2>
+
+<h3>Strengths</h3>
+<p>The LightsOut framework presents a robust and highly effective approach to a persistent problem in image processing. Its core strength lies in the novel integration of a <strong>diffusion-based outpainting method</strong> with a dedicated <strong>multitask regression module</strong> for precise light source parameter prediction. This three-stage pipeline, which includes LoRA fine-tuning on a Stable Diffusion v2 inpainting model, noise reinjection, and RGB alpha composition, ensures high-fidelity reconstruction of light sources and flares. The method's ability to serve as a <strong>plug-and-play solution</strong> is a significant advantage, allowing seamless integration with existing SIFR models without the need for costly retraining. Comprehensive quantitative evaluations on <strong>Flare7K datasets</strong>, utilizing metrics like PSNR, SSIM, and LPIPS, alongside qualitative assessments and ablation studies, rigorously demonstrate its superior performance over state-of-the-art methods in various complex scenarios.</p>
+
+<h3>Considerations and Future Directions</h3>
+<p>While LightsOut offers substantial advancements, certain considerations warrant attention. The computational demands inherent in <strong>diffusion models</strong>, even with LoRA fine-tuning, might present challenges for real-time applications on resource-constrained devices. The accuracy of the initial <strong>light source parameter prediction</strong> by the CNN-based architecture is crucial; any inaccuracies could propagate and affect the final outpainting quality. Future research could explore optimizing the model for faster inference or investigating its robustness against highly unusual or extreme flare patterns not adequately represented in current datasets. Further exploration into the framework's generalizability to other image degradation tasks beyond lens flare could also unlock broader applications.</p>
+
+<h3>Implications</h3>
+<p>The implications of LightsOut are far-reaching, particularly for fields reliant on high-quality visual data. By significantly enhancing <strong>image quality</strong> and the reliability of <strong>lens flare removal</strong>, this framework directly contributes to improving the performance of downstream <strong>computer vision tasks</strong>. Its plug-and-play nature makes it an immediately practical tool for researchers and developers, accelerating the deployment of more robust and accurate vision systems in applications like autonomous vehicles, surveillance, and medical imaging. LightsOut represents a valuable step forward in <strong>image restoration</strong>, offering a powerful solution to a long-standing challenge.</p>
+
+<h2>Conclusion</h2>
+<p>LightsOut stands out as a highly impactful and innovative contribution to the field of <strong>image restoration</strong>. By effectively tackling the complex problem of lens flare caused by incomplete off-frame light sources, it provides a sophisticated yet practical solution. The framework's blend of a <strong>diffusion-based outpainting</strong> approach with precise light source parameter prediction marks a significant advancement. Its proven ability to universally enhance existing SIFR methods underscores its value, making it an essential tool for improving <strong>image quality</strong> and bolstering the reliability of critical <strong>computer vision applications</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Lens flare removal</li><li> Single Image Flare Removal (SIFR)</li><li> Diffusion-based outpainting</li><li> Off-frame light source reconstruction</li><li> Computer vision image degradation</li><li> Object detection enhancement</li><li> Autonomous driving perception</li><li> LightsOut framework</li><li> LoRA fine-tuned diffusion models</li><li> Multitask regression module</li><li> Physically consistent image outpainting</li><li> Plug-and-play preprocessing</li><li> Image quality improvement AI</li><li> Challenging imaging scenarios</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/344/lightsout-diffusion-based-outpainting-for-enhanced-lens-flare-removal" target="_blank" title=" LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal">
+    LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/420_d2fe79a0-cd06-437e-bfc8-4564ff7fdbe1.jpg" class="card-img-top" alt="Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning
+and MLLM Implicit Feedback" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zongjian Li
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/393-Uniworld-V2-Reinforce-Image-Editing-with-Diffusion-Negative-aware-Finetuning-and-MLLM-Implicit-F/index.html"  title="Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning
+and MLLM Implicit Feedback">
+          <h3 class="card-title pb-2" itemprop="headline">Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning
+and MLLM Implicit Feedback</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/393-Uniworld-V2-Reinforce-Image-Editing-with-Diffusion-Negative-aware-Finetuning-and-MLLM-Implicit-F/index.html"
+          title="Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning
+and MLLM Implicit Feedback"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/268_e85c7e66-ad43-4afc-a4e3-a36d3380eb56.jpg" class="card-img-top" alt="VR-Thinker: Boosting Video Reward Models through Thinking-with-Image Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qunzhong Wang
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/255-VR-Thinker-Boosting-Video-Reward-Models-through-Thinking-with-Image-Reasoning/index.html"  title="VR-Thinker: Boosting Video Reward Models through Thinking-with-Image Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">VR-Thinker: Boosting Video Reward Models through Thinking-with-Image Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/255-VR-Thinker-Boosting-Video-Reward-Models-through-Thinking-with-Image-Reasoning/index.html"
+          title="VR-Thinker: Boosting Video Reward Models through Thinking-with-Image Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/367_cf152100-bb03-4b76-817d-e1eaee67dc1c.jpg" class="card-img-top" alt="BLIP3o-NEXT: Next Frontier of Native Image Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiuhai Chen
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/347-BLIP3o-NEXT-Next-Frontier-of-Native-Image-Generation/index.html"  title="BLIP3o-NEXT: Next Frontier of Native Image Generation">
+          <h3 class="card-title pb-2" itemprop="headline">BLIP3o-NEXT: Next Frontier of Native Image Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/347-BLIP3o-NEXT-Next-Frontier-of-Native-Image-Generation/index.html"
+          title="BLIP3o-NEXT: Next Frontier of Native Image Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/419_f06d2eeb-0a28-4777-99c5-bcbe8be84900.jpg" class="card-img-top" alt="Annotation-Efficient Universal Honesty Alignment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shiyu Ni
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/392-Annotation-Efficient-Universal-Honesty-Alignment/index.html"  title="Annotation-Efficient Universal Honesty Alignment">
+          <h3 class="card-title pb-2" itemprop="headline">Annotation-Efficient Universal Honesty Alignment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/392-Annotation-Efficient-Universal-Honesty-Alignment/index.html"
+          title="Annotation-Efficient Universal Honesty Alignment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/416_c28e2a69-7a11-46f4-a8fc-ec58d4fe5dd0.jpg" class="card-img-top" alt="QueST: Incentivizing LLMs to Generate Difficult Problems" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hanxu Hu
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/389-QueST-Incentivizing-LLMs-to-Generate-Difficult-Problems/index.html"  title="QueST: Incentivizing LLMs to Generate Difficult Problems">
+          <h3 class="card-title pb-2" itemprop="headline">QueST: Incentivizing LLMs to Generate Difficult Problems</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/389-QueST-Incentivizing-LLMs-to-Generate-Difficult-Problems/index.html"
+          title="QueST: Incentivizing LLMs to Generate Difficult Problems"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/766_4c3fa034-61a4-4e8a-9f0b-41c2f3ab73de.jpg" class="card-img-top" alt="Exploring Conditions for Diffusion models in Robotic Control" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Heeseong Shin
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/863-Exploring-Conditions-for-Diffusion-models-in-Robotic-Control/index.html"  title="Exploring Conditions for Diffusion models in Robotic Control">
+          <h3 class="card-title pb-2" itemprop="headline">Exploring Conditions for Diffusion models in Robotic Control</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/863-Exploring-Conditions-for-Diffusion-models-in-Robotic-Control/index.html"
+          title="Exploring Conditions for Diffusion models in Robotic Control"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
