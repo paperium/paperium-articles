@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>ALICE-LRI: A General Method for Lossless Range Image Generat</title>
+
+<meta name="keywords" content="lossless LiDAR range image generation,  automatic intrinsic calibration for spinning LiDAR,  sensor‑agnostic LiDAR geometry estimation,  point cloud t">
+
+<meta name="description" content="lossless LiDAR range image generation,  automatic intrinsic calibration for spinning LiDAR,  sensor‑agnostic LiDAR geometry estimation,  point cloud t">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                ALICE-LRI: A General Method for Lossless Range Image Generation for Spinning
+LiDAR Sensors without Calibration Metadata
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Samuel Soutullo, Miguel Yermo, David L. Vilariño, Óscar G. Lorenzo, José C. Cabaleiro, Francisco F. Rivera
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              29 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/647_3e9a3bfb-dc09-4a4c-8f34-d8a8017149e0.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a New Trick Lets Self‑Driving Cars See Every Detail Without Losing Data</h3>
+<p>
+Imagine a camera that could capture every single laser dot from a 3‑D scanner and never drop a single one. <strong>Scientists have created</strong> a clever method called <strong>ALICE‑LRI</strong> that does exactly that for spinning LiDAR sensors. Instead of the usual “flattening” that throws away bits of information, this technique turns the cloud of points into a 2‑D range image like a perfectly stitched panorama—no missing pieces, no guesswork. <br><br>
+Think of it as taking a 3‑D jigsaw puzzle and laying it out on a table without losing any pieces; you can still rebuild the whole picture later, exactly as it was. Because it works without any special factory calibration files, any LiDAR device can be upgraded instantly. The result is sharper maps for autonomous cars, more reliable environmental monitoring, and faster data compression that keeps every detail intact. <br><br>
+With <strong>lossless</strong> imaging, the future of high‑precision navigation becomes clearer, proving that even the most complex tech can be made simple—and complete. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing LiDAR Data Processing: A Lossless Approach to Range Image Generation</h2>
+<p>Processing 3D LiDAR point clouds efficiently often involves projecting them into 2D range images. However, conventional projection methods introduce fundamental <strong>geometric inconsistencies</strong> and irreversible <strong>information loss</strong>, significantly compromising the fidelity required for high-precision applications in autonomous navigation, environmental monitoring, and remote sensing. This paper introduces ALICE-LRI (Automatic LiDAR Intrinsic Calibration Estimation for Lossless Range Images), a groundbreaking, sensor-agnostic method designed to overcome these limitations by achieving truly lossless range image generation from spinning LiDAR point clouds.</p>
+<p>ALICE-LRI operates by automatically <strong>reverse-engineering the intrinsic geometry</strong> of any spinning LiDAR sensor. It infers critical parameters such as laser beam configuration, angular distributions, and per-beam calibration corrections directly from the point cloud data, eliminating the need for manufacturer metadata or calibration files. The algorithm employs an iterative, consensus-based approach, leveraging techniques like the <strong>Hough Transform</strong> for vertical parameter estimation and <strong>Weighted Least Squares</strong> for refinement, ensuring accurate intrinsic parameter recovery. Comprehensive evaluation across the complete KITTI and DurLAR datasets demonstrates ALICE-LRI's ability to achieve <strong>perfect point preservation</strong> and maintain geometric accuracy well within sensor precision limits, all while operating with real-time performance. This innovative approach enables complete point cloud reconstruction with zero point loss, offering substantial benefits for downstream applications, including significant quality improvements in point cloud compression.</p>
+
+<h2>Critical Evaluation of ALICE-LRI</h2>
+<h3>Strengths of ALICE-LRI</h3>
+<p>The most significant strength of ALICE-LRI lies in its ability to achieve <strong>lossless range image generation</strong>, a critical advancement over traditional methods that inherently sacrifice geometric fidelity. This capability is paramount for high-precision applications where even minor data loss can have substantial consequences. Furthermore, its <strong>sensor-agnostic design</strong>, which infers intrinsic parameters directly from point clouds, makes it exceptionally versatile and applicable across a wide array of LiDAR sensors without proprietary metadata. The methodology is robust, employing a sophisticated multi-stage algorithm that includes the Hough Transform, Weighted Least Squares, and conflict resolution, effectively handling real-world sensor non-idealities. Extensive empirical validation on large-scale datasets like KITTI and DurLAR, using rigorous quantitative metrics, provides strong evidence of its accuracy, point preservation, and geometric fidelity. Crucially, ALICE-LRI demonstrates <strong>real-time performance</strong> and offers tangible benefits for downstream tasks, such as enhancing point cloud compression efficiency and quality.</p>
+
+<h3>Considerations and Future Directions</h3>
+<p>While ALICE-LRI represents a significant leap forward, certain considerations and avenues for future research are apparent. The method's optimal accuracy is often achieved with <strong>sufficient point density</strong>, although heuristics are incorporated to manage sparser data. While demonstrating real-time viability and minimal overhead, the iterative and exhaustive search components of the algorithm might still present a computational footprint compared to simpler, albeit lossy, projection techniques. The authors themselves highlight future work focusing on addressing <strong>extrinsic motion effects</strong>, exploring downstream perception impacts, developing sensor-aware upsampling techniques, and further parallelizing the algorithm. These areas suggest ongoing opportunities to enhance the method's robustness and broaden its applicability in dynamic and complex environments.</p>
+
+<h2>Conclusion</h2>
+<p>ALICE-LRI marks a pivotal advancement in LiDAR data processing, fundamentally addressing the long-standing challenge of information loss during range image projection. Its <strong>sensor-agnostic, lossless approach</strong>, rigorously validated through comprehensive testing, establishes a new benchmark for geometric fidelity and efficiency in 3D perception. This work not only significantly enhances current LiDAR applications but also paves the way for future <strong>high-precision remote sensing tasks</strong> that demand complete geometric preservation, representing a crucial step forward for autonomous systems, environmental understanding, and various scientific endeavors.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>lossless LiDAR range image generation</li><li> automatic intrinsic calibration for spinning LiDAR</li><li> sensor‑agnostic LiDAR geometry estimation</li><li> point cloud to 2D range image projection</li><li> laser beam angular distribution correction</li><li> zero point loss LiDAR reconstruction</li><li> KITTI and DurLAR dataset evaluation</li><li> real‑time lossless LiDAR processing</li><li> geometric consistency in LiDAR projections</li><li> compression benefits of lossless range images</li><li> high‑precision remote sensing with LiDAR</li><li> per‑beam calibration correction</li><li> spinning LiDAR intrinsic parameter inference</li><li> complete point cloud preservation</li><li> ALICE‑LRI algorithm</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/750/alice-lri-a-general-method-for-lossless-range-image-generation-for-spinninglidar-sensors-without-cal" target="_blank" title=" ALICE-LRI: A General Method for Lossless Range Image Generation for Spinning
+LiDAR Sensors without Calibration Metadata">
+    ALICE-LRI: A General Method for Lossless Range Image Generation for Spinning
+LiDAR Sensors without Calibration Metadata
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/622_c2453e59-35d1-4825-843d-83b6dde16536.jpg" class="card-img-top" alt="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yifu Luo
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/726-Sample-By-Step-Optimize-By-Chunk-Chunk-Level-GRPO-For-Text-to-Image-Generation/index.html"  title="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/726-Sample-By-Step-Optimize-By-Chunk-Chunk-Level-GRPO-For-Text-to-Image-Generation/index.html"
+          title="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/614_ac12d968-230a-4537-80dc-289337201891.jpg" class="card-img-top" alt="ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aritra Roy
+          </div>
+          <div class="article-meta-text">
+            26 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/718-ComProScanner-A-multi-agent-based-framework-for-composition-property-structured-data-extraction/index.html"  title="ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature">
+          <h3 class="card-title pb-2" itemprop="headline">ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/718-ComProScanner-A-multi-agent-based-framework-for-composition-property-structured-data-extraction/index.html"
+          title="ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/691_f5e52b3d-a22e-4f9a-b872-fa6477a99ef7.jpg" class="card-img-top" alt="Memory-based Language Models: An Efficient, Explainable, and Eco-friendly
+Approach to Large Language Modeling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Antal van den Bosch
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/785-Memory-based-Language-Models-An-Efficient-Explainable-and-Eco-friendly-Approach-to-Large-Languag/index.html"  title="Memory-based Language Models: An Efficient, Explainable, and Eco-friendly
+Approach to Large Language Modeling">
+          <h3 class="card-title pb-2" itemprop="headline">Memory-based Language Models: An Efficient, Explainable, and Eco-friendly
+Approach to Large Language Modeling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/785-Memory-based-Language-Models-An-Efficient-Explainable-and-Eco-friendly-Approach-to-Large-Languag/index.html"
+          title="Memory-based Language Models: An Efficient, Explainable, and Eco-friendly
+Approach to Large Language Modeling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/662_c4565375-b95f-46a1-8cb8-60e20641f2e1.jpg" class="card-img-top" alt="Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Junyoung Seo
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/759-Lookahead-Anchoring-Preserving-Character-Identity-in-Audio-Driven-Human-Animation/index.html"  title="Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation">
+          <h3 class="card-title pb-2" itemprop="headline">Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/759-Lookahead-Anchoring-Preserving-Character-Identity-in-Audio-Driven-Human-Animation/index.html"
+          title="Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/625_2b6be9af-bcf7-4947-8b55-585498220bc6.jpg" class="card-img-top" alt="RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bowen Wang
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/731-RECALL-REpresentation-aligned-Catastrophic-forgetting-ALLeviation-via-Hierarchical-Model-Merging/index.html"  title="RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging">
+          <h3 class="card-title pb-2" itemprop="headline">RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/731-RECALL-REpresentation-aligned-Catastrophic-forgetting-ALLeviation-via-Hierarchical-Model-Merging/index.html"
+          title="RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/636_aeb4db54-a2b2-4f8b-bfeb-cb8dc9a54456.jpg" class="card-img-top" alt="AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jonathan Bragg
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/742-AstaBench-Rigorous-Benchmarking-of-AI-Agents-with-a-Scientific-Research-Suite/index.html"  title="AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite">
+          <h3 class="card-title pb-2" itemprop="headline">AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/742-AstaBench-Rigorous-Benchmarking-of-AI-Agents-with-a-Scientific-Research-Suite/index.html"
+          title="AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
