@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Video-Thinker: Sparking "Thinking with Videos" via Reinforce</title>
+
+<meta name="keywords" content="Video-Thinker multimodal LLM,  video chain-of-thought reasoning,  autonomous grounding and captioning for video,  Video-Thinker-10K dataset,  supervis">
+
+<meta name="description" content="Video-Thinker multimodal LLM,  video chain-of-thought reasoning,  autonomous grounding and captioning for video,  Video-Thinker-10K dataset,  supervis">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Shijian Wang, Jiarui Jin, Xingjian Wang, Linxin Song, Runhao Fu, Hecheng Wang, Zongyuan Ge, Yuan Lu, Xuelian Cheng
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              31 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/733_f3ee8792-6e27-4e76-a43b-462985d242b1.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Video-Thinker: How AI Learned to Reason with Moving Pictures</h3>
+<p>
+Ever wondered if a computer could <em>watch</em> a video the way we do and then solve a puzzle? <strong>Scientists have created</strong> a new AI called Video‑Thinker that does exactly that. Instead of just looking at single pictures, this system watches short clips, asks itself questions, and builds a chain of clues—much like a detective piecing together clues from a movie scene. By training the AI to “talk to itself” while it watches, it learns to describe what it sees and link those descriptions to answers, all without needing extra tools. The result? Video‑Thinker can crack tricky video quizzes that even stump older models, beating them by a wide margin. Imagine a future where your phone could instantly explain a sports replay or help you understand a complex tutorial video in seconds. <strong>This breakthrough</strong> shows that AI can move from static snapshots to dynamic storytelling, bringing us closer to machines that truly <em>think</em> with videos. <strong>Stay tuned</strong>—the next generation of smart assistants may already be watching your favorite clips.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: Advancing Video Reasoning with Video-Thinker MLLMs</h2>
+<p>This paper introduces <strong>Video-Thinker</strong>, a novel framework designed to empower Multimodal Large Language Models (MLLMs) with advanced video reasoning capabilities. Building upon the success of "Thinking with Images," Video-Thinker enables MLLMs to autonomously leverage their intrinsic "grounding" and "captioning" functionalities to generate crucial reasoning clues throughout the inference process. The methodology involves a two-stage training strategy: initial <strong>Supervised Fine-Tuning (SFT)</strong> to establish the reasoning format, followed by <strong>Group Relative Policy Optimization (GRPO)</strong> to significantly strengthen these capabilities. This approach is supported by <strong>Video-Thinker-10K</strong>, a meticulously curated dataset featuring autonomous tool usage within chain-of-thought reasoning sequences. Extensive experiments demonstrate that Video-Thinker achieves state-of-the-art performance on both in-domain and challenging out-of-domain video reasoning benchmarks, establishing a new benchmark for 7B-sized MLLMs.</p>
+
+<h2>Critical Evaluation: A Deep Dive into Video-Thinker's Performance</h2>
+<h3>Strengths: Pioneering Autonomous Video Reasoning</h3>
+<p>Video-Thinker presents a significant leap in <strong>multimodal AI</strong> by extending dynamic reasoning paradigms to video tasks, a domain previously lacking such intrinsic capabilities. A key strength lies in its ability to autonomously integrate <strong>grounding and captioning</strong> within Chain-of-Thought (CoT) processes, eliminating the need for external tools and simplifying MLLM architecture. The framework's robust two-stage training, combining SFT and GRPO, is highly effective, with GRPO notably enhancing <strong>out-of-domain generalization</strong>. Furthermore, the novel <strong>Video-Thinker-10K dataset</strong>, constructed with AI models for structured reasoning trace generation and a unique hindsight curation process, provides a rich foundation for training. The model consistently achieves <strong>state-of-the-art performance</strong> across diverse benchmarks, demonstrating superior video reasoning, grounding, and captioning metrics, alongside self-corrective behavior and data efficiency.</p>
+
+<h3>Weaknesses: Exploring Potential Limitations</h3>
+<p>While Video-Thinker demonstrates impressive capabilities, certain aspects warrant consideration. The reliance on AI models for generating structured reasoning traces in the <strong>Video-Thinker-10K dataset</strong> could introduce biases or limitations inherent to the generating models, potentially impacting the framework's robustness in highly novel or adversarial scenarios. Additionally, the two-stage training process, involving both Supervised Fine-Tuning and Group Relative Policy Optimization, particularly with reinforcement learning, can be <strong>computationally intensive</strong>. This might pose a barrier for researchers with limited computational resources, affecting the broader accessibility and reproducibility of the methodology. Further investigation into the interpretability of the model's internal "aha moments" could also provide deeper insights into its reasoning processes.</p>
+
+<h3>Implications: Shaping the Future of Multimodal AI</h3>
+<p>The introduction of Video-Thinker carries profound implications for the future of <strong>Multimodal Large Language Models</strong> and video understanding. By enabling MLLMs to autonomously "think with videos" through intrinsic grounding and captioning, the framework significantly reduces dependency on external tools, streamlining development and deployment. This advancement paves the way for more sophisticated and versatile AI systems capable of handling complex video analysis tasks, from surveillance and content moderation to autonomous navigation. Video-Thinker's strong performance and novel methodology also establish new benchmarks and inspire further research into <strong>video reasoning</strong>, dataset curation, and advanced training strategies, ultimately accelerating progress in the field of artificial intelligence.</p>
+
+<h2>Conclusion: Video-Thinker's Impact on MLLM Capabilities</h2>
+<p>Video-Thinker represents a substantial advancement in empowering Multimodal Large Language Models with sophisticated <strong>video reasoning</strong> abilities. Its innovative approach, combining intrinsic grounding and captioning with a robust two-stage training methodology and a meticulously curated dataset, sets a new standard for performance among 7B-sized MLLMs. The framework's demonstrated superiority across various benchmarks and its enhanced out-of-domain generalization underscore its significant value. Video-Thinker not only pushes the boundaries of what MLLMs can achieve in video understanding but also lays a crucial foundation for developing more autonomous and capable <strong>multimodal AI systems</strong> in the future.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Video-Thinker multimodal LLM</li><li> video chain-of-thought reasoning</li><li> autonomous grounding and captioning for video</li><li> Video-Thinker-10K dataset</li><li> supervised fine-tuning for video reasoning</li><li> group relative policy optimization (GRPO)</li><li> out-of-domain video reasoning benchmarks</li><li> Video-Holmes evaluation</li><li> CG-Bench-Reasoning benchmark</li><li> VRBench video reasoning</li><li> 7B-sized multimodal LLM performance</li><li> tool-free video reasoning</li><li> thinking with images to video extension</li><li> video reasoning with intrinsic tool usage</li><li> state-of-the-art video MLLM baselines</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/834/video-thinker-sparking-thinking-with-videos-via-reinforcement-learning" target="_blank" title=" Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning">
+    Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/723_3a7e5dbd-46e5-47b7-8600-3cd58364295a.jpg" class="card-img-top" alt="ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Baixuan Li
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/808-ParallelMuse-Agentic-Parallel-Thinking-for-Deep-Information-Seeking/index.html"  title="ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking">
+          <h3 class="card-title pb-2" itemprop="headline">ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/808-ParallelMuse-Agentic-Parallel-Thinking-for-Deep-Information-Seeking/index.html"
+          title="ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/782_17ccf176-8e54-403d-ae67-e9b4ed7f2734.jpg" class="card-img-top" alt="EHR-R1: A Reasoning-Enhanced Foundational Language Model for Electronic Health
+Record Analysis" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yusheng Liao
+          </div>
+          <div class="article-meta-text">
+            02 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/926-EHR-R1-A-Reasoning-Enhanced-Foundational-Language-Model-for-Electronic-Health-Record-Analysis/index.html"  title="EHR-R1: A Reasoning-Enhanced Foundational Language Model for Electronic Health
+Record Analysis">
+          <h3 class="card-title pb-2" itemprop="headline">EHR-R1: A Reasoning-Enhanced Foundational Language Model for Electronic Health
+Record Analysis</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/926-EHR-R1-A-Reasoning-Enhanced-Foundational-Language-Model-for-Electronic-Health-Record-Analysis/index.html"
+          title="EHR-R1: A Reasoning-Enhanced Foundational Language Model for Electronic Health
+Record Analysis"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/739_38ddcd62-37d0-47e0-aec6-6f98323390bf.jpg" class="card-img-top" alt="Reasoning-Aware GRPO using Process Mining" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Taekhyun Park
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/839-Reasoning-Aware-GRPO-using-Process-Mining/index.html"  title="Reasoning-Aware GRPO using Process Mining">
+          <h3 class="card-title pb-2" itemprop="headline">Reasoning-Aware GRPO using Process Mining</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/839-Reasoning-Aware-GRPO-using-Process-Mining/index.html"
+          title="Reasoning-Aware GRPO using Process Mining"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/624_21dca981-b593-4a49-8131-3e97f41b8d61.jpg" class="card-img-top" alt="A Definition of AGI" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Dan Hendrycks
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/727-A-Definition-of-AGI/index.html"  title="A Definition of AGI">
+          <h3 class="card-title pb-2" itemprop="headline">A Definition of AGI</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/727-A-Definition-of-AGI/index.html"
+          title="A Definition of AGI"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/699_2137e348-bd2e-409c-ab7c-9c13031c37cc.jpg" class="card-img-top" alt="RoboOmni: Proactive Robot Manipulation in Omni-modal Context" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Siyin Wang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"  title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context">
+          <h3 class="card-title pb-2" itemprop="headline">RoboOmni: Proactive Robot Manipulation in Omni-modal Context</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"
+          title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/811_c6f8f6e7-5188-4955-8843-80500f1a8aa0.jpg" class="card-img-top" alt="CLASS-IT: Conversational and Lecture-Aligned Small-Scale Instruction Tuning for
+BabyLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Luca Capone
+          </div>
+          <div class="article-meta-text">
+            02 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/902-CLASS-IT-Conversational-and-Lecture-Aligned-Small-Scale-Instruction-Tuning-for-BabyLMs/index.html"  title="CLASS-IT: Conversational and Lecture-Aligned Small-Scale Instruction Tuning for
+BabyLMs">
+          <h3 class="card-title pb-2" itemprop="headline">CLASS-IT: Conversational and Lecture-Aligned Small-Scale Instruction Tuning for
+BabyLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/902-CLASS-IT-Conversational-and-Lecture-Aligned-Small-Scale-Instruction-Tuning-for-BabyLMs/index.html"
+          title="CLASS-IT: Conversational and Lecture-Aligned Small-Scale Instruction Tuning for
+BabyLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
