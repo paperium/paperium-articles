@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Annotation-Efficient Universal Honesty Alignment</title>
+
+<meta name="keywords" content="Honesty alignment LLMs,  Calibrated confidence LLMs,  Elicitation-Then-Calibration (EliCal),  Annotation-efficient LLM training,  Self-consistency sup">
+
+<meta name="description" content="Honesty alignment LLMs,  Calibrated confidence LLMs,  Elicitation-Then-Calibration (EliCal),  Annotation-efficient LLM training,  Self-consistency sup">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Annotation-Efficient Universal Honesty Alignment
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Shiyu Ni, Keping Bi, Jiafeng Guo, Minghao Tang, Jingtong Wu, Zengxin Han, Xueqi Cheng
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              22 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/419_f06d2eeb-0a28-4777-99c5-bcbe8be84900.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learns to Be Honest with Just a Few Corrections</h3>
+<p>
+Ever wondered why some chatbots sound confident even when they’re guessing? <strong>Scientists have discovered</strong> a clever way to teach these AI assistants to know when they truly know something and when they should say “I’m not sure.” The new method, called EliCal, works in two simple steps: first, the AI checks its own answers for consistency, like double‑checking a math problem, and then it receives a tiny handful of real‑world corrections—only about a thousand, instead of millions. This tiny “teacher’s note” is enough to fine‑tune the AI’s confidence, making it more trustworthy without the huge cost of massive labeling. Think of it like a student who practices with self‑quizzes and then gets a quick review from a teacher; the student quickly learns when to be sure and when to stay humble. <strong>This breakthrough</strong> means future virtual assistants could give you honest answers while learning faster and cheaper. <strong>Imagine a world</strong> where every AI you talk to knows its limits, helping us make smarter, safer decisions every day. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Honesty Alignment in Large Language Models with EliCal</h2>
+
+<p>This scientific preprint introduces a novel approach to enhance <strong>honesty alignment</strong> in Large Language Models (LLMs), crucial for trustworthy deployment. The core challenge involves enabling LLMs to recognize knowledge boundaries and express calibrated confidence efficiently, without extensive, costly labeling. The authors propose <strong>Elicitation-Then-Calibration (EliCal)</strong>, a two-stage framework for annotation-efficient training. EliCal first elicits internal confidence using inexpensive self-consistency supervision, then refines this confidence with a small set of correctness annotations. To support rigorous evaluation, the study releases <strong>HonestyBench</strong>, a comprehensive benchmark covering diverse free-form QA datasets. Experiments show EliCal achieves near-optimal alignment with remarkably few correctness annotations, outperforming calibration-only methods and generalizing well to unseen tasks.</p>
+
+<h2>Critical Evaluation</h2>
+
+<h3>Strengths</h3>
+<p>The article's primary strength lies in its innovative solution for <strong>universal honesty alignment</strong> in LLMs with high annotation efficiency. The proposed <strong>EliCal framework</strong> effectively addresses the prohibitive cost of large-scale labeling by decoupling confidence elicitation from calibration. This two-stage approach, leveraging inexpensive self-consistency signals, significantly reduces the need for extensive correctness annotations, achieving near-optimal performance with only 1k labels. The introduction of <strong>HonestyBench</strong> is also a substantial contribution, providing a robust, large-scale benchmark for evaluating honesty across diverse in-domain and out-of-domain QA tasks. EliCal's superior generalization capabilities and improved confidence expression are convincingly demonstrated, with a commitment to open-sourcing models and data for reproducibility.</p>
+
+<h3>Weaknesses</h3>
+<p>While highly effective, the study's focus on free-form QA datasets, though comprehensive, might limit direct generalizability to other complex LLM applications beyond question answering. Although EliCal significantly reduces annotation requirements, the necessity for even a small set of <strong>correctness annotations</strong> still implies a dependency on human supervision, which could be a bottleneck in extremely low-resource domains. Furthermore, while the framework offers a scalable solution towards universal honesty alignment, the inherent complexities of defining and measuring "honesty" across all possible contexts remain a nuanced challenge, suggesting that true <strong>universal alignment</strong> is an ongoing pursuit.</p>
+
+<h2>Conclusion</h2>
+<p>This research makes a significant contribution to Large Language Model development by offering a practical and highly efficient solution for <strong>honesty alignment</strong>. The EliCal framework, coupled with the HonestyBench benchmark, represents a substantial step forward in making LLMs more trustworthy and reliable for real-world applications. By demonstrating near-optimal alignment with minimal supervision, the study provides a scalable pathway toward more universally honest LLMs. This work advances our understanding of LLM confidence calibration and sets a new standard for annotation efficiency, paving the way for future research into more robust and ethically sound AI systems. Its findings are poised to significantly impact the deployment and responsible development of next-generation language models.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Honesty alignment LLMs</li><li> Calibrated confidence LLMs</li><li> Elicitation-Then-Calibration (EliCal)</li><li> Annotation-efficient LLM training</li><li> Self-consistency supervision</li><li> LLM confidence calibration</li><li> Knowledge boundaries in LLMs</li><li> HonestyBench</li><li> Trustworthy AI deployment</li><li> Free-form QA datasets</li><li> Large language model evaluation</li><li> MMLU tasks</li><li> Scalable LLM alignment</li><li> Training-free confidence estimation</li><li> Correctness annotations LLMs</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/392/annotation-efficient-universal-honesty-alignment" target="_blank" title=" Annotation-Efficient Universal Honesty Alignment">
+    Annotation-Efficient Universal Honesty Alignment
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/539_c5bb5e63-a5dd-498d-8af9-c74b52996d0c.jpg" class="card-img-top" alt="What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Lennart Wachowiak
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/648-What-Questions-Should-Robots-Be-Able-to-Answer-A-Dataset-of-User-Questions-for-Explainable-Robot/index.html"  title="What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics">
+          <h3 class="card-title pb-2" itemprop="headline">What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/648-What-Questions-Should-Robots-Be-Able-to-Answer-A-Dataset-of-User-Questions-for-Explainable-Robot/index.html"
+          title="What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/493_8a5d7a56-8f03-40bc-94a4-53049ccc052e.jpg" class="card-img-top" alt="Unimedvl: Unifying Medical Multimodal Understanding And Generation Through
+Observation-Knowledge-Analysis" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Junzhi Ning
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/497-Unimedvl-Unifying-Medical-Multimodal-Understanding-And-Generation-Through-Observation-Knowledge/index.html"  title="Unimedvl: Unifying Medical Multimodal Understanding And Generation Through
+Observation-Knowledge-Analysis">
+          <h3 class="card-title pb-2" itemprop="headline">Unimedvl: Unifying Medical Multimodal Understanding And Generation Through
+Observation-Knowledge-Analysis</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/497-Unimedvl-Unifying-Medical-Multimodal-Understanding-And-Generation-Through-Observation-Knowledge/index.html"
+          title="Unimedvl: Unifying Medical Multimodal Understanding And Generation Through
+Observation-Knowledge-Analysis"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/364_ded26fcd-3ce3-454c-bbee-9b7e31302bc0.jpg" class="card-img-top" alt="LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shr-Ruei Tsai
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/344-LightsOut-Diffusion-based-Outpainting-for-Enhanced-Lens-Flare-Removal/index.html"  title="LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal">
+          <h3 class="card-title pb-2" itemprop="headline">LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/344-LightsOut-Diffusion-based-Outpainting-for-Enhanced-Lens-Flare-Removal/index.html"
+          title="LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/522_3cab27df-3cdb-4e3d-b729-bbe6fc018cc2.jpg" class="card-img-top" alt="FinSight: Towards Real-World Financial Deep Research" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiajie Jin
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/632-FinSight-Towards-Real-World-Financial-Deep-Research/index.html"  title="FinSight: Towards Real-World Financial Deep Research">
+          <h3 class="card-title pb-2" itemprop="headline">FinSight: Towards Real-World Financial Deep Research</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/632-FinSight-Towards-Real-World-Financial-Deep-Research/index.html"
+          title="FinSight: Towards Real-World Financial Deep Research"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/363_8009a410-23af-4900-bfa1-e502f437f03e.jpg" class="card-img-top" alt="Latent Diffusion Model without Variational Autoencoder" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Minglei Shi
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/343-Latent-Diffusion-Model-without-Variational-Autoencoder/index.html"  title="Latent Diffusion Model without Variational Autoencoder">
+          <h3 class="card-title pb-2" itemprop="headline">Latent Diffusion Model without Variational Autoencoder</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/343-Latent-Diffusion-Model-without-Variational-Autoencoder/index.html"
+          title="Latent Diffusion Model without Variational Autoencoder"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/484_7eb54011-0535-465c-ac39-b62cabc86d0b.jpg" class="card-img-top" alt="Efficient Long-context Language Model Training by Core Attention Disaggregation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yonghao Zhuang
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/489-Efficient-Long-context-Language-Model-Training-by-Core-Attention-Disaggregation/index.html"  title="Efficient Long-context Language Model Training by Core Attention Disaggregation">
+          <h3 class="card-title pb-2" itemprop="headline">Efficient Long-context Language Model Training by Core Attention Disaggregation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/489-Efficient-Long-context-Language-Model-Training-by-Core-Attention-Disaggregation/index.html"
+          title="Efficient Long-context Language Model Training by Core Attention Disaggregation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
