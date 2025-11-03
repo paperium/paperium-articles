@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>InteractiveOmni: A Unified Omni-modal Model for Audio-Visual</title>
+
+<meta name="keywords" content="InteractiveOmni,  omni-modal large language model,  audio-visual interaction,  multi-turn conversational ability,  lightweight models,  speech generat">
+
+<meta name="description" content="InteractiveOmni,  omni-modal large language model,  audio-visual interaction,  multi-turn conversational ability,  lightweight models,  speech generat">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Wenwen Tong, Hewei Guo, Dongchuan Ran, Jiangnan Chen, Jiefan Lu, Kaibin Wang, Keqiang Li, Xiaoxu Zhu, Jiakui Li, Kehan Li, Xueheng Li, Lumin Li, Chenxu Guo, Jiasheng Zhou, Jiandong Chen, Xianye Wu, Jiahao Wang, Silei Wu, Lei Chen, Hanming Deng, Yuxuan Song, Dinghao Zhou, Guiping Zhong, Ken Zheng, Shiyin Kang, Lewei Lu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              16 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/234_d38e195d-f742-4a8f-b77f-c53917bed265.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Meet InteractiveOmni: The AI That Can See, Hear, and Talk Like a Human</h3>
+<p>
+Ever imagined a chatbot that can watch a video, listen to a song, and reply with its own voice? <strong>Scientists have built</strong> exactly that with InteractiveOmni, an open‑source AI that blends sight, sound, and speech into one friendly brain. Think of it as a digital companion that can watch a cooking show, hear the sizzling, and then guide you step‑by‑step, all in real time. The secret? A clever training recipe that teaches the model to understand pictures, audio clips, and video frames together, then generate natural‑sounding replies. <strong>This breakthrough</strong> means the tiny 4‑billion‑parameter version can perform like much larger rivals, keeping memory of earlier conversation turns and sounding almost human. Imagine video‑calls where the AI remembers what you discussed minutes ago, or virtual assistants that can comment on the music you’re playing while answering questions. <strong>InteractiveOmni opens the door</strong> to smarter, more intuitive gadgets that feel less like tools and more like true conversation partners. The future of talking tech just got a lot more exciting.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents <strong>InteractiveOmni</strong>, an innovative open-source omni-modal large language model designed for enhanced audio-visual multi-turn interactions. With parameter sizes ranging from 4B to 8B, this model integrates various encoders and employs a multi-stage training strategy to bolster its cross-modal capabilities. The findings indicate that InteractiveOmni significantly outperforms existing models in multi-turn dialogues and long-term memory retention, marking a substantial advancement in the field of human-computer interaction. The model's architecture and training methodologies are meticulously crafted to facilitate robust understanding and generation tasks across diverse modalities.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of InteractiveOmni is its comprehensive architecture, which integrates audio, visual, and textual inputs through a sophisticated encoder system. This design allows for enhanced <strong>multi-turn dialogue</strong> capabilities, making it particularly effective in maintaining context over extended interactions. The model's performance is validated through rigorous benchmarking against established metrics, such as the Multi-modal Multi-turn Memory Benchmark (MMMB) and the Multi-turn Speech Interaction Benchmark (MSIB), showcasing its superior capabilities in memory utilization and speech quality.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its advancements, there are potential weaknesses to consider. The reliance on extensive datasets for training may limit the model's applicability in scenarios with less available data. Additionally, while the model demonstrates impressive performance, its complexity could pose challenges in real-world deployment, particularly in resource-constrained environments. The scalability of the model, especially in terms of computational requirements, may also hinder its accessibility for broader applications.</p>
+
+<h3>Implications</h3>
+<p>The implications of InteractiveOmni's development are significant for the future of <strong>intelligent interactive systems</strong>. By providing a robust foundation for multi-modal understanding, this model paves the way for advancements in various applications, including virtual assistants, customer service bots, and educational tools. Its ability to engage in human-like conversations enhances user experience and opens new avenues for research in <strong>human-computer interaction</strong>.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, InteractiveOmni represents a notable leap forward in the realm of omni-modal large language models. Its innovative architecture and training methodologies not only enhance performance in multi-turn interactions but also set a new standard for future developments in the field. As the model continues to evolve, it holds the potential to significantly impact how we interact with technology, making it a valuable asset for researchers and developers alike.</p>
+
+<h2>Readability</h2>
+<p>The article is structured to facilitate easy comprehension, with clear and concise language that enhances user engagement. By breaking down complex concepts into digestible sections, it ensures that readers can quickly grasp the key findings and implications of the research. This approach not only improves readability but also encourages further exploration of the topic, fostering a deeper understanding of the advancements in omni-modal language models.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>InteractiveOmni</li><li> omni-modal large language model</li><li> audio-visual interaction</li><li> multi-turn conversational ability</li><li> lightweight models</li><li> speech generation capabilities</li><li> vision encoder integration</li><li> audio encoder integration</li><li> multi-stage training strategy</li><li> cross-modal capabilities</li><li> multi-turn memory benchmark</li><li> speech interaction benchmark</li><li> long-term memory capabilities</li><li> open-source AI models</li><li> intelligent interactive systems</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/222/interactiveomni-a-unified-omni-modal-model-for-audio-visual-multi-turn-dialogue" target="_blank" title=" InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue">
+    InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/326_f27f9380-126e-499a-be81-f8c3d2997cb1.jpg" class="card-img-top" alt="FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qiran Zou
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/310-FML-bench-A-Benchmark-for-Automatic-ML-Research-Agents-Highlighting-the-Importance-of-Exploratio/index.html"  title="FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth">
+          <h3 class="card-title pb-2" itemprop="headline">FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/310-FML-bench-A-Benchmark-for-Automatic-ML-Research-Agents-Highlighting-the-Importance-of-Exploratio/index.html"
+          title="FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/39_b97c9dd9-29df-487d-8a74-1ea9e7ab0747.jpg" class="card-img-top" alt="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Leitian Tao
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/30-Hybrid-Reinforcement-When-Reward-Is-Sparse-Its-Better-to-Be-Dense/index.html"  title="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense">
+          <h3 class="card-title pb-2" itemprop="headline">Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/30-Hybrid-Reinforcement-When-Reward-Is-Sparse-Its-Better-to-Be-Dense/index.html"
+          title="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/251_3429cf80-50c6-4796-84d2-88bf8d3cb04c.jpg" class="card-img-top" alt="MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Taicheng Guo
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/239-MTSQL-R1-Towards-Long-Horizon-Multi-Turn-Text-to-SQL-via-Agentic-Training/index.html"  title="MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training">
+          <h3 class="card-title pb-2" itemprop="headline">MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/239-MTSQL-R1-Towards-Long-Horizon-Multi-Turn-Text-to-SQL-via-Agentic-Training/index.html"
+          title="MTSQL-R1: Towards Long-Horizon Multi-Turn Text-to-SQL via Agentic Training"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/236_62c749d0-98c2-4275-8a26-9d396449f77f.jpg" class="card-img-top" alt="Bee: A High-Quality Corpus and Full-Stack Suite to Unlock Advanced Fully Open
+MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yi Zhang
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/224-Bee-A-High-Quality-Corpus-and-Full-Stack-Suite-to-Unlock-Advanced-Fully-Open-MLLMs/index.html"  title="Bee: A High-Quality Corpus and Full-Stack Suite to Unlock Advanced Fully Open
+MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Bee: A High-Quality Corpus and Full-Stack Suite to Unlock Advanced Fully Open
+MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/224-Bee-A-High-Quality-Corpus-and-Full-Stack-Suite-to-Unlock-Advanced-Fully-Open-MLLMs/index.html"
+          title="Bee: A High-Quality Corpus and Full-Stack Suite to Unlock Advanced Fully Open
+MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/109_576ae172-53ce-4918-af03-d418ddd97eb5.jpg" class="card-img-top" alt="One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Lorenzo Bianchi
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/105-One-Patch-to-Caption-Them-All-A-Unified-Zero-Shot-Captioning-Framework/index.html"  title="One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework">
+          <h3 class="card-title pb-2" itemprop="headline">One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/105-One-Patch-to-Caption-Them-All-A-Unified-Zero-Shot-Captioning-Framework/index.html"
+          title="One Patch to Caption Them All: A Unified Zero-Shot Captioning Framework"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/246_f86dfd37-9da4-48fe-a232-47cace4813d1.jpg" class="card-img-top" alt="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhenyu Liu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"  title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE">
+          <h3 class="card-title pb-2" itemprop="headline">UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"
+          title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
