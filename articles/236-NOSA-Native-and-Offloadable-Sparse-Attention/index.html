@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>NOSA: Native and Offloadable Sparse Attention</title>
+
+<meta name="keywords" content="trainable sparse attention,  long-context processing,  KV cache offloading,  decoding efficiency,  memory access optimization,  large-scale batched in">
+
+<meta name="description" content="trainable sparse attention,  long-context processing,  KV cache offloading,  decoding efficiency,  memory access optimization,  large-scale batched in">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                NOSA: Native and Offloadable Sparse Attention
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yuxiang Huang, Chaojun Xiao, Xu Han, Zhiyuan Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              16 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/248_c68b3ae9-4351-466c-851e-73923d9982e7.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a New Trick Makes AI Chatbots Faster and Smarter</h3>
+<p>
+Ever wondered why your favorite AI sometimes feels a bit sluggish when the conversation gets long? <strong>Scientists have discovered</strong> a clever shortcut called NOSA that lets huge language models think faster without losing their brilliance. Imagine a busy kitchen where the chef keeps all the ingredients on the counter—NOSA moves the rarely‑used spices to a pantry, freeing up space for the main dishes. By cleverly deciding which pieces of memory are truly needed at each step, the system can shift the rest to the computer’s slower but larger storage, cutting down the back‑and‑forth traffic that usually slows things down. The result? A boost of up to <strong>2.3 times</strong> in how quickly the AI can reply, while keeping the answers just as accurate. This breakthrough means smoother chats, more responsive virtual assistants, and the possibility of running powerful AI on everyday devices. <strong>It’s a small change with a big impact</strong>—showing that smarter data handling can make our digital helpers feel more human every day.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>This article presents NOSA (Native and Offloadable Sparse Attention), a novel framework designed to tackle the Key-Value (KV) cache bottleneck in Large Language Models (LLMs). The primary goal is to enhance decoding efficiency while maintaining task performance. By leveraging inherent locality in token selection, NOSA introduces explicit locality constraints that facilitate efficient KV cache offloading. Extensive benchmarks demonstrate that NOSA achieves a remarkable 2.3x improvement in decoding throughput compared to existing trainable sparse attention methods, such as InfLLM-V2, while preserving near-lossless performance.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The introduction of NOSA is a significant advancement in the field of LLMs, particularly in addressing the limitations of existing sparse attention mechanisms. By enforcing locality constraints through a combination of query-aware and query-agnostic token selection, NOSA effectively reduces KV transfers, which are a major source of latency. The implementation of the Exp-Delayed DMA (ED-DMA) optimization further enhances performance stability, making NOSA a robust solution for high-throughput applications.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article does not fully address potential limitations related to the scalability of NOSA in extremely large models or diverse application contexts. While the benchmarks indicate impressive performance improvements, further exploration into the trade-offs associated with different eviction head implementations could provide a more comprehensive understanding of NOSA's capabilities. Additionally, the reliance on PCIe communication for KV transfers may still pose challenges in environments with varying hardware configurations.</p>
+
+<h3>Implications</h3>
+<p>The implications of NOSA extend beyond mere performance enhancements; it sets a precedent for future research in optimizing LLM architectures. By demonstrating that efficient KV cache offloading is achievable without compromising attention computation, NOSA opens avenues for further innovations in model design and inference strategies. This could lead to broader applications of LLMs in real-time systems where decoding speed is critical.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article presents a compelling case for NOSA as a transformative approach to improving decoding efficiency in LLMs. With its innovative use of locality constraints and effective KV cache offloading, NOSA not only enhances throughput but also maintains high task performance. As the demand for more efficient LLMs continues to grow, NOSA's contributions could significantly influence future developments in the field.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and accessible, making complex concepts understandable for a professional audience. The clear presentation of NOSA's mechanisms and benefits enhances engagement, encouraging readers to explore its implications further. By focusing on concise language and logical flow, the article effectively communicates its findings, ensuring that key points are easily digestible.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>trainable sparse attention</li><li> long-context processing</li><li> KV cache offloading</li><li> decoding efficiency</li><li> memory access optimization</li><li> large-scale batched inference</li><li> token selection locality</li><li> query-aware token selection</li><li> query-agnostic components</li><li> NOSA framework</li><li> decoding throughput improvement</li><li> near-lossless performance</li><li> 1B-parameter model</li><li> InfLLM-V2 baseline</li><li> attention computation preservation</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/236/nosa-native-and-offloadable-sparse-attention" target="_blank" title=" NOSA: Native and Offloadable Sparse Attention">
+    NOSA: Native and Offloadable Sparse Attention
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/158_1a54046f-8bcb-46a1-8240-0dea8f35496f.jpg" class="card-img-top" alt="Making Mathematical Reasoning Adaptive" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhejian Lai
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/147-Making-Mathematical-Reasoning-Adaptive/index.html"  title="Making Mathematical Reasoning Adaptive">
+          <h3 class="card-title pb-2" itemprop="headline">Making Mathematical Reasoning Adaptive</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/147-Making-Mathematical-Reasoning-Adaptive/index.html"
+          title="Making Mathematical Reasoning Adaptive"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/280_fd278fe1-dd83-49c4-86ad-3dc78e7f2f97.jpg" class="card-img-top" alt="RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aashiq Muhamed
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/267-RefusalBench-Generative-Evaluation-of-Selective-Refusal-in-Grounded-Language-Models/index.html"  title="RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models">
+          <h3 class="card-title pb-2" itemprop="headline">RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/267-RefusalBench-Generative-Evaluation-of-Selective-Refusal-in-Grounded-Language-Models/index.html"
+          title="RefusalBench: Generative Evaluation of Selective Refusal in Grounded Language
+Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/253_4dda5bde-63d0-4172-a3f2-c2bb8beea476.jpg" class="card-img-top" alt="GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Heng Zhang
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/241-GraphTracer-Graph-Guided-Failure-Tracing-in-LLM-Agents-for-Robust-Multi-Turn-Deep-Search/index.html"  title="GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search">
+          <h3 class="card-title pb-2" itemprop="headline">GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/241-GraphTracer-Graph-Guided-Failure-Tracing-in-LLM-Agents-for-Robust-Multi-Turn-Deep-Search/index.html"
+          title="GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/368_5fdf687a-6395-4b65-9409-15390877e963.jpg" class="card-img-top" alt="Language Models Model Language" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Łukasz Borchmann
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"  title="Language Models Model Language">
+          <h3 class="card-title pb-2" itemprop="headline">Language Models Model Language</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"
+          title="Language Models Model Language"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/248_c68b3ae9-4351-466c-851e-73923d9982e7.jpg" class="card-img-top" alt="NOSA: Native and Offloadable Sparse Attention" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuxiang Huang
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/236-NOSA-Native-and-Offloadable-Sparse-Attention/index.html"  title="NOSA: Native and Offloadable Sparse Attention">
+          <h3 class="card-title pb-2" itemprop="headline">NOSA: Native and Offloadable Sparse Attention</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/236-NOSA-Native-and-Offloadable-Sparse-Attention/index.html"
+          title="NOSA: Native and Offloadable Sparse Attention"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/159_7e7d1a98-78d5-414f-866d-39b2c3090344.jpg" class="card-img-top" alt="Demystifying Reinforcement Learning in Agentic Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhaochen Yu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/148-Demystifying-Reinforcement-Learning-in-Agentic-Reasoning/index.html"  title="Demystifying Reinforcement Learning in Agentic Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">Demystifying Reinforcement Learning in Agentic Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/148-Demystifying-Reinforcement-Learning-in-Agentic-Reasoning/index.html"
+          title="Demystifying Reinforcement Learning in Agentic Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
