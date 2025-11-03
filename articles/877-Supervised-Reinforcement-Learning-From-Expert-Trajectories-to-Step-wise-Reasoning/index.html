@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Supervised Reinforcement Learning: From Expert Trajectories </title>
+
+<meta name="keywords" content="Supervised Reinforcement Learning for LLMs,  reinforcement learning with verifiable rewards (RLVR),  multi-step reasoning in small open-source languag">
+
+<meta name="description" content="Supervised Reinforcement Learning for LLMs,  reinforcement learning with verifiable rewards (RLVR),  multi-step reasoning in small open-source languag">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Supervised Reinforcement Learning: From Expert Trajectories to Step-wise
+Reasoning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yihe Deng, I-Hung Hsu, Jun Yan, Zifeng Wang, Rujun Han, Gufeng Zhang, Yanfei Chen, Wei Wang, Tomas Pfister, Chen-Yu Lee
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              31 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/780_3e1e843c-b629-415d-a179-cac200118735.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a New AI Training Trick Helps Computers Think Step‑by‑Step</h3>
+<p>
+Ever wondered why some chatbots stumble when asked to solve a tricky puzzle? <strong>Scientists have created</strong> a fresh training trick that lets small AI models think out loud, step by step, just like we do when solving a Sudoku. Instead of forcing the model to copy long examples word‑for‑word, the new method asks it to first whisper its reasoning, then decide on the next move. Imagine a child learning to build a LEGO set: they first look at the instructions, picture the next piece, and then place it, checking each step against the guide. This “thinking‑before‑acting” approach gives the AI gentle feedback even when it makes mistakes, helping it improve faster than older techniques. The result? Tiny models that can crack puzzles they previously couldn’t, and even help with simple coding tasks. <strong>This breakthrough</strong> shows that a little inner monologue can turn a clumsy robot into a clever problem‑solver. <strong>Stay tuned</strong>—the future of smarter, more helpful AI is just a thought away.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>This article introduces <strong>Supervised Reinforcement Learning (SRL)</strong>, a novel framework designed to enhance multi-step reasoning in Large Language Models (LLMs), especially smaller, open-source variants. It addresses limitations of Supervised Fine-Tuning (SFT) and Reinforcement Learning with Verifiable Rewards (RLVR), which struggle with overfitting or sparse signals. SRL reformulates problem-solving as a sequence of logical "actions," guiding models to generate an internal reasoning monologue before each step. It provides dense, step-wise rewards based on expert action similarity, offering richer learning signals. Empirical results demonstrate SRL's superior performance on complex reasoning tasks, enabling smaller models to learn previously unlearnable problems and effectively generalizing to agentic software engineering tasks.</p>
+
+<h2>Critical Evaluation</h2>
+<h3>Strengths</h3>
+<p>The <strong>Supervised Reinforcement Learning (SRL)</strong> framework presents significant strengths by directly addressing critical limitations of existing LLM training paradigms. It overcomes SFT's overfitting and RLVR's sparse reward challenges through its novel approach of sequential logical actions and dense, step-wise rewards based on expert action similarity. This granular supervision provides richer learning signals, fostering more flexible and robust reasoning patterns. Empirical evidence strongly supports SRL's efficacy, demonstrating superior performance over baselines on complex reasoning benchmarks and successful generalization to demanding <strong>agentic software engineering tasks</strong>. Crucially, SRL enables smaller models to tackle problems previously considered unlearnable, and its combination with RLVR further boosts overall performance.</p>
+
+<h3>Weaknesses</h3>
+<p>While SRL demonstrates impressive capabilities, certain aspects warrant consideration. The framework's reliance on <strong>expert actions</strong> for step-wise reward calculation implies a need for high-quality, granular demonstrations, which can be resource-intensive to acquire for complex or novel domains. Generating an internal reasoning monologue, while beneficial, could introduce additional computational overhead during training and inference. Furthermore, the precise definition and measurement of "similarity" for reward generation might require careful task-specific tuning. Future research could explore methods to reduce reliance on explicit expert demonstrations or dynamically adapt reward functions for broader applicability.</p>
+
+<h2>Conclusion</h2>
+<p>In conclusion, <strong>Supervised Reinforcement Learning (SRL)</strong> represents a substantial advancement in Large Language Model development, particularly for enhancing multi-step reasoning. By combining supervised learning with reinforcement learning, SRL offers a robust framework that effectively overcomes limitations of prior approaches. Its ability to enable smaller models to tackle challenging problems and generalize across diverse tasks underscores its profound impact. SRL's emphasis on flexible, guided reasoning positions it as a foundational methodology for building more intelligent, capable, and adaptable LLMs, paving the way for sophisticated AI agents.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Supervised Reinforcement Learning for LLMs</li><li> reinforcement learning with verifiable rewards (RLVR)</li><li> multi-step reasoning in small open-source language models</li><li> step-wise similarity reward shaping</li><li> expert action extraction from SFT datasets</li><li> internal reasoning monologue generation</li><li> overfitting mitigation in supervised fine-tuning</li><li> agentic software engineering tasks for LLMs</li><li> reasoning-oriented LLM training framework</li><li> flexible token-level action generation</li><li> hierarchical reward signals for incorrect rollouts</li><li> pretraining with SRL before RLVR fine-tuning</li><li> logical action sequence modeling</li><li> benchmarking multi-step reasoning performance</li><li> rich learning signals from expert demonstrations</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/877/supervised-reinforcement-learning-from-expert-trajectories-to-step-wisereasoning" target="_blank" title=" Supervised Reinforcement Learning: From Expert Trajectories to Step-wise
+Reasoning">
+    Supervised Reinforcement Learning: From Expert Trajectories to Step-wise
+Reasoning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/809_beaf8ae9-00c6-408e-b9e7-ca7b31c88847.jpg" class="card-img-top" alt="MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoke Huang
+          </div>
+          <div class="article-meta-text">
+            02 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/900-MedVLSynther-Synthesizing-High-Quality-Visual-Question-Answering-from-Medical-Documents-with-Gen/index.html"  title="MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs">
+          <h3 class="card-title pb-2" itemprop="headline">MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/900-MedVLSynther-Synthesizing-High-Quality-Visual-Question-Answering-from-Medical-Documents-with-Gen/index.html"
+          title="MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/709_ede61884-6214-4b83-b9a5-719f09957553.jpg" class="card-img-top" alt="Repurposing Synthetic Data for Fine-grained Search Agent Supervision" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yida Zhao
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/794-Repurposing-Synthetic-Data-for-Fine-grained-Search-Agent-Supervision/index.html"  title="Repurposing Synthetic Data for Fine-grained Search Agent Supervision">
+          <h3 class="card-title pb-2" itemprop="headline">Repurposing Synthetic Data for Fine-grained Search Agent Supervision</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/794-Repurposing-Synthetic-Data-for-Fine-grained-Search-Agent-Supervision/index.html"
+          title="Repurposing Synthetic Data for Fine-grained Search Agent Supervision"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/778_2abfc5ea-6232-4f33-a717-659b06ff3ba2.jpg" class="card-img-top" alt="The Era of Agentic Organization: Learning to Organize with Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zewen Chi
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/875-The-Era-of-Agentic-Organization-Learning-to-Organize-with-Language-Models/index.html"  title="The Era of Agentic Organization: Learning to Organize with Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">The Era of Agentic Organization: Learning to Organize with Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/875-The-Era-of-Agentic-Organization-Learning-to-Organize-with-Language-Models/index.html"
+          title="The Era of Agentic Organization: Learning to Organize with Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/786_1c8f43ab-c555-4d85-b8f5-ab5a3a294827.jpg" class="card-img-top" alt="Can Agent Conquer Web? Exploring the Frontiers of ChatGPT Atlas Agent in Web
+Games" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jingran Zhang
+          </div>
+          <div class="article-meta-text">
+            01 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/881-Can-Agent-Conquer-Web-Exploring-the-Frontiers-of-ChatGPT-Atlas-Agent-in-Web-Games/index.html"  title="Can Agent Conquer Web? Exploring the Frontiers of ChatGPT Atlas Agent in Web
+Games">
+          <h3 class="card-title pb-2" itemprop="headline">Can Agent Conquer Web? Exploring the Frontiers of ChatGPT Atlas Agent in Web
+Games</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/881-Can-Agent-Conquer-Web-Exploring-the-Frontiers-of-ChatGPT-Atlas-Agent-in-Web-Games/index.html"
+          title="Can Agent Conquer Web? Exploring the Frontiers of ChatGPT Atlas Agent in Web
+Games"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/800_bc6e2129-33a7-4e7a-a796-190dc0cab50d.jpg" class="card-img-top" alt="ChartAB: A Benchmark for Chart Grounding & Dense Alignment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aniruddh Bansal
+          </div>
+          <div class="article-meta-text">
+            01 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/892-ChartAB-A-Benchmark-for-Chart-Grounding-Dense-Alignment/index.html"  title="ChartAB: A Benchmark for Chart Grounding & Dense Alignment">
+          <h3 class="card-title pb-2" itemprop="headline">ChartAB: A Benchmark for Chart Grounding & Dense Alignment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/892-ChartAB-A-Benchmark-for-Chart-Grounding-Dense-Alignment/index.html"
+          title="ChartAB: A Benchmark for Chart Grounding & Dense Alignment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/765_88ec96f1-6519-4a8e-8d54-13848e5acaf1.jpg" class="card-img-top" alt="Emu3.5: Native Multimodal Models are World Learners" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yufeng Cui
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/862-Emu35-Native-Multimodal-Models-are-World-Learners/index.html"  title="Emu3.5: Native Multimodal Models are World Learners">
+          <h3 class="card-title pb-2" itemprop="headline">Emu3.5: Native Multimodal Models are World Learners</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/862-Emu35-Native-Multimodal-Models-are-World-Learners/index.html"
+          title="Emu3.5: Native Multimodal Models are World Learners"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
