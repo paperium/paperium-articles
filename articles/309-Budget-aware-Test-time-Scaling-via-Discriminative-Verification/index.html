@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Budget-aware Test-time Scaling via Discriminative Verificati</title>
+
+<meta name="keywords" content="Test-time scaling large language models,  Discriminative verification LLM,  Generative verifiers,  Self-consistency in LLMs,  Hybrid verification appr">
+
+<meta name="description" content="Test-time scaling large language models,  Discriminative verification LLM,  Generative verifiers,  Self-consistency in LLMs,  Hybrid verification appr">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Budget-aware Test-time Scaling via Discriminative Verification
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Kyle Montgomery, Sijun Tan, Yuqi Chen, Siyuan Zhuang, Tianjun Zhang, Raluca Ada Popa, Chenguang Wang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              18 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/325_92133a58-68b4-4c6e-a9af-06da2197edb5.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Budget‑Aware Test‑Time Scaling Boosts AI Reasoning</h3>
+<p>
+Ever wondered how your favorite chat‑bot could think faster without needing a supercomputer? Researchers have found a clever shortcut that lets large language models give smarter answers while staying within a modest compute budget. Instead of letting the AI generate dozens of possible replies and then using a heavy‑weight checker to pick the best one, they let a lightweight “discriminative” verifier quickly judge each answer. Think of it like a quick‑glance referee in a sports match who can spot the winning move without watching the whole game. When this fast referee works together with the model’s own self‑consistency tricks, the combo outperforms the old, expensive method by up to 15 % on tough math puzzles like AIME2025. This <strong>budget‑aware</strong> approach is a <strong>breakthrough</strong> for real‑world AI, giving developers a “free” upgrade that saves time and energy. Imagine smarter assistants that stay sharp without draining your device— that’s the promise of this new technique. <strong>Scientists discovered</strong> that smarter, cheaper AI is within reach.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing LLM Performance: A Budget-Aware Scaling Approach</h2>
+<p>This article introduces a novel, budget-aware paradigm for enhancing <strong>large language model (LLM)</strong> performance on complex reasoning tasks, addressing the prohibitive computational costs of state-of-the-art generative verifiers. The core innovation lies in a <strong>hybrid approach</strong> that synergistically combines discriminative verifiers with <strong>self-consistency (SC)</strong>. This method aims to provide a significantly more efficient and effective solution for boosting LLM capabilities. The research demonstrates that this hybrid strategy not only surpasses isolated self-consistency but also outperforms costly generative verification techniques under fixed compute budgets, marking a crucial step towards practical LLM deployment.</p>
+
+<h2>Critical Evaluation</h2>
+<h3>Strengths of Hybrid Discriminative Verification</h3>
+<p>A primary strength of this research is its robust demonstration of a highly <strong>efficient</strong> and <strong>effective</strong> test-time scaling mechanism. The hybrid discriminative verification approach consistently outperforms traditional generative verification and isolated self-consistency, particularly when operating within practical compute constraints. Empirical analysis, including detailed FLOPs and latency comparisons, strongly supports its superior efficiency by effectively avoiding bottlenecks inherent in Chain-of-Thought generation. The reported accuracy gains, notably up to 15.3% higher on AIME2025, underscore its significant practical value for enhancing <strong>LLM reasoning capabilities</strong> in real-world applications.</p>
+
+<h3>Considerations and Potential Limitations</h3>
+<p>While the hybrid approach is compelling, the analysis indicates that <strong>discriminative verifiers</strong> may underperform when utilized in isolation. This suggests that their efficacy is heavily reliant on the synergistic combination with self-consistency, which could introduce a layer of implementation complexity compared to simpler standalone methods. Furthermore, the study primarily focuses on specific benchmarks such as AIME and GPQA. Although these are representative, broader validation across a more diverse range of reasoning tasks and varied model architectures could further solidify the generalizability of these promising findings.</p>
+
+<h2>Impact and Future Directions in LLM Optimization</h2>
+<p>This work represents a substantial advancement in <strong>LLM optimization</strong>, offering a practical and highly efficient alternative to computationally expensive generative methods. The proposed hybrid discriminative verification paradigm is not merely an incremental upgrade over self-consistency but establishes a new benchmark for <strong>budget-aware scaling</strong>. Its findings are crucial for developing more accessible and performant LLM applications in real-world scenarios, making it a valuable contribution that could significantly influence the future direction of efficient LLM deployment and research.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Test-time scaling large language models</li><li> Discriminative verification LLM</li><li> Generative verifiers</li><li> Self-consistency in LLMs</li><li> Hybrid verification approach</li><li> LLM performance boosting</li><li> Complex reasoning tasks AI</li><li> Budget-aware LLM optimization</li><li> Computational efficiency LLM</li><li> AI model accuracy improvement</li><li> Practical LLM deployment</li><li> AIME2025 benchmark results</li><li> Language model inference optimization</li><li> Machine learning verification strategies</li><li> LLM scaling mechanisms</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/309/budget-aware-test-time-scaling-via-discriminative-verification" target="_blank" title=" Budget-aware Test-time Scaling via Discriminative Verification">
+    Budget-aware Test-time Scaling via Discriminative Verification
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/328_11ece2f8-e1c1-4544-99c0-e01b21145396.jpg" class="card-img-top" alt="Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shrey Pandit
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/312-Synthesizing-Agentic-Data-for-Web-Agents-with-Progressive-Difficulty-Enhancement-Mechanisms/index.html"  title="Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms">
+          <h3 class="card-title pb-2" itemprop="headline">Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/312-Synthesizing-Agentic-Data-for-Web-Agents-with-Progressive-Difficulty-Enhancement-Mechanisms/index.html"
+          title="Synthesizing Agentic Data for Web Agents with Progressive Difficulty Enhancement
+Mechanisms"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/309_c53c10e6-f176-4cce-8e7a-94fdb132bf5a.jpg" class="card-img-top" alt="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Meiqi Wu
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/293-ImagerySearch-Adaptive-Test-Time-Search-for-Video-Generation-Beyond-Semantic-Dependency-Constrai/index.html"  title="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints">
+          <h3 class="card-title pb-2" itemprop="headline">ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/293-ImagerySearch-Adaptive-Test-Time-Search-for-Video-Generation-Beyond-Semantic-Dependency-Constrai/index.html"
+          title="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/311_f92fd4fe-dad3-4324-a87c-ace0df1a4bd0.jpg" class="card-img-top" alt="VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Han Zhao
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/295-VLA2-Empowering-Vision-Language-Action-Models-with-an-Agentic-Framework-for-Unseen-Concept-Manip/index.html"  title="VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation">
+          <h3 class="card-title pb-2" itemprop="headline">VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/295-VLA2-Empowering-Vision-Language-Action-Models-with-an-Agentic-Framework-for-Unseen-Concept-Manip/index.html"
+          title="VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/270_5e40f790-24d1-4a9e-ab3a-73f55ced80c7.jpg" class="card-img-top" alt="LLM-guided Hierarchical Retrieval" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Nilesh Gupta
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/257-LLM-guided-Hierarchical-Retrieval/index.html"  title="LLM-guided Hierarchical Retrieval">
+          <h3 class="card-title pb-2" itemprop="headline">LLM-guided Hierarchical Retrieval</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/257-LLM-guided-Hierarchical-Retrieval/index.html"
+          title="LLM-guided Hierarchical Retrieval"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/266_3686c090-eeb8-4465-8cc9-a52f8fbc2dff.jpg" class="card-img-top" alt="Attention Is All You Need for KV Cache in Diffusion LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Quan Nguyen-Tri
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/253-Attention-Is-All-You-Need-for-KV-Cache-in-Diffusion-LLMs/index.html"  title="Attention Is All You Need for KV Cache in Diffusion LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Attention Is All You Need for KV Cache in Diffusion LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/253-Attention-Is-All-You-Need-for-KV-Cache-in-Diffusion-LLMs/index.html"
+          title="Attention Is All You Need for KV Cache in Diffusion LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/260_71b6d33a-37c1-42a7-9511-746b8fcea766.jpg" class="card-img-top" alt="From Pixels to Words -- Towards Native Vision-Language Primitives at Scale" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haiwen Diao
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/248-From-Pixels-to-Words-Towards-Native-Vision-Language-Primitives-at-Scale/index.html"  title="From Pixels to Words -- Towards Native Vision-Language Primitives at Scale">
+          <h3 class="card-title pb-2" itemprop="headline">From Pixels to Words -- Towards Native Vision-Language Primitives at Scale</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/248-From-Pixels-to-Words-Towards-Native-Vision-Language-Primitives-at-Scale/index.html"
+          title="From Pixels to Words -- Towards Native Vision-Language Primitives at Scale"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
