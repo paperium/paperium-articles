@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>DeLeaker: Dynamic Inference-Time Reweighting For Semantic Le</title>
+
+<meta name="keywords" content="Text-to-Image models,  semantic leakage mitigation,  DeLeaker approach,  attention map reweighting,  diffusion process in T2I,  SLIM dataset,  automat">
+
+<meta name="description" content="Text-to-Image models,  semantic leakage mitigation,  DeLeaker approach,  attention map reweighting,  diffusion process in T2I,  SLIM dataset,  automat">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in
+Text-to-Image Models
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Mor Ventura, Michael Toker, Or Patashnik, Yonatan Belinkov, Roi Reichart
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              24 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/540_968e011b-dded-4525-a2d3-95d282323aae.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>DeLeaker: Stopping AI from Mixing Up Your Pictures</h3>
+<p>
+Ever wondered why an AI‑generated image sometimes shows a cat wearing a dog’s collar? That odd blend is called <strong>semantic leakage</strong> – the AI unintentionally swaps details between different objects.  
+Enter <strong>DeLeaker</strong>, a clever new trick that works right at the moment the picture is being created. Instead of heavy re‑training, it quietly nudges the model’s “attention maps,” the internal guide that decides which part of the scene to focus on. Think of it as a traffic controller who keeps each car in its lane, so the cat stays a cat and the dog stays a dog.  
+The result? Cleaner, more accurate pictures that keep the identity of every element intact, without losing any of the vivid detail we love. Researchers even built a special test set called SLIM to prove it works across dozens of scenarios.  
+So the next time you ask an AI to draw a sunrise over a mountain, you can trust that the mountains won’t suddenly sprout a city skyline. <strong>DeLeaker</strong> is a small step toward AI art that respects the world we see. 🌅
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents DeLeaker, an innovative method designed to address the challenge of <strong>semantic leakage</strong> in Text-to-Image (T2I) models. By employing a dynamic, optimization-free approach that intervenes directly on the model's attention maps, DeLeaker effectively mitigates the unintended transfer of features between distinct entities. The authors also introduce SLIM (Semantic Leakage in IMages), a comprehensive dataset and evaluation framework aimed at systematically assessing semantic leakage. Experimental results indicate that DeLeaker consistently outperforms existing baselines, achieving significant improvements in semantic precision without compromising image fidelity.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of this work is the introduction of <strong>DeLeaker</strong>, which utilizes attention-based interventions to enhance the identity of entities while suppressing cross-entity interactions. This approach is particularly noteworthy as it operates without the need for external inputs, making it a lightweight solution for T2I models. Additionally, the creation of the SLIM dataset, which includes 1,130 human-verified samples, provides a robust foundation for evaluating semantic leakage, thereby filling a significant gap in the existing literature.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study does have limitations. The reliance on human assessment for a subset of the SLIM dataset may introduce subjectivity, potentially affecting the reproducibility of results. Furthermore, while DeLeaker demonstrates superior performance against various baselines, the article could benefit from a more detailed discussion on the scalability of the method across different T2I architectures beyond those tested.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are substantial, as it paves the way for more semantically precise T2I models. By addressing the critical issue of semantic leakage, DeLeaker not only enhances the quality of generated images but also contributes to the broader field of <strong>artificial intelligence</strong> and machine learning. The introduction of the SLIM dataset and the accompanying evaluation framework may serve as a valuable resource for future research, encouraging further exploration into the dynamics of attention mechanisms in T2I models.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article makes a significant contribution to the field of Text-to-Image generation by introducing DeLeaker and the SLIM dataset. The findings underscore the importance of attention control in mitigating semantic leakage, highlighting the potential for improved model performance. Overall, this work not only advances our understanding of T2I models but also sets a precedent for future research aimed at enhancing semantic integrity in image generation.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Text-to-Image models</li><li> semantic leakage mitigation</li><li> DeLeaker approach</li><li> attention map reweighting</li><li> diffusion process in T2I</li><li> SLIM dataset</li><li> automatic evaluation framework</li><li> cross-entity interactions</li><li> fidelity in image generation</li><li> optimization-free inference</li><li> attention control in AI</li><li> human-verified image samples</li><li> semantic precision in T2I</li><li> leakage evaluation techniques</li><li> advanced T2I strategies</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/649/deleaker-dynamic-inference-time-reweighting-for-semantic-leakage-mitigation-intext-to-image-models" target="_blank" title=" DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in
+Text-to-Image Models">
+    DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in
+Text-to-Image Models
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/274_a8afd4b9-1748-4312-8472-20bb2ad51e66.jpg" class="card-img-top" alt="VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hyojun Go
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/261-VIST3A-Text-to-3D-by-Stitching-a-Multi-view-Reconstruction-Network-to-a-Video-Generator/index.html"  title="VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator">
+          <h3 class="card-title pb-2" itemprop="headline">VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/261-VIST3A-Text-to-3D-by-Stitching-a-Multi-view-Reconstruction-Network-to-a-Video-Generator/index.html"
+          title="VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/278_e484f8da-7831-45ba-86ca-8ec4a96176b8.jpg" class="card-img-top" alt="Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Weijie Shen
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/265-Expertise-need-not-monopolize-Action-Specialized-Mixture-of-Experts-for-Vision-Language-Action-L/index.html"  title="Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning">
+          <h3 class="card-title pb-2" itemprop="headline">Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/265-Expertise-need-not-monopolize-Action-Specialized-Mixture-of-Experts-for-Vision-Language-Action-L/index.html"
+          title="Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/281_9e979a3e-e2fa-4f4b-9dba-a124ab03697f.jpg" class="card-img-top" alt="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shaowei Liu
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"  title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation">
+          <h3 class="card-title pb-2" itemprop="headline">Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"
+          title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/275_41c47847-c58b-4c63-a92d-b7565f1098ec.jpg" class="card-img-top" alt="pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hansheng Chen
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/262-pi-Flow-Policy-Based-Few-Step-Generation-via-Imitation-Distillation/index.html"  title="pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation">
+          <h3 class="card-title pb-2" itemprop="headline">pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/262-pi-Flow-Policy-Based-Few-Step-Generation-via-Imitation-Distillation/index.html"
+          title="pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/374_a7aa8ef9-dcd4-477e-9949-243ead363686.jpg" class="card-img-top" alt="DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via
+Reinforcement Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shih-Yang Liu
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/354-DLER-Doing-Length-pEnalty-Right-Incentivizing-More-Intelligence-per-Token-via-Reinforcement-Lear/index.html"  title="DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via
+Reinforcement Learning">
+          <h3 class="card-title pb-2" itemprop="headline">DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via
+Reinforcement Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/354-DLER-Doing-Length-pEnalty-Right-Incentivizing-More-Intelligence-per-Token-via-Reinforcement-Lear/index.html"
+          title="DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via
+Reinforcement Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/264_fc9c0849-f92e-4152-9e22-a8e0b1446961.jpg" class="card-img-top" alt="LaSeR: Reinforcement Learning with Last-Token Self-Rewarding" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wenkai Yang
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/338-LaSeR-Reinforcement-Learning-with-Last-Token-Self-Rewarding/index.html"  title="LaSeR: Reinforcement Learning with Last-Token Self-Rewarding">
+          <h3 class="card-title pb-2" itemprop="headline">LaSeR: Reinforcement Learning with Last-Token Self-Rewarding</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/338-LaSeR-Reinforcement-Learning-with-Last-Token-Self-Rewarding/index.html"
+          title="LaSeR: Reinforcement Learning with Last-Token Self-Rewarding"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
