@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Mono4DGS-HDR: High Dynamic Range 4D Gaussian Splatting from </title>
+
+<meta name="keywords" content="Mono4DGS-HDR,  4D HDR scene reconstruction,  Monocular LDR video input,  Gaussian Splatting,  High Dynamic Range video,  Unposed video reconstruction,">
+
+<meta name="description" content="Mono4DGS-HDR,  4D HDR scene reconstruction,  Monocular LDR video input,  Gaussian Splatting,  High Dynamic Range video,  Unposed video reconstruction,">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Mono4DGS-HDR: High Dynamic Range 4D Gaussian Splatting from Alternating-exposure
+Monocular Videos
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Jinfeng Liu, Lingtong Kong, Mi Zhou, Jinwen Chen, Dan Xu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              22 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/459_ff7b1afd-4eae-467f-81b1-282e56171f16.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Turn Your Phone Clips into Stunning HDR 3D Scenes</h3>
+<p>
+Ever wondered if a simple video taken on your phone could become a vivid, lifelike 3‑D world? <strong>Scientists have created</strong> a new tool called Mono4DGS‑HDR that does exactly that. By feeding the system a regular, low‑contrast video shot with alternating bright and dark exposures, it magically builds a full‑color, high‑dynamic‑range scene that you can move around in, just like a video game environment. Think of it as turning a flat postcard into a pop‑up book, where every detail shines with the right amount of light. The trick? The method first sketches the scene in a simple “flat” space, then lifts it into real‑world coordinates while figuring out the camera angles on its own—no extra equipment needed. This means anyone can capture everyday moments and later explore them in dazzling HDR quality, making sunsets look richer and shadows deeper. <strong>This breakthrough</strong> opens the door for creators, educators, and hobbyists to share immersive experiences without costly gear. Imagine reliving a family trip as if you were really there—<strong>the future of video is already unfolding</strong>.<br><br>
+Let’s keep watching the world in higher definition, one ordinary clip at a time.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: Pioneering 4D HDR Scene Reconstruction from Monocular LDR Video</h2>
+<p>This groundbreaking research introduces <strong>Mono4DGS-HDR</strong>, a novel system designed to reconstruct renderable <strong>4D High Dynamic Range (HDR) scenes</strong> directly from unposed monocular Low Dynamic Range (LDR) videos captured with alternating exposures. Addressing a significant gap in existing dynamic reconstruction and HDR Novel View Synthesis (NVS) methods, this system offers a unified framework built upon a two-stage Gaussian Splatting optimization approach. The initial stage establishes a video HDR Gaussian representation in orthographic camera space, effectively bypassing the need for explicit camera poses and enabling a robust preliminary HDR video reconstruction. Subsequently, the second stage refines these video Gaussians into world space, jointly optimizing them with camera poses. The methodology also incorporates a unique temporal luminance regularization strategy, significantly enhancing the temporal consistency of the reconstructed HDR appearance. Through extensive experiments on a newly constructed evaluation benchmark, Mono4DGS-HDR demonstrates superior performance in both rendering quality and speed compared to alternative solutions adapted from state-of-the-art methods.</p>
+
+<h2>Critical Evaluation: Assessing Mono4DGS-HDR's Innovation and Impact</h2>
+<h3>Strengths: Robustness, Efficiency, and Novelty in Dynamic HDR Synthesis</h3>
+<p>Mono4DGS-HDR presents a truly <strong>pioneering approach</strong> by tackling the complex challenge of 4D HDR scene reconstruction from unposed monocular LDR videos, a task previously unaddressed. Its two-stage Gaussian Splatting optimization, coupled with explicit Gaussian dynamics and 2D priors, offers a highly efficient and robust solution. The system's ability to operate without initial camera poses in its first stage is a significant advantage, enhancing its applicability to diverse real-world scenarios. Furthermore, the introduction of <strong>temporal luminance regularization</strong> is crucial for achieving temporally consistent HDR appearance, a common hurdle in dynamic scene reconstruction. The quantitative evaluations, performed on a newly constructed benchmark, convincingly demonstrate its superior performance in both rendering quality and computational efficiency against adapted state-of-the-art methods, validating its key components through thorough ablation studies.</p>
+
+<h3>Weaknesses: Addressing Data Requirements and Generalization Challenges</h3>
+<p>While Mono4DGS-HDR marks a substantial advancement, certain aspects warrant consideration. The method relies on LDR videos captured with <strong>alternating exposures</strong>, which might limit its applicability to standard monocular video inputs lacking this specific capture characteristic. Although the system shows superior performance on its custom benchmark, the generalizability to extremely diverse or highly dynamic real-world environments beyond the evaluated datasets could be an area for further exploration. Additionally, while rendering speed is highlighted, the computational overhead associated with the two-stage optimization and training of complex 4D Gaussian models, particularly for very long or intricate scenes, might still be considerable. Future research could investigate methods to reduce training time or adapt the system for more varied input data types.</p>
+
+<h2>Conclusion: Advancing Dynamic Scene Understanding and Immersive Content Creation</h2>
+<p>Mono4DGS-HDR represents a significant leap forward in <strong>dynamic scene understanding</strong> and High Dynamic Range synthesis. By effectively reconstructing renderable 4D HDR scenes from challenging unposed monocular LDR video inputs, it opens new avenues for research and application. The innovative integration of Gaussian Splatting with a two-stage optimization, temporal luminance regularization, and explicit motion parameterization establishes a new benchmark for performance and robustness. This work has a transformative impact on fields such as virtual reality, augmented reality, and content creation, offering the potential for more immersive and realistic digital experiences. Mono4DGS-HDR not only solves a previously unaddressed problem but also provides a strong foundation for <strong>future research</strong> in real-time 4D scene reconstruction and novel view synthesis.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Mono4DGS-HDR</li><li> 4D HDR scene reconstruction</li><li> Monocular LDR video input</li><li> Gaussian Splatting</li><li> High Dynamic Range video</li><li> Unposed video reconstruction</li><li> Alternating exposure video</li><li> Temporal luminance regularization</li><li> Video HDR Gaussian representation</li><li> Orthographic camera coordinate space</li><li> Camera pose refinement</li><li> HDR video benchmark</li><li> Renderable 4D scenes</li><li> Two-stage optimization for HDR</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/447/mono4dgs-hdr-high-dynamic-range-4d-gaussian-splatting-from-alternating-exposuremonocular-videos" target="_blank" title=" Mono4DGS-HDR: High Dynamic Range 4D Gaussian Splatting from Alternating-exposure
+Monocular Videos">
+    Mono4DGS-HDR: High Dynamic Range 4D Gaussian Splatting from Alternating-exposure
+Monocular Videos
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/487_5c2c540d-0218-45b7-9c20-e6e9847228ea.jpg" class="card-img-top" alt="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Asim Mohamed
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/491-Is-Multilingual-LLM-Watermarking-Truly-Multilingual-A-Simple-Back-Translation-Solution/index.html"  title="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution">
+          <h3 class="card-title pb-2" itemprop="headline">Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/491-Is-Multilingual-LLM-Watermarking-Truly-Multilingual-A-Simple-Back-Translation-Solution/index.html"
+          title="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/486_d17b7dc8-3a3a-460c-ae40-8d381e3b95f6.jpg" class="card-img-top" alt="GAS: Improving Discretization of Diffusion ODEs via Generalized Adversarial
+Solver" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aleksandr Oganov
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/490-GAS-Improving-Discretization-of-Diffusion-ODEs-via-Generalized-Adversarial-Solver/index.html"  title="GAS: Improving Discretization of Diffusion ODEs via Generalized Adversarial
+Solver">
+          <h3 class="card-title pb-2" itemprop="headline">GAS: Improving Discretization of Diffusion ODEs via Generalized Adversarial
+Solver</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/490-GAS-Improving-Discretization-of-Diffusion-ODEs-via-Generalized-Adversarial-Solver/index.html"
+          title="GAS: Improving Discretization of Diffusion ODEs via Generalized Adversarial
+Solver"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/530_d9d95751-d54b-4dcd-a468-8799ccc672e2.jpg" class="card-img-top" alt="From Charts to Code: A Hierarchical Benchmark for Multimodal Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiahao Tang
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/640-From-Charts-to-Code-A-Hierarchical-Benchmark-for-Multimodal-Models/index.html"  title="From Charts to Code: A Hierarchical Benchmark for Multimodal Models">
+          <h3 class="card-title pb-2" itemprop="headline">From Charts to Code: A Hierarchical Benchmark for Multimodal Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/640-From-Charts-to-Code-A-Hierarchical-Benchmark-for-Multimodal-Models/index.html"
+          title="From Charts to Code: A Hierarchical Benchmark for Multimodal Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/463_d15e6bbf-56b6-44e4-a135-9fe1d78ed0e8.jpg" class="card-img-top" alt="Extracting alignment data in open models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Federico Barbero
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/463-Extracting-alignment-data-in-open-models/index.html"  title="Extracting alignment data in open models">
+          <h3 class="card-title pb-2" itemprop="headline">Extracting alignment data in open models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/463-Extracting-alignment-data-in-open-models/index.html"
+          title="Extracting alignment data in open models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/520_e555c782-e0f2-4725-aca5-0da19ee3bb94.jpg" class="card-img-top" alt="olmOCR 2: Unit Test Rewards for Document OCR" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jake Poznanski
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/630-olmOCR-2-Unit-Test-Rewards-for-Document-OCR/index.html"  title="olmOCR 2: Unit Test Rewards for Document OCR">
+          <h3 class="card-title pb-2" itemprop="headline">olmOCR 2: Unit Test Rewards for Document OCR</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/630-olmOCR-2-Unit-Test-Rewards-for-Document-OCR/index.html"
+          title="olmOCR 2: Unit Test Rewards for Document OCR"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/543_cbad48be-db7e-429e-a4c9-1ba0de677f1b.jpg" class="card-img-top" alt="Accelerating Vision Transformers with Adaptive Patch Sizes" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Rohan Choudhury
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/652-Accelerating-Vision-Transformers-with-Adaptive-Patch-Sizes/index.html"  title="Accelerating Vision Transformers with Adaptive Patch Sizes">
+          <h3 class="card-title pb-2" itemprop="headline">Accelerating Vision Transformers with Adaptive Patch Sizes</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/652-Accelerating-Vision-Transformers-with-Adaptive-Patch-Sizes/index.html"
+          title="Accelerating Vision Transformers with Adaptive Patch Sizes"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
