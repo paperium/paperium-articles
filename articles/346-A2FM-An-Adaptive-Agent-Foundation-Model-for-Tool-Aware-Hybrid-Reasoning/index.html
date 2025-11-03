@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>A^2FM: An Adaptive Agent Foundation Model for Tool-Aware Hyb</title>
+
+<meta name="keywords" content="reasoning-centric LLMs,  agentic LLMs,  Adaptive Agent Foundation Model,  A$^2$FM framework,  route-then-align principle,  task-aware routing,  mode-s">
+
+<meta name="description" content="reasoning-centric LLMs,  agentic LLMs,  Adaptive Agent Foundation Model,  A$^2$FM framework,  route-then-align principle,  task-aware routing,  mode-s">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                A^2FM: An Adaptive Agent Foundation Model for Tool-Aware Hybrid Reasoning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Qianben Chen, Jingyi Cao, Jiayu Zhang, Tianrui Qin, Xiaowan Li, King Zhu, Dingfeng Shi, He Zhu, Minghao Liu, Xiaobo Liang, Xin Gui, Ge Zhang, Jian Yang, Yuchen Eleanor Jiang, Wangchunshu Zhou
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              20 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/366_73f6829f-1852-4c58-8d63-751dfe035161.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Smart AI That Knows When to Think, Use Tools, or Just Answer</h3>
+<p>
+Ever wondered why some chatbots over‑think while others keep asking for extra help? <strong>Scientists have created</strong> a new kind of AI that can decide on the spot whether to solve a problem by itself, call a handy tool, or simply give a quick answer. Imagine a helpful robot assistant that first checks if a question is easy—like asking for the weather—and replies instantly, but for tougher tasks it either reasons internally or reaches out to a calculator or search engine, just like you’d pick the right kitchen gadget for a recipe. This “choose‑your‑mode” trick makes the AI both faster and cheaper to run, cutting the cost of each correct answer by almost half compared with older models. <strong>This breakthrough</strong> means smarter virtual helpers that feel more natural and affordable, whether they’re helping you plan a trip, solve a math puzzle, or find a fact online. <strong>It’s a glimpse</strong> of a future where AI works like a versatile teammate, always picking the simplest path to get you the answer you need. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents the Adaptive Agent Foundation Model (A²FM), a novel framework designed to bridge the gap between reasoning-centric and agentic Large Language Models (LLMs). By employing a route-then-align strategy and introducing Adaptive Policy Optimization (APO), A²FM enhances efficiency in handling various query types. The model integrates three operational modes: instant, reasoning, and agentic, optimizing performance through a self-adaptive routing mechanism. Empirical results indicate that A²FM achieves state-of-the-art (SOTA) performance across multiple benchmarks while significantly reducing operational costs, demonstrating its potential to improve LLM efficiency and accuracy.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>A²FM's primary strength lies in its innovative approach to unifying different operational modes, which addresses the inherent limitations of existing LLMs. The incorporation of a self-adaptive router allows for dynamic mode selection, enhancing both <strong>accuracy</strong> and <strong>efficiency</strong>. The empirical results are compelling, showcasing A²FM's ability to outperform traditional models on various benchmarks, thus setting a new standard in the field. Additionally, the cost reduction achieved—up to 45.2% per correct answer—highlights the model's practical applicability in real-world scenarios.</p>
+
+<h3>Weaknesses</h3>
+<pDespite its advancements, A²FM may face challenges related to the complexity of its architecture. The reliance on multiple modes could introduce overhead in processing time, particularly in scenarios requiring rapid responses. Furthermore, while the model demonstrates impressive performance on benchmark tasks, its generalizability to less structured or novel queries remains to be fully validated. This raises questions about the robustness of the adaptive routing mechanism under diverse conditions.</p>
+
+<h3>Implications</h3>
+<p>The implications of A²FM are significant for the future of LLM development. By effectively addressing the reasoning-agentic divide, this model paves the way for more versatile AI systems capable of handling a broader range of tasks with improved efficiency. The introduction of APO as a reinforcement learning method for mode selection could inspire further research into adaptive learning strategies, potentially leading to more intelligent and responsive AI applications.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the Adaptive Agent Foundation Model (A²FM) represents a substantial advancement in the field of Large Language Models, effectively bridging the gap between reasoning and agentic capabilities. Its innovative use of adaptive routing and policy optimization not only enhances performance but also significantly reduces operational costs. As the landscape of AI continues to evolve, A²FM's contributions may serve as a foundation for future research, driving the development of more efficient and capable AI systems that can meet the demands of increasingly complex tasks.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>reasoning-centric LLMs</li><li> agentic LLMs</li><li> Adaptive Agent Foundation Model</li><li> A$^2$FM framework</li><li> route-then-align principle</li><li> task-aware routing</li><li> mode-specific trajectories</li><li> mode-instant query handling</li><li> Adaptive Policy Optimization</li><li> cost-regularized reward</li><li> efficiency in language models</li><li> SOTA performance benchmarks</li><li> cost efficiency in LLMs</li><li> deep reasoning vs. tool invocation</li><li> adaptive sampling techniques</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/346/a2fm-an-adaptive-agent-foundation-model-for-tool-aware-hybrid-reasoning" target="_blank" title=" A^2FM: An Adaptive Agent Foundation Model for Tool-Aware Hybrid Reasoning">
+    A^2FM: An Adaptive Agent Foundation Model for Tool-Aware Hybrid Reasoning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/512_150c2e8f-9cda-4916-aef1-6c82bb946e10.jpg" class="card-img-top" alt="GigaBrain-0: A World Model-Powered Vision-Language-Action Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            GigaBrain Team
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/507-GigaBrain-0-A-World-Model-Powered-Vision-Language-Action-Model/index.html"  title="GigaBrain-0: A World Model-Powered Vision-Language-Action Model">
+          <h3 class="card-title pb-2" itemprop="headline">GigaBrain-0: A World Model-Powered Vision-Language-Action Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/507-GigaBrain-0-A-World-Model-Powered-Vision-Language-Action-Model/index.html"
+          title="GigaBrain-0: A World Model-Powered Vision-Language-Action Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/525_dc2116bd-6b7b-48f5-81d1-9c7f71dc38c2.jpg" class="card-img-top" alt="Are they lovers or friends? Evaluating LLMs' Social Reasoning in English and
+Korean Dialogues" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Eunsu Kim
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/635-Are-they-lovers-or-friends-Evaluating-LLMs-Social-Reasoning-in-English-and-Korean-Dialogues/index.html"  title="Are they lovers or friends? Evaluating LLMs' Social Reasoning in English and
+Korean Dialogues">
+          <h3 class="card-title pb-2" itemprop="headline">Are they lovers or friends? Evaluating LLMs' Social Reasoning in English and
+Korean Dialogues</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/635-Are-they-lovers-or-friends-Evaluating-LLMs-Social-Reasoning-in-English-and-Korean-Dialogues/index.html"
+          title="Are they lovers or friends? Evaluating LLMs' Social Reasoning in English and
+Korean Dialogues"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/489_d52846b6-fb0a-412e-a8d9-2bdb03f64a1a.jpg" class="card-img-top" alt="Think with 3D: Geometric Imagination Grounded Spatial Reasoning from Limited
+Views" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhangquan Chen
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/493-Think-with-3D-Geometric-Imagination-Grounded-Spatial-Reasoning-from-Limited-Views/index.html"  title="Think with 3D: Geometric Imagination Grounded Spatial Reasoning from Limited
+Views">
+          <h3 class="card-title pb-2" itemprop="headline">Think with 3D: Geometric Imagination Grounded Spatial Reasoning from Limited
+Views</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/493-Think-with-3D-Geometric-Imagination-Grounded-Spatial-Reasoning-from-Limited-Views/index.html"
+          title="Think with 3D: Geometric Imagination Grounded Spatial Reasoning from Limited
+Views"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/659_592b9d58-7636-4836-b9d1-cf21ed933efd.jpg" class="card-img-top" alt="VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoyu Liu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/756-VITA-E-Natural-Embodied-Interaction-with-Concurrent-Seeing-Hearing-Speaking-and-Acting/index.html"  title="VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting">
+          <h3 class="card-title pb-2" itemprop="headline">VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/756-VITA-E-Natural-Embodied-Interaction-with-Concurrent-Seeing-Hearing-Speaking-and-Acting/index.html"
+          title="VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/557_2143d8e2-3422-460d-a53d-288807017be8.jpg" class="card-img-top" alt="The Massive Legal Embedding Benchmark (MLEB)" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Umar Butler
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/664-The-Massive-Legal-Embedding-Benchmark-MLEB/index.html"  title="The Massive Legal Embedding Benchmark (MLEB)">
+          <h3 class="card-title pb-2" itemprop="headline">The Massive Legal Embedding Benchmark (MLEB)</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/664-The-Massive-Legal-Embedding-Benchmark-MLEB/index.html"
+          title="The Massive Legal Embedding Benchmark (MLEB)"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/611_71d5bf66-1d14-461f-a3f7-e86f2c01a66a.jpg" class="card-img-top" alt="Communication to Completion: Modeling Collaborative Workflows with Intelligent
+Multi-Agent Communication" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yiming Lu
+          </div>
+          <div class="article-meta-text">
+            26 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/715-Communication-to-Completion-Modeling-Collaborative-Workflows-with-Intelligent-Multi-Agent-Commun/index.html"  title="Communication to Completion: Modeling Collaborative Workflows with Intelligent
+Multi-Agent Communication">
+          <h3 class="card-title pb-2" itemprop="headline">Communication to Completion: Modeling Collaborative Workflows with Intelligent
+Multi-Agent Communication</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/715-Communication-to-Completion-Modeling-Collaborative-Workflows-with-Intelligent-Multi-Agent-Commun/index.html"
+          title="Communication to Completion: Modeling Collaborative Workflows with Intelligent
+Multi-Agent Communication"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
