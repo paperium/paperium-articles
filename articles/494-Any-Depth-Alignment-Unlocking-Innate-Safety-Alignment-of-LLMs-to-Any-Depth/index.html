@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Any-Depth Alignment: Unlocking Innate Safety Alignment of LL</title>
+
+<meta name="keywords" content="Large Language Model safety,  LLM shallow alignment,  Any-Depth Alignment (ADA),  Inference-time LLM defense,  Adversarial attacks on LLMs,  Harmful q">
+
+<meta name="description" content="Large Language Model safety,  LLM shallow alignment,  Any-Depth Alignment (ADA),  Inference-time LLM defense,  Adversarial attacks on LLMs,  Harmful q">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Any-Depth Alignment: Unlocking Innate Safety Alignment of LLMs to Any-Depth
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Jiawei Zhang, Andrew Estornell, David D. Baek, Bo Li, Xiaojun Xu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              23 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/490_13bfcb4b-87cb-43f9-9cdb-52fbeb2a626a.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a Simple Trick Keeps AI Chatbots Safe at Every Turn</h3>
+<p>
+Ever wondered why a friendly AI sometimes slips into a risky conversation? <strong>Researchers have discovered</strong> a clever fix called <strong>Any‑Depth Alignment</strong> that acts like a vigilant guard, stepping in whenever the chat drifts toward trouble. Imagine a conversation as a road trip: the guard periodically checks the map, making sure you never stray onto a dangerous side street. By re‑injecting a few special “safety words” into the AI’s flow, the system re‑evaluates its answers and refuses harmful requests—even after dozens of messages. Tests on popular models such as Llama, Gemma and Mistral showed a <strong>near‑100% refusal rate</strong> against sneaky prompts, while still answering everyday questions smoothly. The best part? It works without rewriting the AI’s brain, so it can be added instantly to existing bots. This breakthrough means our digital assistants can stay trustworthy, no matter how long the chat goes on. As AI becomes a bigger part of daily life, a simple safety checkpoint could keep the conversation friendly and safe for everyone.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing LLM Safety: A Deep Dive into Any-Depth Alignment (ADA)</h2>
+
+<p>This insightful article addresses a critical challenge in artificial intelligence: the inherent <strong>shallow alignment</strong> of <strong>Large Language Models (LLMs)</strong>, which often leads to safety failures under sophisticated <strong>adversarial attacks</strong>. The core problem lies in LLMs' inability to maintain safety when harmful content emerges mid-generation, despite initial refusals. To counter this, the authors propose <strong>Any-Depth Alignment (ADA)</strong>, an innovative <strong>inference-time defense</strong> mechanism. ADA leverages the observation that LLM alignment is concentrated in specific "safety tokens," particularly assistant-header tokens, which carry strong alignment priors. By strategically reintroducing these tokens during generation, ADA prompts the model to reassess potential harmfulness at any depth, thereby recovering robust refusal capabilities. The research demonstrates ADA's remarkable effectiveness across a spectrum of open-source models, achieving near-100% refusal rates against deep prefill attacks and significantly reducing the success of prominent adversarial prompt attacks, all while preserving utility on benign tasks.</p>
+
+<h3>Critical Evaluation</h3>
+
+<h3>Strengths</h3>
+<p>The proposed <strong>Any-Depth Alignment (ADA)</strong> framework presents several compelling strengths. Its primary advantage is the exceptional robustness it offers against advanced adversarial techniques, including deep prefill and prompt attacks, securing a near-100% refusal rate and reducing attack success rates to below 3%. This level of <strong>safety performance</strong> is a significant leap forward. Furthermore, ADA operates as an <strong>inference-time defense</strong>, requiring no modifications to the base model's parameters, making it highly practical and adaptable across diverse LLM architectures such as Llama, Gemma, and Mistral. The method's efficiency is another key highlight, boasting <strong>negligible overhead</strong> and minimal, constant inference costs, partly due to its clever reuse of the Key-Value (KV) cache. Crucially, ADA demonstrates remarkable resilience to <strong>Supervised Fine-Tuning (SFT)</strong> induced alignment erasure, ensuring its effectiveness even after subsequent model tuning, and maintains high utility with minimal over-refusal on benign tasks.</p>
+
+<h3>Weaknesses</h3>
+<p>While ADA offers substantial advancements, the analysis hints at some potential areas for further consideration. The article mentions "some deployment limitations" without elaborating on their specific nature or scope. Understanding these limitations, such as potential integration complexities in certain production environments or specific types of adversarial scenarios where ADA might be less effective, would provide a more complete picture. Additionally, while the mechanism of reintroducing "safety tokens" is clearly outlined, a deeper exploration into the precise cognitive or representational shifts within the LLM that lead to reassessment could offer further theoretical insights.</p>
+
+<h3>Implications</h3>
+<p>The development of <strong>Any-Depth Alignment (ADA)</strong> carries profound implications for the future of <strong>Large Language Model safety</strong>. By effectively addressing the challenge of shallow alignment, ADA paves the way for more secure and trustworthy AI systems capable of resisting sophisticated manipulation. This research not only provides a practical, efficient solution for enhancing LLM robustness but also opens new avenues for understanding and leveraging the innate alignment signals within these complex models. ADA could become a foundational component in developing next-generation <strong>AI safety protocols</strong>, fostering greater confidence in the deployment of LLMs across sensitive applications and contributing significantly to the ongoing efforts to build responsible AI.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large Language Model safety</li><li> LLM shallow alignment</li><li> Any-Depth Alignment (ADA)</li><li> Inference-time LLM defense</li><li> Adversarial attacks on LLMs</li><li> Harmful query refusal</li><li> Assistant header tokens for alignment</li><li> Open-source LLM security</li><li> LLM refusal rate improvement</li><li> Adversarial prefill attack mitigation</li><li> Prompt attack defense (GCG</li><li> AutoDAN)</li><li> LLM safety at generation depth</li><li> Model alignment priors</li><li> Instruction tuning and LLM safety</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/494/any-depth-alignment-unlocking-innate-safety-alignment-of-llms-to-any-depth" target="_blank" title=" Any-Depth Alignment: Unlocking Innate Safety Alignment of LLMs to Any-Depth">
+    Any-Depth Alignment: Unlocking Innate Safety Alignment of LLMs to Any-Depth
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/487_5c2c540d-0218-45b7-9c20-e6e9847228ea.jpg" class="card-img-top" alt="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Asim Mohamed
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/491-Is-Multilingual-LLM-Watermarking-Truly-Multilingual-A-Simple-Back-Translation-Solution/index.html"  title="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution">
+          <h3 class="card-title pb-2" itemprop="headline">Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/491-Is-Multilingual-LLM-Watermarking-Truly-Multilingual-A-Simple-Back-Translation-Solution/index.html"
+          title="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/538_6c9d31c7-8b61-40d5-b3fc-81426664af42.jpg" class="card-img-top" alt="RIR-Mega: a large-scale simulated room impulse response dataset for machine
+learning and room acoustics modeling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Mandip Goswami
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/647-RIR-Mega-a-large-scale-simulated-room-impulse-response-dataset-for-machine-learning-and-room-aco/index.html"  title="RIR-Mega: a large-scale simulated room impulse response dataset for machine
+learning and room acoustics modeling">
+          <h3 class="card-title pb-2" itemprop="headline">RIR-Mega: a large-scale simulated room impulse response dataset for machine
+learning and room acoustics modeling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/647-RIR-Mega-a-large-scale-simulated-room-impulse-response-dataset-for-machine-learning-and-room-aco/index.html"
+          title="RIR-Mega: a large-scale simulated room impulse response dataset for machine
+learning and room acoustics modeling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/445_0b7f0744-2449-4fdf-8176-06b72aa335ba.jpg" class="card-img-top" alt="UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image
+Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yibin Wang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/418-UniGenBench-A-Unified-Semantic-Evaluation-Benchmark-for-Text-to-Image-Generation/index.html"  title="UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image
+Generation">
+          <h3 class="card-title pb-2" itemprop="headline">UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image
+Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/418-UniGenBench-A-Unified-Semantic-Evaluation-Benchmark-for-Text-to-Image-Generation/index.html"
+          title="UniGenBench++: A Unified Semantic Evaluation Benchmark for Text-to-Image
+Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/506_789cf9bc-26c5-43f1-b66e-af54938641b7.jpg" class="card-img-top" alt="LoongRL:Reinforcement Learning for Advanced Reasoning over Long Contexts" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Siyuan Wang
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/503-LoongRLReinforcement-Learning-for-Advanced-Reasoning-over-Long-Contexts/index.html"  title="LoongRL:Reinforcement Learning for Advanced Reasoning over Long Contexts">
+          <h3 class="card-title pb-2" itemprop="headline">LoongRL:Reinforcement Learning for Advanced Reasoning over Long Contexts</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/503-LoongRLReinforcement-Learning-for-Advanced-Reasoning-over-Long-Contexts/index.html"
+          title="LoongRL:Reinforcement Learning for Advanced Reasoning over Long Contexts"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/531_70e164bd-5eb3-4083-8549-12b7c88e5e4f.jpg" class="card-img-top" alt="MINED: Probing and Updating with Multimodal Time-Sensitive Knowledge for Large
+Multimodal Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kailin Jiang
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/641-MINED-Probing-and-Updating-with-Multimodal-Time-Sensitive-Knowledge-for-Large-Multimodal-Models/index.html"  title="MINED: Probing and Updating with Multimodal Time-Sensitive Knowledge for Large
+Multimodal Models">
+          <h3 class="card-title pb-2" itemprop="headline">MINED: Probing and Updating with Multimodal Time-Sensitive Knowledge for Large
+Multimodal Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/641-MINED-Probing-and-Updating-with-Multimodal-Time-Sensitive-Knowledge-for-Large-Multimodal-Models/index.html"
+          title="MINED: Probing and Updating with Multimodal Time-Sensitive Knowledge for Large
+Multimodal Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/448_562a6c18-4970-4a06-acb5-9720f2d93c71.jpg" class="card-img-top" alt="Grasp Any Region: Towards Precise, Contextual Pixel Understanding for Multimodal
+LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haochen Wang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/421-Grasp-Any-Region-Towards-Precise-Contextual-Pixel-Understanding-for-Multimodal-LLMs/index.html"  title="Grasp Any Region: Towards Precise, Contextual Pixel Understanding for Multimodal
+LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Grasp Any Region: Towards Precise, Contextual Pixel Understanding for Multimodal
+LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/421-Grasp-Any-Region-Towards-Precise-Contextual-Pixel-Understanding-for-Multimodal-LLMs/index.html"
+          title="Grasp Any Region: Towards Precise, Contextual Pixel Understanding for Multimodal
+LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
