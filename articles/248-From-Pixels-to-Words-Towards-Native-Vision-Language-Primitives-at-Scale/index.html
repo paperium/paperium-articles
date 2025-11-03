@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>From Pixels to Words -- Towards Native Vision-Language Primi</title>
+
+<meta name="keywords" content="Native Vision-Language Models (VLMs),  Modular VLMs comparison,  NEO VLM family,  Cross-modal properties,  Unified vision-language encoding,  Shared s">
+
+<meta name="description" content="Native Vision-Language Models (VLMs),  Modular VLMs comparison,  NEO VLM family,  Cross-modal properties,  Unified vision-language encoding,  Shared s">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                From Pixels to Words -- Towards Native Vision-Language Primitives at Scale
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Haiwen Diao, Mingxuan Li, Silei Wu, Linjun Dai, Xiaohua Wang, Hanming Deng, Lewei Lu, Dahua Lin, Ziwei Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              17 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/260_71b6d33a-37c1-42a7-9511-746b8fcea766.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New AI Model Turns Pictures into Words Like Magic</h3>
+<p>
+Ever wondered how a phone could instantly “read” a photo the way you read a text message? <strong>Scientists have unveiled</strong> a fresh AI breakthrough called <strong>NEO</strong> that learns to match images and words in one seamless brain, instead of juggling separate vision and language parts. Imagine teaching a child to recognize a dog and say “dog” in a single lesson—NEO does the same, but with millions of pictures and captions, building its understanding from scratch. This unified approach means future apps could search your photo library with a simple phrase, translate street signs on the fly, or help devices describe scenes for the visually‑impaired, all with less computing power and cost. The secret? A clever “primitive” that aligns pixels and words in a shared space, letting the model reason across both worlds naturally. <strong>This discovery</strong> could democratize powerful AI, letting more creators build smart visual tools without massive data or hardware. The next time you snap a picture, remember: a tiny AI marvel is already learning to speak its language. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Native Vision-Language Models with NEO</h2>
+<p>The article introduces NEO, a novel family of <strong>native Vision-Language Models (VLMs)</strong>, designed to overcome limitations of traditional modular architectures. It proposes fundamental principles for constructing unified VLMs, emphasizing effective pixel-word alignment and seamless integration of vision and language. NEO employs a monolithic architecture, incorporating innovations like Native Multi-Head Attention and Native Rotary Position Embeddings (Native-RoPE) to enhance cross-modal reasoning. Through a three-stage training pipeline, NEO efficiently develops visual perception, achieving <strong>competitive performance</strong> against top-tier modular counterparts using only 390M image-text examples. This work aims to democratize and accelerate native VLM research via a scalable, extensible ecosystem.</p>
+
+<h2>Critical Evaluation: NEO's Impact on Multimodal AI</h2>
+<h3>Strengths: Pioneering Unified VLM Architecture</h3>
+<p>NEO represents a significant advancement in <strong>native VLM research</strong> through its unified, monolithic architecture. Its first-principle primitives, including Native Multi-Head Attention and Native-RoPE, effectively align pixel and word representations, mitigating vision-language conflicts. The model demonstrates impressive <strong>competitive performance</strong> against established modular VLMs, even with limited supervised fine-tuning data.</p>
+<p>The comprehensive three-stage training pipeline showcases a robust methodological approach. Public availability of NEO's code and models further fosters a <strong>cost-effective and extensible ecosystem</strong>, contributing to VLM development accessibility.</p>
+
+<h3>Weaknesses: Training Data and Interpretability</h3>
+<p>While NEO achieves strong results, its reliance on 390M image-text examples, though efficient, suggests potential for further performance gains with larger, more diverse datasets or additional reinforcement learning. The article notes competitive performance despite "limited supervised fine-tuning (SFT) data and no reinforcement learning (RL)," indicating areas for future exploration. Additionally, the <strong>monolithic architecture</strong>, while beneficial for integration, could present challenges in fine-grained interpretability or debugging compared to modular systems.</p>
+
+<h3>Implications: Advancing Multimodal AI</h3>
+<p>NEO's success in building powerful native VLMs from first principles has profound implications for the future of <strong>multimodal AI systems</strong>. By demonstrating a viable alternative to modular approaches, it paves the way for more efficient, integrated, and scalable vision-language understanding. This research provides a crucial cornerstone for developing next-generation AI that can seamlessly process and reason across diverse data modalities, accelerating progress in fields requiring sophisticated cross-modal intelligence.</p>
+
+<h2>Conclusion: A Cornerstone for Native VLMs</h2>
+<p>The NEO family of native VLMs marks a pivotal advancement, effectively addressing key challenges in unified vision-language encoding and reasoning. Its innovative architecture and strong empirical performance position it as a formidable contender to modular systems and a significant step towards more accessible and powerful multimodal AI. This work provides practical guiding principles and a robust framework for future research, solidifying NEO's role as a <strong>cornerstone for scalable native VLMs</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Native Vision-Language Models (VLMs)</li><li> Modular VLMs comparison</li><li> NEO VLM family</li><li> Cross-modal properties</li><li> Unified vision-language encoding</li><li> Shared semantic space alignment</li><li> Pixel and word representations</li><li> Scalable native VLMs</li><li> Dense monolithic VLM architecture</li><li> Visual perception from scratch</li><li> Vision-language conflicts mitigation</li><li> VLM research democratization</li><li> Cost-effective VLM ecosystem</li><li> VLM training paradigms</li><li> Vision-language reasoning</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/248/from-pixels-to-words-towards-native-vision-language-primitives-at-scale" target="_blank" title=" From Pixels to Words -- Towards Native Vision-Language Primitives at Scale">
+    From Pixels to Words -- Towards Native Vision-Language Primitives at Scale
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/259_338ff469-6e9c-4638-8748-9705cdd3e8f1.jpg" class="card-img-top" alt="WithAnyone: Towards Controllable and ID Consistent Image Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hengyuan Xu
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/247-WithAnyone-Towards-Controllable-and-ID-Consistent-Image-Generation/index.html"  title="WithAnyone: Towards Controllable and ID Consistent Image Generation">
+          <h3 class="card-title pb-2" itemprop="headline">WithAnyone: Towards Controllable and ID Consistent Image Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/247-WithAnyone-Towards-Controllable-and-ID-Consistent-Image-Generation/index.html"
+          title="WithAnyone: Towards Controllable and ID Consistent Image Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/462_c4d5fa9f-6801-4a72-9f3f-7bda711f0939.jpg" class="card-img-top" alt="AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zheye Deng
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/460-AlphaQuanter-An-End-to-End-Tool-Orchestrated-Agentic-Reinforcement-Learning-Framework-for-Stock/index.html"  title="AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading">
+          <h3 class="card-title pb-2" itemprop="headline">AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/460-AlphaQuanter-An-End-to-End-Tool-Orchestrated-Agentic-Reinforcement-Learning-Framework-for-Stock/index.html"
+          title="AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/276_3cf9a7f0-59fc-4085-a8ff-d0105e95e2e0.jpg" class="card-img-top" alt="MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Weikang Shi
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/263-MathCanvas-Intrinsic-Visual-Chain-of-Thought-for-Multimodal-Mathematical-Reasoning/index.html"  title="MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/263-MathCanvas-Intrinsic-Visual-Chain-of-Thought-for-Multimodal-Mathematical-Reasoning/index.html"
+          title="MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/316_d7b9eceb-58bc-4d12-93e4-b970a031a703.jpg" class="card-img-top" alt="VLA-0: Building State-of-the-Art VLAs with Zero Modification" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ankit Goyal
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/300-VLA-0-Building-State-of-the-Art-VLAs-with-Zero-Modification/index.html"  title="VLA-0: Building State-of-the-Art VLAs with Zero Modification">
+          <h3 class="card-title pb-2" itemprop="headline">VLA-0: Building State-of-the-Art VLAs with Zero Modification</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/300-VLA-0-Building-State-of-the-Art-VLAs-with-Zero-Modification/index.html"
+          title="VLA-0: Building State-of-the-Art VLAs with Zero Modification"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/274_a8afd4b9-1748-4312-8472-20bb2ad51e66.jpg" class="card-img-top" alt="VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hyojun Go
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/261-VIST3A-Text-to-3D-by-Stitching-a-Multi-view-Reconstruction-Network-to-a-Video-Generator/index.html"  title="VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator">
+          <h3 class="card-title pb-2" itemprop="headline">VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/261-VIST3A-Text-to-3D-by-Stitching-a-Multi-view-Reconstruction-Network-to-a-Video-Generator/index.html"
+          title="VIST3A: Text-to-3D by Stitching a Multi-view Reconstruction Network to a Video
+Generator"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/271_7526be17-e593-4b6c-8e42-4b818c95cd69.jpg" class="card-img-top" alt="Qwen3Guard Technical Report" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haiquan Zhao
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/258-Qwen3Guard-Technical-Report/index.html"  title="Qwen3Guard Technical Report">
+          <h3 class="card-title pb-2" itemprop="headline">Qwen3Guard Technical Report</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/258-Qwen3Guard-Technical-Report/index.html"
+          title="Qwen3Guard Technical Report"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
