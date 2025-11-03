@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>RobotArena infty: Scalable Robot Benchmarking via Real-to-Si</title>
+
+<meta name="keywords" content="robot generalist benchmarking,  vision-language agent evaluation,  simulated digital twin environments for robotics,  2D-to-3D generative modeling of ">
+
+<meta name="description" content="robot generalist benchmarking,  vision-language agent evaluation,  simulated digital twin environments for robotics,  2D-to-3D generative modeling of ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yash Jangir, Yidi Zhang, Kashu Yamazaki, Chenyu Zhang, Kuan-Hsun Tu, Tsung-Wei Ke, Lei Ke, Yonatan Bisk, Katerina Fragkiadaki
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              31 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/683_a1e17f5f-bb6a-4435-8038-52b117bbee7c.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>RobotArena infty: Testing Real Robots Inside a Virtual Playground</h3>
+<p>
+Ever wondered how a robot learns to pick up a cup without a human watching every move? <strong>Scientists have created</strong> a clever new system that turns real‑world robot videos into a digital twin, letting the robot practice in a massive, safe simulation. Imagine filming a chef cooking and then replaying that scene inside a video game where you can change the kitchen layout or the lighting—this is what the new benchmark does for robots. By using smart vision‑language AI, the system automatically builds a 3‑D world from a simple video, then scores the robot’s actions with both AI judges and quick human votes. This means researchers can test thousands of robot tricks, tweak textures or object positions, and see if the robot still works, all without lifting a single wrench. <strong>It’s a breakthrough</strong> that makes robot training faster, cheaper, and far more reliable. As robots become everyday helpers, such virtual testing grounds will keep them safe and ready for the real world. <strong>Imagine the possibilities</strong> when every robot can be tried out in endless digital arenas!<br><br>
+The future of robotics is already being played out on screen. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: Advancing Robot Generalist Evaluation with RobotArena ∞</h2>
+<p>The pursuit of truly versatile robot generalists, capable of executing diverse tasks across varied environments, necessitates a robust and scalable evaluation framework. Traditional real-world testing for robot policies is inherently constrained by its labor-intensive nature, slow execution, safety concerns, and reproducibility challenges. Similarly, existing simulation benchmarks often fall short, as they typically train and test within the same synthetic domains, limiting their ability to assess models derived from real-world demonstrations or alternative simulation environments. Addressing these critical gaps, this article introduces <strong>RobotArena ∞</strong>, an innovative benchmarking framework designed to revolutionize the evaluation of <strong>Vision-Language Agents (VLAs)</strong>. By translating real robot video demonstrations into large-scale simulated environments, the framework leverages advancements in <strong>Vision-Language Models (VLMs)</strong> and <strong>2D-to-3D generative modeling</strong>. The core findings reveal that current VLAs exhibit a significant lack of <strong>generalization</strong> and <strong>robustness</strong> when faced with distribution shifts, often specializing too narrowly to their training data.</p>
+
+<h2>Critical Evaluation: Assessing Generalization and Robustness in Vision-Language Agents</h2>
+
+<h3>Strengths: A Scalable and Reproducible Benchmarking Framework</h3>
+<p><strong>RobotArena ∞</strong> presents a compelling solution to long-standing challenges in robotics evaluation. Its primary strength lies in its ability to provide a <strong>scalable</strong>, <strong>reproducible</strong>, and inherently safer alternative to real-world testing. The framework ingeniously converts real-world video demonstrations into digital twins, enabling extensive testing without the logistical overhead of physical setups. A key innovation is the integration of both <strong>automated VLM-guided scoring</strong> and <strong>scalable human preference judgments</strong>, collected from crowdworkers, which transforms human involvement from tedious scene setup and safety supervision into lightweight, nuanced comparisons. Furthermore, the framework's capacity for <strong>systematic perturbation</strong> along multiple axes—such as background changes, color shifts, and object pose variations—is crucial for rigorously stress-testing <strong>policy generalization</strong> and identifying vulnerabilities. This allows for a comprehensive assessment of how well robot policies adapt to controlled environmental variations, a critical step towards developing truly robust generalist robots.</p>
+
+<h3>Weaknesses: Current Limitations and Future Directions</h3>
+<p>While <strong>RobotArena ∞</strong> offers significant advancements, the evaluation also highlights several areas for improvement in current <strong>Vision-Language Agents</strong>. The findings consistently demonstrate <strong>weak cross-dataset generalization</strong> and a notable <strong>sensitivity to perturbations</strong> among existing VLAs, indicating that they tend to over-specialize to their training data rather than learning broadly applicable skills. Although the framework's simulation-based evaluation aligns well with real-world performance, the article acknowledges current limitations within the simulation environment itself, particularly concerning the fidelity of <strong>camera inputs</strong> and the complexity of <strong>contact dynamics</strong>. Addressing these simulation fidelity issues could further enhance the framework's predictive power and its ability to guide the development of more sophisticated VLA architectures. Future research could focus on improving these aspects to better capture the nuances of real-world physical interactions.</p>
+
+<h2>Conclusion: Paving the Way for Next-Generation Robot Policies</h2>
+<p>The introduction of <strong>RobotArena ∞</strong> marks a pivotal step forward in the field of robotics, addressing a critical missing capability in the evaluation of <strong>robot generalists</strong>. By offering a <strong>continuously evolving</strong>, <strong>reproducible</strong>, and <strong>scalable benchmark</strong> for real-world trained robot manipulation policies, this framework provides invaluable insights into the current state of <strong>Vision-Language Agents</strong>. The findings underscore the urgent need for developing VLAs with enhanced <strong>generalization</strong> and <strong>robustness</strong> to diverse environmental conditions. Ultimately, <strong>RobotArena ∞</strong> is poised to accelerate the development of more capable and adaptable robot policies, paving the way for a future where robots can reliably perform complex tasks across an unpredictable array of real-world scenarios.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>robot generalist benchmarking</li><li> vision-language agent evaluation</li><li> simulated digital twin environments for robotics</li><li> 2D-to-3D generative modeling of robot demonstrations</li><li> differentiable rendering for policy testing</li><li> VLM-guided scoring of manipulation tasks</li><li> crowdworker preference judgments in robot evaluation</li><li> texture and object placement perturbation robustness</li><li> scalable human feedback loop for robot policies</li><li> reproducible robot manipulation benchmark</li><li> real-world trained robot policy transfer to simulation</li><li> large-scale simulated environments with online human feedback</li><li> automated success metric for robot manipulation</li><li> policy generalization across synthetic and real domains</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/824/robotarena-infty-scalable-robot-benchmarking-via-real-to-sim-translation" target="_blank" title=" RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation">
+    RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/679_77592da1-d45b-4db9-9866-95df03900e70.jpg" class="card-img-top" alt="LightBagel: A Light-weighted, Double Fusion Framework for Unified Multimodal
+Understanding and Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zeyu Wang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/775-LightBagel-A-Light-weighted-Double-Fusion-Framework-for-Unified-Multimodal-Understanding-and-Gen/index.html"  title="LightBagel: A Light-weighted, Double Fusion Framework for Unified Multimodal
+Understanding and Generation">
+          <h3 class="card-title pb-2" itemprop="headline">LightBagel: A Light-weighted, Double Fusion Framework for Unified Multimodal
+Understanding and Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/775-LightBagel-A-Light-weighted-Double-Fusion-Framework-for-Unified-Multimodal-Understanding-and-Gen/index.html"
+          title="LightBagel: A Light-weighted, Double Fusion Framework for Unified Multimodal
+Understanding and Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/809_beaf8ae9-00c6-408e-b9e7-ca7b31c88847.jpg" class="card-img-top" alt="MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoke Huang
+          </div>
+          <div class="article-meta-text">
+            02 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/900-MedVLSynther-Synthesizing-High-Quality-Visual-Question-Answering-from-Medical-Documents-with-Gen/index.html"  title="MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs">
+          <h3 class="card-title pb-2" itemprop="headline">MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/900-MedVLSynther-Synthesizing-High-Quality-Visual-Question-Answering-from-Medical-Documents-with-Gen/index.html"
+          title="MedVLSynther: Synthesizing High-Quality Visual Question Answering from Medical
+Documents with Generator-Verifier LMMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/743_ae2de635-3e73-4170-99c7-ea4e50e6704a.jpg" class="card-img-top" alt="RegionE: Adaptive Region-Aware Generation for Efficient Image Editing" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Pengtao Chen
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/843-RegionE-Adaptive-Region-Aware-Generation-for-Efficient-Image-Editing/index.html"  title="RegionE: Adaptive Region-Aware Generation for Efficient Image Editing">
+          <h3 class="card-title pb-2" itemprop="headline">RegionE: Adaptive Region-Aware Generation for Efficient Image Editing</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/843-RegionE-Adaptive-Region-Aware-Generation-for-Efficient-Image-Editing/index.html"
+          title="RegionE: Adaptive Region-Aware Generation for Efficient Image Editing"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/624_21dca981-b593-4a49-8131-3e97f41b8d61.jpg" class="card-img-top" alt="A Definition of AGI" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Dan Hendrycks
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/727-A-Definition-of-AGI/index.html"  title="A Definition of AGI">
+          <h3 class="card-title pb-2" itemprop="headline">A Definition of AGI</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/727-A-Definition-of-AGI/index.html"
+          title="A Definition of AGI"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/719_962ae7be-449d-4a34-8f52-a62c8ab4e94d.jpg" class="card-img-top" alt="WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich
+Seeking" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhengwei Tao
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/804-WebLeaper-Empowering-Efficiency-and-Efficacy-in-WebAgent-via-Enabling-Info-Rich-Seeking/index.html"  title="WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich
+Seeking">
+          <h3 class="card-title pb-2" itemprop="headline">WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich
+Seeking</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/804-WebLeaper-Empowering-Efficiency-and-Efficacy-in-WebAgent-via-Enabling-Info-Rich-Seeking/index.html"
+          title="WebLeaper: Empowering Efficiency and Efficacy in WebAgent via Enabling Info-Rich
+Seeking"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/688_43e2a252-3dce-48aa-a9e2-f8e3ce0fb642.jpg" class="card-img-top" alt="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yusu Qian
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/782-PRISM-Bench-A-Benchmark-of-Puzzle-Based-Visual-Tasks-with-CoT-Error-Detection/index.html"  title="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection">
+          <h3 class="card-title pb-2" itemprop="headline">PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/782-PRISM-Bench-A-Benchmark-of-Puzzle-Based-Visual-Tasks-with-CoT-Error-Detection/index.html"
+          title="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
