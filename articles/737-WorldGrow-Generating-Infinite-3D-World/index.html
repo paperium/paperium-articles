@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>WorldGrow: Generating Infinite 3D World</title>
+
+<meta name="keywords" content="unbounded 3D scene synthesis,  hierarchical 3D world generation,  scene block inpainting,  structured latent representations for 3D scenes,  coarse-to">
+
+<meta name="description" content="unbounded 3D scene synthesis,  hierarchical 3D world generation,  scene block inpainting,  structured latent representations for 3D scenes,  coarse-to">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                WorldGrow: Generating Infinite 3D World
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Sikuang Li, Chen Yang, Jiemin Fang, Taoran Yi, Jia Lu, Jiazhong Cen, Lingxi Xie, Wei Shen, Qi Tian
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              27 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/631_cebae097-11fa-41bc-acd6-cf09a27df7fb.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>WorldGrow: How AI Can Build Endless 3D Worlds</h3>
+<p>
+Ever imagined stepping into a video game that never runs out of new places to explore? <strong>WorldGrow</strong> makes that dream possible by teaching computers to grow virtual worlds just like a gardener tends a never‑ending garden. Instead of stitching together flat pictures, the system creates three‑dimensional “blocks” that fit together seamlessly, so the scenery stays realistic from every angle. Think of it like LEGO bricks that automatically snap into place, forming whole cities, forests, or interiors without any gaps or mismatched pieces. The magic comes from a clever “inpainting” trick that fills in missing parts based on what’s already there, and a two‑step process that first sketches the big layout before adding fine details. The result? Photorealistic, endless environments that could power the next generation of games, virtual tours, or training simulators. <strong>Scientists found</strong> this approach not only looks stunning but also keeps the geometry accurate, opening doors to truly immersive digital worlds. <strong>Imagine</strong> a future where every adventure feels fresh, because the world itself keeps growing.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: Pioneering Unbounded 3D Scene Synthesis with WorldGrow</h2>
+<p>The article introduces WorldGrow, a novel and hierarchical framework designed to address the significant challenge of generating <strong>infinitely extendable 3D worlds</strong> with coherent geometry and realistic appearance. Existing methods often struggle with geometric and appearance inconsistencies, scalability issues in implicit representations, or are limited to object-centric generation. WorldGrow overcomes these by leveraging strong generation priors from pre-trained 3D models for structured scene block generation. Its methodology integrates a sophisticated data curation pipeline to extract high-quality scene blocks, a <strong>3D block inpainting mechanism</strong> for context-aware scene extension, and a coarse-to-fine generation strategy ensuring both global layout plausibility and local fidelity. Evaluated on the large-scale 3D-FRONT dataset, WorldGrow achieves state-of-the-art performance in geometry reconstruction, uniquely supporting infinite scene generation with photorealistic and structurally consistent outputs.</p>
+
+<h3>Critical Evaluation: Assessing WorldGrow's Innovation and Impact</h3>
+
+<h3>Strengths: Advancing Photorealistic 3D World Generation</h3>
+<p>WorldGrow presents a robust solution to long-standing issues in 3D content creation, particularly its ability to generate <strong>unbounded 3D scenes</strong>. A key strength lies in its innovative use of Structured LATents (SLATs) and a "scene-friendly SLAT" modification, which significantly enhances representational capabilities for complex scenes, including handling occlusions. The hierarchical framework, combining iterative inpainting and structure-guided denoising, ensures both global coherence and fine-grained detail, leading to superior geometric and visual fidelity. The method's validation through extensive experiments on the 3D-FRONT dataset, demonstrating <strong>state-of-the-art performance</strong> against existing methods across various metrics (FID, MMD, CLIP score), underscores its technical prowess. Furthermore, the comprehensive ablation studies confirm the efficacy of its core components, including data curation and the coarse-to-fine strategy, highlighting its potential for applications in <strong>virtual reality</strong>, augmented reality, and computer-aided design.</p>
+
+<h3>Weaknesses and Limitations: Navigating Current Challenges in 3D Synthesis</h3>
+<p>While WorldGrow marks a significant leap, the article acknowledges certain limitations. Primarily, the current framework is optimized for <strong>XY-plane expansion</strong>, meaning its capability for vertical generation of multi-story or complex vertical structures is not yet fully developed. This restricts its immediate applicability to certain types of virtual environments. Additionally, while the method excels at structural and visual consistency, the discussion of future work points towards the need for enhanced <strong>semantic control</strong>. This suggests that fine-grained, user-driven semantic manipulation of generated scenes might still be an area for further refinement, potentially limiting its flexibility for highly customized content creation without additional post-processing.</p>
+
+<h2>Conclusion: WorldGrow's Contribution to Virtual Environment Creation</h2>
+<p>WorldGrow stands out as a pioneering framework that significantly pushes the boundaries of <strong>large-scale 3D environment creation</strong>. By effectively tackling the challenges of geometric consistency, scalability, and photorealism in unbounded scene generation, it offers a powerful tool for researchers and developers. Its unique combination of structured latent representations, block-wise inpainting, and a coarse-to-fine strategy positions it as a leading method for synthesizing <strong>infinite, coherent, and photorealistic 3D worlds</strong>. Despite current limitations in vertical generation and semantic control, WorldGrow's foundational contributions are immense, paving the way for more immersive virtual experiences and the development of sophisticated <strong>future world models</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>unbounded 3D scene synthesis</li><li> hierarchical 3D world generation</li><li> scene block inpainting</li><li> structured latent representations for 3D scenes</li><li> coarse-to-fine 3D generation strategy</li><li> large-scale 3D-FRONT dataset evaluation</li><li> photorealistic infinite virtual environments</li><li> context-aware scene extension</li><li> geometry reconstruction SOTA performance</li><li> pre-trained 3D foundation models for scene generation</li><li> data curation pipeline for high-quality scene blocks</li><li> global layout plausibility in 3D synthesis</li><li> local geometric and textural fidelity</li><li> object-centric versus scene-level 3D models</li><li> infinite extendable 3D environments.</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/737/worldgrow-generating-infinite-3d-world" target="_blank" title=" WorldGrow: Generating Infinite 3D World">
+    WorldGrow: Generating Infinite 3D World
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/731_a2d2a6ff-433b-4100-aca7-35f23201b1ee.jpg" class="card-img-top" alt="PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Penghao Wang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/815-PartNeXt-A-Next-Generation-Dataset-for-Fine-Grained-and-Hierarchical-3D-Part-Understanding/index.html"  title="PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding">
+          <h3 class="card-title pb-2" itemprop="headline">PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/815-PartNeXt-A-Next-Generation-Dataset-for-Fine-Grained-and-Hierarchical-3D-Part-Understanding/index.html"
+          title="PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/548_2ecd9a26-797c-418a-b429-f85765f24dfa.jpg" class="card-img-top" alt="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiahao Meng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/657-Open-o3-Video-Grounded-Video-Reasoning-with-Explicit-Spatio-Temporal-Evidence/index.html"  title="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence">
+          <h3 class="card-title pb-2" itemprop="headline">Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/657-Open-o3-Video-Grounded-Video-Reasoning-with-Explicit-Spatio-Temporal-Evidence/index.html"
+          title="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/619_56ceb9e3-293c-469b-9ab4-78af6dcee705.jpg" class="card-img-top" alt="Video-As-Prompt: Unified Semantic Control for Video Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuxuan Bian
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/724-Video-As-Prompt-Unified-Semantic-Control-for-Video-Generation/index.html"  title="Video-As-Prompt: Unified Semantic Control for Video Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Video-As-Prompt: Unified Semantic Control for Video Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/724-Video-As-Prompt-Unified-Semantic-Control-for-Video-Generation/index.html"
+          title="Video-As-Prompt: Unified Semantic Control for Video Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/689_dde75879-f30d-4bc6-82f4-b62285a007c8.jpg" class="card-img-top" alt="Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech
+Recognition with LLMS" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Anand
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/783-Mitigating-Attention-Sinks-and-Massive-Activations-in-Audio-Visual-Speech-Recognition-with-LLMS/index.html"  title="Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech
+Recognition with LLMS">
+          <h3 class="card-title pb-2" itemprop="headline">Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech
+Recognition with LLMS</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/783-Mitigating-Attention-Sinks-and-Massive-Activations-in-Audio-Visual-Speech-Recognition-with-LLMS/index.html"
+          title="Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech
+Recognition with LLMS"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/496_2c1178f8-5334-470f-b2fd-bc3893df45ad.jpg" class="card-img-top" alt="PokeeResearch: Effective Deep Research via Reinforcement Learning from AI
+Feedback and Robust Reasoning Scaffold" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yi Wan
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/500-PokeeResearch-Effective-Deep-Research-via-Reinforcement-Learning-from-AI-Feedback-and-Robust-Rea/index.html"  title="PokeeResearch: Effective Deep Research via Reinforcement Learning from AI
+Feedback and Robust Reasoning Scaffold">
+          <h3 class="card-title pb-2" itemprop="headline">PokeeResearch: Effective Deep Research via Reinforcement Learning from AI
+Feedback and Robust Reasoning Scaffold</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/500-PokeeResearch-Effective-Deep-Research-via-Reinforcement-Learning-from-AI-Feedback-and-Robust-Rea/index.html"
+          title="PokeeResearch: Effective Deep Research via Reinforcement Learning from AI
+Feedback and Robust Reasoning Scaffold"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/630_9bbc6c93-f905-4841-ac7c-c9422ec82ba6.jpg" class="card-img-top" alt="Visual Diffusion Models are Geometric Solvers" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Nir Goren
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/736-Visual-Diffusion-Models-are-Geometric-Solvers/index.html"  title="Visual Diffusion Models are Geometric Solvers">
+          <h3 class="card-title pb-2" itemprop="headline">Visual Diffusion Models are Geometric Solvers</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/736-Visual-Diffusion-Models-are-Geometric-Solvers/index.html"
+          title="Visual Diffusion Models are Geometric Solvers"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
