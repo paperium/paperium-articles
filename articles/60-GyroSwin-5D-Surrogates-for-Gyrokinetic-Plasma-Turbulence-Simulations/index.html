@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+
+<title>GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence Si</title>
+
+<meta name="keywords" content="Nonlinear gyrokinetic simulations,  Reduced-order plasma transport models,  5D distribution function dynamics,  Scalable neural surrogate architecture">
+
+<meta name="description" content="Nonlinear gyrokinetic simulations,  Reduced-order plasma transport models,  5D distribution function dynamics,  Scalable neural surrogate architecture">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence Simulations
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Fabian Paischer, Gianluca Galletti, William Hornsby, Paul Setinek, Lorenzo Zanisi, Naomi Carey, Stanislas Pamela, Johannes Brandstetter
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/73_c19fa4ec-942e-49ec-96db-6781af14dbdb.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>GyroSwin: AI Breakthrough That Could Power the Future</h3>
+<p>
+Imagine trying to predict a wild, swirling storm inside a tiny bottle—that’s what scientists face when they study the chaotic dance of super‑hot plasma in a fusion reactor. <strong>GyroSwin</strong> is a new AI tool that acts like a super‑fast weather forecast for this invisible storm, learning from massive 5‑dimensional simulations and then delivering accurate predictions in a flash.  
+Instead of the slow, clunky calculations that have limited fusion research for years, this neural surrogate captures the hidden twists and turns of plasma turbulence, giving engineers a clear picture of how heat will flow. Think of it as swapping a hand‑cranked calculator for a high‑speed computer that still knows the physics inside.  
+The result? Researchers can now explore reactor designs that were previously out of reach, cutting the computational cost by a thousand times while keeping the predictions trustworthy. <strong>Scientists found</strong> that GyroSwin not only predicts heat loss better than older shortcuts but also reveals the subtle energy cascades that keep the plasma alive.  
+With this breakthrough, the dream of clean, limitless fusion energy feels a little closer—one smart simulation at a time. <strong>It’s a game‑changer for the future of power</strong>.  
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p><strong>GyroSwin</strong> introduces a novel scalable neural surrogate for the five‑dimensional <strong>gyrokinetic</strong> equation that governs <strong>plasma turbulence</strong> in fusion devices. By extending hierarchical Vision Transformers to 5D, the model incorporates cross‑attention modules linking electrostatic potential fields with the distribution function, enabling faithful capture of nonlinear dynamics omitted by reduced models. The architecture also employs channelwise mode separation inspired by physical cascades, allowing efficient representation of turbulent energy transfer across scales. Benchmarking against conventional reduced numerics shows GyroSwin achieves superior <strong>heat flux prediction</strong> while reducing computational cost by three orders of magnitude. These results demonstrate that large‑scale neural surrogates can bridge the gap between full gyrokinetic simulations and practical engineering tools for next‑generation reactors.</p>
+
+<h3>Critical Evaluation</h3>
+<h4>Strengths</h4>
+<p>The integration of Vision Transformer attention mechanisms with physics‑motivated channel separation provides a principled way to encode high‑dimensional turbulence features. The model’s ability to scale up to one billion parameters without loss of accuracy indicates strong generalization and robustness across parameter regimes. Moreover, the demonstrated cost savings make GyroSwin attractive for real‑time predictive control in fusion experiments.</p>
+<h4>Weaknesses</h4>
+<p>While the surrogate reproduces heat flux statistics well, its performance on other transport channels (e.g., particle or momentum flux) remains unreported. The reliance on supervised training data from fully resolved simulations may limit applicability to regimes where such data are scarce or noisy. Additionally, the interpretability of learned attention maps is not addressed, potentially obscuring physical insight.</p>
+<h4>Implications</h4>
+<p>If validated across a broader set of plasma conditions, GyroSwin could accelerate design cycles for tokamak and stellarator devices by providing rapid, physics‑consistent turbulence estimates. The framework also offers a template for extending deep learning to other high‑dimensional kinetic problems in space and astrophysical plasmas.</p>
+
+<h3>Conclusion</h3>
+<p>GyroSwin represents a significant methodological advance that marries modern transformer architectures with gyrokinetic physics, delivering accurate, scalable turbulence predictions at dramatically reduced cost. Its success underscores the potential of data‑driven surrogates to complement traditional numerical solvers in fusion research.</p>
+
+<h3>Readability</h3>
+<p>The article is structured into concise sections that guide readers through motivation, methodology, and results. Key terms such as <strong>gyrokinetic</strong>, <strong>plasma turbulence</strong>, and <strong>neural surrogate</strong> are highlighted to aid search engine indexing. Paragraphs remain short and focused, improving scanability for professionals seeking actionable insights.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Nonlinear gyrokinetic simulations</li><li> Reduced-order plasma transport models</li><li> 5D distribution function dynamics</li><li> Scalable neural surrogate architecture</li><li> Vision Transformer adaptation for high-dimensional physics</li><li> Cross-attention latent interaction modules</li><li> Electrostatic potential field coupling</li><li> Channelwise mode separation technique</li><li> Turbulent heat flux prediction accuracy</li><li> Energy cascade representation in machine learning</li><li> Three-order magnitude computational savings</li><li> Billion-parameter scaling laws</li><li> Physically verifiable surrogate modeling</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/60/gyroswin-5d-surrogates-for-gyrokinetic-plasma-turbulence-simulations" target="_blank" title=" GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence Simulations">
+    GyroSwin: 5D Surrogates for Gyrokinetic Plasma Turbulence Simulations
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5">
+       <h2 class="lead text-center mb-5">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3>More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/65_012f4e1a-ec17-41da-87b8-56eeb8f41cc3.jpg" class="card-img-top" alt="DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise
+Neural Dynamics Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xueyi Liu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/52-DexNDM-Closing-the-Reality-Gap-for-Dexterous-In-Hand-Rotation-via-Joint-Wise-Neural-Dynamics-Mode/index.html"  title="DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise
+Neural Dynamics Model">
+          <h3 class="card-title pb-2" itemprop="headline">DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise
+Neural Dynamics Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/52-DexNDM-Closing-the-Reality-Gap-for-Dexterous-In-Hand-Rotation-via-Joint-Wise-Neural-Dynamics-Mode/index.html"
+          title="DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise
+Neural Dynamics Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/191_7f6f05c9-8719-4a2e-a270-8bd1dd818421.jpg" class="card-img-top" alt="VER: Vision Expert Transformer for Robot Learning via Foundation Distillation
+and Dynamic Routing" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yixiao Wang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/180-VER-Vision-Expert-Transformer-for-Robot-Learning-via-Foundation-Distillation-and-Dynamic-Routing/index.html"  title="VER: Vision Expert Transformer for Robot Learning via Foundation Distillation
+and Dynamic Routing">
+          <h3 class="card-title pb-2" itemprop="headline">VER: Vision Expert Transformer for Robot Learning via Foundation Distillation
+and Dynamic Routing</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/180-VER-Vision-Expert-Transformer-for-Robot-Learning-via-Foundation-Distillation-and-Dynamic-Routing/index.html"
+          title="VER: Vision Expert Transformer for Robot Learning via Foundation Distillation
+and Dynamic Routing"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/187_855bdde7-49d3-4ebd-ad7e-c4971ce78eeb.jpg" class="card-img-top" alt="World-To-Image: Grounding Text-to-Image Generation with Agent-Driven World
+Knowledge" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Moo Hyun Son
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/176-World-To-Image-Grounding-Text-to-Image-Generation-with-Agent-Driven-World-Knowledge/index.html"  title="World-To-Image: Grounding Text-to-Image Generation with Agent-Driven World
+Knowledge">
+          <h3 class="card-title pb-2" itemprop="headline">World-To-Image: Grounding Text-to-Image Generation with Agent-Driven World
+Knowledge</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/176-World-To-Image-Grounding-Text-to-Image-Generation-with-Agent-Driven-World-Knowledge/index.html"
+          title="World-To-Image: Grounding Text-to-Image Generation with Agent-Driven World
+Knowledge"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/37_2ef0c5de-f488-4ac6-9d55-e90489c9fb77.jpg" class="card-img-top" alt="The Alignment Waltz: Jointly Training Agents to Collaborate for Safety" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jingyu Zhang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/28-The-Alignment-Waltz-Jointly-Training-Agents-to-Collaborate-for-Safety/index.html"  title="The Alignment Waltz: Jointly Training Agents to Collaborate for Safety">
+          <h3 class="card-title pb-2" itemprop="headline">The Alignment Waltz: Jointly Training Agents to Collaborate for Safety</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/28-The-Alignment-Waltz-Jointly-Training-Agents-to-Collaborate-for-Safety/index.html"
+          title="The Alignment Waltz: Jointly Training Agents to Collaborate for Safety"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/27_e88af98b-5b6c-4d2b-b945-8cb117f4e395.jpg" class="card-img-top" alt="Agent Learning via Early Experience" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kai Zhang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/18-Agent-Learning-via-Early-Experience/index.html"  title="Agent Learning via Early Experience">
+          <h3 class="card-title pb-2" itemprop="headline">Agent Learning via Early Experience</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/18-Agent-Learning-via-Early-Experience/index.html"
+          title="Agent Learning via Early Experience"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/38_4e94fbd1-54bc-4c87-88f2-c275fa228a33.jpg" class="card-img-top" alt="Training-Free Group Relative Policy Optimization" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuzheng Cai
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/29-Training-Free-Group-Relative-Policy-Optimization/index.html"  title="Training-Free Group Relative Policy Optimization">
+          <h3 class="card-title pb-2" itemprop="headline">Training-Free Group Relative Policy Optimization</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/29-Training-Free-Group-Relative-Policy-Optimization/index.html"
+          title="Training-Free Group Relative Policy Optimization"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <link rel="stylesheet" href="/paperium-articles/assets/script1.js"> 
+ 
+</body>
+</html>
