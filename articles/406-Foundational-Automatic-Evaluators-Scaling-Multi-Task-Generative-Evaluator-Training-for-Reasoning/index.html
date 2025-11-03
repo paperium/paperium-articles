@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Foundational Automatic Evaluators: Scaling Multi-Task Genera</title>
+
+<meta name="keywords" content="Finetuning generative evaluators,  Scalable AI evaluation,  Foundational Automatic Reasoning Evaluators (FARE),  Data-driven evaluation methodology,  ">
+
+<meta name="description" content="Finetuning generative evaluators,  Scalable AI evaluation,  Foundational Automatic Reasoning Evaluators (FARE),  Data-driven evaluation methodology,  ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator
+Training for Reasoning-Centric Domains
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Austin Xu, Xuan-Phi Nguyen, Yilun Zhou, Chien-Sheng Wu, Caiming Xiong, Shafiq Joty
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              22 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/433_fe596e0e-d962-400e-9147-f6e1f2c79829.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New AI Evaluators Make Smart Machines Even Smarter</h3>
+<p>
+Ever wondered how we can tell if a computer’s answer is truly clever? <strong>Scientists have built</strong> a fresh kind of AI “judge” that can grade reasoning tasks just like a human teacher. By gathering a massive library of 2.5 million example questions—from simple pair comparisons to step‑by‑step math problems—they taught these judges to spot good reasoning without any fancy tricks. Think of it like training a seasoned editor with millions of drafts; the more they read, the sharper their eye becomes. The result? Two powerful models, one the size of a modest smartphone brain (8 billion parameters) and another rivaling the biggest commercial systems (20 billion). <strong>These evaluators outshine</strong> older, specialized tools and even help other AIs improve by up to 14 % when they learn from the feedback. In real tests, the biggest model ranks math solutions almost as well as a perfect oracle. <strong>This breakthrough shows</strong> that smarter, data‑driven judges can lift the whole AI community, bringing us closer to machines that think and reason like us. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Scalable Evaluation with Foundational Automatic Reasoning Evaluators (FARE)</h2>
+<p>This research introduces Foundational Automatic Reasoning Evaluators (FARE), addressing the critical need for <strong>scalable evaluation</strong> in large language models. The core goal was to develop high-performing, data-driven evaluators for complex reasoning tasks. Utilizing a massive 2.5 million sample dataset across five evaluation tasks and an innovative iterative rejection-sampling Supervised Finetuning (SFT) approach, FARE models (8B and 20B parameters) were trained. These models demonstrate superior performance, challenging and often surpassing larger, specialized, and RL-trained evaluators on benchmarks and real-world applications like reranking and RL training verification. This work significantly advances <strong>automatic evaluation</strong>, offering robust tools for both training and test-time assessment.</p>
+
+<h2>Critical Evaluation of FARE's Impact on AI Evaluation</h2>
+
+<h3>Strengths: Data-Driven Excellence and Methodological Innovation</h3>
+<p>A key strength is the <strong>data-centric approach</strong>, leveraging a 2.5 million sample dataset from diverse sources and synthetic generation, providing a robust training foundation. The novel <strong>iterative rejection-sampling Supervised Finetuning (SFT)</strong> method is a significant innovation, addressing limitations of teacher models and RL, enhancing scalability and mitigating distribution shifts. FARE models consistently achieve best-in-class performance, outperforming larger specialized evaluators across benchmarks and real-world tasks like reranking, RL training verification, and code evaluation. Their versatility and open-source nature are notable contributions.</p>
+
+<h3>Weaknesses: Potential Caveats and Future Considerations</h3>
+<p>While impressive, a potential caveat lies in the reliance on <strong>synthetic data generation</strong>. The quality and representativeness of this data, derived from programmatic error injection, are crucial, as biases could impact real-world performance. Computational resources for curating such a large dataset and executing iterative SFT might also be substantial. Future research could explore FARE's generalizability to an even broader array of nuanced evaluation tasks.</p>
+
+<h3>Implications: Reshaping AI Model Development and Assessment</h3>
+<p>The development of FARE has profound implications for <strong>AI model development</strong> and evaluation. By providing highly effective, scalable, and open-source automatic evaluators, this research empowers developers to more efficiently assess and refine large language models. FARE's ability to achieve near-oracle performance in reranking and significantly improve downstream RL-trained models highlights its potential to accelerate progress in complex reasoning tasks. Its utility as an initialization for domain-specific finetuning sets a new standard for <strong>open-source evaluators</strong>, fostering innovation and accessibility.</p>
+
+<h2>Conclusion: A New Benchmark for Automatic Reasoning Evaluation</h2>
+<p>In conclusion, the introduction of Foundational Automatic Reasoning Evaluators (FARE) marks a significant milestone in AI evaluation. By prioritizing a <strong>data-driven approach</strong> and employing an innovative iterative SFT methodology, this research has successfully developed a family of evaluators that challenge and often surpass larger, specialized models. FARE's demonstrated capabilities across diverse tasks underscore its immense value, providing a robust, scalable, and high-performing solution for efficient evaluation. This work sets a new benchmark for <strong>automatic reasoning evaluation</strong>, paving the way for more advanced and reliable generative AI systems.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Finetuning generative evaluators</li><li> Scalable AI evaluation</li><li> Foundational Automatic Reasoning Evaluators (FARE)</li><li> Data-driven evaluation methodology</li><li> Iterative rejection-sampling SFT</li><li> Reasoning evaluation models</li><li> Open-source AI evaluators</li><li> Inference-time reranking</li><li> RL training verifiers</li><li> Test-case quality evaluation</li><li> Large language model evaluation</li><li> Pairwise evaluation tasks</li><li> Reference-free verification</li><li> Step-level evaluation</li><li> Supervised finetuning for evaluators</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/406/foundational-automatic-evaluators-scaling-multi-task-generative-evaluatortraining-for-reasoning-cent" target="_blank" title=" Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator
+Training for Reasoning-Centric Domains">
+    Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator
+Training for Reasoning-Centric Domains
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/455_b3cb6b46-415d-4119-83bd-ef1fc4f02276.jpg" class="card-img-top" alt="MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yongshun Zhang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/434-MUG-V-10B-High-efficiency-Training-Pipeline-for-Large-Video-Generation-Models/index.html"  title="MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models">
+          <h3 class="card-title pb-2" itemprop="headline">MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/434-MUG-V-10B-High-efficiency-Training-Pipeline-for-Large-Video-Generation-Models/index.html"
+          title="MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/428_f56bfafb-b16c-4aab-b1ac-87c0fa7bf0b9.jpg" class="card-img-top" alt="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuhao Yang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/401-UltraCUA-A-Foundation-Model-for-Computer-Use-Agents-with-Hybrid-Action/index.html"  title="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action">
+          <h3 class="card-title pb-2" itemprop="headline">UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/401-UltraCUA-A-Foundation-Model-for-Computer-Use-Agents-with-Hybrid-Action/index.html"
+          title="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/413_373625e8-ff83-451a-bb00-ae5d5badaa83.jpg" class="card-img-top" alt="Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chenghao Zhang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/386-Towards-Mixed-Modal-Retrieval-for-Universal-Retrieval-Augmented-Generation/index.html"  title="Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/386-Towards-Mixed-Modal-Retrieval-for-Universal-Retrieval-Augmented-Generation/index.html"
+          title="Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/484_7eb54011-0535-465c-ac39-b62cabc86d0b.jpg" class="card-img-top" alt="Efficient Long-context Language Model Training by Core Attention Disaggregation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yonghao Zhuang
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/489-Efficient-Long-context-Language-Model-Training-by-Core-Attention-Disaggregation/index.html"  title="Efficient Long-context Language Model Training by Core Attention Disaggregation">
+          <h3 class="card-title pb-2" itemprop="headline">Efficient Long-context Language Model Training by Core Attention Disaggregation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/489-Efficient-Long-context-Language-Model-Training-by-Core-Attention-Disaggregation/index.html"
+          title="Efficient Long-context Language Model Training by Core Attention Disaggregation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/359_ee3fe2ee-2e28-406d-8e1b-f1837bceded4.jpg" class="card-img-top" alt="OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hanrong Ye
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/339-OmniVinci-Enhancing-Architecture-and-Data-for-Omni-Modal-Understanding-LLM/index.html"  title="OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM">
+          <h3 class="card-title pb-2" itemprop="headline">OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/339-OmniVinci-Enhancing-Architecture-and-Data-for-Omni-Modal-Understanding-LLM/index.html"
+          title="OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/363_8009a410-23af-4900-bfa1-e502f437f03e.jpg" class="card-img-top" alt="Latent Diffusion Model without Variational Autoencoder" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Minglei Shi
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/343-Latent-Diffusion-Model-without-Variational-Autoencoder/index.html"  title="Latent Diffusion Model without Variational Autoencoder">
+          <h3 class="card-title pb-2" itemprop="headline">Latent Diffusion Model without Variational Autoencoder</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/343-Latent-Diffusion-Model-without-Variational-Autoencoder/index.html"
+          title="Latent Diffusion Model without Variational Autoencoder"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
