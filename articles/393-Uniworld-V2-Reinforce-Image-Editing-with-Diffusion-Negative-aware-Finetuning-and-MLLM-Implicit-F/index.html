@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Uniworld-V2: Reinforce Image Editing with Diffusion Negative</title>
+
+<meta name="keywords" content="Instruction-based image editing,  Policy optimization for image editing,  Diffusion Negative-aware Finetuning (DiffusionNFT),  Likelihood-free policy ">
+
+<meta name="description" content="Instruction-based image editing,  Policy optimization for image editing,  Diffusion Negative-aware Finetuning (DiffusionNFT),  Likelihood-free policy ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning
+and MLLM Implicit Feedback
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Zongjian Li, Zheyuan Liu, Qihui Zhang, Bin Lin, Shenghai Yuan, Zhiyuan Yan, Yang Ye, Wangbo Yu, Yuwei Niu, Li Yuan
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              22 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/420_d2fe79a0-cd06-437e-bfc8-4564ff7fdbe1.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New AI Trick Lets Computers Edit Photos Like a Pro</h3>
+<p>
+Ever wondered why some photo‑editing apps seem to “guess” exactly what you want? <strong>Scientists have created</strong> a fresh AI technique that teaches image editors to follow your instructions without getting stuck in old patterns. Imagine a chef who can taste a dish and instantly adjust the recipe – this system uses a smart language model as a “taste‑tester,” giving instant feedback so the AI knows when it’s getting the edit right. By fine‑tuning the AI with this feedback, it learns to handle a wider range of requests, from swapping sky colors to adding subtle shadows, all while staying fast and reliable. The result? Sharper, more natural edits that feel like they were done by a human hand. <strong>This breakthrough</strong> means everyday users can expect smoother, more creative photo tweaks on their phones and computers. <strong>It’s a step toward AI that truly understands our visual wishes</strong>, turning ordinary snapshots into standout memories. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Instruction-Based Image Editing with Edit-R1: A Policy Optimization Framework</h2>
+
+<p>This insightful article introduces <strong>Edit-R1</strong>, a novel post-training framework designed to overcome the limitations of supervised fine-tuning in instruction-based image editing, particularly the tendency for models to overfit and struggle with generalization. The core innovation lies in its use of <strong>Diffusion Negative-aware Finetuning (DiffusionNFT)</strong> for robust policy optimization, coupled with a training-free <strong>Multimodal Large Language Model (MLLM)</strong> serving as a unified reward mechanism. By leveraging MLLM output logits and a carefully designed low-variance group filtering mechanism, Edit-R1 effectively addresses the challenge of diverse editing instructions and the absence of a universal reward model. The framework demonstrates remarkable performance, achieving <strong>state-of-the-art results</strong> on prominent benchmarks like ImgEdit and GEdit-Bench, while also proving its model-agnostic applicability across various base models, significantly enhancing human preference alignment.</p>
+
+<h2>Critical Evaluation of the Edit-R1 Framework</h2>
+
+<h3>Strengths</h3>
+<p>The Edit-R1 framework presents several compelling strengths that significantly advance the field of generative AI. Its primary innovation is the strategic integration of <strong>DiffusionNFT</strong> with a training-free <strong>MLLM reward model</strong>, offering a robust solution to the long-standing problem of overfitting in instruction-based image editing. The use of MLLM logits for fine-grained feedback is particularly clever, circumventing the need for a dedicated, task-specific reward model and demonstrating high correlation with <strong>human preferences</strong>. Furthermore, the inclusion of a low-variance group filtering mechanism effectively mitigates MLLM scoring noise, ensuring stable and reliable optimization. The framework's proven <strong>model-agnosticism</strong>, showcasing substantial performance gains across diverse base models like Qwen-Image-Edit and FLUX-Kontext, underscores its broad applicability and potential for widespread adoption. Comprehensive ablation studies further validate the individual contributions of DiffusionNFT and group filtering, providing strong empirical evidence for their efficacy.</p>
+
+<h3>Weaknesses</h3>
+<p>While Edit-R1 offers substantial advancements, a few potential areas warrant consideration. The reliance on a "training-free" MLLM for reward, while innovative, still implies significant computational resources for MLLM inference during the scoring phase, which could be a bottleneck for real-time applications or resource-constrained environments. The quality and biases inherent in the chosen MLLM could also subtly influence the reward signal, potentially propagating unforeseen limitations or biases into the editing process, despite the group filtering mechanism. Although the framework mitigates reward hacking, the inherent complexity of MLLM-based rewards means that subtle forms of this issue might still emerge in highly nuanced or adversarial editing scenarios. Finally, while the curated 27,572-sample dataset is substantial, the true universality of the MLLM as a reward model across an infinitely diverse range of editing instructions and tasks remains an ongoing challenge in the broader field.</p>
+
+<h3>Implications</h3>
+<p>The implications of the Edit-R1 framework are profound for the future of <strong>instruction-based image editing</strong> and generative AI. By providing a robust, generalizable, and human-aligned solution, it paves the way for more intuitive and powerful creative tools. The successful integration of MLLMs as dynamic, training-free reward models opens new research avenues for leveraging large pre-trained models in policy optimization across various generative tasks, potentially reducing the need for extensive human annotation or specialized reward model training. This approach could significantly accelerate the development of AI systems that better understand and execute complex human instructions, fostering more natural and effective human-AI collaboration in creative and design industries. The public availability of code and models further ensures its impact by enabling broader research and development within the community.</p>
+
+<h2>Conclusion</h2>
+<p>The Edit-R1 framework represents a significant leap forward in <strong>instruction-based image editing</strong>, effectively addressing critical challenges related to model overfitting and generalization. Its innovative combination of <strong>DiffusionNFT</strong> and a training-free <strong>MLLM-based reward system</strong>, bolstered by robust noise reduction, delivers state-of-the-art performance and superior human preference alignment. This work not only provides a powerful, model-agnostic solution for current image editing tasks but also establishes a compelling paradigm for leveraging large language models in policy optimization for future generative AI applications. Edit-R1's contributions are poised to inspire further research and development, ultimately leading to more intelligent and user-friendly creative AI tools.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Instruction-based image editing</li><li> Policy optimization for image editing</li><li> Diffusion Negative-aware Finetuning (DiffusionNFT)</li><li> Likelihood-free policy optimization</li><li> Multimodal Large Language Model (MLLM) reward model</li><li> Training-free reward models</li><li> Image editing generalization</li><li> Post-training frameworks</li><li> Overfitting in image generation</li><li> Flow matching forward process</li><li> Low-variance group filtering</li><li> UniWorld-V2</li><li> State-of-the-art image editing</li><li> Model-agnostic image editing framework</li><li> AI image editing benchmarks</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/393/uniworld-v2-reinforce-image-editing-with-diffusion-negative-aware-finetuningand-mllm-implicit-feedba" target="_blank" title=" Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning
+and MLLM Implicit Feedback">
+    Uniworld-V2: Reinforce Image Editing with Diffusion Negative-aware Finetuning
+and MLLM Implicit Feedback
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/371_485d7007-e388-47fe-9388-2723d50c5fd5.jpg" class="card-img-top" alt="Imaginarium: Vision-guided High-Quality 3D Scene Layout Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoming Zhu
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/350-Imaginarium-Vision-guided-High-Quality-3D-Scene-Layout-Generation/index.html"  title="Imaginarium: Vision-guided High-Quality 3D Scene Layout Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Imaginarium: Vision-guided High-Quality 3D Scene Layout Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/350-Imaginarium-Vision-guided-High-Quality-3D-Scene-Layout-Generation/index.html"
+          title="Imaginarium: Vision-guided High-Quality 3D Scene Layout Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/435_2c073d04-4942-42df-9c86-c8e28b48ed1e.jpg" class="card-img-top" alt="Balanced Multi-Task Attention for Satellite Image Classification: A Systematic
+Approach to Achieving 97.23% Accuracy on EuroSAT Without Pre-Training" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aditya Vir
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/408-Balanced-Multi-Task-Attention-for-Satellite-Image-Classification-A-Systematic-Approach-to-Achiev/index.html"  title="Balanced Multi-Task Attention for Satellite Image Classification: A Systematic
+Approach to Achieving 97.23% Accuracy on EuroSAT Without Pre-Training">
+          <h3 class="card-title pb-2" itemprop="headline">Balanced Multi-Task Attention for Satellite Image Classification: A Systematic
+Approach to Achieving 97.23% Accuracy on EuroSAT Without Pre-Training</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/408-Balanced-Multi-Task-Attention-for-Satellite-Image-Classification-A-Systematic-Approach-to-Achiev/index.html"
+          title="Balanced Multi-Task Attention for Satellite Image Classification: A Systematic
+Approach to Achieving 97.23% Accuracy on EuroSAT Without Pre-Training"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/423_6719c389-dec9-42a3-b7cd-3a765a30c721.jpg" class="card-img-top" alt="Deep Self-Evolving Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zihan Liu
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/396-Deep-Self-Evolving-Reasoning/index.html"  title="Deep Self-Evolving Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">Deep Self-Evolving Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/396-Deep-Self-Evolving-Reasoning/index.html"
+          title="Deep Self-Evolving Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/518_fc1b7ddb-868e-4bde-9dda-169930a57348.jpg" class="card-img-top" alt="Attention Sinks in Diffusion Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Maximo Eduardo Rulli
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/628-Attention-Sinks-in-Diffusion-Language-Models/index.html"  title="Attention Sinks in Diffusion Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">Attention Sinks in Diffusion Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/628-Attention-Sinks-in-Diffusion-Language-Models/index.html"
+          title="Attention Sinks in Diffusion Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/439_95df461e-ff2b-43fb-b163-64c04678438b.jpg" class="card-img-top" alt="On Non-interactive Evaluation of Animal Communication Translators" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Orr Paradise
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/412-On-Non-interactive-Evaluation-of-Animal-Communication-Translators/index.html"  title="On Non-interactive Evaluation of Animal Communication Translators">
+          <h3 class="card-title pb-2" itemprop="headline">On Non-interactive Evaluation of Animal Communication Translators</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/412-On-Non-interactive-Evaluation-of-Animal-Communication-Translators/index.html"
+          title="On Non-interactive Evaluation of Animal Communication Translators"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/442_a223fc20-40c2-4364-be52-6e93fdd25a64.jpg" class="card-img-top" alt="What Limits Agentic Systems Efficiency?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Song Bian
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/415-What-Limits-Agentic-Systems-Efficiency/index.html"  title="What Limits Agentic Systems Efficiency?">
+          <h3 class="card-title pb-2" itemprop="headline">What Limits Agentic Systems Efficiency?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/415-What-Limits-Agentic-Systems-Efficiency/index.html"
+          title="What Limits Agentic Systems Efficiency?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
