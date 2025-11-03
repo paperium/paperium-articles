@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>UniMoE-Audio: Unified Speech and Music Generation with Dynam</title>
+
+<meta name="keywords" content="Universal audio synthesis,  unified speech and music generation,  Mixture-of-Experts (MoE) framework,  Dynamic-Capacity MoE,  multimodal content gener">
+
+<meta name="description" content="Universal audio synthesis,  unified speech and music generation,  Mixture-of-Experts (MoE) framework,  Dynamic-Capacity MoE,  multimodal content gener">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Zhenyu Liu, Yunxin Li, Xuanyu Zhang, Qixun Teng, Shenyuan Jiang, Xinyu Chen, Haoyuan Shi, Jinchao Li, Qi Wang, Haolan Chen, Fanbo Meng, Mingjun Zhao, Yu Xu, Yancheng He, Baotian Hu, Min Zhang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              16 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/246_f86dfd37-9da4-48fe-a232-47cace4813d1.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>AI That Can Sing and Compose Music in One Go</h3>
+<p>
+Ever imagined a single computer program that can both talk like a friend and compose a catchy tune? <strong>Scientists have built</strong> such a system, called UniMoE‑Audio, that blends speech and music generation into one smart AI. Instead of training separate programs, this model learns to switch between “talking” and “playing” modes, much like a talented musician who can pick up a microphone or a guitar at the drop of a hat. The secret sauce is a flexible “expert team” inside the AI that decides on the fly how many specialists to use, so it never gets overwhelmed by the huge amount of music data or the smaller speech data. The result? Clearer, more natural‑sounding speech and richer, more creative music—both beating previous benchmarks. <strong>This breakthrough</strong> means future apps could let you chat with a virtual assistant that also writes background scores for your videos, all without juggling multiple programs. <strong>Imagine the possibilities</strong> for creators, educators, and anyone who loves sound. The future of audio is finally speaking in harmony.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Universal Audio Generation with UniMoE-Audio</h2>
+<p>This insightful article introduces <strong>UniMoE-Audio</strong>, a pioneering unified model designed for both speech and music generation. It directly addresses the long-standing challenges of task conflicts and severe data imbalances that have historically hindered progress in universal audio synthesis. The authors propose a novel <strong>Dynamic-Capacity Mixture-of-Experts (MoE) framework</strong>, coupled with an innovative three-stage training curriculum, to overcome these obstacles. Through extensive experimentation, UniMoE-Audio demonstrates state-of-the-art performance across major speech and music generation benchmarks, showcasing superior synergistic learning and effectively mitigating performance degradation often seen in naive joint training approaches.</p>
+
+<h3>Critical Evaluation of UniMoE-Audio</h3>
+<h3>Strengths</h3>
+<p>The core strength of UniMoE-Audio lies in its sophisticated architectural design. The <strong>Dynamic-Capacity MoE framework</strong>, featuring a Top-P routing strategy and hybrid experts (routed, shared, and null), intelligently allocates computational resources and captures both domain-specific and domain-agnostic features. This adaptive approach effectively resolves the inherent task conflicts between speech and music generation. Furthermore, the meticulously crafted three-stage training curriculum—comprising Independent Specialist Training, MoE Integration and Warmup, and Synergistic Joint Training—is highly effective in leveraging imbalanced datasets, preventing catastrophic forgetting, and fostering enhanced <strong>cross-domain synergy</strong>.</p>
+<p>Experimental results consistently highlight UniMoE-Audio's superior performance, achieving state-of-the-art results in both speech synthesis (measured by metrics like UTMOS) and aesthetic music generation (evaluated via CLAP and Fréchet Audio Distance). The model's ability to maintain high quality across diverse tasks, including Text-to-Music and Video-to-Music, underscores its robustness and the efficacy of its specialized <strong>MoE architecture</strong> in mitigating task conflict compared to dense baselines.</p>
+
+<h3>Considerations and Future Scope</h3>
+<p>While UniMoE-Audio presents a robust and highly effective solution, the inherent complexity of its <strong>MoE architecture</strong> and multi-stage training curriculum might pose challenges for broader implementation or require significant computational resources. Future research could explore optimizing these aspects for greater efficiency or extending its capabilities to an even wider array of audio tasks beyond speech and music, such as environmental sounds or sound effects, further pushing the boundaries of <strong>universal audio generation</strong>.</p>
+
+<h3>Conclusion</h3>
+<p>UniMoE-Audio represents a significant leap forward in the pursuit of <strong>universal audio generation</strong>. By innovatively tackling task conflicts and data imbalance through its specialized MoE architecture and a carefully designed training strategy, the model not only achieves state-of-the-art performance but also demonstrates profound synergistic learning. This work provides a compelling blueprint for future research in unified multimodal models, paving the way for more comprehensive and high-fidelity AI-driven audio content creation.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Universal audio synthesis</li><li> unified speech and music generation</li><li> Mixture-of-Experts (MoE) framework</li><li> Dynamic-Capacity MoE</li><li> multimodal content generation AI</li><li> audio data imbalance solutions</li><li> Top-P routing strategy</li><li> hybrid expert architecture</li><li> synergistic audio learning</li><li> cross-domain audio generation models</li><li> three-stage training curriculum</li><li> state-of-the-art audio AI</li><li> AI audio synthesis challenges</li><li> domain-specific audio experts</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/234/unimoe-audio-unified-speech-and-music-generation-with-dynamic-capacity-moe" target="_blank" title=" UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE">
+    UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/197_7ab1aad0-4315-48ce-9df8-d985aeaccae3.jpg" class="card-img-top" alt="The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Norbert Tihanyi
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/186-The-Hidden-DNA-of-LLM-Generated-JavaScript-Structural-Patterns-Enable-High-Accuracy-Authorship-A/index.html"  title="The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution">
+          <h3 class="card-title pb-2" itemprop="headline">The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/186-The-Hidden-DNA-of-LLM-Generated-JavaScript-Structural-Patterns-Enable-High-Accuracy-Authorship-A/index.html"
+          title="The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/254_5afca79d-6005-4500-9168-5430c7d2076a.jpg" class="card-img-top" alt="InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist
+Robot Policy" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xinyi Chen
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/242-InternVLA-M1-A-Spatially-Guided-Vision-Language-Action-Framework-for-Generalist-Robot-Policy/index.html"  title="InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist
+Robot Policy">
+          <h3 class="card-title pb-2" itemprop="headline">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist
+Robot Policy</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/242-InternVLA-M1-A-Spatially-Guided-Vision-Language-Action-Framework-for-Generalist-Robot-Policy/index.html"
+          title="InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist
+Robot Policy"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/240_654c6317-b436-4bef-a708-bef86ddcce1f.jpg" class="card-img-top" alt="The Role of Computing Resources in Publishing Foundation Model Research" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuexing Hao
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"  title="The Role of Computing Resources in Publishing Foundation Model Research">
+          <h3 class="card-title pb-2" itemprop="headline">The Role of Computing Resources in Publishing Foundation Model Research</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"
+          title="The Role of Computing Resources in Publishing Foundation Model Research"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/246_f86dfd37-9da4-48fe-a232-47cace4813d1.jpg" class="card-img-top" alt="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhenyu Liu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"  title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE">
+          <h3 class="card-title pb-2" itemprop="headline">UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"
+          title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/162_5480f94f-affa-43db-a45c-468e4e53a2ee.jpg" class="card-img-top" alt="ACADREASON: Exploring the Limits of Reasoning Models with Academic Research
+Problems" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xin Gui
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/151-ACADREASON-Exploring-the-Limits-of-Reasoning-Models-with-Academic-Research-Problems/index.html"  title="ACADREASON: Exploring the Limits of Reasoning Models with Academic Research
+Problems">
+          <h3 class="card-title pb-2" itemprop="headline">ACADREASON: Exploring the Limits of Reasoning Models with Academic Research
+Problems</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/151-ACADREASON-Exploring-the-Limits-of-Reasoning-Models-with-Academic-Research-Problems/index.html"
+          title="ACADREASON: Exploring the Limits of Reasoning Models with Academic Research
+Problems"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/184_86e85034-583c-4af3-a086-84647485989d.jpg" class="card-img-top" alt="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Abdelhakim Benechehab
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/173-From-Data-to-Rewards-a-Bilevel-Optimization-Perspective-on-Maximum-Likelihood-Estimation/index.html"  title="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation">
+          <h3 class="card-title pb-2" itemprop="headline">From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/173-From-Data-to-Rewards-a-Bilevel-Optimization-Perspective-on-Maximum-Likelihood-Estimation/index.html"
+          title="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
