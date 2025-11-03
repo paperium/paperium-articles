@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Agentic Entropy-Balanced Policy Optimization</title>
+
+<meta name="keywords" content="Agentic Reinforcement Learning,  Web agents tool-use,  Entropy-balanced policy optimization,  AEPO algorithm,  RL training collapse prevention,  Dynam">
+
+<meta name="description" content="Agentic Reinforcement Learning,  Web agents tool-use,  Entropy-balanced policy optimization,  AEPO algorithm,  RL training collapse prevention,  Dynam">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Agentic Entropy-Balanced Policy Optimization
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Guanting Dong, Licheng Bao, Zhongyuan Wang, Kangzhi Zhao, Xiaoxi Li, Jiajie Jin, Jinghan Yang, Hangyu Mao, Fuzheng Zhang, Kun Gai, Guorui Zhou, Yutao Zhu, Ji-Rong Wen, Zhicheng Dou
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              17 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/261_7eb1d6d2-b0f2-4516-8bb8-3f93508c7b81.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Balancing Curiosity: A New Boost for AI Web Assistants</h3>
+<p>
+What if your digital assistant could learn to use online tools as smoothly as a human? <strong>Scientists have unveiled</strong> a fresh approach that keeps AI “curiosity” in check while it explores the web, leading to smarter, more reliable assistants. Imagine a chef who adds just the right pinch of spice—too much overwhelms the dish, too little leaves it bland. This new method, called <strong>Agentic Entropy‑Balanced Policy Optimization</strong>, acts like that careful chef, dynamically adjusting how much randomness the AI gets during training and when it decides what to do next. By gently pruning overly wild “branching” steps, the AI stays focused, learns faster, and can handle complex tasks with fewer mistakes. The result? Even with a tiny amount of training data, the AI achieved impressive scores on tough benchmarks, showing it can navigate the internet with confidence. <strong>This breakthrough</strong> brings us closer to everyday AI that can fetch information, fill forms, and solve problems for us—making our digital lives smoother and more secure. The future of helpful web agents just got a lot brighter.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Agentic Reinforcement Learning: A Critique of AEPO</h2>
+
+<p>The article introduces <strong>Agentic Entropy-Balanced Policy Optimization (AEPO)</strong>, a novel Agentic Reinforcement Learning (RL) algorithm designed to enhance multi-turn, long-horizon tool-use in web agents. It directly addresses critical challenges in mainstream agentic RL, specifically "High-entropy Rollout Collapse" and "High-entropy Token Gradient Clipping," which often lead to training instability. AEPO achieves this by meticulously balancing entropy across both rollout and policy update phases. Its methodology integrates a dynamic entropy-balanced rollout mechanism with an entropy-balanced policy optimization strategy. Experimental results across 14 challenging datasets consistently demonstrate AEPO's superior performance, significantly outperforming seven mainstream RL algorithms and improving web agent training stability and sampling diversity.</p>
+
+<h2>Critical Evaluation of AEPO's Methodology and Performance</h2>
+
+<h3>Strengths of Agentic Entropy-Balanced Policy Optimization</h3>
+<p>The proposed <strong>AEPO algorithm</strong> offers a robust solution to well-identified challenges in agentic RL, particularly the detrimental effects of excessive entropy on training stability. Its innovative two-pronged approach, encompassing dynamic entropy-balanced rollout and entropy-balanced policy optimization, represents a significant methodological strength. Extensive experimental validation across <strong>14 diverse datasets</strong>, where AEPO consistently outperforms numerous mainstream RL algorithms, provides compelling evidence of its effectiveness and generalization capabilities. The algorithm's ability to enhance rollout sampling diversity while maintaining stable policy entropy is a crucial advancement for scalable web agent training.</p>
+
+<h3>Potential Considerations and Future Directions</h3>
+<p>While highly effective, a deeper exploration into the <strong>computational overhead</strong> of AEPO's dynamic entropy pre-monitoring and branch penalty mechanisms could be beneficial. Understanding the sensitivity of AEPO's performance to various hyperparameter settings, particularly those governing entropy balancing, might also offer further insights. Future research could investigate AEPO's applicability across an even wider spectrum of <strong>agentic tasks</strong> beyond web navigation, exploring its utility in domains with different uncertainty profiles or action spaces.</p>
+
+<h3>Broader Implications for Agentic AI</h3>
+<p>The development of AEPO carries significant implications for advancing <strong>agentic AI systems</strong>, especially those requiring sophisticated multi-turn, long-horizon tool-use. By mitigating training collapse and enhancing both sampling diversity and policy stability, AEPO paves the way for more robust and scalable training of web agents. This breakthrough could accelerate the development of highly capable AI assistants and autonomous systems that navigate complex digital environments more effectively, ultimately pushing the boundaries of <strong>Reinforcement Learning</strong> in real-world applications.</p>
+
+<h2>Overall Assessment and Impact</h2>
+<p>This article presents a highly impactful and valuable contribution to Agentic Reinforcement Learning, effectively addressing a critical bottleneck in training sophisticated web agents. By introducing <strong>AEPO</strong>, the authors have provided a robust solution to high-entropy rollout collapse and gradient clipping, setting a new benchmark for performance and stability. The demonstrated improvements in sampling diversity, policy stability, and overall task success underscore AEPO's potential to significantly advance the capabilities and scalability of <strong>AI agents</strong> operating in complex, uncertain environments.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Agentic Reinforcement Learning</li><li> Web agents tool-use</li><li> Entropy-balanced policy optimization</li><li> AEPO algorithm</li><li> RL training collapse prevention</li><li> Dynamic entropy rollout</li><li> Multi-turn long-horizon RL</li><li> Scalable web agent training</li><li> High-uncertainty tool-call steps</li><li> Entropy-aware advantage estimation</li><li> Qwen3-14B agent performance</li><li> GAIA benchmark</li><li> Policy entropy stability</li><li> Stop-gradient operation RL</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/249/agentic-entropy-balanced-policy-optimization" target="_blank" title=" Agentic Entropy-Balanced Policy Optimization">
+    Agentic Entropy-Balanced Policy Optimization
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/500_f293ca5c-7ca8-49fb-bdd0-e43399754a5e.jpg" class="card-img-top" alt="Pruning Overparameterized Multi-Task Networks for Degraded Web Image Restoration" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Thomas Katraouras
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/501-Pruning-Overparameterized-Multi-Task-Networks-for-Degraded-Web-Image-Restoration/index.html"  title="Pruning Overparameterized Multi-Task Networks for Degraded Web Image Restoration">
+          <h3 class="card-title pb-2" itemprop="headline">Pruning Overparameterized Multi-Task Networks for Degraded Web Image Restoration</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/501-Pruning-Overparameterized-Multi-Task-Networks-for-Degraded-Web-Image-Restoration/index.html"
+          title="Pruning Overparameterized Multi-Task Networks for Degraded Web Image Restoration"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/281_9e979a3e-e2fa-4f4b-9dba-a124ab03697f.jpg" class="card-img-top" alt="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shaowei Liu
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"  title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation">
+          <h3 class="card-title pb-2" itemprop="headline">Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"
+          title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/379_309e0743-f6c8-4b12-9388-f9e051122816.jpg" class="card-img-top" alt="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Guinan Su
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/359-Rewiring-Experts-on-the-FlyContinuous-Rerouting-for-Better-Online-Adaptation-in-Mixture-of-Exper/index.html"  title="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models">
+          <h3 class="card-title pb-2" itemprop="headline">Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/359-Rewiring-Experts-on-the-FlyContinuous-Rerouting-for-Better-Online-Adaptation-in-Mixture-of-Exper/index.html"
+          title="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/313_15928343-e6eb-41c1-a619-59081b9e3b6a.jpg" class="card-img-top" alt="LLMs Can Get "Brain Rot"!" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shuo Xing
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/297-LLMs-Can-Get-Brain-Rot/index.html"  title="LLMs Can Get "Brain Rot"!">
+          <h3 class="card-title pb-2" itemprop="headline">LLMs Can Get "Brain Rot"!</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/297-LLMs-Can-Get-Brain-Rot/index.html"
+          title="LLMs Can Get "Brain Rot"!"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/501_ceed1ab0-4866-4d6b-8ff4-18258aaab3d6.jpg" class="card-img-top" alt="When "Correct" Is Not Safe: Can We Trust Functionally Correct Patches Generated
+by Code Agents?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yibo Peng
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/502-When-Correct-Is-Not-Safe-Can-We-Trust-Functionally-Correct-Patches-Generated-by-Code-Agents/index.html"  title="When "Correct" Is Not Safe: Can We Trust Functionally Correct Patches Generated
+by Code Agents?">
+          <h3 class="card-title pb-2" itemprop="headline">When "Correct" Is Not Safe: Can We Trust Functionally Correct Patches Generated
+by Code Agents?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/502-When-Correct-Is-Not-Safe-Can-We-Trust-Functionally-Correct-Patches-Generated-by-Code-Agents/index.html"
+          title="When "Correct" Is Not Safe: Can We Trust Functionally Correct Patches Generated
+by Code Agents?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/263_ccf74e5d-b351-4531-af24-7ff22bd94aa0.jpg" class="card-img-top" alt="Information Gain-based Policy Optimization: A Simple and Effective Approach for
+Multi-Turn LLM Agents" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Guoqing Wang
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/251-Information-Gain-based-Policy-Optimization-A-Simple-and-Effective-Approach-for-Multi-Turn-LLM-Ag/index.html"  title="Information Gain-based Policy Optimization: A Simple and Effective Approach for
+Multi-Turn LLM Agents">
+          <h3 class="card-title pb-2" itemprop="headline">Information Gain-based Policy Optimization: A Simple and Effective Approach for
+Multi-Turn LLM Agents</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/251-Information-Gain-based-Policy-Optimization-A-Simple-and-Effective-Approach-for-Multi-Turn-LLM-Ag/index.html"
+          title="Information Gain-based Policy Optimization: A Simple and Effective Approach for
+Multi-Turn LLM Agents"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
