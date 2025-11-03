@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>DiT360: High-Fidelity Panoramic Image Generation via Hybrid </title>
+
+<meta name="keywords" content="DiT360 framework,  hybrid training for panoramic images,  perspective and panoramic data,  geometric fidelity in image generation,  photorealism in pa">
+
+<meta name="description" content="DiT360 framework,  hybrid training for panoramic images,  perspective and panoramic data,  geometric fidelity in image generation,  photorealism in pa">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Haoran Feng, Dizhe Zhang, Xiangtai Li, Bo Du, Lu Qi
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/157_61bef665-6f60-4ba7-a4c7-411df2926b08.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Meet DiT360: The AI That Paints 360° Worlds From a Single Prompt</h3>
+<p>
+Ever wondered how a computer could create a seamless, all‑around view of a place it has never seen? <strong>Scientists have built DiT360</strong>, a new AI that learns from both regular photos and wide‑angle panoramas to generate stunning 360° images. Think of it like a chef who studies both a single dish recipe and a full banquet spread, then can whip up a perfect feast that looks real from every angle. By mixing “perspective” snapshots with “panoramic” scenes during training, DiT360 keeps the edges smooth, the colors true, and the geometry believable—no more weird seams or stretched walls. This breakthrough means you could type “sunset over a mountain lake” and instantly get an immersive view you could explore on a VR headset or use to design virtual tours. <strong>It opens doors</strong> for faster content creation, better in‑painting of missing parts, and richer storytelling in games and travel apps. <strong>Imagine the world</strong> becoming a gallery you can walk through, all generated in seconds. The future of visual imagination is just a prompt away.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents DiT360, an innovative framework designed for generating high-quality panoramic images through a hybrid training approach that integrates both perspective and panoramic data. The primary goal is to address challenges related to geometric fidelity and photorealism, which are often hindered by the scarcity of large-scale, high-quality panoramic datasets. DiT360 employs a combination of inter-domain transformation and intra-domain augmentation techniques, enhancing image quality at both the pre-VAE and post-VAE levels. Extensive experiments demonstrate that this framework significantly improves boundary consistency and image fidelity across multiple quantitative metrics.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the notable strengths of the DiT360 framework is its dual training mechanism, which effectively combines image-level regularization with token-level supervision. This approach not only enhances <strong>photorealism</strong> but also addresses common issues such as blurring and distortion in panoramic images. The incorporation of advanced techniques like perspective image guidance and various loss functions, including yaw loss and cube loss, further contributes to the framework's robustness. The extensive quantitative evaluations and ablation studies provide strong evidence of its superior performance compared to existing methods.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article does not thoroughly address potential limitations related to the reliance on high-quality data for training. The effectiveness of DiT360 may be compromised in scenarios where such data is not available. Additionally, while the framework shows promise in generating realistic panoramas, the complexity of its architecture may pose challenges for practical implementation in real-world applications. The article could benefit from a more detailed discussion on the computational requirements and scalability of the proposed methods.</p>
+
+<h3>Implications</h3>
+<p>The implications of DiT360 extend beyond mere image generation; it sets a new benchmark for future research in <strong>panoramic image generation</strong> and related fields. By addressing the critical issues of geometric fidelity and perceptual quality, this framework opens avenues for advancements in various applications, including virtual reality and augmented reality, where high-quality panoramic images are essential.</p>
+
+<h3>Conclusion</h3>
+<p>In summary, the DiT360 framework represents a significant advancement in the field of panoramic image generation, effectively combining innovative training techniques to enhance image quality. Its ability to outperform existing benchmarks underscores its potential impact on future research and applications. As the demand for high-quality visual content continues to grow, DiT360 offers a promising solution that could reshape the landscape of image generation technologies.</p>
+
+<h3>Readability</h3>
+<p>The article is well-structured and presents complex concepts in a clear and accessible manner. The use of concise paragraphs and straightforward language enhances readability, making it easier for a professional audience to engage with the content. By focusing on key findings and implications, the article effectively communicates the significance of the DiT360 framework in advancing panoramic image generation.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>DiT360 framework</li><li> hybrid training for panoramic images</li><li> perspective and panoramic data</li><li> geometric fidelity in image generation</li><li> photorealism in panoramic images</li><li> large-scale panoramic datasets</li><li> inter-domain transformation techniques</li><li> intra-domain augmentation methods</li><li> cross-domain knowledge integration</li><li> text-to-panorama generation</li><li> image inpainting techniques</li><li> outpainting methods</li><li> boundary consistency in image generation</li><li> yaw loss for image robustness</li><li> cube loss for distortion awareness</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/146/dit360-high-fidelity-panoramic-image-generation-via-hybrid-training" target="_blank" title=" DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training">
+    DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/375_debd8343-c39a-4e8a-ad94-36eb783d07a3.jpg" class="card-img-top" alt="Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Nikita Afonin
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/355-Emergent-Misalignment-via-In-Context-Learning-Narrow-in-context-examples-can-produce-broadly-mis/index.html"  title="Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/355-Emergent-Misalignment-via-In-Context-Learning-Narrow-in-context-examples-can-produce-broadly-mis/index.html"
+          title="Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/39_b97c9dd9-29df-487d-8a74-1ea9e7ab0747.jpg" class="card-img-top" alt="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Leitian Tao
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/30-Hybrid-Reinforcement-When-Reward-Is-Sparse-Its-Better-to-Be-Dense/index.html"  title="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense">
+          <h3 class="card-title pb-2" itemprop="headline">Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/30-Hybrid-Reinforcement-When-Reward-Is-Sparse-Its-Better-to-Be-Dense/index.html"
+          title="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/150_3368e2e1-0c85-483c-8780-5dd185bd5010.jpg" class="card-img-top" alt="QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wei Huang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/139-QeRL-Beyond-Efficiency-Quantization-enhanced-Reinforcement-Learning-for-LLMs/index.html"  title="QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/139-QeRL-Beyond-Efficiency-Quantization-enhanced-Reinforcement-Learning-for-LLMs/index.html"
+          title="QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/196_6f142900-a549-4b2d-b199-d871c17ba49c.jpg" class="card-img-top" alt="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqi Liu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"  title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"
+          title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/240_654c6317-b436-4bef-a708-bef86ddcce1f.jpg" class="card-img-top" alt="The Role of Computing Resources in Publishing Foundation Model Research" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuexing Hao
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"  title="The Role of Computing Resources in Publishing Foundation Model Research">
+          <h3 class="card-title pb-2" itemprop="headline">The Role of Computing Resources in Publishing Foundation Model Research</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"
+          title="The Role of Computing Resources in Publishing Foundation Model Research"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/184_86e85034-583c-4af3-a086-84647485989d.jpg" class="card-img-top" alt="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Abdelhakim Benechehab
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/173-From-Data-to-Rewards-a-Bilevel-Optimization-Perspective-on-Maximum-Likelihood-Estimation/index.html"  title="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation">
+          <h3 class="card-title pb-2" itemprop="headline">From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/173-From-Data-to-Rewards-a-Bilevel-Optimization-Perspective-on-Maximum-Likelihood-Estimation/index.html"
+          title="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
