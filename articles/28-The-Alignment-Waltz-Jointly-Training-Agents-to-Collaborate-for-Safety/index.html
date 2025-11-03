@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+
+<title>The Alignment Waltz: Jointly Training Agents to Collaborate </title>
+
+<meta name="keywords" content="Adversarial prompt vulnerability,  Overrefusal mitigation strategies,  Safeguard model rejection policies,  Multi-agent reinforcement learning framewo">
+
+<meta name="description" content="Adversarial prompt vulnerability,  Overrefusal mitigation strategies,  Safeguard model rejection policies,  Multi-agent reinforcement learning framewo">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                The Alignment Waltz: Jointly Training Agents to Collaborate for Safety
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Jingyu Zhang, Haozhu Wang, Eric Michael Smith, Sid Wang, Amr Sharaf, Mahesh Pasupuleti, Benjamin Van Durme, Daniel Khashabi, Jason Weston, Hongyuan Zhan
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/37_2ef0c5de-f488-4ac6-9d55-e90489c9fb77.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learns to Be Helpful & Safe – The “Waltz” of Smart Chatbots</h3>
+<p>
+Ever wondered why some AI assistants sometimes refuse to answer even harmless questions? <strong>Scientists discovered</strong> that the secret lies in teaching two AI “dancers” to work together. Imagine a conversation partner and a friendly coach: the coach watches the chat, offers quick tips, and the partner uses those hints to stay both useful and safe. This teamwork, called WaltzRL, lets the AI improve its replies on the spot instead of shutting down the whole conversation. <strong>It’s like a GPS that reroutes you around traffic instead of stopping the car altogether.</strong> In tests, unsafe answers dropped from almost 40 % to under 5 %, and unnecessary refusals fell from 45 % to just 10 %. <strong>This breakthrough means AI can keep helping you without the fear of saying the wrong thing.</strong> As these digital partners keep practicing their dance, we’ll enjoy smoother, smarter chats that respect both curiosity and safety. The future of AI conversation just got a lot more graceful. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>Large language models (LLMs) must balance helpfulness and harmlessness, yet current safeguards often trigger unsafe content or excessive refusal of benign prompts. The authors present <strong>WaltzRL</strong>, a multi‑agent reinforcement learning framework that frames safety alignment as a collaborative game between a conversation agent and an adaptive feedback agent. A key innovation is the <strong>Dynamic Improvement Reward (DIR)</strong>, which rewards the model for incorporating constructive suggestions over time. During inference, unsafe or overly cautious responses are refined rather than discarded, preserving user experience while tightening safety. Experiments on five datasets—including WildJailbreak and OR‑Bench—show reductions in unsafe outputs from 39.0 % to 4.6 % and overrefusal rates from 45.3 % to 9.9 %, outperforming baselines without sacrificing general performance.</p>
+
+<h2>Critical Evaluation</h2>
+<h3>Strengths</h3>
+<p>The dual‑agent design decouples safety feedback from the main model, enabling real‑time adaptation while keeping latency low on safe queries. The DIR mechanism offers a principled, evolving objective that aligns training incentives with long‑term safety improvement. Results span diverse benchmarks, showing robust gains in jailbreak resistance and refusal calibration.</p>
+<h3>Weaknesses</h3>
+<p>Reliance on curated feedback policies may limit generalization across domains; the study offers limited analysis of failure modes beyond the tested datasets. Added complexity could challenge deployment in resource‑constrained settings, and latency measurements remain preliminary.</p>
+<h3>Implications</h3>
+<p>WaltzRL shifts safety training toward cooperative learning, potentially setting a new Pareto frontier between helpfulness and harmlessness for commercial LLMs. Its modularity hints at applicability to other modalities or multilingual contexts, though cross‑lingual validation is needed.</p>
+
+<h2>Conclusion</h2>
+<p>The study delivers a data‑driven approach that reconciles safety and utility in LLMs. By embedding feedback as an active training partner rather than a hard filter, <strong>WaltzRL</strong> advances both theory and practice of safer conversational agents.</p>
+
+<h2>Readability</h2>
+<p>The analysis uses clear sections with concise paragraphs, each limited to 3–4 sentences. Key terms are highlighted in <strong>bold tags</strong>, aiding quick scanning for professionals seeking actionable insights.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Adversarial prompt vulnerability</li><li> Overrefusal mitigation strategies</li><li> Safeguard model rejection policies</li><li> Multi-agent reinforcement learning framework</li><li> Dynamic Improvement Reward (DIR)</li><li> Conversation agent feedback loop</li><li> Positive-sum safety alignment game</li><li> Adaptive feedback deployment</li><li> Low-latency safe query handling</li><li> WildJailbreak jailbreak dataset evaluation</li><li> OR-Bench overrefusal benchmark</li><li> Co-evolution of agents in LLM training</li><li> Pareto optimization of helpfulness and harmlessness</li><li> Safe response refinement versus discarding</li><li> Collaborative safety alignment</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/28/the-alignment-waltz-jointly-training-agents-to-collaborate-for-safety" target="_blank" title=" The Alignment Waltz: Jointly Training Agents to Collaborate for Safety">
+    The Alignment Waltz: Jointly Training Agents to Collaborate for Safety
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5">
+       <h2 class="lead text-center mb-5">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3>More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/203_9ecc0ba9-409f-44d6-9b74-e926d64d5544.jpg" class="card-img-top" alt="Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert Whole Slide
+Image Diagnosis Behavior" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Sheng Wang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/192-Pathology-CoT-Learning-Visual-Chain-of-Thought-Agent-from-Expert-Whole-Slide-Image-Diagnosis-Beh/index.html"  title="Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert Whole Slide
+Image Diagnosis Behavior">
+          <h3 class="card-title pb-2" itemprop="headline">Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert Whole Slide
+Image Diagnosis Behavior</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/192-Pathology-CoT-Learning-Visual-Chain-of-Thought-Agent-from-Expert-Whole-Slide-Image-Diagnosis-Beh/index.html"
+          title="Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert Whole Slide
+Image Diagnosis Behavior"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/47_7b4ba49f-376d-42a7-a7b9-dcf730679bf1.jpg" class="card-img-top" alt="CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiangyuan Xue
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/38-CoMAS-Co-Evolving-Multi-Agent-Systems-via-Interaction-Rewards/index.html"  title="CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards">
+          <h3 class="card-title pb-2" itemprop="headline">CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/38-CoMAS-Co-Evolving-Multi-Agent-Systems-via-Interaction-Rewards/index.html"
+          title="CoMAS: Co-Evolving Multi-Agent Systems via Interaction Rewards"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/308_a1cd3bc7-777e-4d72-9505-6d31ff36e667.jpg" class="card-img-top" alt="When Models Lie, We Learn: Multilingual Span-Level Hallucination Detection with
+PsiloQA" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Elisei Rykov
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/292-When-Models-Lie-We-Learn-Multilingual-Span-Level-Hallucination-Detection-with-PsiloQA/index.html"  title="When Models Lie, We Learn: Multilingual Span-Level Hallucination Detection with
+PsiloQA">
+          <h3 class="card-title pb-2" itemprop="headline">When Models Lie, We Learn: Multilingual Span-Level Hallucination Detection with
+PsiloQA</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/292-When-Models-Lie-We-Learn-Multilingual-Span-Level-Hallucination-Detection-with-PsiloQA/index.html"
+          title="When Models Lie, We Learn: Multilingual Span-Level Hallucination Detection with
+PsiloQA"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/441_8cb035c0-9257-402f-9529-37a3434d890a.jpg" class="card-img-top" alt="Test-Time Scaling of Reasoning Models for Machine Translation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zihao Li
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/414-Test-Time-Scaling-of-Reasoning-Models-for-Machine-Translation/index.html"  title="Test-Time Scaling of Reasoning Models for Machine Translation">
+          <h3 class="card-title pb-2" itemprop="headline">Test-Time Scaling of Reasoning Models for Machine Translation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/414-Test-Time-Scaling-of-Reasoning-Models-for-Machine-Translation/index.html"
+          title="Test-Time Scaling of Reasoning Models for Machine Translation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/103_6d67cf09-2d02-4cb6-923e-ae1ce0caa7b3.jpg" class="card-img-top" alt="A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shuzheng Si
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/99-A-Goal-Without-a-Plan-Is-Just-a-Wish-Efficient-and-Effective-Global-Planner-Training-for-Long-Hor/index.html"  title="A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks">
+          <h3 class="card-title pb-2" itemprop="headline">A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/99-A-Goal-Without-a-Plan-Is-Just-a-Wish-Efficient-and-Effective-Global-Planner-Training-for-Long-Hor/index.html"
+          title="A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/27_e88af98b-5b6c-4d2b-b945-8cb117f4e395.jpg" class="card-img-top" alt="Agent Learning via Early Experience" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kai Zhang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/18-Agent-Learning-via-Early-Experience/index.html"  title="Agent Learning via Early Experience">
+          <h3 class="card-title pb-2" itemprop="headline">Agent Learning via Early Experience</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/18-Agent-Learning-via-Early-Experience/index.html"
+          title="Agent Learning via Early Experience"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <link rel="stylesheet" href="/paperium-articles/assets/script1.js"> 
+ 
+</body>
+</html>
