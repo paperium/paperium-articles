@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>DLER: Doing Length pEnalty Right - Incentivizing More Intell</title>
+
+<meta name="keywords" content="Reasoning language models,  LLM efficiency optimization,  Reinforcement learning for LLMs,  Length penalty in LLMs,  Truncation length penalty,  DLER ">
+
+<meta name="description" content="Reasoning language models,  LLM efficiency optimization,  Reinforcement learning for LLMs,  Length penalty in LLMs,  Truncation length penalty,  DLER ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via
+Reinforcement Learning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Shih-Yang Liu, Xin Dong, Ximing Lu, Shizhe Diao, Mingjie Liu, Min-Hung Chen, Hongxu Yin, Yu-Chiang Frank Wang, Kwang-Ting Cheng, Yejin Choi, Jan Kautz, Pavlo Molchanov
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              20 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/374_a7aa8ef9-dcd4-477e-9949-243ead363686.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Got Smarter by Saying Less: The DLER Breakthrough</h3>
+<p>
+Ever wondered why some chat‑bots ramble on while still getting the answer right? <strong>Scientists have discovered</strong> a simple trick that teaches AI to be both concise and accurate. By gently nudging the model to stop writing early—think of it like a teacher cutting off a student’s essay once the main point is clear—researchers created a method called <strong>Doing Length Penalty Right (DLER)</strong>. This approach uses clever “reward” balancing and a bit of extra training finesse, so the AI learns to pack more intelligence into each word. The result? Answers that are up to 70 % shorter, yet even more correct than before, and they arrive faster—like getting a crisp text message instead of a long‑winded email. Imagine asking a question and receiving a clear, spot‑on reply in the blink of an eye. <strong>This breakthrough shows that smarter AI doesn’t need to be wordy</strong>; it just needs the right guidance. The future of chat‑bots may be brief, bright, and brilliantly efficient. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Optimizing Reasoning Language Models for Enhanced Efficiency</h2>
+<p>This insightful article introduces Doing Length pEnalty Right (DLER), a novel Reinforcement Learning (RL) recipe designed to significantly enhance the efficiency of reasoning language models. Addressing the prevalent issue of unnecessarily long outputs from models employing extended chains of thought, DLER aims to maximize <strong>intelligence per token</strong>. The core premise is that accuracy degradation, when applying length penalties, stems not from the penalty design itself but from inadequate RL optimization. The authors identify and tackle three critical challenges: large bias in advantage estimation, entropy collapse, and sparse reward signals. DLER integrates several key techniques, including batch-wise reward normalization, higher clipping thresholds, dynamic sampling, and a simple truncation length penalty. This comprehensive approach achieves state-of-the-art accuracy-efficiency trade-offs, dramatically cutting output length by over 70 percent while simultaneously surpassing previous baseline accuracy. Furthermore, DLER improves <strong>test-time scaling</strong>, enabling the generation of multiple concise responses in parallel with higher accuracy and lower latency. The research also introduces Difficulty-Aware DLER (DA-DLER) for adaptive truncation and an update-selective merging method to preserve concise reasoning in data-scarce scenarios.</p>
+
+<h2>Critical Evaluation</h2>
+<h3>Strengths of the DLER Approach</h3>
+<p>The primary strength of this work lies in its innovative reframing of the <strong>accuracy-efficiency trade-off</strong> in reasoning language models. By demonstrating that simple truncation, when coupled with robust RL optimization, can outperform complex penalty designs, the authors provide a computationally efficient and highly effective solution. DLER's systematic approach to overcoming fundamental RL challenges—such as <strong>entropy collapse</strong> and sparse reward signals—is particularly commendable. The empirical results are compelling, showcasing a remarkable reduction in output length (over 70%) alongside improved accuracy across various benchmarks. This significant gain in <strong>test-time scaling</strong> and the ability to generate parallel, concise responses represent a substantial practical advancement for deploying large language models in real-world applications, making them faster and more resource-efficient.</p>
+
+<h3>Potential Caveats and Future Directions</h3>
+<p>While the DLER recipe presents a powerful solution, certain aspects warrant consideration. The article primarily focuses on reasoning benchmarks, and the generalizability of DLER's effectiveness to other complex LLM tasks, such as creative writing or open-ended dialogue, could be further explored. Additionally, while DLER improves inference efficiency, the computational cost and complexity associated with the initial <strong>Reinforcement Learning training</strong> process itself, especially for very large models, are not extensively detailed. The reliance on specific RL algorithms like GRPO, mentioned in the chunk analyses, might also imply a dependency that could be explored for broader applicability across different RL frameworks. Future research could investigate the interpretability of the more concise reasoning steps, ensuring that "curtailing overthinking" does not inadvertently obscure critical decision pathways for human review.</p>
+
+<h3>Implications for AI Development</h3>
+<p>The implications of the DLER framework are profound for the future of <strong>efficient AI reasoning</strong>. By enabling language models to deliver more intelligence per token, this research paves the way for more sustainable and scalable AI deployments. The ability to achieve higher accuracy with significantly shorter outputs translates directly into reduced computational costs, lower latency, and a smaller carbon footprint for AI operations. This breakthrough could accelerate the adoption of advanced reasoning capabilities in resource-constrained environments and facilitate the integration of LLMs into real-time applications. Furthermore, the emphasis on robust RL optimization techniques provides a valuable blueprint for addressing similar efficiency challenges across various domains of <strong>machine learning research</strong>, fostering a new generation of highly optimized and performant AI systems.</p>
+
+<h2>Conclusion</h2>
+<p>This article makes a significant contribution to the field of large language models by effectively tackling the critical challenge of output inefficiency. The DLER recipe, through its meticulous focus on <strong>Reinforcement Learning optimization</strong>, establishes a new paradigm for achieving superior accuracy-efficiency trade-offs. Its demonstrated ability to drastically reduce response length while boosting performance positions it as a foundational advancement for developing more practical, scalable, and environmentally conscious AI systems. The insights into robust RL training, coupled with the practical benefits of improved test-time scaling, underscore the substantial value and lasting impact of this research on the trajectory of <strong>AI development</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Reasoning language models</li><li> LLM efficiency optimization</li><li> Reinforcement learning for LLMs</li><li> Length penalty in LLMs</li><li> Truncation length penalty</li><li> DLER training recipe</li><li> Intelligence per token metric</li><li> Accuracy-efficiency trade-offs</li><li> Advantage estimation bias RL</li><li> Entropy collapse in RL</li><li> Sparse reward signal RL</li><li> Batch-wise reward normalization</li><li> Adaptive truncation LLMs</li><li> Concise LLM response generation</li><li> Test-time scaling language models</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/354/dler-doing-length-penalty-right-incentivizing-more-intelligence-per-token-viareinforcement-learning" target="_blank" title=" DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via
+Reinforcement Learning">
+    DLER: Doing Length pEnalty Right - Incentivizing More Intelligence per Token via
+Reinforcement Learning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/281_9e979a3e-e2fa-4f4b-9dba-a124ab03697f.jpg" class="card-img-top" alt="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shaowei Liu
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"  title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation">
+          <h3 class="card-title pb-2" itemprop="headline">Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/268-Ponimator-Unfolding-Interactive-Pose-for-Versatile-Human-human-Interaction-Animation/index.html"
+          title="Ponimator: Unfolding Interactive Pose for Versatile Human-human Interaction
+Animation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/317_a8cc14c7-489c-49a8-94b5-46e5c85fca73.jpg" class="card-img-top" alt="SimKO: Simple Pass@K Policy Optimization" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ruotian Peng
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/301-SimKO-Simple-PassK-Policy-Optimization/index.html"  title="SimKO: Simple Pass@K Policy Optimization">
+          <h3 class="card-title pb-2" itemprop="headline">SimKO: Simple Pass@K Policy Optimization</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/301-SimKO-Simple-PassK-Policy-Optimization/index.html"
+          title="SimKO: Simple Pass@K Policy Optimization"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/540_968e011b-dded-4525-a2d3-95d282323aae.jpg" class="card-img-top" alt="DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in
+Text-to-Image Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Mor Ventura
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/649-DeLeaker-Dynamic-Inference-Time-Reweighting-For-Semantic-Leakage-Mitigation-in-Text-to-Image-Mod/index.html"  title="DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in
+Text-to-Image Models">
+          <h3 class="card-title pb-2" itemprop="headline">DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in
+Text-to-Image Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/649-DeLeaker-Dynamic-Inference-Time-Reweighting-For-Semantic-Leakage-Mitigation-in-Text-to-Image-Mod/index.html"
+          title="DeLeaker: Dynamic Inference-Time Reweighting For Semantic Leakage Mitigation in
+Text-to-Image Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/269_3084249e-a3bd-4eb5-9760-e35e6386b34b.jpg" class="card-img-top" alt="TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yinxi Li
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/256-TokDrift-When-LLM-Speaks-in-Subwords-but-Code-Speaks-in-Grammar/index.html"  title="TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar">
+          <h3 class="card-title pb-2" itemprop="headline">TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/256-TokDrift-When-LLM-Speaks-in-Subwords-but-Code-Speaks-in-Grammar/index.html"
+          title="TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/323_1b10cbfc-f3a6-44b2-ab1e-b7fb517a68da.jpg" class="card-img-top" alt="The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Lukas Gienapp
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/307-The-German-Commons-154-Billion-Tokens-of-Openly-Licensed-Text-for-German-Language-Models/index.html"  title="The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/307-The-German-Commons-154-Billion-Tokens-of-Openly-Licensed-Text-for-German-Language-Models/index.html"
+          title="The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/318_a6206810-9172-44af-aa15-58650cc0a337.jpg" class="card-img-top" alt="LLMs as Scalable, General-Purpose Simulators For Evolving Digital Agent Training" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yiming Wang
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/302-LLMs-as-Scalable-General-Purpose-Simulators-For-Evolving-Digital-Agent-Training/index.html"  title="LLMs as Scalable, General-Purpose Simulators For Evolving Digital Agent Training">
+          <h3 class="card-title pb-2" itemprop="headline">LLMs as Scalable, General-Purpose Simulators For Evolving Digital Agent Training</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/302-LLMs-as-Scalable-General-Purpose-Simulators-For-Evolving-Digital-Agent-Training/index.html"
+          title="LLMs as Scalable, General-Purpose Simulators For Evolving Digital Agent Training"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
