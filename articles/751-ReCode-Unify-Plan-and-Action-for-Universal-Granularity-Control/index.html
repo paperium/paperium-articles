@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>ReCode: Unify Plan and Action for Universal Granularity Cont</title>
+
+<meta name="keywords" content="recursive code generation for LLM agents,  hierarchical decision-making in language models,  multi-granularity planning and action,  unified planning-">
+
+<meta name="description" content="recursive code generation for LLM agents,  hierarchical decision-making in language models,  multi-granularity planning and action,  unified planning-">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                ReCode: Unify Plan and Action for Universal Granularity Control
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Zhaoyang Yu, Jiayi Zhang, Huixue Su, Yufan Zhao, Yifan Wu, Mingyi Deng, Jinyu Xiang, Yizhang Lin, Lingxiao Tang, Yingchao Li, Yuyu Luo, Bang Liu, Chenglin Wu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              29 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/651_eec9c8a6-3a92-4fa7-98dd-6fefb86bc9cc.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New AI Trick Lets Computers Plan and Act Like Humans</h3>
+<p>
+Ever wondered why a robot can’t seem to switch smoothly from big goals to tiny steps? <strong>Scientists have discovered</strong> a fresh approach called <strong>ReCode</strong> that teaches AI to blend planning and action into one seamless flow. Imagine a chef who first sketches a whole menu, then breaks each dish down into simple recipes until the final garnish is placed – that’s how ReCode works, turning a lofty plan into a chain of tiny, doable commands. By treating every plan as a “placeholder” that the system keeps refining, the AI can jump from high‑level ideas to low‑level moves without a clunky hand‑off. This not only makes the machine more adaptable but also lets it learn faster, because each step creates useful training data on the fly. <strong>The breakthrough</strong> means future assistants could handle everything from scheduling a trip to controlling a smart home, all with the same flexible brain. <strong>It’s a glimpse</strong> of a world where our digital helpers think and act with human‑like fluidity, turning big dreams into everyday actions. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Revolutionizing LLM Agent Decision Granularity with ReCode</h2>
+
+<p>This insightful article introduces <strong>ReCode</strong> (Recursive Code Generation), a novel paradigm designed to address a critical limitation in current <strong>Large Language Model (LLM) agents</strong>: their inability to operate fluidly across varying decision granularities. Existing LLM agent frameworks often enforce a rigid separation between high-level planning and low-level action, hindering dynamic adaptability and generalization. ReCode proposes a unified cognitive representation where planning is fundamentally understood as a high-level form of action, achieved by treating abstract plans as placeholder functions that are recursively decomposed into finer-grained sub-functions until primitive actions are reached. This innovative approach not only dissolves the rigid boundary between plan and action but also inherently generates rich, multi-granularity training data, significantly improving reasoning, training efficiency, and overall performance.</p>
+
+<h2>Critical Evaluation of ReCode's Approach</h2>
+
+<h3>Strengths</h3>
+<p>ReCode's primary strength lies in its elegant solution to a fundamental challenge in AI agent design: achieving <strong>universal granularity control</strong>. By unifying planning and action within a single <strong>recursive code representation</strong>, the framework enables agents to dynamically adjust their decision-making level, mimicking human cognitive flexibility. The method's ability to generate hierarchical, multi-granularity training data is a significant advantage, fostering more robust and adaptable models. Experimental results consistently demonstrate ReCode's <strong>superior inference performance</strong> and remarkable <strong>data efficiency</strong> compared to advanced baselines like ReAct and CodeAct across diverse environments, validating its core insight and showcasing its practical utility.</p>
+
+<h3>Weaknesses</h3>
+<p>While ReCode presents a compelling advancement, potential areas for further exploration exist. The inherent complexity of <strong>recursive code generation</strong> might introduce challenges in debugging or ensuring optimal performance in extremely intricate, real-world scenarios with vast state spaces. The quality and interpretability of the generated code could also become a factor as tasks grow more abstract or require nuanced understanding beyond current LLM capabilities. Furthermore, while tested across several environments, the generalizability of its recursive decomposition logic to entirely novel or highly specialized domains warrants continued investigation to fully understand its boundaries.</p>
+
+<h3>Implications</h3>
+<p>ReCode represents a significant step towards developing more sophisticated and <strong>human-like AI agents</strong>. Its capacity for dynamic decision granularity control opens new avenues for tackling complex, real-world tasks that demand flexible reasoning and adaptable execution. This paradigm shift could lead to more efficient training methodologies, reducing the reliance on vast, meticulously curated datasets. Ultimately, ReCode's contribution could accelerate the development of truly intelligent agents capable of navigating and interacting with dynamic environments with unprecedented levels of autonomy and adaptability, paving the way for future advancements in <strong>artificial general intelligence</strong>.</p>
+
+<h2>Conclusion</h2>
+<p>The ReCode paradigm offers a powerful and effective approach to achieving <strong>universal granularity control</strong> in LLM agents, marking a substantial advancement in the field. By elegantly unifying planning and action through recursive code generation, the research provides a foundational framework for building more adaptable, efficient, and intelligent AI systems. Its demonstrated superior performance and data efficiency underscore its immediate value and position it as a crucial development for the future of <strong>AI agent design</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>recursive code generation for LLM agents</li><li> hierarchical decision-making in language models</li><li> multi-granularity planning and action</li><li> unified planning-action code representation</li><li> dynamic granularity control in AI agents</li><li> recursive function decomposition for task execution</li><li> data-efficient training of hierarchical policies</li><li> benchmarking ReCode against LLM baselines</li><li> abstract placeholder functions in AI planning</li><li> universal granularity control in autonomous systems</li><li> recursive code generation paradigm</li><li> high-level plan as function abstraction</li><li> LLM-based agents with unified planning</li><li> granular action synthesis via recursion</li><li> rich multi-granularity training data generation</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/751/recode-unify-plan-and-action-for-universal-granularity-control" target="_blank" title=" ReCode: Unify Plan and Action for Universal Granularity Control">
+    ReCode: Unify Plan and Action for Universal Granularity Control
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/637_0e09eb2e-fe89-432a-959c-b5b0ac81a023.jpg" class="card-img-top" alt="Document Understanding, Measurement, and Manipulation Using Category Theory" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jared Claypoole
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/743-Document-Understanding-Measurement-and-Manipulation-Using-Category-Theory/index.html"  title="Document Understanding, Measurement, and Manipulation Using Category Theory">
+          <h3 class="card-title pb-2" itemprop="headline">Document Understanding, Measurement, and Manipulation Using Category Theory</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/743-Document-Understanding-Measurement-and-Manipulation-Using-Category-Theory/index.html"
+          title="Document Understanding, Measurement, and Manipulation Using Category Theory"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/544_c6350bc9-7949-4e26-828e-8d5bb26f2c08.jpg" class="card-img-top" alt="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yanhong Li
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"  title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"
+          title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/545_ae9cb8b1-9cbd-4e25-904a-a80862891988.jpg" class="card-img-top" alt="DeepWideSearch: Benchmarking Depth and Width in Agentic Information Seeking" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tian Lan
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/654-DeepWideSearch-Benchmarking-Depth-and-Width-in-Agentic-Information-Seeking/index.html"  title="DeepWideSearch: Benchmarking Depth and Width in Agentic Information Seeking">
+          <h3 class="card-title pb-2" itemprop="headline">DeepWideSearch: Benchmarking Depth and Width in Agentic Information Seeking</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/654-DeepWideSearch-Benchmarking-Depth-and-Width-in-Agentic-Information-Seeking/index.html"
+          title="DeepWideSearch: Benchmarking Depth and Width in Agentic Information Seeking"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/495_01322e03-7519-4f28-a0c7-e8b488714ff9.jpg" class="card-img-top" alt="Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires
+Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jinkun Chen
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/499-Static-Sandboxes-Are-Inadequate-Modeling-Societal-Complexity-Requires-Open-Ended-Co-Evolution-in/index.html"  title="Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires
+Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations">
+          <h3 class="card-title pb-2" itemprop="headline">Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires
+Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/499-Static-Sandboxes-Are-Inadequate-Modeling-Societal-Complexity-Requires-Open-Ended-Co-Evolution-in/index.html"
+          title="Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires
+Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/676_7bb1a029-9235-476e-9182-ea359e5922c0.jpg" class="card-img-top" alt="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqian Yuan
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/773-PixelRefer-A-Unified-Framework-for-Spatio-Temporal-Object-Referring-with-Arbitrary-Granularity/index.html"  title="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity">
+          <h3 class="card-title pb-2" itemprop="headline">PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/773-PixelRefer-A-Unified-Framework-for-Spatio-Temporal-Object-Referring-with-Arbitrary-Granularity/index.html"
+          title="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/517_c37fd5cc-a5d3-493b-a64f-57cfb56e2c8a.jpg" class="card-img-top" alt="Language Models are Injective and Hence Invertible" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Giorgos Nikolaou
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/627-Language-Models-are-Injective-and-Hence-Invertible/index.html"  title="Language Models are Injective and Hence Invertible">
+          <h3 class="card-title pb-2" itemprop="headline">Language Models are Injective and Hence Invertible</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/627-Language-Models-are-Injective-and-Hence-Invertible/index.html"
+          title="Language Models are Injective and Hence Invertible"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
