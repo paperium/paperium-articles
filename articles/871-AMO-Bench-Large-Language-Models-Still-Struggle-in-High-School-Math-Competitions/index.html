@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>AMO-Bench: Large Language Models Still Struggle in High Scho</title>
+
+<meta name="keywords" content="AMO-Bench benchmark,  advanced mathematical reasoning for LLMs,  Olympiad-level math problems,  International Mathematical Olympiad difficulty standar">
+
+<meta name="description" content="AMO-Bench benchmark,  advanced mathematical reasoning for LLMs,  Olympiad-level math problems,  International Mathematical Olympiad difficulty standar">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                AMO-Bench: Large Language Models Still Struggle in High School Math Competitions
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Shengnan An, Xunliang Cai, Xuezhi Cao, Xiaoyu Li, Yehao Lin, Junlin Liu, Xinxuan Lv, Dan Ma, Xuanlin Wang, Ziwen Wang, Shuang Zhou
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              31 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/774_f7c6ee76-71fc-4e0a-a540-a85196ca0920.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>When AI Meets Olympiad Math: The New AMO‑Bench Challenge</h3>
+<p>
+Ever wondered if a chatbot could ace the toughest high‑school math contests? <strong>Researchers have unveiled AMO‑Bench</strong>, a fresh set of 50 brand‑new problems that rival the difficulty of the International Mathematical Olympiad. These puzzles are so fresh that even the smartest <strong>large language models</strong> can’t rely on memorized answers—they have to think from scratch. The result? The best AI today solves just over half of them, while most linger below 40 % accuracy. Imagine a sprinter who can dash 100 meters in a flash but still struggles to climb a steep mountain—that’s the gap we’re seeing in AI math reasoning. This “breakthrough” benchmark shines a light on how far we still have to go, and it gives scientists a clear track to train smarter, more reasoning‑capable machines. <strong>Every new problem solved brings us a step closer</strong> to AI that can truly reason like a human, turning today’s curiosity into tomorrow’s everyday tools. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Unveiling Advanced Mathematical Reasoning Gaps in Large Language Models with AMO-Bench</h2>
+
+<p>This insightful article introduces <strong>AMO-Bench</strong>, a novel and highly challenging benchmark designed to rigorously evaluate the advanced mathematical reasoning capabilities of <strong>Large Language Models (LLMs)</strong>. Addressing the performance saturation observed in existing benchmarks, AMO-Bench comprises 50 entirely original, human-crafted problems, meticulously validated by experts to meet or exceed International Mathematical Olympiad (IMO) difficulty standards. The study's primary goal is to expose the current limitations of top-tier LLMs in complex mathematical problem-solving. Key findings reveal that even the most advanced models struggle significantly, with the best performer achieving only 52.4% accuracy, underscoring a substantial gap in their reasoning abilities. Furthermore, the research highlights a promising scaling trend, indicating that increased test-time compute can enhance performance, suggesting a clear path for future LLM development.</p>
+
+<h2>Critical Evaluation of AMO-Bench for LLM Assessment</h2>
+
+<h3>Strengths</h3>
+<p>The development of AMO-Bench represents a significant stride in <strong>LLM evaluation</strong>. Its core strength lies in its rigorous construction pipeline, ensuring all 50 problems are original and expert-validated to <strong>IMO difficulty standards</strong>, effectively preventing data memorization and benchmark saturation. This meticulous approach guarantees a truly challenging and fair assessment of advanced reasoning. The decision to require only a final answer, coupled with robust parser-based or LLM-based grading, ensures high accuracy (99.2%) and enables efficient, automatic evaluation. Moreover, the detailed analysis of performance across diverse LLMs, including the observation of <strong>scaling trends</strong> with increased output length and inference budget, provides invaluable insights into the inherent potential and current limitations of these models.</p>
+
+<h3>Weaknesses</h3>
+<p>While AMO-Bench excels in its specific domain, a few considerations warrant discussion. The focus on Olympiad-level problems, while crucial for advanced reasoning, might not encompass the full spectrum of mathematical challenges LLMs could face in real-world applications beyond competitive math. Additionally, while the final-answer format facilitates robust automatic grading, it inherently bypasses the evaluation of the step-by-step reasoning process. This could potentially obscure deeper insights into how LLMs arrive at their solutions or where their logical breakdowns occur, which a proof-based evaluation might reveal. Lastly, while highly curated, the dataset size of 50 problems, though challenging, might limit the breadth of mathematical domains explored at this advanced level.</p>
+
+<h3>Implications</h3>
+<p>AMO-Bench carries profound implications for the future of <strong>AI research</strong> and LLM development. By clearly demonstrating the significant room for improvement in <strong>mathematical reasoning</strong>, it establishes a new, higher bar for evaluating advanced AI capabilities. The observed scaling trend, where performance improves with increased test-time compute, offers a clear and actionable direction for researchers to enhance LLM architectures and inference strategies. Furthermore, the finding that open-source models are progressively closing the performance gap with proprietary ones is highly encouraging, fostering greater accessibility and innovation within the AI community. This benchmark is poised to accelerate advancements in building more robust and intelligent language models.</p>
+
+<h2>Conclusion</h2>
+<p>AMO-Bench stands as a pivotal contribution to the field of <strong>artificial intelligence</strong>, offering a much-needed, highly rigorous benchmark for assessing advanced mathematical reasoning in LLMs. Its innovative design and comprehensive evaluation methodology effectively highlight the current limitations of even the best models, while simultaneously pointing towards promising avenues for future research and development. This work not only provides a critical tool for measuring progress but also inspires the next generation of LLMs capable of tackling truly complex intellectual challenges, ultimately pushing the boundaries of what AI can achieve in <strong>scientific problem-solving</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>AMO-Bench benchmark</li><li> advanced mathematical reasoning for LLMs</li><li> Olympiad-level math problems</li><li> International Mathematical Olympiad difficulty standard</li><li> original math problem generation</li><li> automatic answer grading for language models</li><li> performance saturation on AIME benchmarks</li><li> scaling trend with test-time compute</li><li> LLM accuracy on high-difficulty math</li><li> mathematical reasoning evaluation metrics</li><li> large language model math capabilities</li><li> cross-validated expert math problems</li><li> reasoning ability improvement for LLMs.</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/871/amo-bench-large-language-models-still-struggle-in-high-school-math-competitions" target="_blank" title=" AMO-Bench: Large Language Models Still Struggle in High School Math Competitions">
+    AMO-Bench: Large Language Models Still Struggle in High School Math Competitions
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/788_4aa49059-a2b1-4b9c-8c41-650fc1a733fd.jpg" class="card-img-top" alt="Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Gagan Bansal
+          </div>
+          <div class="article-meta-text">
+            01 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/883-Magentic-Marketplace-An-Open-Source-Environment-for-Studying-Agentic-Markets/index.html"  title="Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets">
+          <h3 class="card-title pb-2" itemprop="headline">Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/883-Magentic-Marketplace-An-Open-Source-Environment-for-Studying-Agentic-Markets/index.html"
+          title="Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/765_88ec96f1-6519-4a8e-8d54-13848e5acaf1.jpg" class="card-img-top" alt="Emu3.5: Native Multimodal Models are World Learners" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yufeng Cui
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/862-Emu35-Native-Multimodal-Models-are-World-Learners/index.html"  title="Emu3.5: Native Multimodal Models are World Learners">
+          <h3 class="card-title pb-2" itemprop="headline">Emu3.5: Native Multimodal Models are World Learners</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/862-Emu35-Native-Multimodal-Models-are-World-Learners/index.html"
+          title="Emu3.5: Native Multimodal Models are World Learners"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/800_bc6e2129-33a7-4e7a-a796-190dc0cab50d.jpg" class="card-img-top" alt="ChartAB: A Benchmark for Chart Grounding & Dense Alignment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aniruddh Bansal
+          </div>
+          <div class="article-meta-text">
+            01 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/892-ChartAB-A-Benchmark-for-Chart-Grounding-Dense-Alignment/index.html"  title="ChartAB: A Benchmark for Chart Grounding & Dense Alignment">
+          <h3 class="card-title pb-2" itemprop="headline">ChartAB: A Benchmark for Chart Grounding & Dense Alignment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/892-ChartAB-A-Benchmark-for-Chart-Grounding-Dense-Alignment/index.html"
+          title="ChartAB: A Benchmark for Chart Grounding & Dense Alignment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/726_6ecc6668-aa22-406c-bc4b-61affa67312b.jpg" class="card-img-top" alt="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zengzhuang Xu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/810-FunReason-MT-Technical-Report-Overcoming-the-Complexity-Barrier-in-Multi-Turn-Function-Calling/index.html"  title="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling">
+          <h3 class="card-title pb-2" itemprop="headline">FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/810-FunReason-MT-Technical-Report-Overcoming-the-Complexity-Barrier-in-Multi-Turn-Function-Calling/index.html"
+          title="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/778_2abfc5ea-6232-4f33-a717-659b06ff3ba2.jpg" class="card-img-top" alt="The Era of Agentic Organization: Learning to Organize with Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zewen Chi
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/875-The-Era-of-Agentic-Organization-Learning-to-Organize-with-Language-Models/index.html"  title="The Era of Agentic Organization: Learning to Organize with Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">The Era of Agentic Organization: Learning to Organize with Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/875-The-Era-of-Agentic-Organization-Learning-to-Organize-with-Language-Models/index.html"
+          title="The Era of Agentic Organization: Learning to Organize with Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/692_c04e22fd-aad2-478b-afe9-d0a404c94a06.jpg" class="card-img-top" alt="InteractComp: Evaluating Search Agents With Ambiguous Queries" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Mingyi Deng
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/786-InteractComp-Evaluating-Search-Agents-With-Ambiguous-Queries/index.html"  title="InteractComp: Evaluating Search Agents With Ambiguous Queries">
+          <h3 class="card-title pb-2" itemprop="headline">InteractComp: Evaluating Search Agents With Ambiguous Queries</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/786-InteractComp-Evaluating-Search-Agents-With-Ambiguous-Queries/index.html"
+          title="InteractComp: Evaluating Search Agents With Ambiguous Queries"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
