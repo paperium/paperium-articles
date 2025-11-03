@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal</title>
+
+<meta name="keywords" content="Large Multimodal Models (LMMs),  Visual Chain-of-Thought (VCoT),  Mathematical Reasoning AI,  Geometry Problem Solving AI,  AI Diagram Generation and ">
+
+<meta name="description" content="Large Multimodal Models (LMMs),  Visual Chain-of-Thought (VCoT),  Mathematical Reasoning AI,  Geometry Problem Solving AI,  AI Diagram Generation and ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Weikang Shi, Aldrich Yu, Rongyao Fang, Houxing Ren, Ke Wang, Aojun Zhou, Changyao Tian, Xinyu Fu, Yuxuan Hu, Zimu Lu, Linjiang Huang, Si Liu, Rui Liu, Hongsheng Li
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              17 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/276_3cf9a7f0-59fc-4085-a8ff-d0105e95e2e0.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learned to Sketch Math Like a Human</h3>
+<p>
+Ever wondered why a computer can chat but still fumbles when asked to solve a geometry puzzle? <strong>Researchers have created</strong> a new system called <strong>MathCanvas</strong> that teaches AI to draw and edit diagrams just like a student with a pencil and paper. Imagine giving a child a blank sheet and watching them sketch circles, lines, and angles step by step—the AI does the same, but instantly and with perfect precision. By training on millions of picture‑caption pairs and editing sequences, the model learns when a picture will help solve a problem and then produces the exact sketch it needs. In tests, this “visual chain‑of‑thought” boosted the AI’s math scores by more than 80 % compared to previous models. The result is a smarter assistant that can explain a proof with a quick sketch, making complex math feel as clear as a doodle on a napkin. <strong>This breakthrough</strong> could change how we learn, teach, and even design software that talks and draws at the same time. <strong>Imagine a future</strong> where every math question comes with a perfect diagram, right at your fingertips.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Visual-Aided Reasoning in Large Multimodal Models</h2>
+
+<p>This insightful research introduces <strong>MathCanvas</strong>, a novel framework designed to equip Large Multimodal Models (LMMs) with intrinsic Visual Chain-of-Thought (VCoT) capabilities for complex mathematical reasoning, particularly in geometry-heavy domains. Recognizing the inherent limitations of Large Language Models (LLMs) in tasks requiring visual interpretation, the study proposes a comprehensive two-phase training approach. This methodology leverages extensive, newly curated datasets and a rigorous benchmark to foster advanced visual-textual problem-solving skills in LMMs.</p>
+
+<p>The framework's first phase, <strong>Visual Manipulation</strong>, pre-trains models on a massive 15.2 million-pair corpus, including MathCanvas-Imagen for diagram generation and MathCanvas-Edit for step-by-step editing trajectories. The subsequent <strong>Strategic Visual-Aided Reasoning</strong> phase fine-tunes the model using MathCanvas-Instruct, a 219K-example dataset of interleaved visual-textual reasoning paths. This teaches the model when and how to effectively utilize visual aids. The developed model, BAGEL-Canvas, demonstrates an impressive 86% relative improvement over existing LMM baselines on the challenging MathCanvas-Bench, showcasing its superior performance and generalization across various public math benchmarks.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The MathCanvas framework presents a significant leap forward by providing a <strong>comprehensive toolkit</strong>—including a framework, novel datasets, and a benchmark—to unlock human-like visual-aided reasoning in LMMs. Its two-phase training strategy effectively addresses the critical need for both high-fidelity diagram generation and strategic visual integration. The resulting <strong>BAGEL-Canvas model</strong> achieves substantial performance gains, particularly in geometry-intensive mathematical subjects, and exhibits excellent generalization across diverse benchmarks like MathVista and MathVerse.</p>
+
+<h3>Weaknesses</h3>
+<p>While highly innovative, the framework's reliance on a massive 15.2 million-pair pre-training corpus and the use of advanced models like GPT-5/4.1 for dataset construction suggest considerable <strong>computational demands</strong> and resource intensity. This could pose a practical challenge for replication or further development by research groups with limited access to extensive computational infrastructure. Future work might explore more resource-efficient training paradigms.</p>
+
+<h3>Implications</h3>
+<p>This research has profound implications for the future of <strong>AI development</strong>, particularly in domains requiring complex visual-textual understanding. By endowing LMMs with intrinsic VCoT, MathCanvas paves the way for more robust and versatile AI systems capable of tackling problems that traditionally require human-like visual intuition. It sets a new standard for evaluating and enhancing <strong>LMM capabilities</strong> in mathematical reasoning, fostering further innovation in multimodal AI.</p>
+
+<h3>Conclusion</h3>
+<p>The MathCanvas framework represents a transformative contribution to the field of artificial intelligence, effectively bridging the gap between textual and visual reasoning in large multimodal models. By providing a robust methodology, extensive datasets, and a challenging benchmark, this work not only advances the state-of-the-art but also offers a complete foundation for future research into <strong>human-like visual-aided reasoning</strong>. Its impact on enhancing LMMs' ability to solve complex mathematical problems is undeniable, marking a significant step towards more intelligent and versatile AI systems.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large Multimodal Models (LMMs)</li><li> Visual Chain-of-Thought (VCoT)</li><li> Mathematical Reasoning AI</li><li> Geometry Problem Solving AI</li><li> AI Diagram Generation and Editing</li><li> Visual-Aided Reasoning Frameworks</li><li> MathCanvas Framework</li><li> Interleaved Visual-Textual Reasoning</li><li> Multimodal AI Datasets</li><li> AI Benchmarks for Math</li><li> BAGEL-Canvas Model</li><li> Human-like Visual Reasoning</li><li> LLM Limitations in Math</li><li> Strategic Visual Aid Leveraging</li><li> Complex Problem Solving AI</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/263/mathcanvas-intrinsic-visual-chain-of-thought-for-multimodal-mathematicalreasoning" target="_blank" title=" MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning">
+    MathCanvas: Intrinsic Visual Chain-of-Thought for Multimodal Mathematical
+Reasoning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/266_3686c090-eeb8-4465-8cc9-a52f8fbc2dff.jpg" class="card-img-top" alt="Attention Is All You Need for KV Cache in Diffusion LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Quan Nguyen-Tri
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/253-Attention-Is-All-You-Need-for-KV-Cache-in-Diffusion-LLMs/index.html"  title="Attention Is All You Need for KV Cache in Diffusion LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Attention Is All You Need for KV Cache in Diffusion LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/253-Attention-Is-All-You-Need-for-KV-Cache-in-Diffusion-LLMs/index.html"
+          title="Attention Is All You Need for KV Cache in Diffusion LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/265_aabfbffb-ab8e-4172-a9bd-ebda1f8c4118.jpg" class="card-img-top" alt="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Cheng Cui
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/252-PaddleOCR-VL-Boosting-Multilingual-Document-Parsing-via-a-09B-Ultra-Compact-Vision-Language-Mode/index.html"  title="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model">
+          <h3 class="card-title pb-2" itemprop="headline">PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/252-PaddleOCR-VL-Boosting-Multilingual-Document-Parsing-via-a-09B-Ultra-Compact-Vision-Language-Mode/index.html"
+          title="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/379_309e0743-f6c8-4b12-9388-f9e051122816.jpg" class="card-img-top" alt="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Guinan Su
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/359-Rewiring-Experts-on-the-FlyContinuous-Rerouting-for-Better-Online-Adaptation-in-Mixture-of-Exper/index.html"  title="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models">
+          <h3 class="card-title pb-2" itemprop="headline">Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/359-Rewiring-Experts-on-the-FlyContinuous-Rerouting-for-Better-Online-Adaptation-in-Mixture-of-Exper/index.html"
+          title="Rewiring Experts on the Fly:Continuous Rerouting for Better Online Adaptation in
+Mixture-of-Expert models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/309_c53c10e6-f176-4cce-8e7a-94fdb132bf5a.jpg" class="card-img-top" alt="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Meiqi Wu
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/293-ImagerySearch-Adaptive-Test-Time-Search-for-Video-Generation-Beyond-Semantic-Dependency-Constrai/index.html"  title="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints">
+          <h3 class="card-title pb-2" itemprop="headline">ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/293-ImagerySearch-Adaptive-Test-Time-Search-for-Video-Generation-Beyond-Semantic-Dependency-Constrai/index.html"
+          title="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/256_f5d83f22-e656-495c-a5c1-ef98fd9d231a.jpg" class="card-img-top" alt="Universal Image Restoration Pre-training via Masked Degradation Classification" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            JiaKui Hu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/244-Universal-Image-Restoration-Pre-training-via-Masked-Degradation-Classification/index.html"  title="Universal Image Restoration Pre-training via Masked Degradation Classification">
+          <h3 class="card-title pb-2" itemprop="headline">Universal Image Restoration Pre-training via Masked Degradation Classification</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/244-Universal-Image-Restoration-Pre-training-via-Masked-Degradation-Classification/index.html"
+          title="Universal Image Restoration Pre-training via Masked Degradation Classification"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/327_07497a7c-ce11-4a31-a74e-25e4de5085c3.jpg" class="card-img-top" alt="Predicting Task Performance with Context-aware Scaling Laws" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kyle Montgomery
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/311-Predicting-Task-Performance-with-Context-aware-Scaling-Laws/index.html"  title="Predicting Task Performance with Context-aware Scaling Laws">
+          <h3 class="card-title pb-2" itemprop="headline">Predicting Task Performance with Context-aware Scaling Laws</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/311-Predicting-Task-Performance-with-Context-aware-Scaling-Laws/index.html"
+          title="Predicting Task Performance with Context-aware Scaling Laws"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
