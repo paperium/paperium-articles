@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>VisCoder2: Building Multi-Language Visualization Coding Agen</title>
+
+<meta name="keywords" content="LLM-powered visualization coding agents,  multi-turn code correction dialogues,  multi-language visualization dataset VisCode-Multi-679K,  executable ">
+
+<meta name="description" content="LLM-powered visualization coding agents,  multi-turn code correction dialogues,  multi-language visualization dataset VisCode-Multi-679K,  executable ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                VisCoder2: Building Multi-Language Visualization Coding Agents
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yuansheng Ni, Songcheng Cai, Xiangchao Chen, Jiarong Liang, Zhiheng Lyu, Jiaqi Deng, Kai Zou, Ping Nie, Fei Yuan, Xiang Yue, Wenhu Chen
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              29 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/717_9f3f7490-ddd1-48e3-b8c8-af2eb29f8517.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>VisCoder2: AI That Paints Data in Any Language</h3>
+<p>
+Ever wondered if a computer could draw a chart for you, no matter which programming language you speak? <strong>VisCoder2</strong> makes that happen. Imagine a multilingual artist that not only sketches a graph on the first try but also fixes any mistakes it spots, just like a friend who corrects your doodles in real time.  
+Built on a massive collection of 679,000 real‑world examples, this new AI has learned to write, run, and polish visualization code in 12 different languages—from Python’s tidy libraries to the more cryptic compiler‑heavy tools. The secret sauce is a “conversation” style training, where the model practices back‑and‑forth debugging, much like a student learning from a teacher’s hints.  
+The result? A stunning <strong>82 % success rate</strong> in actually producing working charts, rivaling even the most expensive proprietary systems. This means data scientists, teachers, and hobbyists can get clear, instant visuals without wrestling with code errors.  
+As AI becomes our creative partner, tools like VisCoder2 promise to turn raw numbers into beautiful stories with just a few clicks. The future of data visualization is here, and it speaks every language. 🌍
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Multi-Language Visualization Code Generation with VisCoder2</h2>
+
+<h3>Overview</h3>
+<p>This research tackles critical limitations in large language models (LLMs) for generating visualization code, specifically their restricted language coverage, unreliable execution, and lack of iterative correction. To address these, the study introduces three key resources: <strong>VisCode-Multi-679K</strong>, a large-scale, multi-language dataset with multi-turn correction dialogues; <strong>VisPlotBench</strong>, a systematic benchmark for evaluating initial generation and multi-round self-debugging; and <strong>VisCoder2</strong>, a family of multi-language visualization models. Experiments show VisCoder2 significantly outperforms open-source baselines and approaches proprietary models like GPT-4.1, achieving an 82.4% execution pass rate through iterative self-debug, particularly in symbolic languages.</p>
+
+<h2>Critical Evaluation: Advancing Visualization Code Generation</h2>
+<h3>Strengths in Visualization Coding Agents</h3>
+<p>The study's primary strength lies in its comprehensive approach, providing novel and robust resources. <strong>VisCode-Multi-679K</strong> stands out as a meticulously constructed, large-scale dataset crucial for training advanced visualization coding agents, incorporating multi-turn feedback for iterative refinement. The <strong>VisPlotBench benchmark</strong> offers a systematic, multi-language evaluation framework, including essential self-debugging protocols. VisCoder2's strong performance, surpassing open-source models and nearing proprietary solutions, validates the effectiveness of these resources. The research effectively highlights the critical role of <strong>iterative self-debug</strong> in improving code reliability, especially for structural errors and compiler-dependent languages, establishing a valuable framework for future development.</p>
+
+<h3>Limitations and Future Research Directions</h3>
+<p>Despite its advancements, the research identifies areas for further improvement and future exploration. A notable challenge is the persistent performance gap between VisCoder2 and proprietary models, indicating ongoing potential for enhancement in open-source solutions. While effective for structural issues, the <strong>self-debugging mechanism</strong> shows limitations with semantic or runtime errors, suggesting a need for more sophisticated error correction strategies. Additionally, the study notes that execution success does not always perfectly align with the semantic or visual quality of the generated output, and acknowledges dataset imbalances. These points underscore the complexity of fully automating high-quality visualization code generation and provide clear directions for future research to bridge gaps and enhance semantic understanding.</p>
+
+<h3>Conclusion: Impact on Scientific Visualization</h3>
+<p>This comprehensive study marks a significant stride in <strong>automated visualization code generation</strong>. By delivering VisCode-Multi-679K, VisPlotBench, and VisCoder2, the authors have established a robust, systematic framework that addresses critical limitations in language coverage and execution reliability. The demonstrated ability of VisCoder2, particularly with <strong>iterative self-debugging</strong>, to approach proprietary model performance offers immense potential. This research provides invaluable tools and insights, paving the way for further innovation and making advanced visualization coding more accessible and reliable for the scientific community and beyond.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>LLM-powered visualization coding agents</li><li> multi-turn code correction dialogues</li><li> multi-language visualization dataset VisCode-Multi-679K</li><li> executable visualization benchmark VisPlotBench</li><li> iterative self-debugging for code generation</li><li> cross-language visualization code generation</li><li> execution pass rate optimization</li><li> symbolic and compiler-dependent language support</li><li> open-source visualization model baselines</li><li> GPT-4.1 comparison for visualization tasks</li><li> multi-round generation evaluation</li><li> supervised dataset for visualization code</li><li> multi-language programming in data visualisation</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/802/viscoder2-building-multi-language-visualization-coding-agents" target="_blank" title=" VisCoder2: Building Multi-Language Visualization Coding Agents">
+    VisCoder2: Building Multi-Language Visualization Coding Agents
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/633_cbf0fc0b-88c6-43d8-bc4a-c1f0373ffc5e.jpg" class="card-img-top" alt="Are Large Reasoning Models Good Translation Evaluators? Analysis and Performance
+Boost" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Runzhe Zhan
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/739-Are-Large-Reasoning-Models-Good-Translation-Evaluators-Analysis-and-Performance-Boost/index.html"  title="Are Large Reasoning Models Good Translation Evaluators? Analysis and Performance
+Boost">
+          <h3 class="card-title pb-2" itemprop="headline">Are Large Reasoning Models Good Translation Evaluators? Analysis and Performance
+Boost</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/739-Are-Large-Reasoning-Models-Good-Translation-Evaluators-Analysis-and-Performance-Boost/index.html"
+          title="Are Large Reasoning Models Good Translation Evaluators? Analysis and Performance
+Boost"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/728_b8153939-56dc-4ae5-b464-557aecae8aed.jpg" class="card-img-top" alt="Generalization or Memorization: Dynamic Decoding for Mode Steering" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xuanming Zhang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/812-Generalization-or-Memorization-Dynamic-Decoding-for-Mode-Steering/index.html"  title="Generalization or Memorization: Dynamic Decoding for Mode Steering">
+          <h3 class="card-title pb-2" itemprop="headline">Generalization or Memorization: Dynamic Decoding for Mode Steering</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/812-Generalization-or-Memorization-Dynamic-Decoding-for-Mode-Steering/index.html"
+          title="Generalization or Memorization: Dynamic Decoding for Mode Steering"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/614_ac12d968-230a-4537-80dc-289337201891.jpg" class="card-img-top" alt="ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Aritra Roy
+          </div>
+          <div class="article-meta-text">
+            26 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/718-ComProScanner-A-multi-agent-based-framework-for-composition-property-structured-data-extraction/index.html"  title="ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature">
+          <h3 class="card-title pb-2" itemprop="headline">ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/718-ComProScanner-A-multi-agent-based-framework-for-composition-property-structured-data-extraction/index.html"
+          title="ComProScanner: A multi-agent based framework for composition-property structured
+data extraction from scientific literature"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/550_43db9ef6-7f48-4c13-9002-0c8bab884614.jpg" class="card-img-top" alt="HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yihao Meng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/659-HoloCine-Holistic-Generation-of-Cinematic-Multi-Shot-Long-Video-Narratives/index.html"  title="HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives">
+          <h3 class="card-title pb-2" itemprop="headline">HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/659-HoloCine-Holistic-Generation-of-Cinematic-Multi-Shot-Long-Video-Narratives/index.html"
+          title="HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/676_7bb1a029-9235-476e-9182-ea359e5922c0.jpg" class="card-img-top" alt="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqian Yuan
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/773-PixelRefer-A-Unified-Framework-for-Spatio-Temporal-Object-Referring-with-Arbitrary-Granularity/index.html"  title="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity">
+          <h3 class="card-title pb-2" itemprop="headline">PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/773-PixelRefer-A-Unified-Framework-for-Spatio-Temporal-Object-Referring-with-Arbitrary-Granularity/index.html"
+          title="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/637_0e09eb2e-fe89-432a-959c-b5b0ac81a023.jpg" class="card-img-top" alt="Document Understanding, Measurement, and Manipulation Using Category Theory" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jared Claypoole
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/743-Document-Understanding-Measurement-and-Manipulation-Using-Category-Theory/index.html"  title="Document Understanding, Measurement, and Manipulation Using Category Theory">
+          <h3 class="card-title pb-2" itemprop="headline">Document Understanding, Measurement, and Manipulation Using Category Theory</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/743-Document-Understanding-Measurement-and-Manipulation-Using-Category-Theory/index.html"
+          title="Document Understanding, Measurement, and Manipulation Using Category Theory"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
