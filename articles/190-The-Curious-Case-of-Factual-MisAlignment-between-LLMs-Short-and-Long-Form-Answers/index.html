@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>The Curious Case of Factual (Mis)Alignment between LLMs' Sho</title>
+
+<meta name="keywords" content="Large language models,  factual question answering,  Short-Long Form Alignment,  SLAQ framework,  query complexity,  trustworthiness of LLMs,  accurac">
+
+<meta name="description" content="Large language models,  factual question answering,  Short-Long Form Alignment,  SLAQ framework,  query complexity,  trustworthiness of LLMs,  accurac">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Saad Obaid ul Islam, Anne Lauscher, Goran Glavaš
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/201_cc7b4bdc-f4fa-4b76-961f-1344661f6d77.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Why Your AI Might Forget the Same Fact in a Story</h3>
+<p>
+Ever asked a chatbot “When was Einstein born?” and got the right date, then read a longer paragraph about his life and saw a different year? <strong>Researchers discovered</strong> that many large language models (LLMs) act like that – they nail simple questions but stumble when the same fact is hidden inside a longer story. Imagine a friend who can name the capital of France instantly, yet mixes it up when talking about a travel itinerary. This mismatch, called “short‑long form misalignment,” shows that AI reliability isn’t just about answering quick quizzes; it’s about staying consistent across any conversation. By testing 16 AI systems with hundreds of questions, scientists found a clear pattern: the longer the query, the more often the answer drifts, and even a string of right or wrong replies can push the model into a “momentum” that repeats the same mistake. <strong>This matters</strong> because we trust AI for everything from homework help to medical advice, and a hidden slip can erode that trust. <strong>Understanding and fixing this inconsistency</strong> will make our digital assistants more dependable and keep the facts straight, no matter how the question is asked.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>This article investigates the <strong>inconsistency</strong> in factual responses from large language models (LLMs) when addressing simple versus complex queries. It introduces the Short-Long Form Alignment for Factual Question Answering (SLAQ) framework, which reveals systematic misalignment and position-dependent accuracy loss in LLM responses. The study evaluates 16 LLMs across 600 queries, uncovering that internal processing differences significantly affect answer reliability. The findings challenge existing assumptions about LLM performance, particularly regarding their trustworthiness in complex knowledge-seeking tasks.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The introduction of the SLAQ framework is a notable strength, as it provides a structured approach to assess <strong>factual consistency</strong> across varying query complexities. The empirical analysis, which includes a diverse dataset derived from Wikipedia, enhances the reliability of the findings. Additionally, the study's mechanistic analysis offers valuable insights into the internal workings of LLMs, suggesting that aligned responses exhibit greater mechanistic similarity. This contributes to a deeper understanding of how LLMs process information and the factors influencing their accuracy.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study has limitations, particularly concerning the synthetic nature of the dataset used for evaluation. This may affect the generalizability of the findings to real-world applications. Furthermore, the focus on position-dependent accuracy loss and momentum effects may overlook other critical factors influencing LLM performance. The reliance on specific metrics for assessing alignment could also introduce biases, potentially skewing the interpretation of results.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the field of natural language processing. By establishing the importance of <strong>factual consistency</strong> over query complexity, the study challenges current evaluation practices that assume good performance on simple queries translates to reliability in more complex tasks. This could lead to a reevaluation of how LLMs are assessed and improved, ultimately enhancing their trustworthiness in practical applications.</p>
+
+<h2>Conclusion</h2>
+<p>Overall, this article makes a substantial contribution to understanding the reliability of LLMs in factual question answering. By highlighting the discrepancies in performance based on query complexity, it underscores the need for more rigorous evaluation frameworks like SLAQ. The findings not only advance the discourse on LLM accuracy but also pave the way for future research aimed at addressing the identified consistency failures, thereby enhancing the overall trustworthiness of these models.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and presents complex ideas in a clear and accessible manner. The use of concise paragraphs and straightforward language improves user engagement, making it easier for readers to grasp the key concepts. By emphasizing important terms, the text enhances scannability, which is crucial for maintaining reader interest and reducing bounce rates.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large language models</li><li> factual question answering</li><li> Short-Long Form Alignment</li><li> SLAQ framework</li><li> query complexity</li><li> trustworthiness of LLMs</li><li> accuracy gap in LLMs</li><li> mechanistic analysis of LLMs</li><li> position-dependent accuracy loss</li><li> self-reinforcing answer patterns</li><li> model internals activation</li><li> factual consistency in AI</li><li> evaluation practices for LLMs</li><li> complex query performance</li><li> knowledge-seeking tasks in AI</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/190/the-curious-case-of-factual-misalignment-between-llms-short-and-long-formanswers" target="_blank" title=" The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers">
+    The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/184_86e85034-583c-4af3-a086-84647485989d.jpg" class="card-img-top" alt="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Abdelhakim Benechehab
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/173-From-Data-to-Rewards-a-Bilevel-Optimization-Perspective-on-Maximum-Likelihood-Estimation/index.html"  title="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation">
+          <h3 class="card-title pb-2" itemprop="headline">From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/173-From-Data-to-Rewards-a-Bilevel-Optimization-Perspective-on-Maximum-Likelihood-Estimation/index.html"
+          title="From Data to Rewards: a Bilevel Optimization Perspective on Maximum Likelihood
+Estimation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/368_5fdf687a-6395-4b65-9409-15390877e963.jpg" class="card-img-top" alt="Language Models Model Language" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Łukasz Borchmann
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"  title="Language Models Model Language">
+          <h3 class="card-title pb-2" itemprop="headline">Language Models Model Language</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"
+          title="Language Models Model Language"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/153_45eac646-128d-4175-9168-ea0f86366ff2.jpg" class="card-img-top" alt="Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qinglin Zhu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/142-Latent-Refinement-Decoding-Enhancing-Diffusion-Based-Language-Models-by-Refining-Belief-States/index.html"  title="Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States">
+          <h3 class="card-title pb-2" itemprop="headline">Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/142-Latent-Refinement-Decoding-Enhancing-Diffusion-Based-Language-Models-by-Refining-Belief-States/index.html"
+          title="Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/234_d38e195d-f742-4a8f-b77f-c53917bed265.jpg" class="card-img-top" alt="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wenwen Tong
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/222-InteractiveOmni-A-Unified-Omni-modal-Model-for-Audio-Visual-Multi-turn-Dialogue/index.html"  title="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue">
+          <h3 class="card-title pb-2" itemprop="headline">InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/222-InteractiveOmni-A-Unified-Omni-modal-Model-for-Audio-Visual-Multi-turn-Dialogue/index.html"
+          title="InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/160_2967f29c-d26d-4665-8e89-17e5fbf40b41.jpg" class="card-img-top" alt="InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haomin Wang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/149-InternSVG-Towards-Unified-SVG-Tasks-with-Multimodal-Large-Language-Models/index.html"  title="InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/149-InternSVG-Towards-Unified-SVG-Tasks-with-Multimodal-Large-Language-Models/index.html"
+          title="InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/240_654c6317-b436-4bef-a708-bef86ddcce1f.jpg" class="card-img-top" alt="The Role of Computing Resources in Publishing Foundation Model Research" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuexing Hao
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"  title="The Role of Computing Resources in Publishing Foundation Model Research">
+          <h3 class="card-title pb-2" itemprop="headline">The Role of Computing Resources in Publishing Foundation Model Research</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/228-The-Role-of-Computing-Resources-in-Publishing-Foundation-Model-Research/index.html"
+          title="The Role of Computing Resources in Publishing Foundation Model Research"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
