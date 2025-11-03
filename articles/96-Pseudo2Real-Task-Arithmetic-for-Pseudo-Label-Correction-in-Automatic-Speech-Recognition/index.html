@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+
+<title>Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in </title>
+
+<meta name="keywords" content="ASR domain shift,  pseudo-labeling in ASR,  accent-specific errors,  parameter-space correction,  fine-tuning ASR models,  ground-truth vs pseudo-labe">
+
+<meta name="description" content="ASR domain shift,  pseudo-labeling in ASR,  accent-specific errors,  parameter-space correction,  fine-tuning ASR models,  ground-truth vs pseudo-labe">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech
+Recognition
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yi-Cheng Lin, Yu-Hsuan Li Liang, Hsuan Su, Tzu-Quan Lin, Shang-Tse Chen, Yun-Nung Chen, Hung-yi Lee
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/100_6594e4d5-d81f-48d3-9d08-d73b26478651.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learns to Understand Every Accent – The Pseudo2Real Breakthrough</h3>
+<p>
+Ever wondered why your voice assistant sometimes garbles your words when you speak with a regional accent? <strong>Pseudo2Real</strong> is a new trick that helps speech‑recognition AIs listen more fairly. <strong>Researchers found</strong> that when a model learns from its own guessed transcripts—called pseudo‑labels—it often repeats the same accent‑specific slip‑ups, like mistaking “water” for “wader”. To stop this, they train two identical AI twins on the same data: one learns from real, human‑checked sentences, the other from the guessed ones. The difference between their “brains” becomes a correction map that wipes out the systematic bias. Applying this map to a model that works on new, unheard accents cuts errors by up to <strong>35 %</strong>—imagine a phone call in a Kenyan dialect being understood almost as clearly as in English. It’s like giving the AI a pair of glasses tuned to each speaker’s unique voice. As we keep improving these smart ears, everyday conversations across the globe will become smoother and more inclusive. 🌍
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article introduces the innovative method known as <strong>Pseudo2Real</strong>, designed to enhance the performance of <strong>automatic speech recognition</strong> (ASR) systems under domain shifts. The primary goal is to address the systematic biases introduced by pseudo-labeling techniques, which often lead to accent-specific errors. By fine-tuning two ASR models—one on real data and the other on pseudo-labeled data—the authors create a correction vector that significantly improves recognition accuracy. The results demonstrate a remarkable reduction of up to 35% in relative <strong>Word Error Rate</strong> (WER) across ten African accents using the Whisper tiny model.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The Pseudo2Real method represents a significant advancement in the field of ASR, particularly in its ability to operate without the need for target ground truth data. This approach not only addresses the limitations of existing pseudo-labeling techniques but also introduces a novel parameter-space correction that enhances model performance across diverse accents. The use of subgroup-specific correction vectors further tailors the model to account for variability in pseudo-label quality, showcasing a comprehensive understanding of the challenges in ASR adaptation.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the Pseudo2Real method is not without limitations. The reliance on source domain supervision may introduce biases, particularly if the source data does not adequately represent the target accents. Additionally, while the method shows promise, some accent-specific degradations were noted, indicating that further refinement is necessary. Ethical considerations surrounding fairness and privacy in ASR applications also warrant attention, especially in contexts where misuse could occur.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are profound, as it opens new avenues for improving ASR systems in real-world applications. By effectively reducing systematic errors without requiring extensive labeled datasets, Pseudo2Real could enhance accessibility and usability in diverse linguistic environments. Future work should focus on expanding the method's applicability and addressing the ethical concerns associated with ASR technologies.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the Pseudo2Real method offers a promising solution to the challenges faced in <strong>automatic speech recognition</strong> under domain shifts. Its innovative approach to correcting pseudo-label biases not only improves model accuracy but also contributes to the broader discourse on ethical AI practices. As the field continues to evolve, the findings from this research will likely influence future developments in ASR technology, making it more robust and equitable.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and presents complex ideas in a clear and engaging manner. The use of concise paragraphs and straightforward language enhances readability, making it accessible to a professional audience. By focusing on key terms and concepts, the text encourages deeper engagement and understanding of the subject matter.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>ASR domain shift</li><li> pseudo-labeling in ASR</li><li> accent-specific errors</li><li> parameter-space correction</li><li> fine-tuning ASR models</li><li> ground-truth vs pseudo-labels</li><li> recognition enhancement techniques</li><li> Word Error Rate reduction</li><li> AfriSpeech-200 dataset</li><li> African accents in ASR</li><li> systematic bias correction</li><li> model weight difference</li><li> unseen accents in speech recognition</li><li> robust ASR systems</li><li> limited labeled data challenges</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/96/pseudo2real-task-arithmetic-for-pseudo-label-correction-in-automatic-speechrecognition" target="_blank" title=" Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech
+Recognition">
+    Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech
+Recognition
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5">
+       <h2 class="lead text-center mb-5">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3>More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/189_fa93706e-068e-4dde-9b7c-01a0dd9b2822.jpg" class="card-img-top" alt="Multimodal Policy Internalization for Conversational Agents" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhenhailong Wang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/178-Multimodal-Policy-Internalization-for-Conversational-Agents/index.html"  title="Multimodal Policy Internalization for Conversational Agents">
+          <h3 class="card-title pb-2" itemprop="headline">Multimodal Policy Internalization for Conversational Agents</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/178-Multimodal-Policy-Internalization-for-Conversational-Agents/index.html"
+          title="Multimodal Policy Internalization for Conversational Agents"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/90_759a275c-5356-4ba3-97fb-85b79e72bc6c.jpg" class="card-img-top" alt="DISCO: Diversifying Sample Condensation for Efficient Model Evaluation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Alexander Rubinstein
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/86-DISCO-Diversifying-Sample-Condensation-for-Efficient-Model-Evaluation/index.html"  title="DISCO: Diversifying Sample Condensation for Efficient Model Evaluation">
+          <h3 class="card-title pb-2" itemprop="headline">DISCO: Diversifying Sample Condensation for Efficient Model Evaluation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/86-DISCO-Diversifying-Sample-Condensation-for-Efficient-Model-Evaluation/index.html"
+          title="DISCO: Diversifying Sample Condensation for Efficient Model Evaluation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/111_68711121-b023-4ed8-adb9-6a2c6ca80f3f.jpg" class="card-img-top" alt="Speculative Jacobi-Denoising Decoding for Accelerating Autoregressive
+Text-to-image Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yao Teng
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/107-Speculative-Jacobi-Denoising-Decoding-for-Accelerating-Autoregressive-Text-to-image-Generation/index.html"  title="Speculative Jacobi-Denoising Decoding for Accelerating Autoregressive
+Text-to-image Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Speculative Jacobi-Denoising Decoding for Accelerating Autoregressive
+Text-to-image Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/107-Speculative-Jacobi-Denoising-Decoding-for-Accelerating-Autoregressive-Text-to-image-Generation/index.html"
+          title="Speculative Jacobi-Denoising Decoding for Accelerating Autoregressive
+Text-to-image Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/78_c20ef639-69a7-40b4-9a05-74163cbb91d2.jpg" class="card-img-top" alt="Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kang Liao
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/74-Thinking-with-Camera-A-Unified-Multimodal-Model-for-Camera-Centric-Understanding-and-Generation/index.html"  title="Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/74-Thinking-with-Camera-A-Unified-Multimodal-Model-for-Camera-Centric-Understanding-and-Generation/index.html"
+          title="Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/190_04da4b95-7f85-4b2c-bf73-551d84644589.jpg" class="card-img-top" alt="Graph Diffusion Transformers are In-Context Molecular Designers" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Gang Liu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/179-Graph-Diffusion-Transformers-are-In-Context-Molecular-Designers/index.html"  title="Graph Diffusion Transformers are In-Context Molecular Designers">
+          <h3 class="card-title pb-2" itemprop="headline">Graph Diffusion Transformers are In-Context Molecular Designers</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/179-Graph-Diffusion-Transformers-are-In-Context-Molecular-Designers/index.html"
+          title="Graph Diffusion Transformers are In-Context Molecular Designers"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/106_581ce936-06af-4d32-b868-f57f85e663bb.jpg" class="card-img-top" alt="Adaptive Attacks on Trusted Monitors Subvert AI Control Protocols" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Mikhail Terekhov
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/102-Adaptive-Attacks-on-Trusted-Monitors-Subvert-AI-Control-Protocols/index.html"  title="Adaptive Attacks on Trusted Monitors Subvert AI Control Protocols">
+          <h3 class="card-title pb-2" itemprop="headline">Adaptive Attacks on Trusted Monitors Subvert AI Control Protocols</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/102-Adaptive-Attacks-on-Trusted-Monitors-Subvert-AI-Control-Protocols/index.html"
+          title="Adaptive Attacks on Trusted Monitors Subvert AI Control Protocols"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <link rel="stylesheet" href="/paperium-articles/assets/script1.js"> 
+ 
+</body>
+</html>
