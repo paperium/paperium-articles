@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>MT-Video-Bench: A Holistic Video Understanding Benchmark for</title>
+
+<meta name="keywords" content="Multimodal Large Language Models (MLLMs),  MT-Video-Bench,  video understanding benchmark,  multi-turn video dialogues,  MLLM evaluation benchmarks,  ">
+
+<meta name="description" content="Multimodal Large Language Models (MLLMs),  MT-Video-Bench,  video understanding benchmark,  multi-turn video dialogues,  MLLM evaluation benchmarks,  ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating
+Multimodal LLMs in Multi-Turn Dialogues
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yaning Pan, Zekun Wang, Qianqian Xie, Yongqian Wen, Yuanxing Zhang, Guohui Zhang, Haoxuan Hu, Zhiyu Pan, Yibing Huang, Zhidong Gan, Yonghong Lin, An Ping, Tianhao Peng, Jiaheng Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              22 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/452_8046cd04-f9a4-4789-8bc9-0dfbe5e4f446.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Meet MT-Video-Bench: The New Test That Makes AI Talk About Videos Like a Human</h3>
+<p>
+Ever wondered why your voice‑assistant can answer a single question about a picture but gets lost when you ask follow‑up questions about a video? <strong>Researchers have built</strong> a fresh challenge called MT-Video-Bench that pushes AI to handle full‑blown conversations about moving images. Imagine watching a soccer match and asking an AI to explain the last goal, then follow up with “How did the defense change after that?” – the benchmark checks if the system can keep up, just like a knowledgeable friend. It covers six key skills, from spotting tiny details to interacting over several turns, using almost a thousand real‑world dialogues from sports, tutoring, and more. Early tests show that even the most advanced models stumble, revealing a big gap between what we see on screen and what AI truly understands. <strong>This breakthrough</strong> gives scientists a clear map of where to improve, and soon we might have AI tutors that can discuss video lessons step by step. <strong>Stay tuned</strong> – the future of talking machines is about to get a lot more conversational.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview of MT-Video-Bench: Advancing MLLM Video Understanding</h2>
+<p>This article introduces <strong>MT-Video-Bench</strong>, a novel benchmark designed to evaluate <strong>Multimodal Large Language Models (MLLMs)</strong> in complex multi-turn video dialogues. It addresses a critical gap in existing evaluations, which are often limited to single-turn question answering, failing to capture real-world interactive scenarios. The benchmark meticulously assesses six core competencies, focusing on both <strong>perceptivity</strong> and <strong>interactivity</strong>, through 987 curated multi-turn dialogues. Utilizing a robust multi-stage methodology, including scene segmentation and human quality control, the dataset ensures high integrity. Extensive evaluations of various state-of-the-art MLLMs reveal significant performance discrepancies and highlight current limitations in handling dynamic video conversations. The findings underscore the challenging nature of the benchmark and the urgent need for improved interactive and <strong>cross-scene reasoning</strong> capabilities in MLLMs.</p>
+
+<h2>Critical Evaluation of the MT-Video-Bench Framework</h2>
+<h3>Strengths: Comprehensive Evaluation and Real-World Relevance</h3>
+<p>A significant strength of this work lies in its innovative approach to evaluating MLLMs beyond conventional single-turn interactions. By focusing on <strong>multi-turn video dialogues</strong>, MT-Video-Bench provides a more holistic and realistic assessment of model capabilities, particularly in areas like interactive sports analysis and intelligent tutoring. The benchmark's design, encompassing six core competencies, offers a granular understanding of MLLM performance in both <strong>perceptivity</strong> and <strong>interactivity</strong>. Furthermore, the meticulous multi-stage methodology for dataset creation, involving advanced tools like PySceneDetect and YOLOv11, coupled with a rigorous two-stage human quality control, ensures the dataset's high integrity and reliability. The commitment to making the benchmark publicly available is also a crucial factor for fostering future research and collaborative development in the field.</p>
+
+<h3>Weaknesses: Performance Gaps and Methodological Considerations</h3>
+<p>While highly impactful, the study reveals inherent weaknesses in current MLLMs, which the benchmark effectively exposes. A notable limitation is the observed <strong>performance degradation</strong> in cross-scene settings and with increasing video length, indicating challenges in maintaining contextual coherence over extended visual narratives. Although the benchmark identifies optimal ranges for frame count and resolution, this suggests that MLLMs may still struggle with highly variable input conditions, potentially limiting their robustness in diverse real-world applications. The reliance on specific models like Gemini 2.5 Flash/Pro for initial captioning, while state-of-the-art, could introduce a degree of model-specific bias into the dataset creation process, which warrants consideration for future iterations or alternative approaches.</p>
+
+<h2>Conclusion: Impact and Future Directions in MLLM Research</h2>
+<p>The introduction of MT-Video-Bench represents a substantial contribution to the field of <strong>Multimodal Large Language Models</strong>, providing an essential tool for advancing their video understanding capabilities. This benchmark not only effectively identifies significant performance discrepancies among current MLLMs but also clearly delineates critical areas for improvement, particularly in <strong>interactive and cross-scene reasoning</strong>. By offering a challenging yet realistic evaluation framework, the research sets a new standard for assessing MLLM robustness and adaptability. Its public availability is poised to accelerate innovation, guiding researchers toward developing more sophisticated and context-aware MLLMs that can truly excel in complex, real-world interactive video scenarios.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Multimodal Large Language Models (MLLMs)</li><li> MT-Video-Bench</li><li> video understanding benchmark</li><li> multi-turn video dialogues</li><li> MLLM evaluation benchmarks</li><li> AI visual understanding</li><li> perceptivity and interactivity MLLMs</li><li> interactive sports analysis AI</li><li> video-based intelligent tutoring</li><li> conversational AI for video</li><li> real-world MLLM applications</li><li> open-source MLLM performance</li><li> AI benchmark development</li><li> multi-turn question answering</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/423/mt-video-bench-a-holistic-video-understanding-benchmark-for-evaluatingmultimodal-llms-in-multi-turn" target="_blank" title=" MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating
+Multimodal LLMs in Multi-Turn Dialogues">
+    MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating
+Multimodal LLMs in Multi-Turn Dialogues
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/416_c28e2a69-7a11-46f4-a8fc-ec58d4fe5dd0.jpg" class="card-img-top" alt="QueST: Incentivizing LLMs to Generate Difficult Problems" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hanxu Hu
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/389-QueST-Incentivizing-LLMs-to-Generate-Difficult-Problems/index.html"  title="QueST: Incentivizing LLMs to Generate Difficult Problems">
+          <h3 class="card-title pb-2" itemprop="headline">QueST: Incentivizing LLMs to Generate Difficult Problems</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/389-QueST-Incentivizing-LLMs-to-Generate-Difficult-Problems/index.html"
+          title="QueST: Incentivizing LLMs to Generate Difficult Problems"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/444_9811feed-dfb7-48be-8597-5e3dba934ca4.jpg" class="card-img-top" alt="World-in-World: World Models in a Closed-Loop World" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiahan Zhang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/417-World-in-World-World-Models-in-a-Closed-Loop-World/index.html"  title="World-in-World: World Models in a Closed-Loop World">
+          <h3 class="card-title pb-2" itemprop="headline">World-in-World: World Models in a Closed-Loop World</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/417-World-in-World-World-Models-in-a-Closed-Loop-World/index.html"
+          title="World-in-World: World Models in a Closed-Loop World"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/522_3cab27df-3cdb-4e3d-b729-bbe6fc018cc2.jpg" class="card-img-top" alt="FinSight: Towards Real-World Financial Deep Research" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiajie Jin
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/632-FinSight-Towards-Real-World-Financial-Deep-Research/index.html"  title="FinSight: Towards Real-World Financial Deep Research">
+          <h3 class="card-title pb-2" itemprop="headline">FinSight: Towards Real-World Financial Deep Research</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/632-FinSight-Towards-Real-World-Financial-Deep-Research/index.html"
+          title="FinSight: Towards Real-World Financial Deep Research"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/440_8ba75d11-3b8c-4e13-b5da-d42757b6307f.jpg" class="card-img-top" alt="GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Sayan Deb Sarkar
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/413-GuideFlow3D-Optimization-Guided-Rectified-Flow-For-Appearance-Transfer/index.html"  title="GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer">
+          <h3 class="card-title pb-2" itemprop="headline">GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/413-GuideFlow3D-Optimization-Guided-Rectified-Flow-For-Appearance-Transfer/index.html"
+          title="GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/429_ce11694e-14ba-4552-8c14-57ef0c465bda.jpg" class="card-img-top" alt="Agentic Reinforcement Learning for Search is Unsafe" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yushi Yang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/402-Agentic-Reinforcement-Learning-for-Search-is-Unsafe/index.html"  title="Agentic Reinforcement Learning for Search is Unsafe">
+          <h3 class="card-title pb-2" itemprop="headline">Agentic Reinforcement Learning for Search is Unsafe</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/402-Agentic-Reinforcement-Learning-for-Search-is-Unsafe/index.html"
+          title="Agentic Reinforcement Learning for Search is Unsafe"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/428_f56bfafb-b16c-4aab-b1ac-87c0fa7bf0b9.jpg" class="card-img-top" alt="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuhao Yang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/401-UltraCUA-A-Foundation-Model-for-Computer-Use-Agents-with-Hybrid-Action/index.html"  title="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action">
+          <h3 class="card-title pb-2" itemprop="headline">UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/401-UltraCUA-A-Foundation-Model-for-Computer-Use-Agents-with-Hybrid-Action/index.html"
+          title="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
