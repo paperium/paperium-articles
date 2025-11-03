@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+
+<title>CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal </title>
+
+<meta name="keywords" content="Generative models,  environment simulation,  future state prediction,  autonomous driving technology,  high-fidelity video generation,  depth estimati">
+
+<meta name="description" content="Generative models,  environment simulation,  future state prediction,  autonomous driving technology,  high-fidelity video generation,  depth estimati">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model
+for Autonomous Driving
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Tianrui Zhang, Yichen Liu, Zilin Guo, Yuxin Guo, Jingcheng Ni, Chenjing Ding, Dan Xu, Lewei Lu, Zehuan Wu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              16 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/233_1b7a4c92-ffec-433e-a3c4-9562692da77b.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI is Learning to See the Road Like a Human</h3>
+<p>
+Ever wondered how a self‑driving car could “imagine” the road ahead? <strong>Scientists have created</strong> a new AI tool called CVD‑STORM that can generate realistic, multi‑angle video clips of traffic scenes, just like a movie director filming from every side. Imagine watching a soccer game where the camera magically follows the ball from all angles—CVD‑STORM does the same for cars, stitching together a 4‑dimensional view of the world in motion. <strong>This breakthrough</strong> not only makes the video look smoother, it also predicts depth, so the car knows how far away obstacles are. The secret is a special “brain” that learns both the shape of objects and how they move over time, then uses that knowledge to create new scenes on demand. <strong>Why it matters</strong> is simple: safer, smarter autonomous vehicles that can practice countless “what‑if” scenarios without ever leaving the lab. As we watch these virtual streets come alive, we glimpse a future where every ride feels as safe as a well‑rehearsed dance. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article introduces <strong>CVD-STORM</strong>, an innovative cross-view video diffusion model aimed at enhancing video generation for autonomous driving applications. By employing a spatial-temporal reconstruction <strong>Variational Autoencoder (VAE)</strong>, the model significantly improves the quality of generated videos and depth estimation. The methodology involves a two-stage training process that fine-tunes the VAE with an auxiliary 4D reconstruction task, thereby enhancing its ability to capture 3D structures and temporal dynamics. Experimental results indicate substantial improvements in generative quality, as evidenced by enhanced metrics such as <strong>Fréchet Inception Distance (FID)</strong> and <strong>Fréchet Video Distance (FVD)</strong>. Additionally, the integration of a <strong>Gaussian Splatting Decoder</strong> facilitates effective dynamic scene reconstruction, contributing to a more comprehensive understanding of complex environments.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The CVD-STORM framework showcases several notable strengths, particularly its innovative approach to <strong>4D scene reconstruction</strong> in driving scenarios. The use of a refined VAE architecture enhances representation learning, allowing for improved generative quality. The two-stage training strategy effectively addresses existing limitations in depth estimation, making the model a significant advancement in the field of generative models. Furthermore, the rigorous evaluation using FID and FVD metrics demonstrates the model's superiority over state-of-the-art methods.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article does present some weaknesses. The complexity of the model may pose challenges in practical applications, particularly in real-time scenarios where computational efficiency is critical. Additionally, while the integration of the Gaussian Splatting Decoder is beneficial, the article could provide more detailed insights into its operational mechanics and potential limitations. This would enhance the reader's understanding of the model's applicability in diverse environments.</p>
+
+<h3>Implications</h3>
+<p>The implications of CVD-STORM extend beyond autonomous driving, potentially influencing various fields that rely on <strong>video generation</strong> and <strong>scene understanding</strong>. The advancements in generative modeling techniques could pave the way for improved simulations in virtual reality, gaming, and urban planning, where accurate environmental representations are crucial.</p>
+
+<h3>Conclusion</h3>
+<p>In summary, the CVD-STORM framework represents a significant contribution to the field of generative models, particularly in the context of autonomous driving. Its innovative use of a spatial-temporal reconstruction VAE and the incorporation of advanced scene reconstruction techniques underscore its potential to enhance video generation quality. As the demand for high-fidelity simulations continues to grow, CVD-STORM stands out as a promising solution that addresses critical challenges in the domain.</p>
+
+<h3>Readability</h3>
+<p>The article is well-structured and accessible, making it suitable for a professional audience. The clear presentation of methodologies and findings enhances comprehension, while the emphasis on key terms aids in understanding the core concepts. Overall, the engaging narrative style encourages further exploration of the topic, fostering interest in the advancements of generative models.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Generative models</li><li> environment simulation</li><li> future state prediction</li><li> autonomous driving technology</li><li> high-fidelity video generation</li><li> depth estimation techniques</li><li> cross-view video diffusion model</li><li> spatial-temporal reconstruction</li><li> Variational Autoencoder (VAE)</li><li> multi-view video generation</li><li> 4D reconstruction capabilities</li><li> FID and FVD metrics</li><li> Gaussian Splatting Decoder</li><li> dynamic scene reconstruction</li><li> comprehensive scene understanding</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/221/cvd-storm-cross-view-video-diffusion-with-spatial-temporal-reconstruction-modelfor-autonomous-drivin" target="_blank" title=" CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model
+for Autonomous Driving">
+    CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model
+for Autonomous Driving
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5">
+       <h2 class="lead text-center mb-5">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3>More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/174_a4aac8fb-bd56-4a73-8934-af32e4fc22fb.jpg" class="card-img-top" alt="Skill-Targeted Adaptive Training" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yinghui He
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/163-Skill-Targeted-Adaptive-Training/index.html"  title="Skill-Targeted Adaptive Training">
+          <h3 class="card-title pb-2" itemprop="headline">Skill-Targeted Adaptive Training</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/163-Skill-Targeted-Adaptive-Training/index.html"
+          title="Skill-Targeted Adaptive Training"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/102_88b36667-a795-4724-a4e2-299dee87a3b0.jpg" class="card-img-top" alt="Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Reasoning in Spoken
+Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Donghang Wu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/98-Mind-Paced-Speaking-A-Dual-Brain-Approach-to-Real-Time-Reasoning-in-Spoken-Language-Models/index.html"  title="Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Reasoning in Spoken
+Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Reasoning in Spoken
+Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/98-Mind-Paced-Speaking-A-Dual-Brain-Approach-to-Real-Time-Reasoning-in-Spoken-Language-Models/index.html"
+          title="Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Reasoning in Spoken
+Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/82_be5a8299-d340-41ec-880b-fe370b805a59.jpg" class="card-img-top" alt="AutoPR: Let's Automate Your Academic Promotion!" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qiguang Chen
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/78-AutoPR-Lets-Automate-Your-Academic-Promotion/index.html"  title="AutoPR: Let's Automate Your Academic Promotion!">
+          <h3 class="card-title pb-2" itemprop="headline">AutoPR: Let's Automate Your Academic Promotion!</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/78-AutoPR-Lets-Automate-Your-Academic-Promotion/index.html"
+          title="AutoPR: Let's Automate Your Academic Promotion!"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/101_c9419bbd-6923-443a-86ce-880f939c8b91.jpg" class="card-img-top" alt="Parallel Test-Time Scaling for Latent Reasoning Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Runyang You
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/97-Parallel-Test-Time-Scaling-for-Latent-Reasoning-Models/index.html"  title="Parallel Test-Time Scaling for Latent Reasoning Models">
+          <h3 class="card-title pb-2" itemprop="headline">Parallel Test-Time Scaling for Latent Reasoning Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/97-Parallel-Test-Time-Scaling-for-Latent-Reasoning-Models/index.html"
+          title="Parallel Test-Time Scaling for Latent Reasoning Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/152_2169cb1e-aa85-41de-95f7-9ff923cf2074.jpg" class="card-img-top" alt="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Caorui Li
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/141-OmniVideoBench-Towards-Audio-Visual-Understanding-Evaluation-for-Omni-MLLMs/index.html"  title="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/141-OmniVideoBench-Towards-Audio-Visual-Understanding-Evaluation-for-Omni-MLLMs/index.html"
+          title="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/173_28766cc4-cc1d-41a0-b214-919cb58833a3.jpg" class="card-img-top" alt="High-Fidelity Simulated Data Generation for Real-World Zero-Shot Robotic
+Manipulation Learning with Gaussian Splatting" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haoyu Zhao
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/162-High-Fidelity-Simulated-Data-Generation-for-Real-World-Zero-Shot-Robotic-Manipulation-Learning-w/index.html"  title="High-Fidelity Simulated Data Generation for Real-World Zero-Shot Robotic
+Manipulation Learning with Gaussian Splatting">
+          <h3 class="card-title pb-2" itemprop="headline">High-Fidelity Simulated Data Generation for Real-World Zero-Shot Robotic
+Manipulation Learning with Gaussian Splatting</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/162-High-Fidelity-Simulated-Data-Generation-for-Real-World-Zero-Shot-Robotic-Manipulation-Learning-w/index.html"
+          title="High-Fidelity Simulated Data Generation for Real-World Zero-Shot Robotic
+Manipulation Learning with Gaussian Splatting"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <link rel="stylesheet" href="/paperium-articles/assets/script1.js"> 
+ 
+</body>
+</html>
