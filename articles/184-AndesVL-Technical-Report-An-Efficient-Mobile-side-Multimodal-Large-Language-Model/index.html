@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>AndesVL Technical Report: An Efficient Mobile-side Multimoda</title>
+
+<meta name="keywords" content="cloud-based MLLMs,  AndesVL mobile models,  Qwen3 LLM architecture,  visual encoders in MLLMs,  edge device computing,  text-rich image understanding,">
+
+<meta name="description" content="cloud-based MLLMs,  AndesVL mobile models,  Qwen3 LLM architecture,  visual encoders in MLLMs,  edge device computing,  text-rich image understanding,">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                AndesVL Technical Report: An Efficient Mobile-side Multimodal Large Language
+Model
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Zhiwei Jin, Xiaohui Song, Nan Wang, Yafei Liu, Chao Li, Xin Li, Ruichen Wang, Zhihao Li, Qi Qi, Long Cheng, Dongze Hao, Quanlong Zheng, Yanhao Zhang, Haobo Ji, Jian Ma, Zhitong Zheng, Zhenyi Lin, Haolin Deng, Xin Zou, Xiaojie Yin, Ruilin Wang, Liankai Cai, Haijing Liu, Yuqing Qiu, Ke Chen, Zixian Li, Chi Xie, Huafei Li, Chenxing Li, Chuangchuang Wang, Kai Tang, Zhiguang Zhu, Kai Tang, Wenmei Gao, Rui Wang, Jun Wu, Chao Liu, Qin Xie, Chen Chen, Haonan Lu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/195_581a31bc-a989-492d-8e24-752eae482f7b.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>AndesVL: AI That Fits Right Inside Your Pocket</h3>
+<p>
+Ever imagined your phone could *see* and *think* like a mini‑computer brain? <strong>Scientists have created</strong> a new AI called AndesVL that does exactly that—running powerful visual‑language tasks straight on your mobile device. Unlike massive cloud‑based models that need huge data centers, AndesVL is tiny (just 0.6 billion to 4 billion parameters) yet delivers <strong>first‑tier performance</strong> on everything from answering questions about photos to solving math puzzles on the screen. Think of it like a compact Swiss‑army knife: it packs many tools into a size that fits in your pocket, letting you get instant answers without sending data to the internet. This means faster replies, lower battery drain, and better privacy because your images never leave the phone. <strong>AndesVL’s breakthrough</strong> opens the door for smarter camera apps, on‑device translators, and even safer AR experiences for everyone. The future of AI is becoming personal, and it’s already in your hand. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents the AndesVL suite, a collection of mobile-side <strong>multimodal large language models (MLLMs)</strong> designed to overcome the limitations of traditional cloud-based models. With parameter sizes ranging from 0.6B to 4B, AndesVL demonstrates competitive performance across various benchmarks, including text-rich image understanding and reasoning tasks. The paper details the innovative model architectures, training methodologies, and performance evaluations, highlighting the introduction of a 1+N Low-Rank Adaptation (LoRA) architecture for enhanced adaptability. Additionally, it outlines the training pipeline and data sources that contribute to the models' effectiveness in mobile applications.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The AndesVL suite showcases significant advancements in the field of mobile-side MLLMs, particularly through its efficient <strong>training methodologies</strong> and innovative architectural designs. The introduction of the 1+N LoRA architecture allows for improved task adaptability, while the two-stage training process enhances model performance across diverse applications. Furthermore, the comprehensive evaluation against state-of-the-art models across 32 benchmarks underscores AndesVL's competitive edge, particularly in reasoning and math tasks.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article may exhibit some limitations in addressing potential biases inherent in the training data and methodologies. The reliance on specific datasets for supervised fine-tuning could impact the generalizability of the models across varied real-world scenarios. Additionally, while the performance metrics are impressive, further exploration of long-term deployment challenges and user experience in practical applications would enhance the overall analysis.</p>
+
+<h3>Implications</h3>
+<p>The implications of the AndesVL suite are profound, particularly for mobile applications requiring efficient <strong>multimodal processing</strong>. The advancements in cache management and quantization-aware training techniques suggest a promising future for deploying sophisticated models on edge devices. This could lead to broader accessibility of advanced AI capabilities in everyday applications, enhancing user interaction and experience.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the AndesVL suite represents a significant leap forward in the development of mobile-side MLLMs, effectively addressing the limitations of existing cloud-based models. Its innovative architectures and training strategies not only enhance performance but also pave the way for future research in mobile AI applications. The article serves as a valuable resource for researchers and practitioners aiming to leverage <strong>multimodal AI technologies</strong> in practical settings.</p>
+
+<h3>Readability</h3>
+<p>The article is structured to facilitate easy comprehension, with clear sections that guide the reader through complex concepts. The use of concise paragraphs and straightforward language enhances engagement, making it accessible to a broad audience interested in the advancements of mobile AI technologies. By emphasizing key terms and findings, the content remains scannable and informative, encouraging further exploration of the topic.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>cloud-based MLLMs</li><li> AndesVL mobile models</li><li> Qwen3 LLM architecture</li><li> visual encoders in MLLMs</li><li> edge device computing</li><li> text-rich image understanding</li><li> multi-image comprehension</li><li> multilingual understanding in AI</li><li> hallucination mitigation techniques</li><li> VQA benchmarks</li><li> model training pipeline</li><li> parameter efficiency in AI</li><li> mobile-side machine learning</li><li> state-of-the-art AI performance</li><li> GUI-related AI tasks</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/184/andesvl-technical-report-an-efficient-mobile-side-multimodal-large-languagemodel" target="_blank" title=" AndesVL Technical Report: An Efficient Mobile-side Multimodal Large Language
+Model">
+    AndesVL Technical Report: An Efficient Mobile-side Multimodal Large Language
+Model
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/49_7b075104-8ea4-4e08-8654-05625a71b853.jpg" class="card-img-top" alt="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiangyu Peng
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/40-UNIDOC-BENCH-A-Unified-Benchmark-for-Document-Centric-Multimodal-RAG/index.html"  title="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG">
+          <h3 class="card-title pb-2" itemprop="headline">UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/40-UNIDOC-BENCH-A-Unified-Benchmark-for-Document-Centric-Multimodal-RAG/index.html"
+          title="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/246_f86dfd37-9da4-48fe-a232-47cace4813d1.jpg" class="card-img-top" alt="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhenyu Liu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"  title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE">
+          <h3 class="card-title pb-2" itemprop="headline">UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"
+          title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/160_2967f29c-d26d-4665-8e89-17e5fbf40b41.jpg" class="card-img-top" alt="InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haomin Wang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/149-InternSVG-Towards-Unified-SVG-Tasks-with-Multimodal-Large-Language-Models/index.html"  title="InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/149-InternSVG-Towards-Unified-SVG-Tasks-with-Multimodal-Large-Language-Models/index.html"
+          title="InternSVG: Towards Unified SVG Tasks with Multimodal Large Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/196_6f142900-a549-4b2d-b199-d871c17ba49c.jpg" class="card-img-top" alt="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqi Liu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"  title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"
+          title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/202_6902829d-2e9c-4a02-bd4b-62f5628c751e.jpg" class="card-img-top" alt="MultiCOIN: Multi-Modal COntrollable Video INbetweening" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Maham Tanveer
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/191-MultiCOIN-Multi-Modal-COntrollable-Video-INbetweening/index.html"  title="MultiCOIN: Multi-Modal COntrollable Video INbetweening">
+          <h3 class="card-title pb-2" itemprop="headline">MultiCOIN: Multi-Modal COntrollable Video INbetweening</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/191-MultiCOIN-Multi-Modal-COntrollable-Video-INbetweening/index.html"
+          title="MultiCOIN: Multi-Modal COntrollable Video INbetweening"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/39_b97c9dd9-29df-487d-8a74-1ea9e7ab0747.jpg" class="card-img-top" alt="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Leitian Tao
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/30-Hybrid-Reinforcement-When-Reward-Is-Sparse-Its-Better-to-Be-Dense/index.html"  title="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense">
+          <h3 class="card-title pb-2" itemprop="headline">Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/30-Hybrid-Reinforcement-When-Reward-Is-Sparse-Its-Better-to-Be-Dense/index.html"
+          title="Hybrid Reinforcement: When Reward Is Sparse, It's Better to Be Dense"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
