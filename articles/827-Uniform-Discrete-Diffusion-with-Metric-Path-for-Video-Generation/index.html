@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Uniform Discrete Diffusion with Metric Path for Video Genera</title>
+
+<meta name="keywords" content="discrete video diffusion models,  URSA framework (Uniform discRete diffuSion with metric pAth),  linearized metric path diffusion,  resolution-depende">
+
+<meta name="description" content="discrete video diffusion models,  URSA framework (Uniform discRete diffuSion with metric pAth),  linearized metric path diffusion,  resolution-depende">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Uniform Discrete Diffusion with Metric Path for Video Generation
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Haoge Deng, Ting Pan, Fan Zhang, Yang Liu, Zhuoyan Luo, Yufeng Cui, Wenxuan Wang, Chunhua Shen, Shiguang Shan, Zhaoxiang Zhang, Xinlong Wang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              31 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/701_afa892c0-3c77-44d8-abd0-4ff42ecc1f56.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a New AI Trick Makes Video Creation Faster and Sharper</h3>
+<p>
+Ever wondered why some AI‑made videos look glitchy or take forever to render? <strong>Scientists have discovered</strong> a clever shortcut called URSA that treats a video like a puzzle of tiny picture pieces, then refines the whole scene step by step. Imagine painting a mural by first sketching the outline and then quickly filling in the colors—all in one smooth motion. This approach lets the AI work with “discrete” building blocks, avoiding the messy errors that usually pile up over long clips. <strong>The breakthrough</strong> is a simple “metric path” that guides the AI to improve the picture globally, and a clever timing tweak that speeds up high‑resolution scenes. The result? Sharper videos generated in far fewer steps, making it possible to create longer, higher‑quality clips on everyday hardware. <strong>What this means for you</strong> is faster video filters, smoother animations, and new creative tools that feel almost magical. As AI keeps learning to see the world in pieces, the line between imagination and reality keeps getting brighter.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Scalable Video Generation with URSA: A Discrete Diffusion Breakthrough</h2>
+
+<p>The article introduces URSA (Uniform discRete diffuSion with metric pAth), a novel and powerful framework designed to bridge the performance gap between <strong>discrete</strong> and <strong>continuous generative modeling</strong> for scalable video generation. At its core, URSA redefines video generation as an iterative global refinement process of discrete <strong>spatiotemporal tokens</strong>. This innovative approach integrates two key designs: a <strong>Linearized Metric Path</strong> and a <strong>Resolution-dependent Timestep Shifting</strong> mechanism. These elements enable URSA to efficiently scale to high-resolution image synthesis and long-duration video generation, significantly reducing inference steps. Furthermore, the framework incorporates an asynchronous temporal fine-tuning strategy, unifying versatile tasks such as interpolation and image-to-video generation within a single model, thereby addressing long-standing limitations of discrete models like error accumulation and long-context inconsistency.</p>
+
+<h2>Critical Evaluation of URSA's Generative Capabilities</h2>
+
+<h3>Strengths</h3>
+<p>URSA demonstrates remarkable strengths, particularly its ability to achieve <strong>state-of-the-art performance</strong> comparable to leading continuous diffusion methods, while consistently outperforming existing discrete approaches. Its core innovations, including the <strong>Linearized Metric Path</strong> and <strong>Resolution-dependent Timestep Shifting</strong>, contribute to exceptional <strong>efficiency</strong> and <strong>scalability</strong>, allowing for high-resolution image and long-duration video generation with fewer inference steps. The framework's <strong>versatility</strong> is a significant advantage, as its asynchronous temporal fine-tuning strategy enables a single model to handle diverse tasks like image-to-video generation and interpolation. Extensive experiments on challenging benchmarks such as VBench, DPG-Bench, and GenEval robustly validate URSA's capabilities, with ablation studies further confirming the impact of its iterative refinement and path linearity on sampling errors and semantic performance.</p>
+
+<h3>Weaknesses</h3>
+<p>While URSA makes substantial progress, certain aspects warrant consideration. The article notes that larger diffusion models are often limited by <strong>discrete vision tokenizer capacity</strong>, a fundamental challenge that URSA improves upon but may not entirely eliminate for extremely complex or novel scenarios. Although URSA requires fewer inference steps, the overall <strong>computational demands</strong> for training such a sophisticated model, utilizing A100 GPUs and an LLM backbone, remain substantial, potentially limiting accessibility for researchers without significant resources. Furthermore, while the framework demonstrates strong performance across various benchmarks, a deeper analysis of its <strong>generalizability</strong> to highly niche or extremely diverse video content types could provide further insights into its ultimate robustness.</p>
+
+<h3>Implications and Future Directions</h3>
+<p>URSA represents a significant <strong>advancement in discrete generative modeling</strong>, effectively revitalizing research in this domain by demonstrating its potential to rival continuous methods. Its success in achieving <strong>high-quality video synthesis</strong> and efficient scaling opens new avenues for developing more accessible and powerful generative AI tools. The concept of <strong>unified generative models</strong> capable of handling multiple tasks with a single architecture simplifies development workflows and enhances practical utility. This work paves the way for exciting <strong>future research</strong> into optimizing discrete tokenization, exploring novel metric paths, and further integrating asynchronous scheduling to push the boundaries of long-context and high-resolution content generation.</p>
+
+<h2>Conclusion</h2>
+<p>URSA stands as a pivotal <strong>breakthrough</strong> in the field of generative AI, particularly for video synthesis. By innovatively addressing long-standing challenges in discrete generative modeling, it not only achieves performance comparable to state-of-the-art continuous methods but also offers enhanced efficiency and versatility. This research significantly contributes to the development of scalable and robust video generation technologies, promising profound impacts on various <strong>practical applications</strong> and inspiring numerous <strong>future innovations</strong> in the realm of artificial intelligence.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>discrete video diffusion models</li><li> URSA framework (Uniform discRete diffuSion with metric pAth)</li><li> linearized metric path diffusion</li><li> resolution-dependent timestep shifting</li><li> high-resolution video synthesis</li><li> long-duration video generation with reduced inference steps</li><li> asynchronous temporal fine‑tuning strategy</li><li> image‑to‑video generation using discrete spatiotemporal tokens</li><li> iterative global refinement of video tokens</li><li> scalable discrete generative modeling</li><li> video interpolation via diffusion</li><li> benchmark comparison with continuous diffusion methods</li><li> open‑source URSA code repository.</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/827/uniform-discrete-diffusion-with-metric-path-for-video-generation" target="_blank" title=" Uniform Discrete Diffusion with Metric Path for Video Generation">
+    Uniform Discrete Diffusion with Metric Path for Video Generation
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/765_88ec96f1-6519-4a8e-8d54-13848e5acaf1.jpg" class="card-img-top" alt="Emu3.5: Native Multimodal Models are World Learners" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yufeng Cui
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/862-Emu35-Native-Multimodal-Models-are-World-Learners/index.html"  title="Emu3.5: Native Multimodal Models are World Learners">
+          <h3 class="card-title pb-2" itemprop="headline">Emu3.5: Native Multimodal Models are World Learners</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/862-Emu35-Native-Multimodal-Models-are-World-Learners/index.html"
+          title="Emu3.5: Native Multimodal Models are World Learners"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/709_ede61884-6214-4b83-b9a5-719f09957553.jpg" class="card-img-top" alt="Repurposing Synthetic Data for Fine-grained Search Agent Supervision" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yida Zhao
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/794-Repurposing-Synthetic-Data-for-Fine-grained-Search-Agent-Supervision/index.html"  title="Repurposing Synthetic Data for Fine-grained Search Agent Supervision">
+          <h3 class="card-title pb-2" itemprop="headline">Repurposing Synthetic Data for Fine-grained Search Agent Supervision</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/794-Repurposing-Synthetic-Data-for-Fine-grained-Search-Agent-Supervision/index.html"
+          title="Repurposing Synthetic Data for Fine-grained Search Agent Supervision"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/686_e6135114-60aa-4c3d-b6c9-1cfb0a010858.jpg" class="card-img-top" alt="VoMP: Predicting Volumetric Mechanical Property Fields" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Rishit Dagli
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/780-VoMP-Predicting-Volumetric-Mechanical-Property-Fields/index.html"  title="VoMP: Predicting Volumetric Mechanical Property Fields">
+          <h3 class="card-title pb-2" itemprop="headline">VoMP: Predicting Volumetric Mechanical Property Fields</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/780-VoMP-Predicting-Volumetric-Mechanical-Property-Fields/index.html"
+          title="VoMP: Predicting Volumetric Mechanical Property Fields"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/705_80f35ffb-2620-4af8-8cb1-0372afd4165b.jpg" class="card-img-top" alt="Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yujie Wei
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/830-Routing-Matters-in-MoE-Scaling-Diffusion-Transformers-with-Explicit-Routing-Guidance/index.html"  title="Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance">
+          <h3 class="card-title pb-2" itemprop="headline">Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/830-Routing-Matters-in-MoE-Scaling-Diffusion-Transformers-with-Explicit-Routing-Guidance/index.html"
+          title="Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/770_b03c6179-2c75-467d-a32d-1aea5ae4adfe.jpg" class="card-img-top" alt="Kimi Linear: An Expressive, Efficient Attention Architecture" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kimi Team
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/867-Kimi-Linear-An-Expressive-Efficient-Attention-Architecture/index.html"  title="Kimi Linear: An Expressive, Efficient Attention Architecture">
+          <h3 class="card-title pb-2" itemprop="headline">Kimi Linear: An Expressive, Efficient Attention Architecture</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/867-Kimi-Linear-An-Expressive-Efficient-Attention-Architecture/index.html"
+          title="Kimi Linear: An Expressive, Efficient Attention Architecture"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/695_f5e8616d-9815-48a1-9c94-249aad3a554c.jpg" class="card-img-top" alt="AgentFold: Long-Horizon Web Agents with Proactive Context Management" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Rui Ye
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/788-AgentFold-Long-Horizon-Web-Agents-with-Proactive-Context-Management/index.html"  title="AgentFold: Long-Horizon Web Agents with Proactive Context Management">
+          <h3 class="card-title pb-2" itemprop="headline">AgentFold: Long-Horizon Web Agents with Proactive Context Management</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/788-AgentFold-Long-Horizon-Web-Agents-with-Proactive-Context-Management/index.html"
+          title="AgentFold: Long-Horizon Web Agents with Proactive Context Management"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
