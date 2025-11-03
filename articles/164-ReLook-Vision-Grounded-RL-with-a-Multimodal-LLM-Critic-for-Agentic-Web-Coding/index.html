@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>ReLook: Vision-Grounded RL with a Multimodal LLM Critic for </title>
+
+<meta name="keywords" content="Large Language Models,  front-end development,  vision-grounded reinforcement learning,  multimodal LLM,  generate-diagnose-refine loop,  visual criti">
+
+<meta name="description" content="Large Language Models,  front-end development,  vision-grounded reinforcement learning,  multimodal LLM,  generate-diagnose-refine loop,  visual criti">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yuhang Li, Chenchen Zhang, Ruilin Lv, Ao Liu, Ken Deng, Yuanxing Zhang, Jiaheng Liu, Wiggin Zhou, Bo Zhou
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/175_3818d539-9f84-4fc8-a421-6e07070f40ff.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learns to Build Web Pages by Seeing Them</h3>
+<p>
+Ever wondered how a computer could *see* a web page and fix its own code? <strong>ReLook</strong> makes that possible. Imagine a robot artist who paints a picture, steps back, looks at the canvas, and then adds the perfect brushstroke. In the same way, this new AI system writes a snippet of front‑end code, takes a screenshot of the result, and lets a smart visual critic point out what looks off. The critic is a multimodal language model that can understand both text and images, so it can say, “The button is missing” or “The layout is crooked,” and the AI instantly rewrites the code to improve it. By rewarding only screenshots that actually render correctly, the system avoids cheating and keeps getting better, just like a student who only moves on after mastering each lesson. The result? Faster, more reliable web designs that look right the first time. <strong>Scientists found</strong> this loop of generate‑diagnose‑refine works across many coding challenges, showing that giving AI a pair of eyes can turn code into polished, user‑friendly pages. <strong>It’s a breakthrough</strong> that brings us closer to truly self‑editing software—one visual check at a time. 🌐
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents <strong>ReLook</strong>, a novel vision-grounded reinforcement learning framework designed to enhance front-end code generation. By integrating a <strong>multimodal large language model (MLLM)</strong> as a visual critic, ReLook addresses the challenges of visual fidelity and user interaction through a robust generate–diagnose–refine loop. The framework employs a strict reward system and a <strong>Forced Optimization</strong> strategy to ensure continuous improvement in code quality. Experimental results demonstrate that ReLook consistently outperforms existing methods across multiple benchmarks, showcasing its effectiveness in iterative refinement and adaptability with various LLMs.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of ReLook is its innovative use of a <strong>generate–diagnose–refine loop</strong>, which allows for real-time feedback and iterative improvement in code generation. The integration of the MLLM as a visual critic enhances the model's ability to assess visual fidelity, ensuring that generated code meets high standards of renderability. Additionally, the implementation of a strict reward system mitigates issues related to reward hacking, promoting genuine learning and performance enhancement.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the ReLook framework may face challenges related to its reliance on the MLLM for visual feedback. This dependency could introduce biases based on the MLLM's training data and capabilities, potentially limiting the framework's generalizability across diverse coding environments. Furthermore, while the Forced Optimization strategy is effective in promoting improvement, it may also restrict creative exploration in code generation, leading to a narrower range of outputs.</p>
+
+<h3>Implications</h3>
+<p>The implications of ReLook extend beyond front-end development, suggesting potential applications in various domains where visual accuracy and user interaction are critical. The framework's ability to integrate visual assessments into the learning process could inspire future research in <strong>reinforcement learning</strong> and <strong>machine learning</strong> applications, particularly in areas requiring high levels of visual fidelity.</p>
+
+<h3>Conclusion</h3>
+<p>In summary, ReLook represents a significant advancement in the field of front-end code generation, effectively addressing the challenges of visual fidelity and interaction through its innovative framework. The article highlights the framework's superior performance across established benchmarks, underscoring its potential to reshape how we approach code generation tasks. As the field continues to evolve, ReLook's methodologies may pave the way for future innovations in <strong>AI-driven development</strong>.</p>
+
+<h3>Readability</h3>
+<p>The article is structured to enhance readability, with clear and concise language that facilitates understanding. Each section logically flows into the next, allowing readers to grasp complex concepts without overwhelming jargon. This approach not only improves user engagement but also encourages further exploration of the topic.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large Language Models</li><li> front-end development</li><li> vision-grounded reinforcement learning</li><li> multimodal LLM</li><li> generate-diagnose-refine loop</li><li> visual critic</li><li> actionable feedback</li><li> zero-reward rule</li><li> renderability</li><li> Forced Optimization</li><li> self-edit cycle</li><li> latency in code generation</li><li> agentic perception</li><li> training-inference decoupling</li><li> vision-grounded code generation</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/164/relook-vision-grounded-rl-with-a-multimodal-llm-critic-for-agentic-web-coding" target="_blank" title=" ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding">
+    ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/326_f27f9380-126e-499a-be81-f8c3d2997cb1.jpg" class="card-img-top" alt="FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qiran Zou
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/310-FML-bench-A-Benchmark-for-Automatic-ML-Research-Agents-Highlighting-the-Importance-of-Exploratio/index.html"  title="FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth">
+          <h3 class="card-title pb-2" itemprop="headline">FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/310-FML-bench-A-Benchmark-for-Automatic-ML-Research-Agents-Highlighting-the-Importance-of-Exploratio/index.html"
+          title="FML-bench: A Benchmark for Automatic ML Research Agents Highlighting the
+Importance of Exploration Breadth"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/196_6f142900-a549-4b2d-b199-d871c17ba49c.jpg" class="card-img-top" alt="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqi Liu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"  title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"
+          title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/194_79a6cdca-a014-44fe-9804-a0aef4af8789.jpg" class="card-img-top" alt="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yinan Chen
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/183-IVEBench-Modern-Benchmark-Suite-for-Instruction-Guided-Video-Editing-Assessment/index.html"  title="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment">
+          <h3 class="card-title pb-2" itemprop="headline">IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/183-IVEBench-Modern-Benchmark-Suite-for-Instruction-Guided-Video-Editing-Assessment/index.html"
+          title="IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/241_4c467b3d-1495-40e6-9825-597ec64ee06a.jpg" class="card-img-top" alt="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tiancheng Gu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/229-UniME-V2-MLLM-as-a-Judge-for-Universal-Multimodal-Embedding-Learning/index.html"  title="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning">
+          <h3 class="card-title pb-2" itemprop="headline">UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/229-UniME-V2-MLLM-as-a-Judge-for-Universal-Multimodal-Embedding-Learning/index.html"
+          title="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/201_cc7b4bdc-f4fa-4b76-961f-1344661f6d77.jpg" class="card-img-top" alt="The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Saad Obaid ul Islam
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/190-The-Curious-Case-of-Factual-MisAlignment-between-LLMs-Short-and-Long-Form-Answers/index.html"  title="The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers">
+          <h3 class="card-title pb-2" itemprop="headline">The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/190-The-Curious-Case-of-Factual-MisAlignment-between-LLMs-Short-and-Long-Form-Answers/index.html"
+          title="The Curious Case of Factual (Mis)Alignment between LLMs' Short- and Long-Form
+Answers"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/153_45eac646-128d-4175-9168-ea0f86366ff2.jpg" class="card-img-top" alt="Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qinglin Zhu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/142-Latent-Refinement-Decoding-Enhancing-Diffusion-Based-Language-Models-by-Refining-Belief-States/index.html"  title="Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States">
+          <h3 class="card-title pb-2" itemprop="headline">Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/142-Latent-Refinement-Decoding-Enhancing-Diffusion-Based-Language-Models-by-Refining-Belief-States/index.html"
+          title="Latent Refinement Decoding: Enhancing Diffusion-Based Language Models by
+Refining Belief States"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
