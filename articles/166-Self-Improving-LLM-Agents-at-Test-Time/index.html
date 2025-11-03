@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css" >
+
+<title>Self-Improving LLM Agents at Test-Time</title>
+
+<meta name="keywords" content="language model fine-tuning,  training dataset efficiency,  self-improvement algorithms,  test-time self-improvement,  agentic language models,  self-d">
+
+<meta name="description" content="language model fine-tuning,  training dataset efficiency,  self-improvement algorithms,  test-time self-improvement,  agentic language models,  self-d">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Self-Improving LLM Agents at Test-Time
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Emre Can Acikgoz, Cheng Qian, Heng Ji, Dilek Hakkani-Tür, Gokhan Tur
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/177_b7fbe161-6d06-4b3b-af61-c444afcace27.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>AI That Learns on the Spot: Self‑Improving LLM Agents</h3>
+<p>
+Ever imagined a robot that can teach itself while you’re watching? <strong>Scientists have discovered</strong> a way for language‑model agents to get smarter right at the moment they’re used, without needing massive data farms. Instead of feeding the AI endless textbooks, the system first spots the questions it finds tricky (<strong>self‑awareness</strong>), then creates its own practice problems (<strong>self‑data augmentation</strong>), and finally learns from those fresh examples instantly. Think of it like a student who, after stumbling on a math problem, writes similar puzzles to practice and nails the concept before the test. In real tests, this “learn‑as‑you‑go” trick boosted accuracy by over 5 % while using 68 times fewer training samples. The result? Smarter, more adaptable assistants that can evolve on the fly, bringing us a step closer to truly self‑evolving AI. The future may soon be filled with digital helpers that keep getting better every time you ask them a question. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>This article presents a novel approach to enhancing the performance of <strong>language models</strong> (LMs) through a method termed Test-Time Self-Improvement (TT-SI). The primary goal is to address the inefficiencies associated with traditional fine-tuning methods, which often require extensive datasets and computational resources. The proposed TT-SI framework operates in three stages: identifying uncertain samples, generating similar examples, and fine-tuning the model during inference. Empirical evaluations demonstrate that TT-SI achieves an average accuracy improvement of +5.48% while utilizing 68 times fewer training samples compared to conventional methods.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The TT-SI method showcases significant strengths, particularly in its ability to enhance <strong>model generalization</strong> and efficiency. By focusing on uncertain inputs, the framework effectively reduces the need for large training datasets, which is a common limitation in traditional approaches. The empirical results across various benchmarks validate the method's effectiveness, indicating that it not only improves accuracy but also optimizes resource utilization.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its advantages, the TT-SI framework is not without limitations. The reliance on an <strong>uncertainty estimator</strong> may introduce biases if the estimator is not accurately calibrated. Additionally, while the method shows promise in various scenarios, its performance in highly dynamic environments remains to be fully explored. Future research should address these potential weaknesses to ensure broader applicability.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are profound, particularly for the development of <strong>self-evolving agents</strong> in natural language processing (NLP). By enabling models to adapt during inference, TT-SI paves the way for more robust and capable systems that can continuously improve their performance. This approach could significantly impact various applications, from conversational agents to complex decision-making systems.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article presents a compelling case for the adoption of the TT-SI framework as a transformative approach to language model training. Its ability to enhance performance while minimizing resource requirements positions it as a valuable contribution to the field of machine learning. As the demand for efficient and adaptable models grows, the insights provided by this research will likely influence future developments in <strong>agent learning</strong> and beyond.</p>
+
+<h2>Readability</h2>
+<p>The article is structured to facilitate understanding, with clear explanations of complex concepts. The use of concise paragraphs and straightforward language enhances engagement, making it accessible to a broad audience. By emphasizing key terms, the text not only improves readability but also aids in search engine optimization, ensuring that the research reaches those who can benefit from it.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>language model fine-tuning</li><li> training dataset efficiency</li><li> self-improvement algorithms</li><li> test-time self-improvement</li><li> agentic language models</li><li> self-data augmentation</li><li> model generalization techniques</li><li> empirical evaluations in AI</li><li> uncertain sample identification</li><li> test-time distillation</li><li> performance accuracy gain</li><li> adaptive learning methods</li><li> novel information assessment</li><li> cost-effective training strategies</li><li> machine learning benchmarks</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/166/self-improving-llm-agents-at-test-time" target="_blank" title=" Self-Improving LLM Agents at Test-Time">
+    Self-Improving LLM Agents at Test-Time
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/156_166e0630-5657-4e40-bc1f-f90cbb88b854.jpg" class="card-img-top" alt="AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xinlong Chen
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/145-AVoCaDO-An-Audiovisual-Video-Captioner-Driven-by-Temporal-Orchestration/index.html"  title="AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration">
+          <h3 class="card-title pb-2" itemprop="headline">AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/145-AVoCaDO-An-Audiovisual-Video-Captioner-Driven-by-Temporal-Orchestration/index.html"
+          title="AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/86_8c955452-f8a9-4827-846a-e20d05c351ad.jpg" class="card-img-top" alt="StreamingVLM: Real-Time Understanding for Infinite Video Streams" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ruyi Xu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/82-StreamingVLM-Real-Time-Understanding-for-Infinite-Video-Streams/index.html"  title="StreamingVLM: Real-Time Understanding for Infinite Video Streams">
+          <h3 class="card-title pb-2" itemprop="headline">StreamingVLM: Real-Time Understanding for Infinite Video Streams</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/82-StreamingVLM-Real-Time-Understanding-for-Infinite-Video-Streams/index.html"
+          title="StreamingVLM: Real-Time Understanding for Infinite Video Streams"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/257_1c4ba282-4404-4541-96b1-ff0ad10249d3.jpg" class="card-img-top" alt="X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment
+Vision-Language-Action Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jinliang Zheng
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/245-X-VLA-Soft-Prompted-Transformer-as-Scalable-Cross-Embodiment-Vision-Language-Action-Model/index.html"  title="X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment
+Vision-Language-Action Model">
+          <h3 class="card-title pb-2" itemprop="headline">X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment
+Vision-Language-Action Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/245-X-VLA-Soft-Prompted-Transformer-as-Scalable-Cross-Embodiment-Vision-Language-Action-Model/index.html"
+          title="X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment
+Vision-Language-Action Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/186_9651ab94-a4a8-487a-b932-f21fd9dff491.jpg" class="card-img-top" alt="LLaMAX2: Your Translation-Enhanced Model also Performs Well in Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Changjiang Gao
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/175-LLaMAX2-Your-Translation-Enhanced-Model-also-Performs-Well-in-Reasoning/index.html"  title="LLaMAX2: Your Translation-Enhanced Model also Performs Well in Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">LLaMAX2: Your Translation-Enhanced Model also Performs Well in Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/175-LLaMAX2-Your-Translation-Enhanced-Model-also-Performs-Well-in-Reasoning/index.html"
+          title="LLaMAX2: Your Translation-Enhanced Model also Performs Well in Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/83_9473280f-925a-4fd0-b194-a3a9528fc714.jpg" class="card-img-top" alt="R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yi Lu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/79-R-Horizon-How-Far-Can-Your-Large-Reasoning-Model-Really-Go-in-Breadth-and-Depth/index.html"  title="R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?">
+          <h3 class="card-title pb-2" itemprop="headline">R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/79-R-Horizon-How-Far-Can-Your-Large-Reasoning-Model-Really-Go-in-Breadth-and-Depth/index.html"
+          title="R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/155_07e0ffe2-354f-45f6-b828-ee91dde0e1e2.jpg" class="card-img-top" alt="Spotlight on Token Perception for Multimodal Reinforcement Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Siyuan Huang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/144-Spotlight-on-Token-Perception-for-Multimodal-Reinforcement-Learning/index.html"  title="Spotlight on Token Perception for Multimodal Reinforcement Learning">
+          <h3 class="card-title pb-2" itemprop="headline">Spotlight on Token Perception for Multimodal Reinforcement Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/144-Spotlight-on-Token-Perception-for-Multimodal-Reinforcement-Learning/index.html"
+          title="Spotlight on Token Perception for Multimodal Reinforcement Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
