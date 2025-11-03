@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>GuideFlow3D: Optimization-Guided Rectified Flow For Appearan</title>
+
+<meta name="keywords" content="3D appearance transfer,  Texture and geometric detail transfer,  Universal guidance for 3D assets,  Rectified flow models,  Training-free appearance t">
+
+<meta name="description" content="3D appearance transfer,  Texture and geometric detail transfer,  Universal guidance for 3D assets,  Rectified flow models,  Training-free appearance t">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Sayan Deb Sarkar, Sinisa Stekovic, Vincent Lepetit, Iro Armeni
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              22 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/440_8ba75d11-3b8c-4e13-b5da-d42757b6307f.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Can Instantly Dress 3D Objects with Real‑World Textures</h3>
+<p>
+Ever wondered how a video‑game character can instantly wear a new outfit just from a single photo? A new <strong>AI trick</strong> called <strong>GuideFlow3D</strong> makes that possible. Researchers have built a <strong>training‑free method</strong> that takes a 3‑D model and, using a pre‑learned image‑or‑text engine, adds <strong>realistic textures</strong> and tiny surface details—even when the original shape looks nothing like the reference picture. Think of it like a smart paintbrush that watches a painter’s strokes and copies them onto a sculpture, matching every groove and curve. The secret is a gentle “guidance” added during the AI’s generation process, which keeps the new look faithful to the source while preserving the model’s geometry. The result? Game developers, AR creators, and digital artists can now dress virtual objects in seconds, opening doors to faster content creation and more immersive experiences. As this technology spreads, the line between imagination and reality keeps blurring, inviting us all to picture a world where any object can wear any style at the click of a button.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing 3D Appearance Transfer with GuideFlow3D</h2>
+<p>The challenge of robustly transferring appearance to 3D assets, especially when source and target geometries significantly differ, has long hindered digital content creation. Traditional 3D generative models often yield unappealing results. This research introduces <strong>GuideFlow3D</strong>, a novel, training-free framework designed to overcome these limitations. It employs an optimization-guided rectified flow method, inspired by universal guidance, which periodically adds differentiable loss functions—including part-aware and self-similarity losses—during sampling. This approach enables robust transfer of both <strong>texture and geometric details</strong> to diverse 3D assets, supporting image or text inputs. A key innovation is its <strong>GPT-based evaluation system</strong>, validated by user studies, which objectively ranks outputs and addresses the shortcomings of traditional metrics. GuideFlow3D demonstrates superior performance against baselines, promising significant advancements for industries like gaming and augmented reality.</p>
+
+<h2>Critical Evaluation of GuideFlow3D's Innovations</h2>
+
+<h3>Strengths</h3>
+<p>GuideFlow3D offers significant advancements, primarily through its <strong>training-free, optimization-guided rectified flow</strong> approach, ensuring remarkable robustness to geometric variations. Its versatility is notable, supporting diverse inputs (images, text, meshes) and demonstrating generalizability across different diffusion models. The method achieves superior qualitative and quantitative results in transferring stylistic intent and adapting to diverse geometries, outperforming existing baselines. Crucially, the introduction of a <strong>GPT-based evaluation system</strong>, validated by user studies, is a groundbreaking contribution, effectively addressing the critical challenge of objectively assessing appearance transfer quality.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, GuideFlow3D has some limitations. Its current <strong>non-real-time performance</strong> restricts immediate application in scenarios demanding instantaneous feedback, such as live interactive design or real-time AR/VR. The paper also acknowledges broader <strong>ethical considerations regarding AI misuse</strong>, a vital point for any powerful generative AI technology. The inherent complexity of integrating universal diffusion guidance and rectified flow might also present a steep learning curve for broader adoption.</p>
+
+<h3>Implications and Conclusion</h3>
+<p>The implications of GuideFlow3D are substantial, poised to revolutionize several industries. Its ability to robustly transfer appearance and structural coherence across diverse categories opens new frontiers for <strong>digital content creation</strong>, gaming, and advanced AR/VR applications. The method's generalizability suggests widespread adoption and extension, fostering innovation in 3D asset generation and stylization. The pioneering <strong>GPT-based evaluation framework</strong> establishes a new paradigm for assessing generative model outputs. Overall, GuideFlow3D represents a significant leap in 3D appearance transfer, offering a robust, versatile, and innovative solution.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>3D appearance transfer</li><li> Texture and geometric detail transfer</li><li> Universal guidance for 3D assets</li><li> Rectified flow models</li><li> Training-free appearance transfer</li><li> Differentiable loss functions</li><li> Part-aware losses</li><li> GPT-based evaluation system</li><li> 3D asset generation</li><li> Augmented reality content creation</li><li> Gaming asset development</li><li> Digital content creation</li><li> Diffusion models for 3D</li><li> Appearance object representations</li><li> Handling geometry differences in 3D</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/413/guideflow3d-optimization-guided-rectified-flow-for-appearance-transfer" target="_blank" title=" GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer">
+    GuideFlow3D: Optimization-Guided Rectified Flow For Appearance Transfer
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/430_a0a4f2d4-9de6-4c9a-9bb1-81927dca2157.jpg" class="card-img-top" alt="Distractor Injection Attacks on Large Reasoning Models: Characterization and
+Defense" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhehao Zhang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/403-Distractor-Injection-Attacks-on-Large-Reasoning-Models-Characterization-and-Defense/index.html"  title="Distractor Injection Attacks on Large Reasoning Models: Characterization and
+Defense">
+          <h3 class="card-title pb-2" itemprop="headline">Distractor Injection Attacks on Large Reasoning Models: Characterization and
+Defense</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/403-Distractor-Injection-Attacks-on-Large-Reasoning-Models-Characterization-and-Defense/index.html"
+          title="Distractor Injection Attacks on Large Reasoning Models: Characterization and
+Defense"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/442_a223fc20-40c2-4364-be52-6e93fdd25a64.jpg" class="card-img-top" alt="What Limits Agentic Systems Efficiency?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Song Bian
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/415-What-Limits-Agentic-Systems-Efficiency/index.html"  title="What Limits Agentic Systems Efficiency?">
+          <h3 class="card-title pb-2" itemprop="headline">What Limits Agentic Systems Efficiency?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/415-What-Limits-Agentic-Systems-Efficiency/index.html"
+          title="What Limits Agentic Systems Efficiency?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/452_8046cd04-f9a4-4789-8bc9-0dfbe5e4f446.jpg" class="card-img-top" alt="MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating
+Multimodal LLMs in Multi-Turn Dialogues" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yaning Pan
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/423-MT-Video-Bench-A-Holistic-Video-Understanding-Benchmark-for-Evaluating-Multimodal-LLMs-in-Multi/index.html"  title="MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating
+Multimodal LLMs in Multi-Turn Dialogues">
+          <h3 class="card-title pb-2" itemprop="headline">MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating
+Multimodal LLMs in Multi-Turn Dialogues</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/423-MT-Video-Bench-A-Holistic-Video-Understanding-Benchmark-for-Evaluating-Multimodal-LLMs-in-Multi/index.html"
+          title="MT-Video-Bench: A Holistic Video Understanding Benchmark for Evaluating
+Multimodal LLMs in Multi-Turn Dialogues"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/364_ded26fcd-3ce3-454c-bbee-9b7e31302bc0.jpg" class="card-img-top" alt="LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shr-Ruei Tsai
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/344-LightsOut-Diffusion-based-Outpainting-for-Enhanced-Lens-Flare-Removal/index.html"  title="LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal">
+          <h3 class="card-title pb-2" itemprop="headline">LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/344-LightsOut-Diffusion-based-Outpainting-for-Enhanced-Lens-Flare-Removal/index.html"
+          title="LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/359_ee3fe2ee-2e28-406d-8e1b-f1837bceded4.jpg" class="card-img-top" alt="OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hanrong Ye
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/339-OmniVinci-Enhancing-Architecture-and-Data-for-Omni-Modal-Understanding-LLM/index.html"  title="OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM">
+          <h3 class="card-title pb-2" itemprop="headline">OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/339-OmniVinci-Enhancing-Architecture-and-Data-for-Omni-Modal-Understanding-LLM/index.html"
+          title="OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/439_95df461e-ff2b-43fb-b163-64c04678438b.jpg" class="card-img-top" alt="On Non-interactive Evaluation of Animal Communication Translators" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Orr Paradise
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/412-On-Non-interactive-Evaluation-of-Animal-Communication-Translators/index.html"  title="On Non-interactive Evaluation of Animal Communication Translators">
+          <h3 class="card-title pb-2" itemprop="headline">On Non-interactive Evaluation of Animal Communication Translators</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/412-On-Non-interactive-Evaluation-of-Animal-Communication-Translators/index.html"
+          title="On Non-interactive Evaluation of Animal Communication Translators"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
