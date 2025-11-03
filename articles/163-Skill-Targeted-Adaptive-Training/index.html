@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css" >
+
+<title>Skill-Targeted Adaptive Training</title>
+
+<meta name="keywords" content="language models,  supervised fine-tuning,  fine-tuning strategy,  metacognition in AI,  skill-targeted training,  Missing-Skill-Profile,  adaptive rew">
+
+<meta name="description" content="language models,  supervised fine-tuning,  fine-tuning strategy,  metacognition in AI,  skill-targeted training,  Missing-Skill-Profile,  adaptive rew">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Skill-Targeted Adaptive Training
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yinghui He, Abhishek Panigrahi, Yong Lin, Sanjeev Arora
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/174_a4aac8fb-bd56-4a73-8934-af32e4fc22fb.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Gets Smarter by Focusing on Its Weak Spots</h3>
+<p>
+What if your AI could study the same way you do, zeroing in on the topics it still finds tricky? <strong>Skill‑Targeted Adaptive Training</strong> makes that happen. A powerful “teacher” AI looks at a math problem set, lists the exact skills needed, and tags each question with those skills. Then it watches the student AI answer, noting which skills it missed – creating a “missing‑skill profile.” Think of it like a personal tutor who gives you extra worksheets on the chapters you got wrong. Using that profile, the teacher either reshuffles existing examples to stress the weak areas (<strong>STAT‑Sel</strong>) or even writes brand‑new practice problems (<strong>STAT‑Syn</strong>). The result? The AI improves by up to 7.5% on tough math tests and gains a solid boost on fresh challenges it never saw before. It’s a simple idea with a big impact, showing that teaching AI to fill its own gaps can make it far more capable in everyday tasks. The future of smarter assistants may just be a little bit more like a good teacher. 
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents a novel fine-tuning strategy known as <strong>Skill-Targeted Adaptive Training (STAT)</strong>, designed to address the saturation observed in language models during traditional supervised fine-tuning (SFT). By employing a more advanced language model as a teacher, STAT identifies and rectifies skill deficiencies in a student model, leading to notable performance enhancements across various benchmarks. The methodology incorporates two key approaches: adaptive reweighting of existing training examples (STAT-Sel) and the synthesis of new training data (STAT-Syn). Experimental results demonstrate significant improvements, particularly on the MATH dataset, where performance gains reached up to 7.5%. Furthermore, STAT shows compatibility with reinforcement learning methods, suggesting a comprehensive enhancement of training pipelines.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The primary strength of the article lies in its innovative approach to fine-tuning language models. By leveraging the metacognitive abilities of a stronger language model, the authors effectively address the limitations of traditional SFT methods. The introduction of the <strong>Missing-Skill-Profile</strong> allows for a targeted analysis of skill gaps, which is a significant advancement in training methodologies. The empirical results, showcasing improvements on both in-distribution and out-of-distribution benchmarks, underscore the robustness of the proposed methods.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article does have some limitations. The reliance on a stronger teacher model may not be feasible in all contexts, potentially limiting the applicability of STAT in resource-constrained environments. Additionally, while the performance gains are impressive, the long-term effects of such targeted training on model generalization remain to be fully explored. The authors could also provide more detailed discussions on the ethical implications of their methods, particularly concerning data usage and model transparency.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the field of machine learning and natural language processing. By demonstrating that skill-targeted training can yield substantial improvements, the authors pave the way for future research into adaptive training strategies. This approach not only enhances model performance but also encourages a more nuanced understanding of skill acquisition in language models, which could inform the development of more sophisticated AI systems.</p>
+
+<h3>Conclusion</h3>
+<p>In conclusion, the article makes a valuable contribution to the ongoing discourse on fine-tuning language models. The introduction of STAT represents a promising shift towards more adaptive and effective training methodologies. As the field continues to evolve, the insights gained from this research could lead to more robust and capable language models, ultimately enhancing their applicability across various domains.</p>
+
+<h3>Readability</h3>
+<p>The article is well-structured and accessible, making it suitable for a professional audience. The clear presentation of methodologies and findings enhances comprehension, while the use of straightforward language ensures that complex concepts are easily digestible. This clarity is essential for fostering engagement and encouraging further exploration of the topic.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>language models</li><li> supervised fine-tuning</li><li> fine-tuning strategy</li><li> metacognition in AI</li><li> skill-targeted training</li><li> Missing-Skill-Profile</li><li> adaptive reweighting</li><li> synthetic training examples</li><li> performance improvement in LLMs</li><li> out-of-distribution benchmarks</li><li> STAT method</li><li> GRPO reinforcement learning</li><li> Llama model</li><li> Qwen model</li><li> training pipeline optimization</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/163/skill-targeted-adaptive-training" target="_blank" title=" Skill-Targeted Adaptive Training">
+    Skill-Targeted Adaptive Training
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/154_b49f1540-f8ce-4c87-920d-a3a5da4057a8.jpg" class="card-img-top" alt="RLFR: Extending Reinforcement Learning for LLMs with Flow Environment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jinghao Zhang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/143-RLFR-Extending-Reinforcement-Learning-for-LLMs-with-Flow-Environment/index.html"  title="RLFR: Extending Reinforcement Learning for LLMs with Flow Environment">
+          <h3 class="card-title pb-2" itemprop="headline">RLFR: Extending Reinforcement Learning for LLMs with Flow Environment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/143-RLFR-Extending-Reinforcement-Learning-for-LLMs-with-Flow-Environment/index.html"
+          title="RLFR: Extending Reinforcement Learning for LLMs with Flow Environment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/82_be5a8299-d340-41ec-880b-fe370b805a59.jpg" class="card-img-top" alt="AutoPR: Let's Automate Your Academic Promotion!" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qiguang Chen
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/78-AutoPR-Lets-Automate-Your-Academic-Promotion/index.html"  title="AutoPR: Let's Automate Your Academic Promotion!">
+          <h3 class="card-title pb-2" itemprop="headline">AutoPR: Let's Automate Your Academic Promotion!</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/78-AutoPR-Lets-Automate-Your-Academic-Promotion/index.html"
+          title="AutoPR: Let's Automate Your Academic Promotion!"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/156_166e0630-5657-4e40-bc1f-f90cbb88b854.jpg" class="card-img-top" alt="AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xinlong Chen
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/145-AVoCaDO-An-Audiovisual-Video-Captioner-Driven-by-Temporal-Orchestration/index.html"  title="AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration">
+          <h3 class="card-title pb-2" itemprop="headline">AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/145-AVoCaDO-An-Audiovisual-Video-Captioner-Driven-by-Temporal-Orchestration/index.html"
+          title="AVoCaDO: An Audiovisual Video Captioner Driven by Temporal Orchestration"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/78_c20ef639-69a7-40b4-9a05-74163cbb91d2.jpg" class="card-img-top" alt="Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kang Liao
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/74-Thinking-with-Camera-A-Unified-Multimodal-Model-for-Camera-Centric-Understanding-and-Generation/index.html"  title="Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/74-Thinking-with-Camera-A-Unified-Multimodal-Model-for-Camera-Centric-Understanding-and-Generation/index.html"
+          title="Thinking with Camera: A Unified Multimodal Model for Camera-Centric
+Understanding and Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/104_479299c2-2cdd-4782-9733-3b95207e11d6.jpg" class="card-img-top" alt="TC-LoRA: Temporally Modulated Conditional LoRA for Adaptive Diffusion Control" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Minkyoung Cho
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/100-TC-LoRA-Temporally-Modulated-Conditional-LoRA-for-Adaptive-Diffusion-Control/index.html"  title="TC-LoRA: Temporally Modulated Conditional LoRA for Adaptive Diffusion Control">
+          <h3 class="card-title pb-2" itemprop="headline">TC-LoRA: Temporally Modulated Conditional LoRA for Adaptive Diffusion Control</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/100-TC-LoRA-Temporally-Modulated-Conditional-LoRA-for-Adaptive-Diffusion-Control/index.html"
+          title="TC-LoRA: Temporally Modulated Conditional LoRA for Adaptive Diffusion Control"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/100_6594e4d5-d81f-48d3-9d08-d73b26478651.jpg" class="card-img-top" alt="Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech
+Recognition" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yi-Cheng Lin
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/96-Pseudo2Real-Task-Arithmetic-for-Pseudo-Label-Correction-in-Automatic-Speech-Recognition/index.html"  title="Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech
+Recognition">
+          <h3 class="card-title pb-2" itemprop="headline">Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech
+Recognition</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/96-Pseudo2Real-Task-Arithmetic-for-Pseudo-Label-Correction-in-Automatic-Speech-Recognition/index.html"
+          title="Pseudo2Real: Task Arithmetic for Pseudo-Label Correction in Automatic Speech
+Recognition"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
