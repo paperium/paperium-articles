@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Open-o3 Video: Grounded Video Reasoning with Explicit Spatio</title>
+
+<meta name="keywords" content="video reasoning models,  evidence-centered reasoning,  spatio-temporal evidence,  temporal tracking in videos,  spatial localization in dynamic scenes">
+
+<meta name="description" content="video reasoning models,  evidence-centered reasoning,  spatio-temporal evidence,  temporal tracking in videos,  spatial localization in dynamic scenes">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Jiahao Meng, Xiangtai Li, Haochen Wang, Yue Tan, Tao Zhang, Lingdong Kong, Yunhai Tong, Anran Wang, Zhiyang Teng, Yujing Wang, Zhuochen Wang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              24 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/548_2ecd9a26-797c-418a-b429-f85765f24dfa.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learned to Point Out What It Sees in Videos</h3>
+<p>
+Ever wondered why a computer can answer questions about a video but never shows you *where* it found the clue? <strong>Open‑o3 Video</strong> changes that. Imagine watching a mystery movie and having a friend pause the screen, circle the suspect, and note the exact second the clue appears. This new AI does the same: it highlights the key moments, the objects, and even draws boxes around them while giving its answer.<br><br>
+The trick is teaching the system to watch both *when* and *where* something happens, just like a sports commentator who points out the winning goal and the exact frame it happened. Researchers built special training sets with thousands of video clips, each tagged with timestamps and boxes, then used a clever “reward” system to teach the model to be precise.<br><br>
+The result? The AI now solves video puzzles with far higher confidence, and its visual notes help us trust its answers. As machines start to *show* their reasoning, we’re one step closer to AI that’s not just smart, but also transparent and reliable. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents Open-o3 Video, a novel framework designed for <strong>grounded video reasoning</strong> that integrates explicit <strong>spatio-temporal evidence</strong>. It addresses significant challenges in data collection and training by curating two specialized datasets: STGR-CoT-30k for Supervised Fine-Tuning (SFT) and STGR-RL-36k for Reinforcement Learning (RL). The model employs a two-stage training strategy that enhances its ability to generate accurate reasoning traces, achieving state-of-the-art performance on the V-STAR benchmark and other video understanding tasks. Notably, Open-o3 Video surpasses previous models, including GPT-4o, in key performance metrics.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of Open-o3 Video is its innovative approach to <strong>spatio-temporal reasoning</strong>, which allows for the identification of key timestamps and objects within video content. The model's ability to produce grounded evidence significantly enhances the reliability of its outputs compared to traditional text-only methods. Furthermore, the meticulous construction of the STGR-CoT-30k and STGR-RL-36k datasets ensures that the training data is both comprehensive and relevant, addressing the gaps in existing datasets that often lack unified spatio-temporal supervision.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its advancements, the article does not extensively discuss potential limitations or biases inherent in the datasets used. The reliance on specific training strategies, such as cold-start reinforcement learning, may also raise questions about the model's adaptability to diverse video contexts outside the training scope. Additionally, while the model demonstrates impressive performance metrics, the implications of its deployment in real-world scenarios, including ethical considerations and reproducibility, warrant further exploration.</p>
+
+<h3>Implications</h3>
+<p>The implications of Open-o3 Video extend beyond academic research, potentially influencing applications in fields such as surveillance, autonomous driving, and content moderation. By providing a framework that emphasizes <strong>evidence-centered reasoning</strong>, the model could enhance decision-making processes in environments where video analysis is critical. Moreover, the insights gained from its reasoning traces may facilitate advancements in <strong>confidence-aware verification</strong>, improving the overall reliability of automated systems.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, Open-o3 Video represents a significant advancement in the field of video reasoning, combining innovative methodologies with high-quality data to achieve state-of-the-art performance. Its focus on <strong>spatio-temporal evidence</strong> not only enhances the accuracy of video analysis but also sets a new standard for future research in this domain. As the field evolves, addressing the identified weaknesses and exploring the broader implications of this framework will be essential for maximizing its impact and ensuring ethical deployment.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>video reasoning models</li><li> evidence-centered reasoning</li><li> spatio-temporal evidence</li><li> temporal tracking in videos</li><li> spatial localization in dynamic scenes</li><li> Open-o3 Video framework</li><li> training data for video reasoning</li><li> cold-start reinforcement learning</li><li> temporal alignment rewards</li><li> spatial precision in video analysis</li><li> high-quality video datasets</li><li> V-STAR benchmark performance</li><li> confidence-aware verification</li><li> reasoning traces in AI</li><li> video understanding benchmarks</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/657/open-o3-video-grounded-video-reasoning-with-explicit-spatio-temporal-evidence" target="_blank" title=" Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence">
+    Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/662_c4565375-b95f-46a1-8cb8-60e20641f2e1.jpg" class="card-img-top" alt="Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Junyoung Seo
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/759-Lookahead-Anchoring-Preserving-Character-Identity-in-Audio-Driven-Human-Animation/index.html"  title="Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation">
+          <h3 class="card-title pb-2" itemprop="headline">Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/759-Lookahead-Anchoring-Preserving-Character-Identity-in-Audio-Driven-Human-Animation/index.html"
+          title="Lookahead Anchoring: Preserving Character Identity in Audio-Driven Human
+Animation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/620_8395508f-c684-43b0-b922-a82566d31810.jpg" class="card-img-top" alt="From Denoising to Refining: A Corrective Framework for Vision-Language Diffusion
+Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yatai Ji
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/729-From-Denoising-to-Refining-A-Corrective-Framework-for-Vision-Language-Diffusion-Model/index.html"  title="From Denoising to Refining: A Corrective Framework for Vision-Language Diffusion
+Model">
+          <h3 class="card-title pb-2" itemprop="headline">From Denoising to Refining: A Corrective Framework for Vision-Language Diffusion
+Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/729-From-Denoising-to-Refining-A-Corrective-Framework-for-Vision-Language-Diffusion-Model/index.html"
+          title="From Denoising to Refining: A Corrective Framework for Vision-Language Diffusion
+Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/665_72f6bdde-d496-46d1-a07e-d55e9eb349f3.jpg" class="card-img-top" alt="ACG: Action Coherence Guidance for Flow-based VLA models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Minho Park
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/762-ACG-Action-Coherence-Guidance-for-Flow-based-VLA-models/index.html"  title="ACG: Action Coherence Guidance for Flow-based VLA models">
+          <h3 class="card-title pb-2" itemprop="headline">ACG: Action Coherence Guidance for Flow-based VLA models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/762-ACG-Action-Coherence-Guidance-for-Flow-based-VLA-models/index.html"
+          title="ACG: Action Coherence Guidance for Flow-based VLA models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/562_b7f03141-c477-45af-bdb2-944a0be31403.jpg" class="card-img-top" alt="From Masks to Worlds: A Hitchhiker's Guide to World Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jinbin Bai
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/669-From-Masks-to-Worlds-A-Hitchhikers-Guide-to-World-Models/index.html"  title="From Masks to Worlds: A Hitchhiker's Guide to World Models">
+          <h3 class="card-title pb-2" itemprop="headline">From Masks to Worlds: A Hitchhiker's Guide to World Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/669-From-Masks-to-Worlds-A-Hitchhikers-Guide-to-World-Models/index.html"
+          title="From Masks to Worlds: A Hitchhiker's Guide to World Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/548_2ecd9a26-797c-418a-b429-f85765f24dfa.jpg" class="card-img-top" alt="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiahao Meng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/657-Open-o3-Video-Grounded-Video-Reasoning-with-Explicit-Spatio-Temporal-Evidence/index.html"  title="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence">
+          <h3 class="card-title pb-2" itemprop="headline">Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/657-Open-o3-Video-Grounded-Video-Reasoning-with-Explicit-Spatio-Temporal-Evidence/index.html"
+          title="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/622_c2453e59-35d1-4825-843d-83b6dde16536.jpg" class="card-img-top" alt="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yifu Luo
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/726-Sample-By-Step-Optimize-By-Chunk-Chunk-Level-GRPO-For-Text-to-Image-Generation/index.html"  title="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/726-Sample-By-Step-Optimize-By-Chunk-Chunk-Level-GRPO-For-Text-to-Image-Generation/index.html"
+          title="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
