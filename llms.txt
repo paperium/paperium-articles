@@ -1,0 +1,37 @@
+# llms.txt - Allow AI/Language Model Crawlers  
+# Last updated: [DATE]  
+
+# General rule: Allow all LLMs to crawl the root and public content  
+User-agent: *  
+Allow: /  
+
+# Optional: Define crawl delays to manage server load  
+Crawl-delay: 1  
+
+# OpenAI (ChatGPT)  
+User-agent: ChatGPT-User  
+Allow: /  
+
+# Google-Extended (Gemini/Bard)  
+User-agent: Google-Extended  
+Allow: /  
+
+# Anthropic (Claude)  
+User-agent: anthropic-ai  
+Allow: /  
+
+# Perplexity AI  
+User-agent: perplexitybot  
+Allow: /  
+
+# Common Crawl (used by some AI models)  
+User-agent: CCBot  
+Allow: /  
+
+# Bing AI (Microsoft Copilot)  
+User-agent: Bingbot  
+Allow: /  
+
+# Meta AI (LLaMA-based crawlers)  
+User-agent: FacebookBot  
+Allow: /  

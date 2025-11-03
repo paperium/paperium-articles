@@ -1,0 +1,15 @@
+User-agent: *
+
+Sitemap: https://paperium.github.io/paperium-articles/sitemap.xml
+
+User-agent: *  
+Allow: / 
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
