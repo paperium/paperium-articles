@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+
+<title>DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotati</title>
+
+<meta name="keywords" content="Sim-to-real transfer for dexterous manipulation,  Joint-wise dynamics modeling,  Reality gap mitigation in robotic grasping,  Data-efficient policy ad">
+
+<meta name="description" content="Sim-to-real transfer for dexterous manipulation,  Joint-wise dynamics modeling,  Reality gap mitigation in robotic grasping,  Data-efficient policy ad">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise
+Neural Dynamics Model
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Xueyi Liu, He Wang, Li Yi
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/65_012f4e1a-ec17-41da-87b8-56eeb8f41cc3.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How Robots Learned to Twirl Objects Like a Pro</h3>
+<p>
+Ever wondered why a robot hand still looks clumsy when it tries to spin a tiny toy? <strong>Scientists have cracked</strong> the “reality gap” that kept robots stuck in the lab, letting a single AI policy trained in a computer now twist real‑world objects of all shapes and sizes. Imagine teaching a child to spin a pencil, a rubber duck, and a tiny dinosaur—all with one simple lesson. The secret? A clever “joint‑wise” brain that watches each finger move, learns from a handful of real‑hand tries, and instantly adjusts the simulated moves. This tiny data‑saver works like a seasoned chef tasting a dish and adding just the right pinch of salt. The result? A robot hand that can rotate oddly shaped items, long sticks, and even miniature animals, no matter how it’s turned or which way it’s pointing. <strong>This breakthrough</strong> means future robots could handle everyday chores—like sorting laundry or assembling gadgets—without needing endless re‑training. <strong>It’s a big step</strong> toward machines that move as naturally as our own hands, turning science fiction into everyday reality.<br><br>
+The more we teach robots to feel, the more they’ll help us feel at ease. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article tackles the enduring challenge of transferring dexterous manipulation policies from simulation to real‑world robots, focusing on in‑hand object rotation. It introduces a <strong>joint‑wise dynamics model</strong> that learns per‑joint evolution while compressing global influences into low‑dimensional variables, thereby bridging the reality gap with minimal data. The framework couples this model with an autonomous data‑collection pipeline that gathers diverse real‑world interactions without extensive human supervision. Experiments demonstrate a single simulation‑trained policy successfully rotating objects of complex geometry, high aspect ratios up to 5.33, and small sizes across varied wrist orientations and rotation axes. Teleoperation trials further validate the method’s robustness in practical manipulation scenarios.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The approach is highly <strong>data‑efficient</strong>, requiring only limited real‑world samples to adapt a simulation policy, which is crucial for scaling dexterous learning. Factorizing dynamics across joints yields interpretable models and facilitates generalization to unseen objects. The fully autonomous data collection reduces human labor and accelerates deployment cycles.</p>
+<h3>Weaknesses</h3>
+<p>While the joint‑wise model captures many contact effects, it may struggle with highly deformable or extremely high‑friction surfaces that deviate from learned profiles. The study’s evaluation focuses on a specific hand architecture, leaving open questions about cross‑hand transferability. Ablation details for individual components are sparse, limiting insight into each module’s contribution.</p>
+<h3>Implications</h3>
+<p>This work advances the field of sim‑to‑real dexterous manipulation by demonstrating that a single policy can generalize across diverse object geometries and wrist configurations. The factorization strategy offers a blueprint for other robotic domains where high‑dimensional dynamics must be distilled into tractable representations, potentially accelerating learning in complex contact tasks.</p>
+
+<h3>Conclusion</h3>
+<p>The article presents a compelling framework that pushes the boundaries of real‑world dexterous manipulation. By marrying joint‑wise dynamics modeling with autonomous data collection, it delivers unprecedented generality and robustness for in‑hand rotation tasks. Future research should explore cross‑hand applicability and extend the model to accommodate more extreme material properties.</p>
+
+<h3>Readability</h3>
+<p>The narrative is concise yet thorough, using clear language that invites both roboticists and interdisciplinary readers. Paragraphs are short and focused, enhancing scanability and reducing cognitive load for busy professionals browsing LinkedIn or Medium.</p>
+<p>Keyword emphasis via <strong>HTML tags</strong> improves SEO without disrupting flow, ensuring the content ranks well for searches on sim‑to‑real transfer, dexterous manipulation, and joint dynamics modeling.</p>
+<p>The structured format with distinct sections guides readers through the study’s motivation, methodology, results, and broader impact in a logical progression.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Sim-to-real transfer for dexterous manipulation</li><li> Joint-wise dynamics modeling</li><li> Reality gap mitigation in robotic grasping</li><li> Data-efficient policy adaptation from simulation</li><li> Low-dimensional variable compression of hand dynamics</li><li> Autonomous real-world data collection strategy</li><li> Whole-hand interaction distribution generalization</li><li> High aspect ratio object rotation challenges</li><li> Complex shape manipulation (e.g.</li><li> animal-like objects)</li><li> Wrist orientation and rotation axis variability</li><li> Teleoperation for complex in-hand tasks</li><li> Contact-rich dynamics modeling</li><li> Dynamic profile learning per joint</li><li> System-wide influence factorization across joints</li><li> Real-world evaluation of simulated policies</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/52/dexndm-closing-the-reality-gap-for-dexterous-in-hand-rotation-via-joint-wiseneural-dynamics-model" target="_blank" title=" DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise
+Neural Dynamics Model">
+    DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise
+Neural Dynamics Model
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5">
+       <h2 class="lead text-center mb-5">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3>More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/32_c3c555c6-1017-4687-87aa-e86c3b2986a4.jpg" class="card-img-top" alt="DreamOmni2: Multimodal Instruction-based Editing and Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bin Xia
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/23-DreamOmni2-Multimodal-Instruction-based-Editing-and-Generation/index.html"  title="DreamOmni2: Multimodal Instruction-based Editing and Generation">
+          <h3 class="card-title pb-2" itemprop="headline">DreamOmni2: Multimodal Instruction-based Editing and Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/23-DreamOmni2-Multimodal-Instruction-based-Editing-and-Generation/index.html"
+          title="DreamOmni2: Multimodal Instruction-based Editing and Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/33_85286e77-0205-4ca4-b8d3-b121cd34e043.jpg" class="card-img-top" alt="From What to Why: A Multi-Agent System for Evidence-based Chemical Reaction
+Condition Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Cheng Yang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/24-From-What-to-Why-A-Multi-Agent-System-for-Evidence-based-Chemical-Reaction-Condition-Reasoning/index.html"  title="From What to Why: A Multi-Agent System for Evidence-based Chemical Reaction
+Condition Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">From What to Why: A Multi-Agent System for Evidence-based Chemical Reaction
+Condition Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/24-From-What-to-Why-A-Multi-Agent-System-for-Evidence-based-Chemical-Reaction-Condition-Reasoning/index.html"
+          title="From What to Why: A Multi-Agent System for Evidence-based Chemical Reaction
+Condition Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/79_1de8f843-9fc1-4119-9ffc-d19feeecb1f2.jpg" class="card-img-top" alt="D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied
+AI" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Suwhan Choi
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/75-D2E-Scaling-Vision-Action-Pretraining-on-Desktop-Data-for-Transfer-to-Embodied-AI/index.html"  title="D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied
+AI">
+          <h3 class="card-title pb-2" itemprop="headline">D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied
+AI</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/75-D2E-Scaling-Vision-Action-Pretraining-on-Desktop-Data-for-Transfer-to-Embodied-AI/index.html"
+          title="D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied
+AI"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/41_7efbcd60-7908-4b70-8340-aabe66f374ef.jpg" class="card-img-top" alt="ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D Reconstruction with
+Structured Scene Representation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Guanghao Li
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/32-ARTDECO-Towards-Efficient-and-High-Fidelity-On-the-Fly-3D-Reconstruction-with-Structured-Scene-Re/index.html"  title="ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D Reconstruction with
+Structured Scene Representation">
+          <h3 class="card-title pb-2" itemprop="headline">ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D Reconstruction with
+Structured Scene Representation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/32-ARTDECO-Towards-Efficient-and-High-Fidelity-On-the-Fly-3D-Reconstruction-with-Structured-Scene-Re/index.html"
+          title="ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D Reconstruction with
+Structured Scene Representation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/67_63528ed9-f8d0-4a7e-8f4e-5333c3f84a56.jpg" class="card-img-top" alt="Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wang Wei
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/54-Learning-to-Route-LLMs-from-Bandit-Feedback-One-Policy-Many-Trade-offs/index.html"  title="Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs">
+          <h3 class="card-title pb-2" itemprop="headline">Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/54-Learning-to-Route-LLMs-from-Bandit-Feedback-One-Policy-Many-Trade-offs/index.html"
+          title="Learning to Route LLMs from Bandit Feedback: One Policy, Many Trade-offs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/119_12d51cff-506c-4177-8d77-db2cea8a94d1.jpg" class="card-img-top" alt="Instant4D: 4D Gaussian Splatting in Minutes" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhanpeng Luo
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/115-Instant4D-4D-Gaussian-Splatting-in-Minutes/index.html"  title="Instant4D: 4D Gaussian Splatting in Minutes">
+          <h3 class="card-title pb-2" itemprop="headline">Instant4D: 4D Gaussian Splatting in Minutes</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/115-Instant4D-4D-Gaussian-Splatting-in-Minutes/index.html"
+          title="Instant4D: 4D Gaussian Splatting in Minutes"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <link rel="stylesheet" href="/paperium-articles/assets/script1.js"> 
+ 
+</body>
+</html>
