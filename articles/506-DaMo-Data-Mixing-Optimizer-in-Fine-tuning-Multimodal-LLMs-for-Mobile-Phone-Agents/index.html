@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>DaMo: Data Mixing Optimizer in Fine-tuning Multimodal LLMs f</title>
+
+<meta name="keywords" content="Mobile Phone Agents (MPAs),  Multimodal Large Language Models (MLLMs),  DaMo data mixture optimizer,  PhoneAgentBench benchmark,  Multitask supervised">
+
+<meta name="description" content="Mobile Phone Agents (MPAs),  Multimodal Large Language Models (MLLMs),  DaMo data mixture optimizer,  PhoneAgentBench benchmark,  Multitask supervised">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                DaMo: Data Mixing Optimizer in Fine-tuning Multimodal LLMs for Mobile Phone
+Agents
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Kai Shi, Jun Yang, Ni Yang, Binqiang Pan, Qingsong Xie, Chao Zhang, Zhenyu Yang, Tianhuang Su, Haonan Lu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              23 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/511_8e7a7762-ed4b-45e0-ba20-e55e1e3921a1.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a Smart “Recipe Mixer” Boosts Your Phone’s AI Assistant</h3>
+<p>
+Ever wondered why your phone’s AI sometimes seems confused when you ask it to do many things at once? <strong>Scientists have created</strong> a new tool called <strong>DaMo – the Data Mixing Optimizer</strong> that teaches AI assistants to juggle multiple tasks like a seasoned chef mixing ingredients. Imagine trying to bake a cake while also making a smoothie; DaMo figures out the perfect proportion of each recipe so the final dish turns out flawless. By predicting which mix of training data works best, DaMo helped mobile‑phone AI agents improve their answers by more than 3% on a tough real‑world test called PhoneAgentBench, and even lifted performance by double‑digit points on other benchmarks. This means your future voice assistants could understand pictures, text, and voice commands together more smoothly, making everyday tasks faster and less frustrating. <strong>This breakthrough shows</strong> that smarter training tricks, not just bigger models, can make our gadgets genuinely helpful. <strong>Imagine a phone that truly keeps up with you</strong>—that’s the promise of DaMo’s “recipe‑mixing” magic.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview of DaMo: Optimizing MLLMs for Mobile Phone Agents</h2>
+<p>This article introduces <strong>DaMo</strong> (Data Mixture Optimizer), a novel solution designed to enhance the performance of <strong>Multimodal Large Language Models (MLLMs)</strong> in <strong>Mobile Phone Agents (MPAs)</strong>. Existing multitask supervised fine-tuning approaches often struggle with determining ideal data compositions for optimal performance. DaMo addresses this by employing a trainable network, specifically a Multi-Layer Perceptron (MLP), to predict optimal data mixtures by forecasting downstream task performance without requiring full MLLM training. To facilitate comprehensive evaluation, the authors also present <strong>PhoneAgentBench</strong>, the first specialized benchmark for MLLMs on multimodal mobile phone tasks, comprising 1235 QA pairs from diverse real-world scenarios. DaMo demonstrates strong predictive capability with an R^2 of 0.81 in pilot experiments and achieves a notable 3.38% performance improvement on PhoneAgentBench, alongside superior generalization across established benchmarks.</p>
+
+<h2>Critical Evaluation of Data Mixture Optimization</h2>
+<h3>Strengths of the DaMo Framework</h3>
+<p>The DaMo framework presents several compelling strengths. Its core innovation lies in using a <strong>trainable network</strong> to efficiently predict optimal data mixtures, circumventing the computationally intensive process of full MLLM training for each data composition. This approach significantly streamlines the <strong>multitask fine-tuning</strong> process, making it more practical for real-world applications. The introduction of <strong>PhoneAgentBench</strong> is a crucial contribution, providing a much-needed specialized benchmark for evaluating MLLMs in multimodal mobile contexts. DaMo's demonstrated performance gains, including a 3.38% improvement on PhoneAgentBench and a 2.57% average improvement across other benchmarks, underscore its effectiveness. Furthermore, its robust <strong>scalability</strong> and cross-model applicability, enhanced by a linear mapping method to manage model discrepancies, highlight its versatility and potential for broad adoption across various MLLM architectures.</p>
+
+<h3>Potential Areas for Further Research</h3>
+<p>While DaMo offers significant advancements, several areas warrant further exploration. The reported R^2 of 0.81 for predictive capability, while strong, was achieved in "small-scale pilot experiments." Expanding these evaluations to <strong>larger-scale datasets</strong> and more complex scenarios would further validate its robustness. Although DaMo is designed for efficiency, the computational overhead of training the DaMo network itself, and the potential complexity of the MLP in modeling highly intricate training dynamics, could be further analyzed. Additionally, while PhoneAgentBench covers "diverse real-world industrial mobile application scenarios," a deeper analysis of specific <strong>multimodal interaction</strong> types could reveal nuances in DaMo's performance. Investigating the <strong>long-term stability</strong> and adaptability of the predicted optimal mixtures as MLLM architectures rapidly evolve would also be valuable.</p>
+
+<h2>Conclusion: Advancing Multimodal LLMs in Mobile Contexts</h2>
+<p>This research makes a substantial contribution to the field of <strong>Multimodal Large Language Models</strong> and their application in <strong>Mobile Phone Agents</strong>. By introducing DaMo, a novel and efficient <strong>data mixture optimizer</strong>, the authors effectively address a critical challenge in multitask supervised fine-tuning. The creation of <strong>PhoneAgentBench</strong> further solidifies the article's impact, providing a vital tool for future research and development. DaMo's proven ability to significantly enhance MLLM performance, coupled with its strong generalization and scalability, positions it as a valuable framework for advancing <strong>intelligent mobile interactions</strong>. This work not only offers a practical solution for optimizing MLLM training but also lays a robust foundation for exploring more sophisticated data optimization strategies in the evolving landscape of AI-powered mobile applications.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Mobile Phone Agents (MPAs)</li><li> Multimodal Large Language Models (MLLMs)</li><li> DaMo data mixture optimizer</li><li> PhoneAgentBench benchmark</li><li> Multitask supervised fine-tuning (SFT)</li><li> Optimal training data composition</li><li> Mobile phone task automation</li><li> Downstream task performance forecasting</li><li> MLLM generalization capabilities</li><li> AI for industrial mobile applications</li><li> Multimodal mobile task evaluation</li><li> Scalable model architectures</li><li> BFCL-v3 benchmark improvement</li><li> Data mixing configurations</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/506/damo-data-mixing-optimizer-in-fine-tuning-multimodal-llms-for-mobile-phoneagents" target="_blank" title=" DaMo: Data Mixing Optimizer in Fine-tuning Multimodal LLMs for Mobile Phone
+Agents">
+    DaMo: Data Mixing Optimizer in Fine-tuning Multimodal LLMs for Mobile Phone
+Agents
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/534_348f02d8-2df0-4011-9f13-007df727be65.jpg" class="card-img-top" alt="AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience
+Library" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Minwei Kong
+          </div>
+          <div class="article-meta-text">
+            26 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/675-AlphaOPT-Formulating-Optimization-Programs-with-Self-Improving-LLM-Experience-Library/index.html"  title="AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience
+Library">
+          <h3 class="card-title pb-2" itemprop="headline">AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience
+Library</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/675-AlphaOPT-Formulating-Optimization-Programs-with-Self-Improving-LLM-Experience-Library/index.html"
+          title="AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience
+Library"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/453_77361158-1c19-4e0d-ac5b-58c70888c841.jpg" class="card-img-top" alt="ssToken: Self-modulated and Semantic-aware Token Selection for LLM Fine-tuning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaohan Qin
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/429-ssToken-Self-modulated-and-Semantic-aware-Token-Selection-for-LLM-Fine-tuning/index.html"  title="ssToken: Self-modulated and Semantic-aware Token Selection for LLM Fine-tuning">
+          <h3 class="card-title pb-2" itemprop="headline">ssToken: Self-modulated and Semantic-aware Token Selection for LLM Fine-tuning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/429-ssToken-Self-modulated-and-Semantic-aware-Token-Selection-for-LLM-Fine-tuning/index.html"
+          title="ssToken: Self-modulated and Semantic-aware Token Selection for LLM Fine-tuning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/635_91bf4ea4-1cbd-4be8-bc22-97806ecd1ef3.jpg" class="card-img-top" alt="Taming Modality Entanglement in Continual Audio-Visual Segmentation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuyang Hong
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/741-Taming-Modality-Entanglement-in-Continual-Audio-Visual-Segmentation/index.html"  title="Taming Modality Entanglement in Continual Audio-Visual Segmentation">
+          <h3 class="card-title pb-2" itemprop="headline">Taming Modality Entanglement in Continual Audio-Visual Segmentation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/741-Taming-Modality-Entanglement-in-Continual-Audio-Visual-Segmentation/index.html"
+          title="Taming Modality Entanglement in Continual Audio-Visual Segmentation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/563_f67fac08-355c-42bd-80b6-6e86f00d413e.jpg" class="card-img-top" alt="Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiashi Feng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/670-Seed3D-10-From-Images-to-High-Fidelity-Simulation-Ready-3D-Assets/index.html"  title="Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets">
+          <h3 class="card-title pb-2" itemprop="headline">Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/670-Seed3D-10-From-Images-to-High-Fidelity-Simulation-Ready-3D-Assets/index.html"
+          title="Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/615_483a2c8f-1572-4cd9-9425-618590950080.jpg" class="card-img-top" alt="MSC-Bench: A Rigorous Benchmark for Multi-Server Tool Orchestration" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jia-Kai Dong
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/719-MSC-Bench-A-Rigorous-Benchmark-for-Multi-Server-Tool-Orchestration/index.html"  title="MSC-Bench: A Rigorous Benchmark for Multi-Server Tool Orchestration">
+          <h3 class="card-title pb-2" itemprop="headline">MSC-Bench: A Rigorous Benchmark for Multi-Server Tool Orchestration</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/719-MSC-Bench-A-Rigorous-Benchmark-for-Multi-Server-Tool-Orchestration/index.html"
+          title="MSC-Bench: A Rigorous Benchmark for Multi-Server Tool Orchestration"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/690_84d12b6b-6617-4997-86c9-1296e93383d4.jpg" class="card-img-top" alt="MARS-M: When Variance Reduction Meets Matrices" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yifeng Liu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/784-MARS-M-When-Variance-Reduction-Meets-Matrices/index.html"  title="MARS-M: When Variance Reduction Meets Matrices">
+          <h3 class="card-title pb-2" itemprop="headline">MARS-M: When Variance Reduction Meets Matrices</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/784-MARS-M-When-Variance-Reduction-Meets-Matrices/index.html"
+          title="MARS-M: When Variance Reduction Meets Matrices"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
