@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Pico-Banana-400K: A Large-Scale Dataset for Text-Guided Imag</title>
+
+<meta name="keywords" content="Text-guided image editing,  multimodal AI models,  image editing datasets,  Pico-Banana-400K,  instruction-based image editing,  large-scale image edi">
+
+<meta name="description" content="Text-guided image editing,  multimodal AI models,  image editing datasets,  Pico-Banana-400K,  instruction-based image editing,  large-scale image edi">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Pico-Banana-400K: A Large-Scale Dataset for Text-Guided Image Editing
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yusu Qian, Eli Bocek-Rivele, Liangchen Song, Jialing Tong, Yinfei Yang, Jiasen Lu, Wenze Hu, Zhe Gan
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              24 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/516_22fbc687-17c5-4d21-8c32-e0c601f06128.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Pico‑Banana‑400K: The New Playground for Text‑Guided Image Editing</h3>
+<p>
+Ever imagined telling a photo to change its outfit with just a sentence? <strong>Scientists have built</strong> a massive collection of 400,000 real‑world pictures paired with simple edit instructions, and they call it <strong>Pico‑Banana‑400K</strong>. Think of it as a giant coloring book where each page already has a “before” and an “after” picture, and the only tool you need is words. This treasure trove lets AI learn how to turn “add a sunset” or “make the sky bluer” into stunning visual changes, just like a magician following a script. The dataset is carefully sorted into different edit types, includes multi‑step editing stories, and even offers “preference” pairs to teach models what looks best. By sharing this open resource, researchers can train smarter, more reliable tools that let anyone edit images with a chat‑like prompt. <strong>This breakthrough</strong> could soon let you redesign travel photos, create custom memes, or visualize ideas without any Photoshop skills. The future of picture‑making is about to become as easy as sending a text—let’s watch it unfold together. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview of Pico-Banana-400K: Advancing Text-Guided Image Editing Datasets</h2>
+<p>The rapid evolution of `<strong>multimodal models</strong>` highlights a critical need for high-quality, large-scale datasets to advance `<strong>text-guided image editing</strong>`. This paper introduces `<strong>Pico-Banana-400K</strong>`, a novel 400K-image dataset designed to fill this void. It systematically generates diverse edit pairs from real images using Nano-Banana, ensuring `<strong>instruction faithfulness</strong>` and content preservation through `<strong>MLLM-based quality control</strong>` and a comprehensive 35-type editing taxonomy. Uniquely, Pico-Banana-400K extends beyond basic edits, featuring specialized subsets for `<strong>multi-turn sequential editing</strong>`, preference learning, and instruction summarization, providing a robust foundation for future model development.</p>
+
+<h2>Critical Evaluation of the Dataset's Contribution</h2>
+<h3>Strengths: Comprehensive Design and Quality Assurance</h3>
+<p>Pico-Banana-400K's primary strength lies in its `<strong>systematic construction pipeline</strong>` and `<strong>unprecedented scale</strong>` of 400K high-quality image-edit pairs. The `<strong>fine-grained 35-type edit taxonomy</strong>` ensures comprehensive coverage, while dual-instruction generation enhances utility. Rigorous `<strong>MLLM-based quality control</strong>` guarantees high `<strong>instruction compliance</strong>`. The inclusion of specialized subsets for `<strong>multi-turn editing</strong>` and `<strong>preference learning</strong>` is a significant innovation, enabling research into complex, real-world editing challenges.</p>
+
+<h3>Weaknesses: Remaining Challenges in Image Editing</h3>
+<p>While Pico-Banana-400K makes substantial progress, the analysis indicates that certain edit types remain challenging. Specifically, `<strong>precise spatial editing</strong>` and `<strong>typographic edits</strong>` are noted as areas where current models still struggle. This suggests inherent complexities requiring further algorithmic innovation beyond just data. The reliance on synthetic generation, even with robust quality control, might also introduce subtle biases compared to purely human-annotated data.</p>
+
+<h3>Implications: Fostering Next-Generation Image Editing Models</h3>
+<p>The introduction of Pico-Banana-400K has profound implications for the `<strong>text-guided image editing</strong>` research community. By providing a `<strong>large-scale, high-quality, and task-rich resource</strong>`, it establishes a robust foundation for training and `<strong>benchmarking</strong>` the next generation of models. Researchers can now explore more sophisticated editing scenarios, including `<strong>sequential editing</strong>` and developing models that better align with human preferences, accelerating advancements in AI-driven image manipulation.</p>
+
+<h2>Conclusion: A Foundational Resource for AI in Vision</h2>
+<p>Pico-Banana-400K represents a significant leap forward in addressing the critical data bottleneck for `<strong>text-guided image editing</strong>`. Its innovative design, encompassing vast scale, meticulous quality control, and specialized subsets, positions it as a `<strong>foundational resource</strong>` for the field. While challenges in precise spatial and typographic edits persist, this dataset provides an invaluable tool for researchers to push the boundaries of `<strong>multimodal AI</strong>`, fostering the development of more intelligent and versatile image manipulation technologies.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Text-guided image editing</li><li> multimodal AI models</li><li> image editing datasets</li><li> Pico-Banana-400K</li><li> instruction-based image editing</li><li> large-scale image editing data</li><li> high-quality image datasets</li><li> multi-turn image editing</li><li> sequential editing research</li><li> reward model training for image editing</li><li> instruction rewriting AI</li><li> MLLM-based quality scoring</li><li> text-to-image editing benchmarks</li><li> OpenImages dataset integration</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/626/pico-banana-400k-a-large-scale-dataset-for-text-guided-image-editing" target="_blank" title=" Pico-Banana-400K: A Large-Scale Dataset for Text-Guided Image Editing">
+    Pico-Banana-400K: A Large-Scale Dataset for Text-Guided Image Editing
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/520_e555c782-e0f2-4725-aca5-0da19ee3bb94.jpg" class="card-img-top" alt="olmOCR 2: Unit Test Rewards for Document OCR" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jake Poznanski
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/630-olmOCR-2-Unit-Test-Rewards-for-Document-OCR/index.html"  title="olmOCR 2: Unit Test Rewards for Document OCR">
+          <h3 class="card-title pb-2" itemprop="headline">olmOCR 2: Unit Test Rewards for Document OCR</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/630-olmOCR-2-Unit-Test-Rewards-for-Document-OCR/index.html"
+          title="olmOCR 2: Unit Test Rewards for Document OCR"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/659_592b9d58-7636-4836-b9d1-cf21ed933efd.jpg" class="card-img-top" alt="VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoyu Liu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/756-VITA-E-Natural-Embodied-Interaction-with-Concurrent-Seeing-Hearing-Speaking-and-Acting/index.html"  title="VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting">
+          <h3 class="card-title pb-2" itemprop="headline">VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/756-VITA-E-Natural-Embodied-Interaction-with-Concurrent-Seeing-Hearing-Speaking-and-Acting/index.html"
+          title="VITA-E: Natural Embodied Interaction with Concurrent Seeing, Hearing, Speaking,
+and Acting"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/519_81f1a524-ebbe-4cc7-ac41-cee1231f135e.jpg" class="card-img-top" alt="Unified Reinforcement and Imitation Learning for Vision-Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Byung-Kwan Lee
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/629-Unified-Reinforcement-and-Imitation-Learning-for-Vision-Language-Models/index.html"  title="Unified Reinforcement and Imitation Learning for Vision-Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">Unified Reinforcement and Imitation Learning for Vision-Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/629-Unified-Reinforcement-and-Imitation-Learning-for-Vision-Language-Models/index.html"
+          title="Unified Reinforcement and Imitation Learning for Vision-Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/554_12d9d1cb-72b7-4336-a654-47186a2a69a8.jpg" class="card-img-top" alt="Human-Agent Collaborative Paper-to-Page Crafting for Under $0.1" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qianli Ma
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/614-Human-Agent-Collaborative-Paper-to-Page-Crafting-for-Under-01/index.html"  title="Human-Agent Collaborative Paper-to-Page Crafting for Under $0.1">
+          <h3 class="card-title pb-2" itemprop="headline">Human-Agent Collaborative Paper-to-Page Crafting for Under $0.1</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/614-Human-Agent-Collaborative-Paper-to-Page-Crafting-for-Under-01/index.html"
+          title="Human-Agent Collaborative Paper-to-Page Crafting for Under $0.1"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/454_a1dcdf9f-5b29-4a1c-bd2d-51f4a7dbd15e.jpg" class="card-img-top" alt="ProCLIP: Progressive Vision-Language Alignment via LLM-based Embedder" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoxing Hu
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/432-ProCLIP-Progressive-Vision-Language-Alignment-via-LLM-based-Embedder/index.html"  title="ProCLIP: Progressive Vision-Language Alignment via LLM-based Embedder">
+          <h3 class="card-title pb-2" itemprop="headline">ProCLIP: Progressive Vision-Language Alignment via LLM-based Embedder</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/432-ProCLIP-Progressive-Vision-Language-Alignment-via-LLM-based-Embedder/index.html"
+          title="ProCLIP: Progressive Vision-Language Alignment via LLM-based Embedder"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/512_150c2e8f-9cda-4916-aef1-6c82bb946e10.jpg" class="card-img-top" alt="GigaBrain-0: A World Model-Powered Vision-Language-Action Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            GigaBrain Team
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/507-GigaBrain-0-A-World-Model-Powered-Vision-Language-Action-Model/index.html"  title="GigaBrain-0: A World Model-Powered Vision-Language-Action Model">
+          <h3 class="card-title pb-2" itemprop="headline">GigaBrain-0: A World Model-Powered Vision-Language-Action Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/507-GigaBrain-0-A-World-Model-Powered-Vision-Language-Action-Model/index.html"
+          title="GigaBrain-0: A World Model-Powered Vision-Language-Action Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
