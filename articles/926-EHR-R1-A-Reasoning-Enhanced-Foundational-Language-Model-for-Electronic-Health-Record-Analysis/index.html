@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>EHR-R1: A Reasoning-Enhanced Foundational Language Model for</title>
+
+<meta name="keywords" content="Electronic Health Record (EHR) reasoning dataset,  thinking‑graph‑driven data generation,  domain adaptation for clinical LLMs,  multi‑stage training ">
+
+<meta name="description" content="Electronic Health Record (EHR) reasoning dataset,  thinking‑graph‑driven data generation,  domain adaptation for clinical LLMs,  multi‑stage training ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                EHR-R1: A Reasoning-Enhanced Foundational Language Model for Electronic Health
+Record Analysis
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yusheng Liao, Chaoyi Wu, Junwei Liu, Shuyang Jiang, Pengcheng Qiu, Haowen Wang, Yun Yue, Shuai Zhen, Jian Wang, Qianrui Fan, Jinjie Gu, Ya Zhang, Yanfeng Wang, Yu Wang, Weidi Xie
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              02 Nov 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/782_17ccf176-8e54-403d-ae67-e9b4ed7f2734.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>AI Breakthrough Helps Doctors Read Medical Records Faster</h3>
+<p>
+What if a computer could read your doctor’s notes as quickly as you flip a page? <strong>Scientists have unveiled</strong> a new AI system called <strong>EHR‑R1</strong> that can understand and reason through electronic health records – the digital files that hold every test result, prescription, and doctor’s comment. Imagine a super‑smart librarian who not only finds the right book on a shelf but also tells you the plot in plain language; that’s how EHR‑R1 works with medical data. This <strong>breakthrough</strong> lets the AI spot patterns, predict risks, and suggest next steps with far greater accuracy than earlier models, even beating the famous GPT‑4o in head‑to‑head tests. For patients, it could mean faster diagnoses, fewer errors, and more personalized care, all without the doctor having to sift through endless paperwork. As AI continues to learn the language of health, the future of medicine looks brighter, smarter, and more compassionate for everyone. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: Revolutionizing EHR Analysis with Reasoning-Enhanced LLMs</h2>
+<p>This scientific article introduces a groundbreaking approach to enhance the capabilities of large language models (LLMs) in analyzing complex Electronic Health Records (EHRs). Recognizing the limitations of existing LLMs in task coverage and reasoning, the authors present <strong>EHR-Ins</strong>, a comprehensive, large-scale instruction dataset comprising 300k high-quality reasoning cases. This dataset is uniquely generated through a novel <strong>thinking-graph-driven framework</strong>, enabling the scalable creation of sophisticated reasoning data. Building upon this, the paper develops <strong>EHR-R1</strong>, a series of reasoning-enhanced LLMs, with models up to 72 billion parameters, specifically tailored for robust EHR analysis. Through a multi-stage training paradigm encompassing domain adaptation, reasoning enhancement, and reinforcement learning, EHR-R1 systematically acquires deep domain knowledge and diverse reasoning skills. The research also introduces <strong>EHR-Bench</strong>, a new benchmark curated from MIMIC-IV, featuring 42 distinct tasks to comprehensively evaluate reasoning and prediction across various EHR scenarios. Experimental results demonstrate that EHR-R1 consistently outperforms state-of-the-art commercial and open-source LLMs, including GPT-4o, significantly advancing the development of more reliable and clinically relevant EHR analysis.</p>
+
+<h2>Critical Evaluation: Assessing the Impact and Future of EHR-R1</h2>
+<h3>Strengths: A Novel Framework for Robust Clinical AI</h3>
+<p>The article presents several compelling strengths, primarily centered around its innovative methodology and superior performance. The introduction of the <strong>thinking-graph-driven framework</strong> for generating the EHR-Ins dataset is a significant methodological advancement, validated by medical experts who found it superior to GPT-4o in producing supported reasoning chains. This approach addresses a critical need for high-quality, reasoning-rich data in clinical AI. Furthermore, the <strong>multi-stage training paradigm</strong> for EHR-R1, which includes domain adaptation, reasoning enhancement, and reinforcement learning, ensures the model systematically acquires both domain-specific knowledge and diverse reasoning capabilities, leading to enhanced adaptability and robustness. The creation of <strong>EHR-Bench</strong>, a comprehensive benchmark derived from MIMIC-IV and spanning 42 tasks, provides a much-needed standardized evaluation tool for LLMs in EHR analysis, covering both risk-prediction and decision-making tasks. Crucially, EHR-R1's consistent and substantial outperformance of leading LLMs, including GPT-4o, across various benchmarks and tasks, such as multi-level diagnoses and zero-shot generalization, underscores its practical utility and potential for real-world clinical applications. The inclusion of an <strong>ablation study</strong> further strengthens the findings by validating the contribution of key framework components.</p>
+
+<h3>Weaknesses: Navigating Generalizability and Resource Demands</h3>
+<p>While the contributions are substantial, certain aspects warrant consideration. The generalizability of EHR-R1, particularly its performance on diverse EHR systems and patient populations beyond the MIMIC-IV dataset, requires further investigation. Although the model demonstrates strong generalization, the mention of <strong>UMLS data attrition</strong> in the methodology suggests potential limitations when integrating with broader, less structured medical knowledge bases. Developing and deploying LLMs of up to 72 billion parameters inherently demands significant <strong>computational resources</strong>, which could pose challenges for smaller healthcare institutions or research groups with limited infrastructure. While the reinforcement learning stage aims to mitigate hallucinations, the inherent risk of LLMs generating incorrect or misleading information in critical clinical decision-making scenarios remains a persistent concern, necessitating robust human oversight and validation in practice. Additionally, while the model generates reasoning paths, the full interpretability of its complex decisions in a clinical context, beyond the explicit reasoning chains, is an ongoing challenge for all large models.</p>
+
+<h2>Conclusion: Paving the Way for Clinically Relevant AI in Healthcare</h2>
+<p>Collectively, the introduction of EHR-Ins, EHR-R1, and EHR-Bench represents a significant leap forward in the field of automated Electronic Health Record analysis. This work effectively bridges critical gaps in LLM capabilities, offering a robust framework for developing AI that can perform complex clinical reasoning with high accuracy. The superior performance of EHR-R1 against state-of-the-art models underscores its potential to transform clinical decision-making, risk prediction, and personalized medicine. By providing a comprehensive dataset, a powerful model, and a rigorous evaluation benchmark, this research not only advances the scientific understanding of AI in healthcare but also lays a strong foundation for the deployment of more reliable and <strong>clinically relevant AI solutions</strong> in real-world medical settings, ultimately enhancing patient care and operational efficiency.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Electronic Health Record (EHR) reasoning dataset</li><li> thinking‑graph‑driven data generation</li><li> domain adaptation for clinical LLMs</li><li> multi‑stage training paradigm for EHR models</li><li> reinforcement learning for medical language models</li><li> EHR‑R1 72B parameter reasoning‑enhanced LLM</li><li> MIMIC‑IV based EHR‑Bench benchmark</li><li> zero‑shot AUROC evaluation on EHRSHOT</li><li> task‑specific EHR prediction tasks</li><li> large‑scale EHR instruction tuning</li><li> clinical decision‑support with LLMs</li><li> reasoning‑augmented healthcare NLP</li><li> high‑quality EHR reasoning cases.</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/926/ehr-r1-a-reasoning-enhanced-foundational-language-model-for-electronic-healthrecord-analysis" target="_blank" title=" EHR-R1: A Reasoning-Enhanced Foundational Language Model for Electronic Health
+Record Analysis">
+    EHR-R1: A Reasoning-Enhanced Foundational Language Model for Electronic Health
+Record Analysis
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/780_3e1e843c-b629-415d-a179-cac200118735.jpg" class="card-img-top" alt="Supervised Reinforcement Learning: From Expert Trajectories to Step-wise
+Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yihe Deng
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/877-Supervised-Reinforcement-Learning-From-Expert-Trajectories-to-Step-wise-Reasoning/index.html"  title="Supervised Reinforcement Learning: From Expert Trajectories to Step-wise
+Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">Supervised Reinforcement Learning: From Expert Trajectories to Step-wise
+Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/877-Supervised-Reinforcement-Learning-From-Expert-Trajectories-to-Step-wise-Reasoning/index.html"
+          title="Supervised Reinforcement Learning: From Expert Trajectories to Step-wise
+Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/705_80f35ffb-2620-4af8-8cb1-0372afd4165b.jpg" class="card-img-top" alt="Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yujie Wei
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/830-Routing-Matters-in-MoE-Scaling-Diffusion-Transformers-with-Explicit-Routing-Guidance/index.html"  title="Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance">
+          <h3 class="card-title pb-2" itemprop="headline">Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/830-Routing-Matters-in-MoE-Scaling-Diffusion-Transformers-with-Explicit-Routing-Guidance/index.html"
+          title="Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing
+Guidance"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/739_38ddcd62-37d0-47e0-aec6-6f98323390bf.jpg" class="card-img-top" alt="Reasoning-Aware GRPO using Process Mining" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Taekhyun Park
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/839-Reasoning-Aware-GRPO-using-Process-Mining/index.html"  title="Reasoning-Aware GRPO using Process Mining">
+          <h3 class="card-title pb-2" itemprop="headline">Reasoning-Aware GRPO using Process Mining</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/839-Reasoning-Aware-GRPO-using-Process-Mining/index.html"
+          title="Reasoning-Aware GRPO using Process Mining"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/693_51af6959-0309-4513-a33a-37380bf7265d.jpg" class="card-img-top" alt="Tongyi DeepResearch Technical Report" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tongyi DeepResearch Team
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/787-Tongyi-DeepResearch-Technical-Report/index.html"  title="Tongyi DeepResearch Technical Report">
+          <h3 class="card-title pb-2" itemprop="headline">Tongyi DeepResearch Technical Report</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/787-Tongyi-DeepResearch-Technical-Report/index.html"
+          title="Tongyi DeepResearch Technical Report"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/723_3a7e5dbd-46e5-47b7-8600-3cd58364295a.jpg" class="card-img-top" alt="ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Baixuan Li
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/808-ParallelMuse-Agentic-Parallel-Thinking-for-Deep-Information-Seeking/index.html"  title="ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking">
+          <h3 class="card-title pb-2" itemprop="headline">ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/808-ParallelMuse-Agentic-Parallel-Thinking-for-Deep-Information-Seeking/index.html"
+          title="ParallelMuse: Agentic Parallel Thinking for Deep Information Seeking"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/683_a1e17f5f-bb6a-4435-8038-52b117bbee7c.jpg" class="card-img-top" alt="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yash Jangir
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/824-RobotArena-infty-Scalable-Robot-Benchmarking-via-Real-to-Sim-Translation/index.html"  title="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation">
+          <h3 class="card-title pb-2" itemprop="headline">RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/824-RobotArena-infty-Scalable-Robot-Benchmarking-via-Real-to-Sim-Translation/index.html"
+          title="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
