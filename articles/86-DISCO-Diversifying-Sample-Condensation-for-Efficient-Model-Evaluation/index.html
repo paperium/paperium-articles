@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css" >
+
+<title>DISCO: Diversifying Sample Condensation for Efficient Model </title>
+
+<meta name="keywords" content="machine learning model evaluation,  LMMs-Eval benchmarks,  HELM evaluation framework,  GPU resource consumption,  model performance prediction,  sampl">
+
+<meta name="description" content="machine learning model evaluation,  LMMs-Eval benchmarks,  HELM evaluation framework,  GPU resource consumption,  model performance prediction,  sampl">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                DISCO: Diversifying Sample Condensation for Efficient Model Evaluation
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Alexander Rubinstein, Benjamin Raible, Martin Gubri, Seong Joon Oh
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/90_759a275c-5356-4ba3-97fb-85b79e72bc6c.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a Simple Trick Is Making AI Testing Faster and Cheaper</h3>
+<p>
+Ever wondered why checking the performance of today’s AI models feels like buying a ticket for a space launch? <strong>Scientists have discovered</strong> a clever shortcut called <strong>DISCO</strong> that picks just the most “talkative” test questions—those that make different AIs disagree the most. Imagine a group of friends guessing the ending of a mystery movie; the scenes that spark the biggest debates reveal the plot’s twists. By focusing on those contentious moments, DISCO predicts a model’s overall score without running thousands of expensive GPU hours. This means researchers can test new ideas faster, include more voices in AI development, and cut down the energy waste that comes with massive computations. <strong>It’s a breakthrough</strong> that turns a costly marathon into a quick sprint, letting breakthroughs reach us sooner. The next time you see a new AI brag about its scores, remember the hidden shortcut that made it possible—and imagine what else we could achieve when we work smarter, not harder.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents the <strong>Diversifying Sample Condensation (DISCO)</strong> method, a novel approach for evaluating machine learning models that focuses on maximizing model disagreement rather than sample diversity. It critiques existing benchmarking methods, which are often costly and complex, highlighting the inefficiencies in traditional evaluation processes. DISCO simplifies the selection of samples by utilizing a greedy approach based on model responses, leading to significant cost reductions while maintaining accuracy. Empirical results demonstrate DISCO's effectiveness across various benchmarks, including MMLU, HellaSwag, and ARC.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of the DISCO method is its ability to reduce evaluation costs significantly while achieving state-of-the-art performance. By focusing on <strong>model disagreement</strong> as a key criterion for sample selection, DISCO offers a more efficient alternative to traditional methods that rely on complex clustering techniques. The empirical validation across multiple benchmarks showcases its robustness and effectiveness, making it a valuable contribution to the field of machine learning evaluation.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its advantages, DISCO is not without limitations. The method's reliance on model disagreement may introduce biases, particularly in scenarios where model responses are not representative of the broader data distribution. Additionally, the approach's robustness to distribution shifts remains a concern, as the performance may vary when applied to different datasets or real-world applications. These factors warrant further investigation to enhance the method's applicability across diverse contexts.</p>
+
+<h3>Implications</h3>
+<p>The implications of DISCO extend beyond cost savings; it promotes a shift in how machine learning models are evaluated. By prioritizing <strong>predictive diversity</strong> over sample representativeness, DISCO encourages researchers to rethink traditional evaluation paradigms. This could lead to more inclusive and environmentally sustainable practices in model benchmarking, fostering innovation in the field.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the DISCO method represents a significant advancement in the evaluation of machine learning models, offering a cost-effective and efficient alternative to existing benchmarks. Its focus on model disagreement provides a fresh perspective on sample selection, with empirical results supporting its efficacy. As the field continues to evolve, DISCO's approach may pave the way for more sustainable and inclusive evaluation practices, ultimately enhancing the pace of innovation in machine learning.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and accessible, making it easy for readers to grasp the core concepts of the DISCO method. The use of clear language and concise paragraphs enhances engagement, ensuring that key points are easily scannable. This approach not only improves user experience but also encourages further exploration of the topic.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>machine learning model evaluation</li><li> LMMs-Eval benchmarks</li><li> HELM evaluation framework</li><li> GPU resource consumption</li><li> model performance prediction</li><li> sample diversity in machine learning</li><li> model disagreement metrics</li><li> Diversifying Sample Condensation (DISCO)</li><li> empirical gains in model evaluation</li><li> information-theoretic selection methods</li><li> state-of-the-art machine learning benchmarks</li><li> MMLU performance metrics</li><li> Hellaswag dataset evaluation</li><li> Winogrande model testing</li><li> ARC performance analysis</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/86/disco-diversifying-sample-condensation-for-efficient-model-evaluation" target="_blank" title=" DISCO: Diversifying Sample Condensation for Efficient Model Evaluation">
+    DISCO: Diversifying Sample Condensation for Efficient Model Evaluation
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/177_b7fbe161-6d06-4b3b-af61-c444afcace27.jpg" class="card-img-top" alt="Self-Improving LLM Agents at Test-Time" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Emre Can Acikgoz
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/166-Self-Improving-LLM-Agents-at-Test-Time/index.html"  title="Self-Improving LLM Agents at Test-Time">
+          <h3 class="card-title pb-2" itemprop="headline">Self-Improving LLM Agents at Test-Time</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/166-Self-Improving-LLM-Agents-at-Test-Time/index.html"
+          title="Self-Improving LLM Agents at Test-Time"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/116_451911ce-fa8a-44a6-aa67-48ce8440d677.jpg" class="card-img-top" alt="LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Sajib Acharjee Dip
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/112-LLM4Cell-A-Survey-of-Large-Language-and-Agentic-Models-for-Single-Cell-Biology/index.html"  title="LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology">
+          <h3 class="card-title pb-2" itemprop="headline">LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/112-LLM4Cell-A-Survey-of-Large-Language-and-Agentic-Models-for-Single-Cell-Biology/index.html"
+          title="LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/108_31a9c461-3afd-47c9-8cfb-7f519fc37223.jpg" class="card-img-top" alt="Understanding DeepResearch via Reports" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tianyu Fan
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/104-Understanding-DeepResearch-via-Reports/index.html"  title="Understanding DeepResearch via Reports">
+          <h3 class="card-title pb-2" itemprop="headline">Understanding DeepResearch via Reports</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/104-Understanding-DeepResearch-via-Reports/index.html"
+          title="Understanding DeepResearch via Reports"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/57_88e59798-f6d7-4dcd-b41a-bd04a7b439a6.jpg" class="card-img-top" alt="Beyond Turn Limits: Training Deep Search Agents with Dynamic Context Window" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qiaoyu Tang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/72-Beyond-Turn-Limits-Training-Deep-Search-Agents-with-Dynamic-Context-Window/index.html"  title="Beyond Turn Limits: Training Deep Search Agents with Dynamic Context Window">
+          <h3 class="card-title pb-2" itemprop="headline">Beyond Turn Limits: Training Deep Search Agents with Dynamic Context Window</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/72-Beyond-Turn-Limits-Training-Deep-Search-Agents-with-Dynamic-Context-Window/index.html"
+          title="Beyond Turn Limits: Training Deep Search Agents with Dynamic Context Window"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/81_2e893ed5-6e34-42f2-9aff-58f4fe3e73d3.jpg" class="card-img-top" alt="Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yumin Choi
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/77-Multimodal-Prompt-Optimization-Why-Not-Leverage-Multiple-Modalities-for-MLLMs/index.html"  title="Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/77-Multimodal-Prompt-Optimization-Why-Not-Leverage-Multiple-Modalities-for-MLLMs/index.html"
+          title="Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/272_08d26ee8-3fa2-405e-a2ab-150482ec6ccf.jpg" class="card-img-top" alt="Large Language Models Do NOT Really Know What They Don't Know" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chi Seng Cheang
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/259-Large-Language-Models-Do-NOT-Really-Know-What-They-Dont-Know/index.html"  title="Large Language Models Do NOT Really Know What They Don't Know">
+          <h3 class="card-title pb-2" itemprop="headline">Large Language Models Do NOT Really Know What They Don't Know</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/259-Large-Language-Models-Do-NOT-Really-Know-What-They-Dont-Know/index.html"
+          title="Large Language Models Do NOT Really Know What They Don't Know"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
