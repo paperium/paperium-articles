@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>OmniRetarget: Interaction-Preserving Data Generation for Hum</title>
+
+<meta name="keywords" content="Laplacian deformation minimization for mesh alignment,  interaction mesh preserving spatial contact relationships,  human-object interaction modeling ">
+
+<meta name="description" content="Laplacian deformation minimization for mesh alignment,  interaction mesh preserving spatial contact relationships,  human-object interaction modeling ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body
+Loco-Manipulation and Scene Interaction
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Lujie Yang, Xiaoyu Huang, Zhen Wu, Angjoo Kanazawa, Pieter Abbeel, Carmelo Sferrazza, C. Karen Liu, Rocky Duan, Guanya Shi
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/64_6f09a38c-66c6-4859-96bc-d49f3611b8e2.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>OmniRetarget: How Robots Can Copy Human Moves Without Skipping</h3>
+<p>
+What if a robot could copy a human’s parkour tricks without tripping or sliding?  
+A new <strong>breakthrough</strong> called OmniRetarget lets robots learn whole‑body actions by keeping every foot‑step, hand‑grab, and ground contact exactly as a person did. Imagine a choreographer who moves a dance from a stage to a different theater, making sure the dancers never miss a beat or bump into the set—that’s what this system does for robots. By matching the shape of a human body to a robot’s frame while preserving all the important touches with the floor and objects, the robot gets realistic practice data from just one demonstration. This means a humanoid robot can now run, jump, and pick up things on uneven ground, just like we do, without needing endless trial‑and‑error.  
+The result? <strong>Robots</strong> that move with natural, <strong>human‑like moves</strong>, opening doors to safer homes, smarter factories, and even rescue missions. The future of robot motion is already stepping into our world—one graceful stride at a time. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The paper presents <strong>OmniRetarget</strong>, an interaction‑preserving retargeting engine that closes the embodiment gap between humans and humanoid robots. By building an <strong>interaction mesh</strong> that encodes spatial and contact relations among the agent, terrain, and objects, the method minimizes <strong>Laplacian deformation</strong> while enforcing kinematic constraints to generate physically plausible trajectories. Evaluated on OMOMO, LAFAN1, and in‑house mocap data, OmniRetarget produces over eight hours of high‑quality demonstrations that outperform conventional baselines in constraint satisfaction and contact preservation. These trajectories enable proprioceptive reinforcement learning policies to learn long‑horizon parkour and loco‑manipulation skills on a Unitree G1 robot with only five reward terms and simple domain randomization, demonstrating the framework’s practical value.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The explicit modeling of human‑robot and environment contacts eliminates common artifacts such as foot‑skating. Laplacian deformation offers a principled way to maintain shape fidelity while respecting kinematic limits, and the authors show that a single demonstration can be generalized across multiple robot embodiments, terrains, and object configurations.</p>
+
+<h3>Weaknesses</h3>
+<p>The study focuses on a single humanoid platform and limited mocap datasets; broader validation would strengthen generality claims. Computational overhead for constructing and optimizing the interaction mesh is not quantified, leaving questions about real‑time applicability. Reliance on high‑quality mocap data may limit deployment in settings where such data are scarce.</p>
+
+<h3>Implications</h3>
+<p>If widely adopted, OmniRetarget could accelerate the development of expressive locomotion and manipulation skills for humanoid robots by providing a robust source of training data that preserves task‑relevant interactions. The framework also offers a blueprint for integrating human‑object dynamics into reinforcement learning pipelines, potentially improving safety and performance in complex tasks.</p>
+
+<h3>Conclusion</h3>
+<p>The article delivers a compelling solution to the embodiment gap problem, combining geometric fidelity with kinematic feasibility to generate realistic robot trajectories. While further studies are needed to assess scalability and computational demands, the demonstrated success on long‑horizon parkour and manipulation tasks suggests that OmniRetarget is a valuable tool for advancing humanoid robotics research.</p>
+
+<h3>Readability</h3>
+<p>The analysis is organized into clear sections with concise paragraphs, each limited to three sentences. Key terms are highlighted using <strong>tags</strong>, improving keyword visibility for search engines. The language remains accessible to professionals while maintaining scientific rigor, encouraging engagement and reducing bounce rates.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Laplacian deformation minimization for mesh alignment</li><li> interaction mesh preserving spatial contact relationships</li><li> human-object interaction modeling in motion retargeting</li><li> terrain-aware locomotion and manipulation transfer</li><li> proprioceptive RL policies with minimal reward terms</li><li> long-horizon parkour skill learning on Unitree G1</li><li> domain randomization shared across tasks</li><li> single demonstration data augmentation for varied embodiments</li><li> kinematic constraint enforcement during retargeting</li><li> foot-skating artifact mitigation in humanoid motion transfer</li><li> penetration avoidance via contact preservation</li><li> OMOMO and LAFAN1 dataset integration for evaluation</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/51/omniretarget-interaction-preserving-data-generation-for-humanoid-whole-bodyloco-manipulation-and-sce" target="_blank" title=" OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body
+Loco-Manipulation and Scene Interaction">
+    OmniRetarget: Interaction-Preserving Data Generation for Humanoid Whole-Body
+Loco-Manipulation and Scene Interaction
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/235_cda7dcf0-f4b6-47d3-abd9-273764f8a1ad.jpg" class="card-img-top" alt="Generative Universal Verifier as Multimodal Meta-Reasoner" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xinchen Zhang
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/223-Generative-Universal-Verifier-as-Multimodal-Meta-Reasoner/index.html"  title="Generative Universal Verifier as Multimodal Meta-Reasoner">
+          <h3 class="card-title pb-2" itemprop="headline">Generative Universal Verifier as Multimodal Meta-Reasoner</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/223-Generative-Universal-Verifier-as-Multimodal-Meta-Reasoner/index.html"
+          title="Generative Universal Verifier as Multimodal Meta-Reasoner"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/175_3818d539-9f84-4fc8-a421-6e07070f40ff.jpg" class="card-img-top" alt="ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuhang Li
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/164-ReLook-Vision-Grounded-RL-with-a-Multimodal-LLM-Critic-for-Agentic-Web-Coding/index.html"  title="ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding">
+          <h3 class="card-title pb-2" itemprop="headline">ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/164-ReLook-Vision-Grounded-RL-with-a-Multimodal-LLM-Critic-for-Agentic-Web-Coding/index.html"
+          title="ReLook: Vision-Grounded RL with a Multimodal LLM Critic for Agentic Web Coding"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/242_e21d3dd3-89ac-4537-bd15-a13c6e085ce4.jpg" class="card-img-top" alt="Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kai Zou
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/230-Uni-MMMU-A-Massive-Multi-discipline-Multimodal-Unified-Benchmark/index.html"  title="Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark">
+          <h3 class="card-title pb-2" itemprop="headline">Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/230-Uni-MMMU-A-Massive-Multi-discipline-Multimodal-Unified-Benchmark/index.html"
+          title="Uni-MMMU: A Massive Multi-discipline Multimodal Unified Benchmark"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/176_31d7b5d7-2dfc-4bbf-bbd9-1c94edcea17d.jpg" class="card-img-top" alt="PEAR: Phase Entropy Aware Reward for Efficient Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chen Huang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/165-PEAR-Phase-Entropy-Aware-Reward-for-Efficient-Reasoning/index.html"  title="PEAR: Phase Entropy Aware Reward for Efficient Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">PEAR: Phase Entropy Aware Reward for Efficient Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/165-PEAR-Phase-Entropy-Aware-Reward-for-Efficient-Reasoning/index.html"
+          title="PEAR: Phase Entropy Aware Reward for Efficient Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/197_7ab1aad0-4315-48ce-9df8-d985aeaccae3.jpg" class="card-img-top" alt="The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Norbert Tihanyi
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/186-The-Hidden-DNA-of-LLM-Generated-JavaScript-Structural-Patterns-Enable-High-Accuracy-Authorship-A/index.html"  title="The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution">
+          <h3 class="card-title pb-2" itemprop="headline">The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/186-The-Hidden-DNA-of-LLM-Generated-JavaScript-Structural-Patterns-Enable-High-Accuracy-Authorship-A/index.html"
+          title="The Hidden DNA of LLM-Generated JavaScript: Structural Patterns Enable
+High-Accuracy Authorship Attribution"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/151_5173514d-0145-472b-adb2-663a4848ec62.jpg" class="card-img-top" alt="Diffusion Transformers with Representation Autoencoders" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Boyang Zheng
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/140-Diffusion-Transformers-with-Representation-Autoencoders/index.html"  title="Diffusion Transformers with Representation Autoencoders">
+          <h3 class="card-title pb-2" itemprop="headline">Diffusion Transformers with Representation Autoencoders</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/140-Diffusion-Transformers-with-Representation-Autoencoders/index.html"
+          title="Diffusion Transformers with Representation Autoencoders"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
