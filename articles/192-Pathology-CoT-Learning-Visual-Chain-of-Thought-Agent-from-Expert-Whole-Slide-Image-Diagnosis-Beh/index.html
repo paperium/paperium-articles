@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+
+<title>Pathology-CoT: Learning Visual Chain-of-Thought Agent from E</title>
+
+<meta name="keywords" content="whole-slide imaging,  interactive pathology diagnosis,  AI Session Recorder,  behavior-guided reasoning,  gastrointestinal lymph-node metastasis detec">
+
+<meta name="description" content="whole-slide imaging,  interactive pathology diagnosis,  AI Session Recorder,  behavior-guided reasoning,  gastrointestinal lymph-node metastasis detec">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert Whole Slide
+Image Diagnosis Behavior
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Sheng Wang, Ruiming Wu, Charles Herndon, Yihang Liu, Shunsuke Koga, Jeanne Shen, Zhi Huang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/203_9ecc0ba9-409f-44d6-9b74-e926d64d5544.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learned to “Look” Like a Pathologist</h3>
+<p>
+Ever wondered how doctors spot a tiny cancer cell hidden in a massive tissue slide? <strong>Scientists have created</strong> a clever system that watches pathologists as they zoom, pan, and focus—just like a curious apprentice. By attaching a tiny recorder to the digital microscope, the AI captures every click and magnification change, turning those silent habits into clear “where to look” and “why it matters” instructions. Imagine teaching a child to find a needle in a haystack by showing them exactly which straw to pull out first—that’s the power of this new “behavior‑grounded” training. The result? An AI assistant called Pathologist‑o3 that can point out suspicious lymph‑node spots with 100 % recall and impressive precision, beating previous models. This breakthrough means faster, more reliable diagnoses and a future where AI works hand‑in‑hand with doctors, learning from real‑world practice instead of just textbooks. <strong>It’s a step toward AI that truly understands the art of medicine</strong>, making our health care smarter and more human‑centered. <strong>Imagine the possibilities when every slide gets a super‑charged second pair of eyes</strong>.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents a novel approach to enhancing diagnostic accuracy in pathology through the development of the <strong>AI Session Recorder</strong> and the <strong>Pathology-CoT</strong> dataset. It addresses the limitations of existing agentic systems by capturing expert pathologist behavior and transforming it into structured data for training AI models. The study introduces the <strong>Pathologist-o3</strong> framework, which achieved impressive performance metrics in detecting gastrointestinal lymph-node metastasis, including 84.5% precision and 100.0% recall. This work represents a significant advancement in creating scalable, expert-validated AI systems for clinical applications.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The primary strength of this study lies in its innovative methodology, which effectively utilizes the <strong>AI Session Recorder</strong> to convert complex pathologist interactions into actionable data. This approach not only enhances the training of AI agents but also significantly reduces labeling time through a human-in-the-loop process. The creation of the <strong>Pathology-CoT</strong> dataset, which captures both behavioral actions and clinical reasoning, provides a robust foundation for training advanced AI systems. Furthermore, the performance of the <strong>Pathologist-o3</strong> model surpasses existing benchmarks, demonstrating its potential for real-world applications.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study has some limitations. The reliance on data from a limited number of pathologists may introduce biases that affect the generalizability of the findings. Additionally, while the model shows promise in specific tasks, its applicability across diverse pathology scenarios remains to be fully validated. The study also highlights challenges related to the noisy nature of interaction logs, which could impact the quality of the training data if not adequately addressed.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are profound, as it paves the way for the development of <strong>agentic systems</strong> in pathology that are both scalable and aligned with expert practices. By transforming everyday viewer logs into structured, expert-validated supervision, this framework not only enhances diagnostic accuracy but also establishes a pathway for future advancements in clinical AI. The integration of behavior-guided reasoning into AI models could revolutionize how pathologists approach diagnostics, ultimately improving patient outcomes.</p>
+
+<h3>Conclusion</h3>
+<p>In summary, this article contributes significantly to the field of digital pathology by introducing a framework that effectively bridges the gap between expert behavior and AI training. The <strong>Pathologist-o3</strong> model's superior performance metrics underscore the potential of behavior-grounded AI systems in clinical settings. As the field continues to evolve, this research sets a precedent for future studies aimed at enhancing the integration of AI in pathology, emphasizing the importance of expert involvement in the development of reliable diagnostic tools.</p>
+
+<h3>Readability</h3>
+<p>The article is well-structured and presents complex ideas in a clear and accessible manner. The use of concise paragraphs and straightforward language enhances readability, making it easier for professionals in the field to engage with the content. By focusing on key findings and implications, the text effectively communicates the significance of the research while maintaining a conversational tone that invites further discussion.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>whole-slide imaging</li><li> interactive pathology diagnosis</li><li> AI Session Recorder</li><li> behavior-guided reasoning</li><li> gastrointestinal lymph-node metastasis detection</li><li> expert-validated supervision</li><li> scalable clinical AI</li><li> Pathology-CoT dataset</li><li> agentic systems in pathology</li><li> magnification adjustment in pathology</li><li> viewer navigation logs</li><li> human-in-the-loop review</li><li> precision and recall in diagnostics</li><li> machine learning in pathology</li><li> behavior-grounded AI systems</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/192/pathology-cot-learning-visual-chain-of-thought-agent-from-expert-whole-slideimage-diagnosis-behavior" target="_blank" title=" Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert Whole Slide
+Image Diagnosis Behavior">
+    Pathology-CoT: Learning Visual Chain-of-Thought Agent from Expert Whole Slide
+Image Diagnosis Behavior
+</a>
+</p> 
+ 
+</div>
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <link rel="stylesheet" href="/paperium-articles/assets/script1.js"> 
+ 
+</body>
+</html>
