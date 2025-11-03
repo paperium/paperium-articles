@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>InteractComp: Evaluating Search Agents With Ambiguous Querie</title>
+
+<meta name="keywords" content="language agents for web search,  query ambiguity detection in search agents,  interactive disambiguation benchmark InteractComp,  target‑distractor me">
+
+<meta name="description" content="language agents for web search,  query ambiguity detection in search agents,  interactive disambiguation benchmark InteractComp,  target‑distractor me">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                InteractComp: Evaluating Search Agents With Ambiguous Queries
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Mingyi Deng, Lijun Huang, Yani Fan, Jiayi Zhang, Fashen Ren, Jinyi Bai, Fuzhen Yang, Dayi Miao, Zhaoyang Yu, Yifan Wu, Yanfei Zhang, Fengwei Teng, Yingjia Wan, Song Hu, Yude Li, Xin Jin, Conghao Hu, Haoyu Li, Qirui Fu, Tai Zhong, Xinyu Wang, Xiangru Tang, Nan Tang, Chenglin Wu, Yuyu Luo
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              29 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/692_c04e22fd-aad2-478b-afe9-d0a404c94a06.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>When Your Google Search Gets Stuck, AI Might Be the Reason</h3>
+<p>
+Ever typed a vague question like “best way to fix my phone” and got dozens of unrelated results? <strong>Scientists have uncovered</strong> that many AI‑powered search assistants act as if they already know exactly what you mean, ignoring the fact that real users often start with fuzzy queries. To shine a light on this blind spot, researchers built <strong>InteractComp</strong>, a new test that throws deliberately ambiguous questions at search agents and watches whether they ask follow‑up questions to clear things up. Think of it like a detective who refuses to ask “Which model?” when you say “my car broke”—the case stays unsolved. The results are striking: even the smartest models solved only about 14 % of the puzzles, while they breezed through 71 % when the full context was given. This shows that current AI is overconfident, not clueless. By forcing a simple “Did you mean…?” step, performance jumps dramatically, hinting at untapped potential. As we rely more on AI for everyday answers, teaching these agents to ask the right clarifying question could make our digital lives smoother and more reliable. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview of Interactive Search Agent Evaluation</h2>
+<p>This pivotal research introduces <strong>InteractComp</strong>, a novel benchmark designed to rigorously evaluate the capacity of <strong>language agents</strong> to resolve ambiguous user queries through active interaction during web search. Current search agents often operate under the unrealistic assumption of complete and unambiguous user input, lacking the interactive mechanisms crucial for real-world scenarios. To address this critical gap, InteractComp employs 210 expert-curated questions across nine domains, utilizing a target-distractor methodology to create genuine ambiguity resolvable only through dynamic engagement. The study's findings are striking: an evaluation of 17 models revealed a significant performance deficit, with the best model achieving only 13.73% accuracy, a stark contrast to 71.50% with complete context. This underperformance is primarily attributed to <strong>systematic overconfidence</strong> rather than inherent reasoning deficits, as demonstrated by dramatic gains observed under forced interaction. Furthermore, a longitudinal analysis highlighted a concerning stagnation in interaction capabilities over 15 months, despite substantial improvements in general search performance, exposing a critical blind spot in current AI development.</p>
+
+<h2>Critical Evaluation of InteractComp: Benchmarking Interactive AI</h2>
+<h3>Strengths: A Novel Approach to Query Disambiguation</h3>
+<p>The introduction of <strong>InteractComp</strong> represents a significant strength, filling a crucial void in the evaluation of search agents by focusing on their ability to handle <strong>ambiguous queries</strong> interactively. Its "easy to verify, interact to disambiguate" principle, coupled with a target-distractor methodology, ensures that ambiguity is genuine and resolvable only through interaction, providing clean reward signals highly suitable for <strong>Reinforcement Learning with Value Regularization (RLVR)</strong>. The benchmark effectively uncovers latent interaction capabilities in models that otherwise fail, demonstrating that the issue often lies in engagement strategies rather than a complete lack of reasoning. This robust design offers a clear pathway for both evaluating and training more sophisticated, human-like interactive agents.</p>
+
+<h3>Weaknesses: Unveiling Agent Overconfidence and Stagnation</h3>
+<p>While the benchmark itself is robust, the study critically exposes significant weaknesses in current <strong>language agent</strong> performance. The observed 13.73% accuracy rate underscores a profound limitation in how agents currently process and respond to uncertainty. The core issue identified is <strong>systematic overconfidence</strong>, where models fail to recognize their own ambiguity and initiate disambiguation, rather than a deficit in underlying reasoning. This overconfidence acts as a major performance bottleneck. Moreover, the longitudinal analysis revealing a stagnation in interaction capabilities over time, despite advancements in general search, highlights a concerning lack of progress in this vital area, indicating a critical <strong>AI development blind spot</strong> that needs urgent attention.</p>
+
+<h3>Implications: Charting the Future of Interactive AI in Search</h3>
+<p>The findings from InteractComp carry profound implications for the future of <strong>interactive AI</strong> and web search. By clearly demonstrating that agents possess latent interaction capabilities that current strategies fail to engage, the benchmark provides a compelling call to action for researchers and developers. It emphasizes the necessity of designing new mechanisms that actively encourage agents to recognize ambiguity and proactively seek clarification. InteractComp is not merely an evaluation tool; it is a valuable resource for training agents to overcome overconfidence and develop more effective interactive behaviors. This research points towards a future where search agents are not just information retrievers but intelligent, conversational partners capable of truly understanding and fulfilling complex, evolving user needs, thereby enhancing <strong>human-computer interaction</strong> significantly.</p>
+
+<h2>Conclusion: Advancing Human-Like Interaction in Search Agents</h2>
+<p>In conclusion, InteractComp stands as a groundbreaking contribution to the field of <strong>search agent development</strong>, offering an indispensable tool for assessing and improving interactive capabilities. The study's revelation of widespread agent overconfidence and the stagnation of interaction skills highlights a critical area for future research and development. By providing a clear framework for evaluating and training, InteractComp is poised to drive innovation towards more adaptive, context-aware, and truly interactive AI systems. This work is essential for fostering the next generation of search agents that can engage in dynamic, human-like dialogue to navigate the complexities of real-world information retrieval, ultimately enhancing the utility and intelligence of <strong>interactive AI</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>language agents for web search</li><li> query ambiguity detection in search agents</li><li> interactive disambiguation benchmark InteractComp</li><li> target‑distractor methodology for ambiguous queries</li><li> evaluation of search agent interaction capability</li><li> overconfidence vs reasoning in language models</li><li> forced interaction improves retrieval accuracy</li><li> longitudinal analysis of interaction stagnation</li><li> training search agents with interactive feedback</li><li> information retrieval with user clarification</li><li> benchmarking interactive search agents</li><li> latent interaction capability in LLMs</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/786/interactcomp-evaluating-search-agents-with-ambiguous-queries" target="_blank" title=" InteractComp: Evaluating Search Agents With Ambiguous Queries">
+    InteractComp: Evaluating Search Agents With Ambiguous Queries
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/733_f3ee8792-6e27-4e76-a43b-462985d242b1.jpg" class="card-img-top" alt="Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shijian Wang
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/834-Video-Thinker-Sparking-Thinking-with-Videos-via-Reinforcement-Learning/index.html"  title="Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning">
+          <h3 class="card-title pb-2" itemprop="headline">Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/834-Video-Thinker-Sparking-Thinking-with-Videos-via-Reinforcement-Learning/index.html"
+          title="Video-Thinker: Sparking "Thinking with Videos" via Reinforcement Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/683_a1e17f5f-bb6a-4435-8038-52b117bbee7c.jpg" class="card-img-top" alt="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yash Jangir
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/824-RobotArena-infty-Scalable-Robot-Benchmarking-via-Real-to-Sim-Translation/index.html"  title="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation">
+          <h3 class="card-title pb-2" itemprop="headline">RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/824-RobotArena-infty-Scalable-Robot-Benchmarking-via-Real-to-Sim-Translation/index.html"
+          title="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/699_2137e348-bd2e-409c-ab7c-9c13031c37cc.jpg" class="card-img-top" alt="RoboOmni: Proactive Robot Manipulation in Omni-modal Context" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Siyin Wang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"  title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context">
+          <h3 class="card-title pb-2" itemprop="headline">RoboOmni: Proactive Robot Manipulation in Omni-modal Context</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"
+          title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/681_28d43207-fdea-45e7-a6eb-ed59d46393f4.jpg" class="card-img-top" alt="Code Aesthetics with Agentic Reward Feedback" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bang Xiao
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/823-Code-Aesthetics-with-Agentic-Reward-Feedback/index.html"  title="Code Aesthetics with Agentic Reward Feedback">
+          <h3 class="card-title pb-2" itemprop="headline">Code Aesthetics with Agentic Reward Feedback</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/823-Code-Aesthetics-with-Agentic-Reward-Feedback/index.html"
+          title="Code Aesthetics with Agentic Reward Feedback"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/688_43e2a252-3dce-48aa-a9e2-f8e3ce0fb642.jpg" class="card-img-top" alt="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yusu Qian
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/782-PRISM-Bench-A-Benchmark-of-Puzzle-Based-Visual-Tasks-with-CoT-Error-Detection/index.html"  title="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection">
+          <h3 class="card-title pb-2" itemprop="headline">PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/782-PRISM-Bench-A-Benchmark-of-Puzzle-Based-Visual-Tasks-with-CoT-Error-Detection/index.html"
+          title="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/711_31e5d6f1-d8b1-4bd1-87b2-17dbe189dab8.jpg" class="card-img-top" alt="OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hongrui Jia
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/796-OSWorld-MCP-Benchmarking-MCP-Tool-Invocation-In-Computer-Use-Agents/index.html"  title="OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents">
+          <h3 class="card-title pb-2" itemprop="headline">OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/796-OSWorld-MCP-Benchmarking-MCP-Tool-Invocation-In-Computer-Use-Agents/index.html"
+          title="OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
