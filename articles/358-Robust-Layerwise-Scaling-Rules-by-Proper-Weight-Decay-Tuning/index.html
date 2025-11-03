@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Robust Layerwise Scaling Rules by Proper Weight Decay Tuning</title>
+
+<meta name="keywords" content="Maximal-update parameterization ($\mu$P),  Weight-decay scaling rule for AdamW,  Learning-rate transfer across widths,  Hyperparameter transfer optimi">
+
+<meta name="description" content="Maximal-update parameterization ($\mu$P),  Weight-decay scaling rule for AdamW,  Learning-rate transfer across widths,  Hyperparameter transfer optimi">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Robust Layerwise Scaling Rules by Proper Weight Decay Tuning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Zhiyuan Fan, Yifeng Liu, Qingyue Zhao, Angela Yuan, Quanquan Gu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              20 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/378_2c085449-30a5-4fc1-a578-dfb4ea638363.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New Trick Lets AI Models Grow Without Extra Tuning</h3>
+<p>
+Ever wondered why building a bigger AI model feels like starting from scratch each time? <strong>Researchers have uncovered</strong> a simple rule that keeps the “learning speed” and “regularization” steady, no matter how wide the model gets. Think of it like adjusting the water pressure when you swap a thin hose for a thick one – you just turn the knob a bit, and the flow stays the same. By fine‑tuning a single setting called *weight decay* in the popular AdamW optimizer, the team found that the adjustment follows a predictable square‑root pattern as the model widens. This means you can train a small “proxy” model, note the settings, and then scale up to massive transformers without running endless experiments. The result is faster, cheaper development of powerful language models that power chatbots, translation tools, and more. <strong>This breakthrough</strong> removes a major bottleneck, letting AI researchers focus on ideas rather than endless trial‑and‑error. <strong>Imagine</strong> a world where every new AI breakthrough can be built on the last, with just a tiny tweak.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Hyperparameter Transfer in Large Language Models with Novel Weight Decay Scaling</h2>
+
+<p>This insightful article addresses a critical challenge in scaling deep learning models: the efficient transfer of hyperparameters across varying model widths. It focuses on extending <strong>Maximal-update Parameterization (μP)</strong>, a technique designed to enable learning-rate transfer, beyond its typical near-initialization regime. The research proposes a novel <strong>weight-decay scaling rule</strong> for AdamW-trained scale-invariant architectures, particularly LLaMA-style Transformers. By ensuring width-invariant sublayer gains, this method facilitates <strong>zero-shot transfer</strong> of both learning rate and weight decay, significantly streamlining the development of larger models.</p>
+
+<h2>Critical Evaluation</h2>
+
+<h3>Strengths</h3>
+<p>The paper offers a highly practical and impactful solution to a significant bottleneck in large-scale deep learning: the prohibitive cost of hyperparameter tuning. By introducing a specific <strong>weight-decay scaling rule (λ₂ ∝ √d)</strong> for AdamW matrix parameters, it effectively extends the utility of μP into the optimizer-governed steady state, where previous methods often faltered. The empirical validation on <strong>LLaMA-style Transformers</strong> and synthetic settings provides strong evidence for the rule's effectiveness. Furthermore, the provision of a simple diagnostic—matching top singular values—to verify sublayer-gain invariance adds to its practical utility.</p>
+
+<h3>Weaknesses</h3>
+<p>While the proposed scaling rule is empirically robust, a deeper theoretical derivation for the observed <strong>d^0.75 scaling</strong> of the top singular value could further strengthen the work. The focus primarily on AdamW, while highly relevant, might limit immediate generalizability to other optimizers without further investigation. Additionally, the term "zero-shot transfer" is powerful, and exploring potential edge cases or architectural variations where this transfer might be less perfect could provide a more nuanced understanding of its boundaries.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are substantial for the field of large-scale AI. By enabling <strong>zero-shot hyperparameter transfer</strong>, the proposed methodology promises to drastically reduce the computational resources and time required for scaling up deep learning models. This efficiency gain can accelerate research and development cycles, making it easier and more cost-effective to train larger, more capable models. It provides a concrete, actionable recipe for practitioners aiming to build and scale state-of-the-art language models, fostering innovation and accessibility in AI development.</p>
+
+<h2>Conclusion</h2>
+<p>This article presents a highly valuable contribution to the practical aspects of deep learning, particularly for large-scale model development. By successfully addressing the limitations of μP in the steady-state training of AdamW-optimized models, it offers a robust and empirically validated method for <strong>hyperparameter transfer</strong>. The novel weight-decay scaling rule is a significant step forward, promising substantial savings in computational resources and accelerating the progress of AI research and application.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Maximal-update parameterization ($\mu$P)</li><li> Weight-decay scaling rule for AdamW</li><li> Learning-rate transfer across widths</li><li> Hyperparameter transfer optimization</li><li> Sublayer gain invariance</li><li> Neural network width scaling</li><li> Optimizer-governed steady state</li><li> Singular-value spectrum analysis</li><li> LLaMA-style Transformers training</li><li> Zero-shot hyperparameter tuning</li><li> Empirical scaling laws for deep learning</li><li> Backward scale sensitivity in neural networks</li><li> AdamW width-robust training</li><li> Parameter allocation strategies</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/358/robust-layerwise-scaling-rules-by-proper-weight-decay-tuning" target="_blank" title=" Robust Layerwise Scaling Rules by Proper Weight Decay Tuning">
+    Robust Layerwise Scaling Rules by Proper Weight Decay Tuning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/372_ee69263f-6bbe-4ea1-9ab5-7bcd75bef80f.jpg" class="card-img-top" alt="Foundation Models for Scientific Discovery: From Paradigm Enhancement to
+Paradigm Transition" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Fan Liu
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/352-Foundation-Models-for-Scientific-Discovery-From-Paradigm-Enhancement-to-Paradigm-Transition/index.html"  title="Foundation Models for Scientific Discovery: From Paradigm Enhancement to
+Paradigm Transition">
+          <h3 class="card-title pb-2" itemprop="headline">Foundation Models for Scientific Discovery: From Paradigm Enhancement to
+Paradigm Transition</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/352-Foundation-Models-for-Scientific-Discovery-From-Paradigm-Enhancement-to-Paradigm-Transition/index.html"
+          title="Foundation Models for Scientific Discovery: From Paradigm Enhancement to
+Paradigm Transition"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/433_fe596e0e-d962-400e-9147-f6e1f2c79829.jpg" class="card-img-top" alt="Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator
+Training for Reasoning-Centric Domains" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Austin Xu
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/406-Foundational-Automatic-Evaluators-Scaling-Multi-Task-Generative-Evaluator-Training-for-Reasoning/index.html"  title="Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator
+Training for Reasoning-Centric Domains">
+          <h3 class="card-title pb-2" itemprop="headline">Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator
+Training for Reasoning-Centric Domains</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/406-Foundational-Automatic-Evaluators-Scaling-Multi-Task-Generative-Evaluator-Training-for-Reasoning/index.html"
+          title="Foundational Automatic Evaluators: Scaling Multi-Task Generative Evaluator
+Training for Reasoning-Centric Domains"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/413_373625e8-ff83-451a-bb00-ae5d5badaa83.jpg" class="card-img-top" alt="Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chenghao Zhang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/386-Towards-Mixed-Modal-Retrieval-for-Universal-Retrieval-Augmented-Generation/index.html"  title="Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/386-Towards-Mixed-Modal-Retrieval-for-Universal-Retrieval-Augmented-Generation/index.html"
+          title="Towards Mixed-Modal Retrieval for Universal Retrieval-Augmented Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/425_3a90ca71-5cfe-47c6-9d12-b63b74f7b1f2.jpg" class="card-img-top" alt="Beyond Pipelines: A Survey of the Paradigm Shift toward Model-Native Agentic AI" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jitao Sang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/398-Beyond-Pipelines-A-Survey-of-the-Paradigm-Shift-toward-Model-Native-Agentic-AI/index.html"  title="Beyond Pipelines: A Survey of the Paradigm Shift toward Model-Native Agentic AI">
+          <h3 class="card-title pb-2" itemprop="headline">Beyond Pipelines: A Survey of the Paradigm Shift toward Model-Native Agentic AI</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/398-Beyond-Pipelines-A-Survey-of-the-Paradigm-Shift-toward-Model-Native-Agentic-AI/index.html"
+          title="Beyond Pipelines: A Survey of the Paradigm Shift toward Model-Native Agentic AI"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/424_430e1162-5e85-4e05-b3d3-2f4c1b0dfc13.jpg" class="card-img-top" alt="Chronos-2: From Univariate to Universal Forecasting" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Abdul Fatir Ansari
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/397-Chronos-2-From-Univariate-to-Universal-Forecasting/index.html"  title="Chronos-2: From Univariate to Universal Forecasting">
+          <h3 class="card-title pb-2" itemprop="headline">Chronos-2: From Univariate to Universal Forecasting</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/397-Chronos-2-From-Univariate-to-Universal-Forecasting/index.html"
+          title="Chronos-2: From Univariate to Universal Forecasting"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/442_a223fc20-40c2-4364-be52-6e93fdd25a64.jpg" class="card-img-top" alt="What Limits Agentic Systems Efficiency?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Song Bian
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/415-What-Limits-Agentic-Systems-Efficiency/index.html"  title="What Limits Agentic Systems Efficiency?">
+          <h3 class="card-title pb-2" itemprop="headline">What Limits Agentic Systems Efficiency?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/415-What-Limits-Agentic-Systems-Efficiency/index.html"
+          title="What Limits Agentic Systems Efficiency?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
