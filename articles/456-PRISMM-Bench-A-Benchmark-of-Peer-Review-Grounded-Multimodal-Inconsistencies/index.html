@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal</title>
+
+<meta name="keywords" content="Large Multimodal Models (LMMs),  Multimodal scientific reasoning,  Inconsistency detection in scientific papers,  PRISMM-Bench,  Peer-review sourced i">
+
+<meta name="description" content="Large Multimodal Models (LMMs),  Multimodal scientific reasoning,  Inconsistency detection in scientific papers,  PRISMM-Bench,  Peer-review sourced i">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Lukas Selch, Yufang Hou, M. Jehanzeb Mirza, Sivan Doveh, James Glass, Rogerio Feris, Wei Lin
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              23 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/460_223e632d-a724-408b-b56e-5805141b8d47.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New Test Shows AI Struggles to Spot Mistakes in Science Papers</h3>
+<p>
+Ever wondered if a robot could catch the tiny errors that slip into research articles? <strong>Scientists have built</strong> a fresh challenge called PRISMM‑Bench that does exactly that – it gathers real‑world slip‑ups flagged by human reviewers, from mismatched graphs to confusing equations. Imagine a detective who not only reads the story but also checks the photos, tables, and sketches for clues; that’s what this benchmark asks AI models to do. <strong>It matters</strong> because today we rely on smart assistants to help researchers write, review, and even discover new ideas. If those assistants miss subtle mismatches, the whole chain of knowledge can wobble. The test puts 21 leading AI models through three rounds: spot the error, suggest a fix, and match the right text with the right figure. The results were sobering – most models scored below 55%, showing they’re still far from being trustworthy scientific partners. <strong>This breakthrough</strong> shines a light on the road ahead: smarter, more reliable AI that truly understands the full picture of science. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Evaluating Large Multimodal Models in Scientific Reasoning</h2>
+<p>This insightful article introduces <strong>PRISMM-Bench</strong>, a novel benchmark designed to rigorously evaluate <strong>Large Multimodal Models (LMMs)</strong> on their capacity for multimodal scientific reasoning. The core objective is to assess how reliably LMMs can detect and resolve inconsistencies across various modalities—text, figures, tables, and equations—within scientific papers. Utilizing a meticulously curated dataset of 262 real reviewer-flagged inconsistencies, the research employs a multi-stage pipeline involving LLM-assisted filtering and human verification. The study's key finding reveals a strikingly low performance from leading LMMs, ranging from 26.1% to 54.2%, underscoring significant challenges in their ability to understand and reason over complex scientific content.</p>
+
+<h2>Critical Assessment of PRISMM-Bench and LMM Performance</h2>
+<h3>Robust Methodology and Real-World Relevance</h3>
+<p>A significant strength of this work lies in its innovative approach to creating a benchmark grounded in <strong>real-world inconsistencies</strong> sourced directly from peer reviews. Unlike previous benchmarks that often rely on synthetic errors or isolate single modalities, PRISMM-Bench captures the subtle, domain-specific challenges inherent in scientific communication. The multi-stage curation process, combining LLM assistance with human verification, ensures the dataset's high quality and relevance. Furthermore, the introduction of <strong>JSON-based debiasing</strong> for multiple-choice questions effectively mitigates linguistic shortcuts, providing a more accurate assessment of LMMs' true reasoning capabilities rather than their ability to exploit answer patterns. The comprehensive evaluation across 21 leading LMMs, three distinct tasks (identification, remedy, pair matching), and varying contextual granularities (Focused, Page, Document) offers a holistic view of model performance.</p>
+
+<h3>Current Limitations and Future Challenges for LMMs</h3>
+<p>Despite the robust evaluation framework, the study highlights substantial weaknesses in current LMM capabilities. The <strong>strikingly low performance</strong> of even the most advanced proprietary models (up to 54.2%) clearly indicates that LMMs are far from reliably understanding and reasoning over multimodal scientific complexity. The research also reveals that LMMs tend to exploit <strong>linguistic biases</strong> and natural language shortcuts when not constrained by structured JSON outputs, suggesting a reliance on superficial cues over deep multimodal grounding. Moreover, the observed degradation in performance with expanded contextual granularity points to challenges in scaling reasoning capabilities to full document understanding. This suggests that while "bigger" models might offer some benefits, the "bigger is better" paradigm doesn't automatically translate to robust scientific reasoning, especially when dealing with intricate, cross-modal inconsistencies.</p>
+
+<h2>Advancing Trustworthy AI in Scientific Research</h2>
+<p>This article makes a crucial contribution by exposing the current limitations of LMMs in handling the nuanced, multimodal inconsistencies prevalent in scientific literature. By introducing PRISMM-Bench, it establishes a vital <strong>benchmark</strong> for future research, setting a new standard for evaluating LMMs' scientific reasoning abilities. The findings serve as a powerful call to action, motivating the development of more sophisticated and <strong>trustworthy scientific assistants</strong> that can genuinely support researchers. This work is indispensable for anyone interested in the intersection of AI and scientific discovery, providing a clear roadmap for improving the reliability and utility of LMMs in complex, real-world scientific applications.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large Multimodal Models (LMMs)</li><li> Multimodal scientific reasoning</li><li> Inconsistency detection in scientific papers</li><li> PRISMM-Bench</li><li> Peer-review sourced inconsistencies</li><li> Scientific reproducibility</li><li> Trustworthy AI in science</li><li> LMM evaluation benchmarks</li><li> Multimodal document understanding</li><li> JSON-based answer representations</li><li> LLM-assisted data curation</li><li> Inconsistency remedy tasks</li><li> AI for scientific assistants</li><li> Scientific paper analysis with AI</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/456/prismm-bench-a-benchmark-of-peer-review-grounded-multimodal-inconsistencies" target="_blank" title=" PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies">
+    PRISMM-Bench: A Benchmark of Peer-Review Grounded Multimodal Inconsistencies
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/651_eec9c8a6-3a92-4fa7-98dd-6fefb86bc9cc.jpg" class="card-img-top" alt="ReCode: Unify Plan and Action for Universal Granularity Control" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhaoyang Yu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/751-ReCode-Unify-Plan-and-Action-for-Universal-Granularity-Control/index.html"  title="ReCode: Unify Plan and Action for Universal Granularity Control">
+          <h3 class="card-title pb-2" itemprop="headline">ReCode: Unify Plan and Action for Universal Granularity Control</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/751-ReCode-Unify-Plan-and-Action-for-Universal-Granularity-Control/index.html"
+          title="ReCode: Unify Plan and Action for Universal Granularity Control"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/623_d07ef857-e025-48ef-b779-22e5b10e6a93.jpg" class="card-img-top" alt="Sparser Block-Sparse Attention via Token Permutation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xinghao Wang
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/730-Sparser-Block-Sparse-Attention-via-Token-Permutation/index.html"  title="Sparser Block-Sparse Attention via Token Permutation">
+          <h3 class="card-title pb-2" itemprop="headline">Sparser Block-Sparse Attention via Token Permutation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/730-Sparser-Block-Sparse-Attention-via-Token-Permutation/index.html"
+          title="Sparser Block-Sparse Attention via Token Permutation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/678_04b063af-426d-45d4-8237-534a0cf89aca.jpg" class="card-img-top" alt="Knocking-Heads Attention" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhanchao Zhou
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/774-Knocking-Heads-Attention/index.html"  title="Knocking-Heads Attention">
+          <h3 class="card-title pb-2" itemprop="headline">Knocking-Heads Attention</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/774-Knocking-Heads-Attention/index.html"
+          title="Knocking-Heads Attention"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/628_a2a79983-5db6-4d16-b1c5-356a3b73d43f.jpg" class="card-img-top" alt="RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bingjie Gao
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/734-RAPO-Cross-Stage-Prompt-Optimization-for-Text-to-Video-Generation-via-Data-Alignment-and-Test-Ti/index.html"  title="RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling">
+          <h3 class="card-title pb-2" itemprop="headline">RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/734-RAPO-Cross-Stage-Prompt-Optimization-for-Text-to-Video-Generation-via-Data-Alignment-and-Test-Ti/index.html"
+          title="RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/544_c6350bc9-7949-4e26-828e-8d5bb26f2c08.jpg" class="card-img-top" alt="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yanhong Li
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"  title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"
+          title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/550_43db9ef6-7f48-4c13-9002-0c8bab884614.jpg" class="card-img-top" alt="HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yihao Meng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/659-HoloCine-Holistic-Generation-of-Cinematic-Multi-Shot-Long-Video-Narratives/index.html"  title="HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives">
+          <h3 class="card-title pb-2" itemprop="headline">HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/659-HoloCine-Holistic-Generation-of-Cinematic-Multi-Shot-Long-Video-Narratives/index.html"
+          title="HoloCine: Holistic Generation of Cinematic Multi-Shot Long Video Narratives"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
