@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>NANO3D: A Training-Free Approach for Efficient 3D Editing Wi</title>
+
+<meta name="keywords" content="Nano3D framework,  3D object editing,  training-free 3D editing,  localized 3D edits,  region-aware merging strategies,  Voxel-Merge,  Slat-Merge,  3D">
+
+<meta name="description" content="Nano3D framework,  3D object editing,  training-free 3D editing,  localized 3D edits,  region-aware merging strategies,  Voxel-Merge,  Slat-Merge,  3D">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                NANO3D: A Training-Free Approach for Efficient 3D Editing Without Masks
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Junliang Ye, Shenghao Xie, Ruowen Zhao, Zhengyi Wang, Hongyu Yan, Wenqiang Zu, Lei Ma, Jun Zhu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              20 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/360_be606f98-96ae-4ba1-bf43-8d2aa02cba0f.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Meet Nano3D: The Magic Tool That Edits 3D Objects Without Any Training</h3>
+<p>
+What if you could reshape a 3D model like clay, without learning a single line of code? <strong>Scientists have unveiled Nano3D</strong>, a brand‑new, <strong>training‑free</strong> system that lets creators tweak virtual objects in seconds. Instead of juggling complex masks or rebuilding the whole scene, Nano3D works like a smart brush: you point at the part you want to change, and the tool instantly blends the edit while keeping the rest of the model perfectly intact. Imagine a video‑game designer adjusting a character’s armor on the fly, or an animator fixing a robot’s arm without re‑rendering the whole world – all with the same ease as doodling on paper. The secret lies in a clever “region‑aware merging” trick that preserves the original shape, so the final result looks natural and <strong>consistent</strong>. This breakthrough could speed up game updates, make custom 3D printing designs more accessible, and spark a wave of fresh digital art. The future of 3D creation just got a lot more playful – and it’s waiting for you to try it. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Revolutionizing 3D Object Editing with Nano3D: A Comprehensive Review</h2>
+<p>This paper introduces <strong>Nano3D</strong>, an innovative training-free framework revolutionizing <strong>3D object editing</strong>. Current methods often suffer from inefficiencies, inconsistencies, and difficulties preserving unedited regions, frequently relying on multi-view rendering that introduces artifacts. Nano3D addresses these by integrating <strong>FlowEdit</strong> into TRELLIS, enabling precise localized edits guided by front-view renderings. Its key innovation lies in region-aware merging strategies, <strong>Voxel/Slat-Merge</strong>, ensuring structural fidelity and consistency. The framework demonstrates superior <strong>3D consistency</strong> and visual quality. Crucially, the authors also contribute the first large-scale 3D editing dataset, <strong>Nano3D-Edit-100k</strong>, significantly advancing both algorithmic design and data availability in the field.</p>
+
+<h2>Critical Evaluation</h2>
+<h3>Advancing 3D Editing Precision and Data Availability</h3>
+<p>A significant strength is <strong>Nano3D</strong>'s design as a <strong>training-free framework</strong>, inherently reducing computational overhead and simplifying deployment. The novel integration of <strong>FlowEdit into TRELLIS</strong>, coupled with sophisticated <strong>region-aware merging strategies</strong> like Voxel-Merge and SLat-Merge, directly tackles the long-standing issue of maintaining geometric and semantic consistency during 3D object editing. This ensures precise localized edits while preserving unedited regions, a critical advancement. Moreover, the creation of <strong>Nano3D-Edit-100k</strong>, the first large-scale 3D editing dataset, is a monumental contribution, addressing data scarcity and providing a robust benchmark for future research.</p>
+
+<h3>Potential Challenges and Future Directions</h3>
+<p>While Nano3D presents substantial advancements, certain aspects warrant consideration. Although <strong>training-free</strong>, its reliance on integrating multiple existing components alongside novel merging strategies could introduce architectural complexity, potentially challenging adaptation for highly specialized applications. Furthermore, while localized edits guided by front-view renderings offer precision, scenarios requiring more global or multi-view guided editing might benefit from extended capabilities. The paper alludes to limitations, often related to the scope of editable object types or the complexity of transformations reliably handled, suggesting avenues for future refinement.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, Nano3D represents a highly impactful contribution to <strong>3D object editing</strong>. By effectively tackling issues of inefficiency, inconsistency, and data scarcity, this framework significantly enhances the reliability and generality of 3D content creation. The dual achievement of a robust, training-free editing algorithm and a foundational large-scale dataset positions Nano3D as a critical stepping stone. This work not only provides immediate practical benefits for interactive content creation in domains like gaming, animation, and robotics but also crucially lays the <strong>groundwork for future research</strong>, particularly in the development of more advanced <strong>feed-forward 3D editing models</strong>. Its innovative approach and comprehensive validation make it a valuable reference.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Nano3D framework</li><li> 3D object editing</li><li> training-free 3D editing</li><li> localized 3D edits</li><li> region-aware merging strategies</li><li> Voxel-Merge</li><li> Slat-Merge</li><li> 3D consistency improvement</li><li> interactive content creation</li><li> gaming 3D asset modification</li><li> animation 3D model editing</li><li> Nano3D-Edit-100k dataset</li><li> preserving unedited 3D regions</li><li> feed-forward 3D editing models</li><li> multi-view reconstruction artifacts</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/340/nano3d-a-training-free-approach-for-efficient-3d-editing-without-masks" target="_blank" title=" NANO3D: A Training-Free Approach for Efficient 3D Editing Without Masks">
+    NANO3D: A Training-Free Approach for Efficient 3D Editing Without Masks
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/317_a8cc14c7-489c-49a8-94b5-46e5c85fca73.jpg" class="card-img-top" alt="SimKO: Simple Pass@K Policy Optimization" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ruotian Peng
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/301-SimKO-Simple-PassK-Policy-Optimization/index.html"  title="SimKO: Simple Pass@K Policy Optimization">
+          <h3 class="card-title pb-2" itemprop="headline">SimKO: Simple Pass@K Policy Optimization</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/301-SimKO-Simple-PassK-Policy-Optimization/index.html"
+          title="SimKO: Simple Pass@K Policy Optimization"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/325_92133a58-68b4-4c6e-a9af-06da2197edb5.jpg" class="card-img-top" alt="Budget-aware Test-time Scaling via Discriminative Verification" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kyle Montgomery
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/309-Budget-aware-Test-time-Scaling-via-Discriminative-Verification/index.html"  title="Budget-aware Test-time Scaling via Discriminative Verification">
+          <h3 class="card-title pb-2" itemprop="headline">Budget-aware Test-time Scaling via Discriminative Verification</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/309-Budget-aware-Test-time-Scaling-via-Discriminative-Verification/index.html"
+          title="Budget-aware Test-time Scaling via Discriminative Verification"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/282_d4392971-6694-4a1e-9a26-8eeaa61e5f66.jpg" class="card-img-top" alt="Beyond One World: Benchmarking Super Heros in Role-Playing Across Multiversal
+Contexts" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Perapard Ngokpol
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/269-Beyond-One-World-Benchmarking-Super-Heros-in-Role-Playing-Across-Multiversal-Contexts/index.html"  title="Beyond One World: Benchmarking Super Heros in Role-Playing Across Multiversal
+Contexts">
+          <h3 class="card-title pb-2" itemprop="headline">Beyond One World: Benchmarking Super Heros in Role-Playing Across Multiversal
+Contexts</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/269-Beyond-One-World-Benchmarking-Super-Heros-in-Role-Playing-Across-Multiversal-Contexts/index.html"
+          title="Beyond One World: Benchmarking Super Heros in Role-Playing Across Multiversal
+Contexts"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/311_f92fd4fe-dad3-4324-a87c-ace0df1a4bd0.jpg" class="card-img-top" alt="VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Han Zhao
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/295-VLA2-Empowering-Vision-Language-Action-Models-with-an-Agentic-Framework-for-Unseen-Concept-Manip/index.html"  title="VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation">
+          <h3 class="card-title pb-2" itemprop="headline">VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/295-VLA2-Empowering-Vision-Language-Action-Models-with-an-Agentic-Framework-for-Unseen-Concept-Manip/index.html"
+          title="VLA^2: Empowering Vision-Language-Action Models with an Agentic Framework for
+Unseen Concept Manipulation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/324_7d91ae3b-338f-4c40-88cc-c0b65e122e60.jpg" class="card-img-top" alt="On Pretraining for Project-Level Code Completion" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Maksim Sapronov
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/308-On-Pretraining-for-Project-Level-Code-Completion/index.html"  title="On Pretraining for Project-Level Code Completion">
+          <h3 class="card-title pb-2" itemprop="headline">On Pretraining for Project-Level Code Completion</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/308-On-Pretraining-for-Project-Level-Code-Completion/index.html"
+          title="On Pretraining for Project-Level Code Completion"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/277_e835b796-9510-45d2-9062-50189d1aec58.jpg" class="card-img-top" alt="Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Rikiya Takehi
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/264-Fantastic-small-Retrievers-and-How-to-Train-Them-mxbai-edge-colbert-v0-Tech-Report/index.html"  title="Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report">
+          <h3 class="card-title pb-2" itemprop="headline">Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/264-Fantastic-small-Retrievers-and-How-to-Train-Them-mxbai-edge-colbert-v0-Tech-Report/index.html"
+          title="Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
