@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>EnzyControl: Adding Functional and Substrate-Specific Contro</title>
+
+<meta name="keywords" content="enzyme backbone design,  substrate-specific enzyme generation,  computational protein engineering,  EnzyBind enzyme‑substrate dataset,  PDBbind curate">
+
+<meta name="description" content="enzyme backbone design,  substrate-specific enzyme generation,  computational protein engineering,  EnzyBind enzyme‑substrate dataset,  PDBbind curate">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                EnzyControl: Adding Functional and Substrate-Specific Control for Enzyme
+Backbone Generation
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Chao Song, Zhiyuan Liu, Han Huang, Liang Wang, Qiong Wang, Jianyu Shi, Hui Yu, Yihang Zhou, Yang Zhang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              01 Nov 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/798_4ef3e4b5-436a-4b94-8d17-56a8433b9d27.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>EnzyControl: AI‑Powered Design of Custom Enzymes</h3>
+<p>
+Imagine a computer that can sketch out a brand‑new enzyme, perfectly tuned to a specific chemical – like a master chef creating a recipe for a dish that never existed before. <strong>Scientists have unveiled</strong> a new AI method called EnzyControl that does exactly that. By feeding the system a massive library of real enzyme‑substrate pairs, the program learns the subtle shapes and “hand‑holds” enzymes use to grab their targets. It then builds fresh enzyme backbones that are already pre‑wired to bind a chosen molecule. Think of it as a 3‑D printer that, instead of plastic, prints molecular machines ready to work on a chosen task. The result? EnzyControl designs enzymes that are up to 13 % more efficient and easier to produce than previous attempts. This could speed up everything from greener drug manufacturing to breaking down plastic waste. <strong>It’s a breakthrough</strong> that brings us closer to a future where we can program biology as easily as we program computers. <strong>Stay tuned</strong> – the next generation of custom enzymes may soon be in our hands. 
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Enzyme Backbone Generation with Substrate-Specific Control</h2>
+
+<p>This article introduces <strong>EnzyControl</strong>, a novel computational method designed to generate enzyme backbones with precise substrate-specific functionality. Addressing critical limitations in existing generative models, particularly concerning binding data and de novo enzyme design, the research leverages <strong>EnzyBind</strong>, a newly curated dataset of over 11,000 experimentally validated enzyme-substrate pairs. EnzyControl employs a sophisticated approach, conditioning backbone generation on Multiple Sequence Alignment (MSA)-annotated catalytic sites and their corresponding substrates. At its core is EnzyAdapter, a lightweight, modular component that integrates substrate awareness into a pretrained motif-scaffolding model, refined through a two-stage training paradigm. The findings demonstrate EnzyControl's superior performance, achieving significant improvements in both designability and catalytic efficiency compared to baseline models.</p>
+
+<h2>Critical Evaluation</h2>
+
+<h3>Strengths</h3>
+<p>The primary strength of this work lies in its innovative approach to <strong>substrate-specific enzyme design</strong>. The introduction of EnzyBind, a meticulously curated dataset, directly addresses a major bottleneck in computational protein engineering by providing high-quality, experimentally validated data. EnzyControl's architecture, featuring the substrate-aware EnzyAdapter and a robust two-stage training strategy, represents a significant methodological advancement. The model's superior performance, evidenced by a 13% improvement in designability and catalytic efficiency, alongside state-of-the-art EC match rates and strong zero-shot generalization, highlights its practical utility. Furthermore, the use of SE(3)-equivariant k-NN graphs, Invariant Point Attention (IPA), and Transformer layers showcases a sophisticated integration of cutting-edge deep learning techniques, contributing to its high structural quality and functional relevance. The release of the code also fosters transparency and reproducibility within the scientific community.</p>
+
+<h3>Weaknesses</h3>
+<p>While EnzyControl excels in performance, the analysis indicates a trade-off in <strong>design diversity</strong>, which is noted to be lower compared to some competitor models. This suggests that while the generated enzymes are highly functional and specific, the breadth of novel structural solutions might be somewhat constrained. Another potential caveat is the method's reliance on the quality of Multiple Sequence Alignment (MSA) input for catalytic site annotation. The effectiveness of EnzyControl could be limited in scenarios where high-quality, comprehensive MSA data for novel or less-studied enzyme families is scarce, potentially impacting its generalizability to entirely new enzyme classes without sufficient prior information. The complexity of integrating multiple advanced components, while powerful, might also present challenges for researchers seeking to adapt or fine-tune the model for highly specialized applications.</p>
+
+<h3>Implications</h3>
+<p>This research holds profound implications for the field of <strong>computational enzyme engineering</strong>. By enabling the generation of enzyme backbones with precise substrate specificity, EnzyControl paves the way for designing novel enzymes tailored for specific industrial, therapeutic, and biotechnological applications. The ability to predict and optimize catalytic efficiency and binding affinity at the design stage could significantly accelerate drug discovery, bioremediation efforts, and the development of sustainable chemical processes. This work represents a substantial step towards overcoming current limitations in de novo enzyme design, offering a powerful tool for researchers to explore previously inaccessible regions of enzyme sequence and structure space, thereby fostering innovation in various scientific and industrial sectors.</p>
+
+<h3>Conclusion</h3>
+<p>The EnzyControl framework marks a significant advancement in <strong>computational protein design</strong>, effectively addressing the challenge of generating substrate-specific enzyme backbones. Through its innovative dataset, sophisticated architecture, and demonstrated superior performance, the article provides a valuable contribution to the field. Despite minor limitations concerning design diversity and data dependency, its overall impact on accelerating the design of functional enzymes for diverse applications is substantial. This work sets a new benchmark for enzyme engineering, promising to unlock new possibilities in biotechnology and beyond.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>enzyme backbone design</li><li> substrate-specific enzyme generation</li><li> computational protein engineering</li><li> EnzyBind enzyme‑substrate dataset</li><li> PDBbind curated enzyme‑substrate pairs</li><li> EnzyControl substrate‑aware generative model</li><li> MSA‑annotated catalytic site conditioning</li><li> motif‑scaffolding model adaptation</li><li> EnzyAdapter lightweight module</li><li> two‑stage training paradigm for enzyme design</li><li> designability metric improvement</li><li> catalytic efficiency enhancement</li><li> EnzyBench benchmark evaluation</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/890/enzycontrol-adding-functional-and-substrate-specific-control-for-enzymebackbone-generation" target="_blank" title=" EnzyControl: Adding Functional and Substrate-Specific Control for Enzyme
+Backbone Generation">
+    EnzyControl: Adding Functional and Substrate-Specific Control for Enzyme
+Backbone Generation
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/774_f7c6ee76-71fc-4e0a-a540-a85196ca0920.jpg" class="card-img-top" alt="AMO-Bench: Large Language Models Still Struggle in High School Math Competitions" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shengnan An
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/871-AMO-Bench-Large-Language-Models-Still-Struggle-in-High-School-Math-Competitions/index.html"  title="AMO-Bench: Large Language Models Still Struggle in High School Math Competitions">
+          <h3 class="card-title pb-2" itemprop="headline">AMO-Bench: Large Language Models Still Struggle in High School Math Competitions</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/871-AMO-Bench-Large-Language-Models-Still-Struggle-in-High-School-Math-Competitions/index.html"
+          title="AMO-Bench: Large Language Models Still Struggle in High School Math Competitions"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/688_43e2a252-3dce-48aa-a9e2-f8e3ce0fb642.jpg" class="card-img-top" alt="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yusu Qian
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/782-PRISM-Bench-A-Benchmark-of-Puzzle-Based-Visual-Tasks-with-CoT-Error-Detection/index.html"  title="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection">
+          <h3 class="card-title pb-2" itemprop="headline">PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/782-PRISM-Bench-A-Benchmark-of-Puzzle-Based-Visual-Tasks-with-CoT-Error-Detection/index.html"
+          title="PRISM-Bench: A Benchmark of Puzzle-Based Visual Tasks with CoT Error Detection"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/681_28d43207-fdea-45e7-a6eb-ed59d46393f4.jpg" class="card-img-top" alt="Code Aesthetics with Agentic Reward Feedback" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bang Xiao
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/823-Code-Aesthetics-with-Agentic-Reward-Feedback/index.html"  title="Code Aesthetics with Agentic Reward Feedback">
+          <h3 class="card-title pb-2" itemprop="headline">Code Aesthetics with Agentic Reward Feedback</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/823-Code-Aesthetics-with-Agentic-Reward-Feedback/index.html"
+          title="Code Aesthetics with Agentic Reward Feedback"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/699_2137e348-bd2e-409c-ab7c-9c13031c37cc.jpg" class="card-img-top" alt="RoboOmni: Proactive Robot Manipulation in Omni-modal Context" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Siyin Wang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"  title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context">
+          <h3 class="card-title pb-2" itemprop="headline">RoboOmni: Proactive Robot Manipulation in Omni-modal Context</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"
+          title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/695_f5e8616d-9815-48a1-9c94-249aad3a554c.jpg" class="card-img-top" alt="AgentFold: Long-Horizon Web Agents with Proactive Context Management" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Rui Ye
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/788-AgentFold-Long-Horizon-Web-Agents-with-Proactive-Context-Management/index.html"  title="AgentFold: Long-Horizon Web Agents with Proactive Context Management">
+          <h3 class="card-title pb-2" itemprop="headline">AgentFold: Long-Horizon Web Agents with Proactive Context Management</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/788-AgentFold-Long-Horizon-Web-Agents-with-Proactive-Context-Management/index.html"
+          title="AgentFold: Long-Horizon Web Agents with Proactive Context Management"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/683_a1e17f5f-bb6a-4435-8038-52b117bbee7c.jpg" class="card-img-top" alt="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yash Jangir
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/824-RobotArena-infty-Scalable-Robot-Benchmarking-via-Real-to-Sim-Translation/index.html"  title="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation">
+          <h3 class="card-title pb-2" itemprop="headline">RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/824-RobotArena-infty-Scalable-Robot-Benchmarking-via-Real-to-Sim-Translation/index.html"
+          title="RobotArena infty: Scalable Robot Benchmarking via Real-to-Sim Translation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
