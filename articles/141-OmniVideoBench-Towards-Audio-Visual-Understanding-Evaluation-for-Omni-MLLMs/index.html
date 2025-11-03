@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css" >
+
+<title>OmniVideoBench: Towards Audio-Visual Understanding Evaluatio</title>
+
+<meta name="keywords" content="multimodal large language models,  video understanding benchmarks,  audio-visual reasoning,  OmniVideoBench,  synergistic reasoning capabilities,  mod">
+
+<meta name="description" content="multimodal large language models,  video understanding benchmarks,  audio-visual reasoning,  OmniVideoBench,  synergistic reasoning capabilities,  mod">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Caorui Li, Yu Chen, Yiyan Ji, Jin Xu, Zhenyu Cui, Shihao Li, Yuanxing Zhang, Jiafu Tang, Zhenghao Song, Dingling Zhang, Ying He, Haoxiang Liu, Yuxuan Wang, Qiufeng Wang, Zhenhe Wu, Jiehui Luo, Zhiyu Pan, Weihao Xie, Chenchen Zhang, Zhaohui Wang, Jiayi Tian, Yanghai Wang, Zhe Cao, Minxin Dai, Ke Wang, Runzhe Wen, Yinghao Ma, Yaning Pan, Sungkyun Chang, Termeh Taheri, Haiwen Xia, Christos Plachouras, Emmanouil Benetos, Yizhi Li, Ge Zhang, Jian Yang, Tianhao Peng, Zili Wang, Minghao Liu, Junran Peng, Zhaoxiang Zhang, Jiaheng Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/152_2169cb1e-aa85-41de-95f7-9ff923cf2074.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New AI Test Shows How Smart Machines Can Really See and Hear Videos</h3>
+<p>
+Ever wondered if a computer can truly <strong>watch</strong> a video and <strong>listen</strong> to its sound the way we do? Researchers just gave AI a tough new quiz called <strong>OmniVideoBench</strong>. This test isn’t just about spotting a cat or hearing a bark – it asks machines to connect what they see with what they hear, reason about cause and effect, count objects, and even summarize a story that lasts minutes. Imagine watching a cooking show and being able to explain why the chef added salt right before the sauce boiled – that’s the kind of step‑by‑step thinking the benchmark expects.<br><br>
+The team built 1,000 real‑world questions from 628 diverse clips, each with detailed reasoning notes, so the AI can’t cheat by guessing. When they tried several popular AI models, the results showed a big gap: open‑source systems lag far behind the polished, closed‑source giants, highlighting how hard true <strong>audio‑visual reasoning</strong> really is.<br><br>
+This <strong>breakthrough</strong> test will push developers to create smarter, more human‑like assistants that understand the world through both sight and sound. The future of AI may soon be as curious as ours.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article introduces <strong>OmniVideoBench</strong>, a novel benchmark designed to evaluate the performance of <strong>multimodal large language models (MLLMs)</strong> in the realm of audio-visual reasoning. It addresses the shortcomings of existing benchmarks that often fail to assess the synergistic capabilities of audio and visual modalities. The benchmark comprises 1,000 meticulously crafted question-answer pairs derived from 628 diverse videos, emphasizing logical consistency and modality complementarity. The findings reveal a significant performance gap between MLLMs and human reasoning, particularly highlighting the challenges in integrating complex audio-visual information.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of OmniVideoBench is its comprehensive design, which includes a diverse array of question types that cover essential reasoning tasks such as temporal reasoning, spatial localization, and causal inference. The rigorous manual annotation process ensures high-quality data, enhancing the reliability of the benchmark. Furthermore, the dataset's focus on <strong>modality complementarity</strong> allows for a more nuanced evaluation of MLLMs, pushing the boundaries of current understanding in audio-visual reasoning.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the benchmark has limitations. The performance gap between open-source and closed-source models raises concerns about accessibility and the potential bias towards proprietary technologies. Additionally, challenges in understanding complex audio elements, such as music, and the limitations in processing long-duration videos indicate that further refinement is necessary. These issues may hinder the generalizability of the findings across different contexts and applications.</p>
+
+<h3>Implications</h3>
+<p>The introduction of OmniVideoBench has significant implications for the development of MLLMs. By providing a structured framework for evaluating audio-visual reasoning, it encourages researchers to enhance model capabilities and address existing gaps. The benchmark's release is expected to foster innovation in the field, ultimately leading to more robust and generalizable reasoning models.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, OmniVideoBench represents a critical advancement in the evaluation of multimodal reasoning capabilities in MLLMs. Its rigorous design and focus on <strong>synergistic reasoning</strong> highlight the complexities of audio-visual integration, while also revealing substantial performance gaps that need to be addressed. The benchmark not only serves as a valuable tool for researchers but also sets the stage for future developments in the field of multimodal understanding.</p>
+
+<h2>Readability</h2>
+<p>The article is structured to enhance readability, with clear and concise language that facilitates understanding. Each section flows logically, allowing readers to grasp the significance of the findings without encountering dense academic jargon. This approach not only improves user engagement but also encourages further exploration of the topic.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>multimodal large language models</li><li> video understanding benchmarks</li><li> audio-visual reasoning</li><li> OmniVideoBench</li><li> synergistic reasoning capabilities</li><li> modality complementarity</li><li> logical consistency in AI</li><li> question-answer pairs in video analysis</li><li> temporal reasoning in videos</li><li> spatial localization challenges</li><li> causal inference in multimodal models</li><li> high-quality video annotations</li><li> open-source vs closed-source MLLMs</li><li> reasoning traces in AI evaluation</li><li> generalizable reasoning capabilities in AI</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/141/omnivideobench-towards-audio-visual-understanding-evaluation-for-omni-mllms" target="_blank" title=" OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs">
+    OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/93_33d76140-cc30-4ebf-9a84-f0c360b03c96.jpg" class="card-img-top" alt="StatEval: A Comprehensive Benchmark for Large Language Models in Statistics" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuchen Lu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/89-StatEval-A-Comprehensive-Benchmark-for-Large-Language-Models-in-Statistics/index.html"  title="StatEval: A Comprehensive Benchmark for Large Language Models in Statistics">
+          <h3 class="card-title pb-2" itemprop="headline">StatEval: A Comprehensive Benchmark for Large Language Models in Statistics</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/89-StatEval-A-Comprehensive-Benchmark-for-Large-Language-Models-in-Statistics/index.html"
+          title="StatEval: A Comprehensive Benchmark for Large Language Models in Statistics"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/83_9473280f-925a-4fd0-b194-a3a9528fc714.jpg" class="card-img-top" alt="R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yi Lu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/79-R-Horizon-How-Far-Can-Your-Large-Reasoning-Model-Really-Go-in-Breadth-and-Depth/index.html"  title="R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?">
+          <h3 class="card-title pb-2" itemprop="headline">R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/79-R-Horizon-How-Far-Can-Your-Large-Reasoning-Model-Really-Go-in-Breadth-and-Depth/index.html"
+          title="R-Horizon: How Far Can Your Large Reasoning Model Really Go in Breadth and
+Depth?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/105_831160c3-0ca7-4172-bd17-384934f39390.jpg" class="card-img-top" alt="Mitigating Overthinking through Reasoning Shaping" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Feifan Song
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/101-Mitigating-Overthinking-through-Reasoning-Shaping/index.html"  title="Mitigating Overthinking through Reasoning Shaping">
+          <h3 class="card-title pb-2" itemprop="headline">Mitigating Overthinking through Reasoning Shaping</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/101-Mitigating-Overthinking-through-Reasoning-Shaping/index.html"
+          title="Mitigating Overthinking through Reasoning Shaping"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/166_df30bbbd-e8e8-4fc6-8c5c-9cd631d98f34.jpg" class="card-img-top" alt="Don't Just Fine-tune the Agent, Tune the Environment" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Siyuan Lu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/155-Dont-Just-Fine-tune-the-Agent-Tune-the-Environment/index.html"  title="Don't Just Fine-tune the Agent, Tune the Environment">
+          <h3 class="card-title pb-2" itemprop="headline">Don't Just Fine-tune the Agent, Tune the Environment</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/155-Dont-Just-Fine-tune-the-Agent-Tune-the-Environment/index.html"
+          title="Don't Just Fine-tune the Agent, Tune the Environment"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/233_1b7a4c92-ffec-433e-a3c4-9562692da77b.jpg" class="card-img-top" alt="CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model
+for Autonomous Driving" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tianrui Zhang
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/221-CVD-STORM-Cross-View-Video-Diffusion-with-Spatial-Temporal-Reconstruction-Model-for-Autonomous-D/index.html"  title="CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model
+for Autonomous Driving">
+          <h3 class="card-title pb-2" itemprop="headline">CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model
+for Autonomous Driving</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/221-CVD-STORM-Cross-View-Video-Diffusion-with-Spatial-Temporal-Reconstruction-Model-for-Autonomous-D/index.html"
+          title="CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model
+for Autonomous Driving"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/116_451911ce-fa8a-44a6-aa67-48ce8440d677.jpg" class="card-img-top" alt="LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Sajib Acharjee Dip
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/112-LLM4Cell-A-Survey-of-Large-Language-and-Agentic-Models-for-Single-Cell-Biology/index.html"  title="LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology">
+          <h3 class="card-title pb-2" itemprop="headline">LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/112-LLM4Cell-A-Survey-of-Large-Language-and-Agentic-Models-for-Single-Cell-Biology/index.html"
+          title="LLM4Cell: A Survey of Large Language and Agentic Models for Single-Cell Biology"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
