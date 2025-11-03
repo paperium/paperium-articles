@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css" >
+
+<title>Large Language Models Do NOT Really Know What They Don't Kno</title>
+
+<meta name="keywords" content="LLM factuality,  Large language model hallucinations,  Internal representations of LLMs,  LLM hidden states,  Mechanistic analysis of LLMs,  Distingui">
+
+<meta name="description" content="LLM factuality,  Large language model hallucinations,  Internal representations of LLMs,  LLM hidden states,  Mechanistic analysis of LLMs,  Distingui">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Large Language Models Do NOT Really Know What They Don't Know
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Chi Seng Cheang, Hou Pong Chan, Wenxuan Zhang, Yang Deng
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              17 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/272_08d26ee8-3fa2-405e-a2ab-150482ec6ccf.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Do AI Chatbots Really Know When They're Wrong?</h3>
+<p>
+Ever wondered if a chatbot can tell you when it’s guessing? A new <strong>study shows</strong> that big <strong>AI language models</strong>, the same tech behind ChatGPT, don’t actually <strong>know when they’re wrong</strong>. Researchers peeked inside the AI’s “brain” and saw that when the model tries to answer a factual question, it uses the same memory pathways whether the answer is correct or a made‑up one. It’s like a student who copies the same notes for both a right answer and a bluff—the teacher can’t tell the difference. Only when the AI’s mistake is completely unrelated to the topic does its internal pattern form a separate “cluster,” making the error easier to spot. This means the AI’s confidence scores aren’t a reliable guide to <strong>truth</strong>. The takeaway? While these models are amazing at mimicking knowledge, they still can’t truly judge their own certainty, so we must stay critical and double‑check the facts they give us.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: Unpacking LLM Internal Factual Processing</h2>
+<p>This article investigates whether large language models (LLMs) internally distinguish between factual and hallucinated outputs, challenging the notion that LLMs might "know what they don't know." Through a detailed mechanistic analysis, the study compares how LLMs process factual queries against two distinct types of hallucinations. It reveals that hallucinations associated with subject knowledge share internal recall processes with correct responses, making their hidden-state geometries indistinguishable. In contrast, hallucinations detached from subject knowledge produce clearly distinct, clustered representations. This critical distinction highlights that LLMs primarily encode patterns of <strong>knowledge recall</strong> rather than inherent truthfulness in their internal states.</p>
+
+<h2>Critical Evaluation: Dissecting LLM Hallucination Mechanisms</h2>
+<h3>Strengths of Mechanistic LLM Analysis</h3>
+<p>This research offers a robust <strong>mechanistic analysis</strong>, providing deep insights into LLM internal processing. The clear categorization of hallucinations into Associated Hallucinations (AHs) and Unassociated Hallucinations (UHs) is a significant methodological strength. Utilizing interpretability techniques like causal mediation and analyzing hidden states, including Multi-Head Self-Attention and Feed-Forward Network outputs, effectively differentiates processing pathways.</p>
+<p>The study's findings are particularly strong in demonstrating that <strong>Factual Associations</strong> (FAs) and AHs exhibit similar information flow and strong subject representations. This alignment with parametric knowledge provides a compelling explanation for their indistinguishability. The ability to effectively separate UHs from FAs/AHs using existing detection methods further validates the distinct internal processing identified.</p>
+
+<h3>Challenges and Limitations in LLM Truthfulness</h3>
+<p>A primary weakness lies in the fundamental limitation revealed: LLMs do not encode <strong>truthfulness</strong> in their internal states, only patterns of knowledge recall. This poses a significant challenge for developing reliable hallucination detection and refusal tuning mechanisms, especially for AHs. The study explicitly notes that current detection methods fail to distinguish AHs from FAs, indicating a critical blind spot.</p>
+<p>Furthermore, the research highlights that refusal tuning's generalizability is limited by inherent <strong>hallucination heterogeneity</strong>. Associated Hallucinations, which mimic factual recall, prove particularly challenging for effective generalization. This suggests current approaches to improving LLM reliability may be fundamentally constrained by internal processing.</p>
+
+<h3>Implications for LLM Development and Trust</h3>
+<p>The findings have profound implications for the future of <strong>Large Language Model development</strong> and the pursuit of trustworthy AI. Understanding that LLMs primarily encode knowledge recall patterns, rather than truthfulness, necessitates a paradigm shift in AI safety and reliability. It underscores the urgent need for novel methods to detect and mitigate hallucinations, particularly those deeply embedded with subject knowledge.</p>
+<p>This work suggests that simply refining existing detection or refusal tuning techniques may not be sufficient to overcome the challenge of associated hallucinations. Future research must explore alternative mechanisms that can discern genuine factual accuracy beyond mere recall, fostering greater <strong>user trust</strong> and ensuring more reliable AI-generated content.</p>
+
+<h2>Conclusion: Redefining LLM Knowledge Boundaries</h2>
+<p>This article makes a significant contribution by mechanistically dissecting how LLMs process factual queries and hallucinations. It definitively shows that "LLMs don't really know what they don't know" when hallucinations are tied to subject knowledge. The distinction between detectable unassociated hallucinations and indistinguishable associated hallucinations is a crucial insight. This research is invaluable for guiding the development of more robust and reliable AI systems, emphasizing that new strategies are essential to move beyond mere knowledge recall towards genuine <strong>factual integrity</strong> in LLMs.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>LLM factuality</li><li> Large language model hallucinations</li><li> Internal representations of LLMs</li><li> LLM hidden states</li><li> Mechanistic analysis of LLMs</li><li> Distinguishing factual vs. hallucinated outputs</li><li> Subject knowledge reliance in LLMs</li><li> LLM knowledge recall process</li><li> Hidden-state geometries in LLMs</li><li> Detecting LLM hallucinations</li><li> Truthfulness encoding in AI</li><li> AI factual errors</li><li> LLM limitations</li><li> Spurious associations in LLMs</li><li> Patterns of knowledge recall in LLMs</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/259/large-language-models-do-not-really-know-what-they-dont-know" target="_blank" title=" Large Language Models Do NOT Really Know What They Don't Know">
+    Large Language Models Do NOT Really Know What They Don't Know
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/190_04da4b95-7f85-4b2c-bf73-551d84644589.jpg" class="card-img-top" alt="Graph Diffusion Transformers are In-Context Molecular Designers" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Gang Liu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/179-Graph-Diffusion-Transformers-are-In-Context-Molecular-Designers/index.html"  title="Graph Diffusion Transformers are In-Context Molecular Designers">
+          <h3 class="card-title pb-2" itemprop="headline">Graph Diffusion Transformers are In-Context Molecular Designers</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/179-Graph-Diffusion-Transformers-are-In-Context-Molecular-Designers/index.html"
+          title="Graph Diffusion Transformers are In-Context Molecular Designers"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/152_2169cb1e-aa85-41de-95f7-9ff923cf2074.jpg" class="card-img-top" alt="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Caorui Li
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/141-OmniVideoBench-Towards-Audio-Visual-Understanding-Evaluation-for-Omni-MLLMs/index.html"  title="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/141-OmniVideoBench-Towards-Audio-Visual-Understanding-Evaluation-for-Omni-MLLMs/index.html"
+          title="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/172_c6e94e1e-7126-4041-a044-2ddeb233d696.jpg" class="card-img-top" alt="On Epistemic Uncertainty of Visual Tokens for Object Hallucinations in Large
+Vision-Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hoigi Seo
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/161-On-Epistemic-Uncertainty-of-Visual-Tokens-for-Object-Hallucinations-in-Large-Vision-Language-Mod/index.html"  title="On Epistemic Uncertainty of Visual Tokens for Object Hallucinations in Large
+Vision-Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">On Epistemic Uncertainty of Visual Tokens for Object Hallucinations in Large
+Vision-Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/161-On-Epistemic-Uncertainty-of-Visual-Tokens-for-Object-Hallucinations-in-Large-Vision-Language-Mod/index.html"
+          title="On Epistemic Uncertainty of Visual Tokens for Object Hallucinations in Large
+Vision-Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/168_93ab7fe2-620f-4b65-ba71-d20f6b70e9ee.jpg" class="card-img-top" alt="AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yu Li
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/157-AdaViewPlanner-Adapting-Video-Diffusion-Models-for-Viewpoint-Planning-in-4D-Scenes/index.html"  title="AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes">
+          <h3 class="card-title pb-2" itemprop="headline">AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/157-AdaViewPlanner-Adapting-Video-Diffusion-Models-for-Viewpoint-Planning-in-4D-Scenes/index.html"
+          title="AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/97_906a0a5a-aab5-4bdb-8489-73effc8f3d90.jpg" class="card-img-top" alt="Which Heads Matter for Reasoning? RL-Guided KV Cache Compression" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wenjie Du
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/93-Which-Heads-Matter-for-Reasoning-RL-Guided-KV-Cache-Compression/index.html"  title="Which Heads Matter for Reasoning? RL-Guided KV Cache Compression">
+          <h3 class="card-title pb-2" itemprop="headline">Which Heads Matter for Reasoning? RL-Guided KV Cache Compression</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/93-Which-Heads-Matter-for-Reasoning-RL-Guided-KV-Cache-Compression/index.html"
+          title="Which Heads Matter for Reasoning? RL-Guided KV Cache Compression"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/108_31a9c461-3afd-47c9-8cfb-7f519fc37223.jpg" class="card-img-top" alt="Understanding DeepResearch via Reports" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tianyu Fan
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/104-Understanding-DeepResearch-via-Reports/index.html"  title="Understanding DeepResearch via Reports">
+          <h3 class="card-title pb-2" itemprop="headline">Understanding DeepResearch via Reports</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/104-Understanding-DeepResearch-via-Reports/index.html"
+          title="Understanding DeepResearch via Reports"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
