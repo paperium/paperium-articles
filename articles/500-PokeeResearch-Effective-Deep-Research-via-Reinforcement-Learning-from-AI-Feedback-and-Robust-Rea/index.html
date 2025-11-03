@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>PokeeResearch: Effective Deep Research via Reinforcement Lea</title>
+
+<meta name="keywords" content="Tool-augmented LLMs,  Deep research agents,  PokeeResearch-7B,  Reinforcement Learning from AI Feedback (RLAIF),  Chain-of-thought reasoning LLMs,  LL">
+
+<meta name="description" content="Tool-augmented LLMs,  Deep research agents,  PokeeResearch-7B,  Reinforcement Learning from AI Feedback (RLAIF),  Chain-of-thought reasoning LLMs,  LL">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                PokeeResearch: Effective Deep Research via Reinforcement Learning from AI
+Feedback and Robust Reasoning Scaffold
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yi Wan, Jiuqi Wang, Liam Li, Jinsong Liu, Ruihao Zhu, Zheqing Zhu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              23 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/496_2c1178f8-5334-470f-b2fd-bc3893df45ad.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Meet the New AI Research Buddy That Learns Like a Human</h3>
+<p>
+Ever wondered if a computer could dig through the web, check facts, and write a clear answer all by itself? <strong>Scientists have built</strong> a clever AI called PokeeResearch‑7B that does just that. Imagine a diligent student who not only reads dozens of articles for a school project but also double‑checks each source and fixes mistakes on the fly—that’s the spirit of this new research assistant. <strong>Its breakthrough</strong> lies in a special training method where the AI learns from its own successes and failures, guided by feedback from other smart language models. This “self‑coach” approach helps the system stay accurate, cite the right papers, and follow instructions without getting confused by broken tools. The result? A compact, 7‑billion‑parameter model that outperforms larger rivals on ten tough research tests, all while staying free and open for anyone to use. <strong>In everyday life</strong>, such a tool could turn a vague question into a reliable answer in seconds, making research faster and more trustworthy for students, journalists, and curious minds alike. The future of learning just got a little smarter. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Deep Research Agents with PokeeResearch-7B</h2>
+<p>This insightful article introduces <strong>PokeeResearch-7B</strong>, a 7-billion-parameter deep research agent designed to overcome critical limitations in current tool-augmented large language models, such as shallow retrieval and brittle tool-use. The core innovation lies in its unified <strong>Reinforcement Learning from AI Feedback</strong> (RLAIF) framework, which optimizes policies using LLM-based reward signals for factual accuracy and citation faithfulness. Furthermore, a sophisticated chain-of-thought-driven multi-call reasoning scaffold enhances robustness through self-verification and adaptive recovery from tool failures. The agent demonstrates impressive <strong>state-of-the-art performance</strong> across ten popular deep research benchmarks, validating its advanced reinforcement learning and reasoning design. This work significantly contributes to developing more efficient, resilient, and research-grade AI agents capable of complex information synthesis.</p>
+
+<h2>Critical Evaluation</h2>
+<h3>Strengths</h3>
+<p>The development of PokeeResearch-7B showcases several significant strengths. Its foundation on a <strong>unified reinforcement learning framework</strong>, combining RLAIF and RLOO, provides a robust and scalable approach to agent training, optimizing for factual accuracy and instruction adherence. The innovative multi-call reasoning scaffold, incorporating self-verification and adaptive recovery, markedly enhances the agent's reliability in complex research workflows. The use of sophisticated <strong>LLM-based reward signals</strong>, including Exact Match and AI Feedback (R_AI), offers a more semantically rich evaluation compared to traditional lexical methods. Achieving state-of-the-art performance on ten diverse benchmarks, including PopQA and GAIA, for a 7B-parameter model, underscores its efficiency and effectiveness. Additionally, the inclusion of Research Threads Synthesis (RTS) for improved test-time accuracy and the open-source release of the model are commendable, fostering transparency and future research.</p>
+
+<h3>Weaknesses</h3>
+<p>While PokeeResearch-7B presents a compelling advancement, certain aspects warrant consideration. The reliance on a complex RLAIF/RLOO framework and multi-call reasoning, while effective, could imply significant <strong>computational intensity</strong> during training and inference, potentially limiting accessibility for researchers without substantial resources. Although LLM-based AI feedback (R_AI) offers semantic advantages, it may still inherit inherent <strong>AI feedback biases</strong> from the underlying LLM, which could subtly influence policy optimization. Furthermore, while benchmark performance is excellent, the transition from structured benchmark tasks to the more ambiguous and open-ended demands of <strong>real-world applicability</strong> in scientific research might present unforeseen challenges. The agent's performance is also inherently tied to the reliability and capabilities of its external tools, such as Serper and Jina Reader.</p>
+
+<h3>Implications</h3>
+<p>PokeeResearch-7B holds substantial implications for the future of <strong>research-grade AI</strong>. By demonstrating that careful reinforcement learning and reasoning design can yield efficient and resilient agents, it sets a new benchmark for developing AI systems capable of deep information synthesis. This technology has the potential to revolutionize how researchers approach complex queries, offering a powerful tool for <strong>automating complex research</strong> tasks, accelerating knowledge discovery, and enhancing the reliability of AI-generated insights. The open-source nature of the model further encourages collaborative development and broader adoption, paving the way for more advanced and trustworthy AI assistants in scientific and academic domains.</p>
+
+<h2>Conclusion</h2>
+<p>PokeeResearch-7B represents a significant leap forward in the development of <strong>robust AI agents</strong> for deep research. Its innovative integration of a unified reinforcement learning framework, sophisticated reward signals, and a resilient reasoning scaffold addresses key limitations of existing LLMs. The demonstrated state-of-the-art performance on multiple benchmarks highlights its potential to transform <strong>scientific inquiry</strong> and information synthesis. This work not only provides a highly capable tool but also offers valuable insights into the design principles necessary for building reliable and aligned AI, setting an exciting precedent for <strong>future AI development</strong> in complex cognitive tasks.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Tool-augmented LLMs</li><li> Deep research agents</li><li> PokeeResearch-7B</li><li> Reinforcement Learning from AI Feedback (RLAIF)</li><li> Chain-of-thought reasoning LLMs</li><li> LLM-based reward signals</li><li> AI agent robustness</li><li> Factual accuracy in LLMs</li><li> Citation faithfulness AI</li><li> Multi-call reasoning scaffold</li><li> Adaptive recovery tool failures</li><li> Open-source deep research agent</li><li> 7B-parameter AI models</li><li> Scalable AI agents</li><li> LLM alignment metrics</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/500/pokeeresearch-effective-deep-research-via-reinforcement-learning-from-aifeedback-and-robust-reasonin" target="_blank" title=" PokeeResearch: Effective Deep Research via Reinforcement Learning from AI
+Feedback and Robust Reasoning Scaffold">
+    PokeeResearch: Effective Deep Research via Reinforcement Learning from AI
+Feedback and Robust Reasoning Scaffold
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/678_04b063af-426d-45d4-8237-534a0cf89aca.jpg" class="card-img-top" alt="Knocking-Heads Attention" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhanchao Zhou
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/774-Knocking-Heads-Attention/index.html"  title="Knocking-Heads Attention">
+          <h3 class="card-title pb-2" itemprop="headline">Knocking-Heads Attention</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/774-Knocking-Heads-Attention/index.html"
+          title="Knocking-Heads Attention"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/562_b7f03141-c477-45af-bdb2-944a0be31403.jpg" class="card-img-top" alt="From Masks to Worlds: A Hitchhiker's Guide to World Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jinbin Bai
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/669-From-Masks-to-Worlds-A-Hitchhikers-Guide-to-World-Models/index.html"  title="From Masks to Worlds: A Hitchhiker's Guide to World Models">
+          <h3 class="card-title pb-2" itemprop="headline">From Masks to Worlds: A Hitchhiker's Guide to World Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/669-From-Masks-to-Worlds-A-Hitchhikers-Guide-to-World-Models/index.html"
+          title="From Masks to Worlds: A Hitchhiker's Guide to World Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/628_a2a79983-5db6-4d16-b1c5-356a3b73d43f.jpg" class="card-img-top" alt="RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bingjie Gao
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/734-RAPO-Cross-Stage-Prompt-Optimization-for-Text-to-Video-Generation-via-Data-Alignment-and-Test-Ti/index.html"  title="RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling">
+          <h3 class="card-title pb-2" itemprop="headline">RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/734-RAPO-Cross-Stage-Prompt-Optimization-for-Text-to-Video-Generation-via-Data-Alignment-and-Test-Ti/index.html"
+          title="RAPO++: Cross-Stage Prompt Optimization for Text-to-Video Generation via Data
+Alignment and Test-Time Scaling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/623_d07ef857-e025-48ef-b779-22e5b10e6a93.jpg" class="card-img-top" alt="Sparser Block-Sparse Attention via Token Permutation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xinghao Wang
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/730-Sparser-Block-Sparse-Attention-via-Token-Permutation/index.html"  title="Sparser Block-Sparse Attention via Token Permutation">
+          <h3 class="card-title pb-2" itemprop="headline">Sparser Block-Sparse Attention via Token Permutation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/730-Sparser-Block-Sparse-Attention-via-Token-Permutation/index.html"
+          title="Sparser Block-Sparse Attention via Token Permutation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/564_8cbd44e8-3aab-4498-a34c-5dd313a6c16b.jpg" class="card-img-top" alt="Thought Communication in Multiagent Collaboration" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yujia Zheng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/671-Thought-Communication-in-Multiagent-Collaboration/index.html"  title="Thought Communication in Multiagent Collaboration">
+          <h3 class="card-title pb-2" itemprop="headline">Thought Communication in Multiagent Collaboration</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/671-Thought-Communication-in-Multiagent-Collaboration/index.html"
+          title="Thought Communication in Multiagent Collaboration"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/548_2ecd9a26-797c-418a-b429-f85765f24dfa.jpg" class="card-img-top" alt="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiahao Meng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/657-Open-o3-Video-Grounded-Video-Reasoning-with-Explicit-Spatio-Temporal-Evidence/index.html"  title="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence">
+          <h3 class="card-title pb-2" itemprop="headline">Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/657-Open-o3-Video-Grounded-Video-Reasoning-with-Explicit-Spatio-Temporal-Evidence/index.html"
+          title="Open-o3 Video: Grounded Video Reasoning with Explicit Spatio-Temporal Evidence"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
