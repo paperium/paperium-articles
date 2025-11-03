@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>OmniX: From Unified Panoramic Generation and Perception to G</title>
+
+<meta name="keywords" content="panorama-based 2D lifting,  graphics-ready 3D scene generation,  physically based rendering (PBR) materials,  cross-modal adapter architecture,  multi">
+
+<meta name="description" content="panorama-based 2D lifting,  graphics-ready 3D scene generation,  physically based rendering (PBR) materials,  cross-modal adapter architecture,  multi">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                OmniX: From Unified Panoramic Generation and Perception to Graphics-Ready 3D
+Scenes
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yukun Huang, Jiwen Yu, Yanning Zhou, Jianan Wang, Xintao Wang, Pengfei Wan, Xihui Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              31 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/776_2512b503-42f2-47d2-ace3-4d574c9ef8b5.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>OmniX: Turning Simple Panoramas into Ready‑to‑Use 3D Worlds</h3>
+<p>
+Ever wondered how a flat 360° photo could become a walk‑through video‑game scene? <strong>Scientists have discovered</strong> a new trick called OmniX that lets a single panoramic picture sprout full‑blown 3‑D rooms you can explore, light, and even use for realistic simulations. Imagine taking a picture of your living room and instantly getting a virtual replica that reacts to sunlight just like the real one. OmniX works by borrowing the brainpower of today’s best 2‑D image generators and teaching them to “see” depth, texture, and material details hidden in the panorama. The result is a graphics‑ready world that looks as real as a photograph but can be moved through like a video game. This breakthrough means designers, game makers, and architects can create immersive environments faster than ever—no need for painstaking 3‑D modeling. <strong>It’s a game‑changing step</strong> toward making virtual worlds as easy to build as snapping a photo, opening doors to richer VR experiences and smarter simulations. <strong>Imagine the possibilities</strong> when every panorama can become a living, breathing space.<br><br>
+The future of digital worlds may just start with the next picture you take.
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: OmniX for Advanced 3D Scene Generation</h2>
+<p>This article introduces OmniX, a novel framework significantly advancing <strong>3D scene generation</strong> from 2D panoramas. Its primary goal is to create graphics-ready 3D environments suitable for <strong>Physically Based Rendering (PBR)</strong>, relighting, and physical dynamics simulation. OmniX uniquely repurposes powerful 2D generative models, specifically flow matching, for panoramic perception of geometry, textures, and PBR materials, enabling unified generation, perception, and completion. A key methodological concept involves a lightweight, efficient cross-modal adapter structure leveraging pre-trained 2D generative priors. Complementing OmniX, the authors present PanoX, a substantial <strong>synthetic multimodal panorama dataset</strong>. Experimental results confirm OmniX's effectiveness in panoramic visual perception and its capability to generate immersive, physically realistic virtual worlds.</p>
+
+<h2>Critical Evaluation</h2>
+<h3>Strengths: Unified Framework and Graphics-Ready Output</h3>
+<p>The OmniX framework presents compelling strengths, notably its innovative <strong>unified approach</strong> to panoramic generation, perception, and completion. It efficiently leverages powerful pre-trained 2D flow matching models for complex 3D tasks. A significant advantage is its focus on producing <strong>graphics-ready 3D scenes</strong> with intrinsic properties like PBR materials, geometry, and textures, crucial for realistic rendering and simulation. The introduction of PanoX, a novel <strong>multimodal synthetic panoramic dataset</strong> with dense annotations, is a substantial contribution. OmniX also demonstrates state-of-the-art performance in intrinsic decomposition and competitive geometry estimation, validated through extensive experiments.</p>
+
+<h3>Potential Weaknesses and Generalization Challenges</h3>
+<p>While highly innovative, the article's approach presents a few potential caveats. The reliance on a <strong>synthetic dataset</strong> like PanoX, though meticulously constructed, might challenge generalization to the full complexity of real-world panoramic data. Although the framework uses a lightweight adapter structure, training large generative models can still be computationally intensive. Furthermore, while repurposing 2D generative models is effective, the novelty lies more in its specific application to <strong>panoramic PBR material perception</strong>. Future work should explore robust validation against more diverse real-world datasets to ascertain its generalization capabilities.</p>
+
+<h2>Conclusion: Impact on Virtual Content Creation</h2>
+<p>In conclusion, this article presents a highly impactful contribution to <strong>3D scene generation</strong> and computer graphics. The OmniX framework, coupled with the PanoX dataset, represents a significant leap forward in creating immersive, physically realistic virtual environments from 2D panoramas. By effectively bridging powerful 2D generative priors with 3D intrinsic property perception, the authors provide a robust, versatile, and efficient solution. This work pushes the boundaries of automated content creation, opening exciting new possibilities for applications in virtual reality, augmented reality, and high-fidelity simulations. The transformative potential of OmniX for generating <strong>graphics-ready 3D environments</strong> is undeniable, setting a new benchmark for future research.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>panorama-based 2D lifting</li><li> graphics-ready 3D scene generation</li><li> physically based rendering (PBR) materials</li><li> cross-modal adapter architecture</li><li> multimodal panoramic dataset</li><li> panoramic geometry perception</li><li> 2D generative priors for 3D</li><li> immersive virtual environment synthesis</li><li> panoramic scene completion</li><li> omni-directional vision tasks</li><li> synthetic indoor/outdoor panoramas</li><li> relighting of generated 3D scenes</li><li> procedural vs 2D lifting methods</li><li> OmniX unified framework</li><li> panoramic visual perception for simulation</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/873/omnix-from-unified-panoramic-generation-and-perception-to-graphics-ready-3dscenes" target="_blank" title=" OmniX: From Unified Panoramic Generation and Perception to Graphics-Ready 3D
+Scenes">
+    OmniX: From Unified Panoramic Generation and Perception to Graphics-Ready 3D
+Scenes
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/770_b03c6179-2c75-467d-a32d-1aea5ae4adfe.jpg" class="card-img-top" alt="Kimi Linear: An Expressive, Efficient Attention Architecture" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kimi Team
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/867-Kimi-Linear-An-Expressive-Efficient-Attention-Architecture/index.html"  title="Kimi Linear: An Expressive, Efficient Attention Architecture">
+          <h3 class="card-title pb-2" itemprop="headline">Kimi Linear: An Expressive, Efficient Attention Architecture</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/867-Kimi-Linear-An-Expressive-Efficient-Attention-Architecture/index.html"
+          title="Kimi Linear: An Expressive, Efficient Attention Architecture"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/813_cb956f20-4f49-4b0a-80d0-569221b41689.jpg" class="card-img-top" alt="PORTool: Tool-Use LLM Training with Rewarded Tree" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Feijie Wu
+          </div>
+          <div class="article-meta-text">
+            02 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/904-PORTool-Tool-Use-LLM-Training-with-Rewarded-Tree/index.html"  title="PORTool: Tool-Use LLM Training with Rewarded Tree">
+          <h3 class="card-title pb-2" itemprop="headline">PORTool: Tool-Use LLM Training with Rewarded Tree</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/904-PORTool-Tool-Use-LLM-Training-with-Rewarded-Tree/index.html"
+          title="PORTool: Tool-Use LLM Training with Rewarded Tree"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/703_e31fc908-0324-4a5e-9783-2c6520dea43b.jpg" class="card-img-top" alt="Group Relative Attention Guidance for Image Editing" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xuanpu Zhang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/791-Group-Relative-Attention-Guidance-for-Image-Editing/index.html"  title="Group Relative Attention Guidance for Image Editing">
+          <h3 class="card-title pb-2" itemprop="headline">Group Relative Attention Guidance for Image Editing</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/791-Group-Relative-Attention-Guidance-for-Image-Editing/index.html"
+          title="Group Relative Attention Guidance for Image Editing"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/726_6ecc6668-aa22-406c-bc4b-61affa67312b.jpg" class="card-img-top" alt="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zengzhuang Xu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/810-FunReason-MT-Technical-Report-Overcoming-the-Complexity-Barrier-in-Multi-Turn-Function-Calling/index.html"  title="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling">
+          <h3 class="card-title pb-2" itemprop="headline">FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/810-FunReason-MT-Technical-Report-Overcoming-the-Complexity-Barrier-in-Multi-Turn-Function-Calling/index.html"
+          title="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/701_afa892c0-3c77-44d8-abd0-4ff42ecc1f56.jpg" class="card-img-top" alt="Uniform Discrete Diffusion with Metric Path for Video Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haoge Deng
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/827-Uniform-Discrete-Diffusion-with-Metric-Path-for-Video-Generation/index.html"  title="Uniform Discrete Diffusion with Metric Path for Video Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Uniform Discrete Diffusion with Metric Path for Video Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/827-Uniform-Discrete-Diffusion-with-Metric-Path-for-Video-Generation/index.html"
+          title="Uniform Discrete Diffusion with Metric Path for Video Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/729_1c07c90f-3e55-4511-a77b-fe29c7c58749.jpg" class="card-img-top" alt="Rethinking Visual Intelligence: Insights from Video Pretraining" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Pablo Acuaviva
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/813-Rethinking-Visual-Intelligence-Insights-from-Video-Pretraining/index.html"  title="Rethinking Visual Intelligence: Insights from Video Pretraining">
+          <h3 class="card-title pb-2" itemprop="headline">Rethinking Visual Intelligence: Insights from Video Pretraining</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/813-Rethinking-Visual-Intelligence-Insights-from-Video-Pretraining/index.html"
+          title="Rethinking Visual Intelligence: Insights from Video Pretraining"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
