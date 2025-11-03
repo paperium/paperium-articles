@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>GroundedPRM: Tree-Guided and Fidelity-Aware Process Reward M</title>
+
+<meta name="keywords" content="Process Reward Models (PRMs),  Multi-step reasoning LLMs,  GroundedPRM framework,  Automatic process supervision,  Monte Carlo Tree Search (MCTS) for ">
+
+<meta name="description" content="Process Reward Models (PRMs),  Multi-step reasoning LLMs,  GroundedPRM framework,  Automatic process supervision,  Monte Carlo Tree Search (MCTS) for ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                GroundedPRM: Tree-Guided and Fidelity-Aware Process Reward Modeling for
+Step-Level Reasoning
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yao Zhang, Yu Wu, Haowei Zhang, Weiguo Li, Haokun Chen, Jingpei Wu, Guohao Li, Zhen Han, Volker Tresp
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              18 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/331_1ac57749-e7c7-4e57-a35d-7906ff6c436d.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Learns to Think Step by Step – The GroundedPRM Breakthrough</h3>
+<p>
+Ever wondered how a computer can solve a puzzle the way you do, checking each move before the next? <strong>Scientists have created</strong> a new system called GroundedPRM that teaches AI to double‑check every step, just like a detective verifying clues with real evidence. Instead of guessing, the AI builds a “tree” of possible moves, and a handy external tool confirms whether each move makes sense, cutting out the wild guesses that often lead to mistakes. Think of it as a chef tasting each ingredient before adding the next, ensuring the final dish is perfect. This clever mix of step‑by‑step checking and overall outcome scoring lets the AI learn faster, using only a fraction of the data other methods need. The result? Up to a <strong>26% boost</strong> in solving complex problems, even beating models trained with expensive human labels. <strong>This discovery</strong> shows that smarter, more reliable AI is within reach, promising everyday tools that reason more clearly and safely for everyone. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing LLM Reasoning with GroundedPRM: A Fidelity-Aware Approach</h2>
+
+<p>This analysis focuses on GroundedPRM, an innovative framework designed to enhance multi-step reasoning in <strong>Large Language Models (LLMs)</strong> by addressing critical limitations in existing <strong>Process Reward Models (PRMs)</strong>. Traditional PRMs often suffer from noisy rewards, low factual fidelity, and misalignment with step-level reasoning objectives, stemming from costly human labeling, hallucination-prone LLM self-evaluation, or credit misattribution in Monte Carlo estimation. GroundedPRM introduces a novel, tree-guided, and fidelity-aware approach that leverages structured reasoning paths via <strong>Monte Carlo Tree Search (MCTS)</strong> and external tool verification to provide execution-grounded correctness signals. This methodology significantly reduces reward noise and eliminates hallucinated supervision, leading to superior performance and remarkable data efficiency in complex reasoning tasks, particularly in mathematical domains.</p>
+
+<h2>Critical Evaluation of GroundedPRM</h2>
+
+<h3>Strengths</h3>
+<p>GroundedPRM presents several compelling strengths. Its integration of <strong>Monte Carlo Tree Search (MCTS)</strong> for constructing structured reasoning paths enables fine-grained credit assignment, effectively mitigating reward noise. The framework's use of an <strong>external tool verification</strong> mechanism is crucial for ensuring factual fidelity, directly addressing the issue of hallucinated supervision prevalent in LLM-based self-evaluation. Furthermore, the hybrid reward aggregation mechanism, which fuses tool-based verification with MCTS-derived feedback, provides a robust and comprehensive assessment of reasoning steps. This approach demonstrates superior performance on ProcessBench with significantly less data, highlighting the power of <strong>verifiable, structure-guided supervision</strong> over mere data scale.</p>
+
+<h3>Weaknesses</h3>
+<p>While highly effective, GroundedPRM's reliance on external tools for verification might introduce dependencies on the availability and domain specificity of these tools, potentially limiting its generalizability to tasks where such tools are scarce or non-existent. The computational overhead associated with <strong>Monte Carlo Tree Search (MCTS)</strong>, particularly for extremely complex or expansive reasoning problems, could also be a consideration, impacting inference speed or resource requirements. Future research could explore methods to reduce this computational burden or adapt the framework for broader applicability across diverse reasoning domains without specialized external validators.</p>
+
+<h3>Implications</h3>
+<p>The implications of GroundedPRM are substantial for the field of LLM development. By offering a <strong>scalable and verifiable path</strong> toward high-quality process-level reasoning, it paves the way for more reliable and trustworthy AI systems capable of tackling intricate, multi-step problems. The framework's emphasis on <strong>structured reasoning</strong> and factual fidelity represents a significant paradigm shift, suggesting that strategic, quality-focused supervision can yield greater improvements than simply increasing training data volume. This could accelerate the deployment of LLMs in critical applications requiring high accuracy and interpretability.</p>
+
+<h2>Conclusion</h2>
+<p>GroundedPRM stands out as a pivotal advancement in enhancing <strong>Large Language Model (LLM)</strong> reasoning capabilities. Its innovative combination of <strong>Monte Carlo Tree Search (MCTS)</strong> and external tool verification effectively resolves long-standing challenges of reward noise and hallucination in process supervision. The framework's demonstrated superior performance and data efficiency underscore its value, offering a robust and <strong>verifiable supervision</strong> methodology that promises to elevate the reliability and trustworthiness of LLMs in complex, multi-step reasoning tasks.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Process Reward Models (PRMs)</li><li> Multi-step reasoning LLMs</li><li> GroundedPRM framework</li><li> Automatic process supervision</li><li> Monte Carlo Tree Search (MCTS) for LLMs</li><li> External tool validation LLM</li><li> Execution-grounded correctness signals</li><li> Hybrid reward aggregation LLMs</li><li> LLM hallucination mitigation</li><li> Reward noise reduction in LLMs</li><li> Fine-grained credit assignment</li><li> Scalable LLM reasoning</li><li> Verifiable process-level reasoning</li><li> ProcessBench evaluation</li><li> Rationale-enhanced generative rewards</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/315/groundedprm-tree-guided-and-fidelity-aware-process-reward-modeling-forstep-level-reasoning" target="_blank" title=" GroundedPRM: Tree-Guided and Fidelity-Aware Process Reward Modeling for
+Step-Level Reasoning">
+    GroundedPRM: Tree-Guided and Fidelity-Aware Process Reward Modeling for
+Step-Level Reasoning
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/323_1b10cbfc-f3a6-44b2-ab1e-b7fb517a68da.jpg" class="card-img-top" alt="The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Lukas Gienapp
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/307-The-German-Commons-154-Billion-Tokens-of-Openly-Licensed-Text-for-German-Language-Models/index.html"  title="The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/307-The-German-Commons-154-Billion-Tokens-of-Openly-Licensed-Text-for-German-Language-Models/index.html"
+          title="The German Commons - 154 Billion Tokens of Openly Licensed Text for German
+Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/313_15928343-e6eb-41c1-a619-59081b9e3b6a.jpg" class="card-img-top" alt="LLMs Can Get "Brain Rot"!" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shuo Xing
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/297-LLMs-Can-Get-Brain-Rot/index.html"  title="LLMs Can Get "Brain Rot"!">
+          <h3 class="card-title pb-2" itemprop="headline">LLMs Can Get "Brain Rot"!</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/297-LLMs-Can-Get-Brain-Rot/index.html"
+          title="LLMs Can Get "Brain Rot"!"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/327_07497a7c-ce11-4a31-a74e-25e4de5085c3.jpg" class="card-img-top" alt="Predicting Task Performance with Context-aware Scaling Laws" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kyle Montgomery
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/311-Predicting-Task-Performance-with-Context-aware-Scaling-Laws/index.html"  title="Predicting Task Performance with Context-aware Scaling Laws">
+          <h3 class="card-title pb-2" itemprop="headline">Predicting Task Performance with Context-aware Scaling Laws</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/311-Predicting-Task-Performance-with-Context-aware-Scaling-Laws/index.html"
+          title="Predicting Task Performance with Context-aware Scaling Laws"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/319_b414f611-c3dd-4624-a20e-37d18e511c55.jpg" class="card-img-top" alt="DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yu Zhou
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/303-DialectGen-Benchmarking-and-Improving-Dialect-Robustness-in-Multimodal-Generation/index.html"  title="DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation">
+          <h3 class="card-title pb-2" itemprop="headline">DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/303-DialectGen-Benchmarking-and-Improving-Dialect-Robustness-in-Multimodal-Generation/index.html"
+          title="DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/277_e835b796-9510-45d2-9062-50189d1aec58.jpg" class="card-img-top" alt="Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Rikiya Takehi
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/264-Fantastic-small-Retrievers-and-How-to-Train-Them-mxbai-edge-colbert-v0-Tech-Report/index.html"  title="Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report">
+          <h3 class="card-title pb-2" itemprop="headline">Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/264-Fantastic-small-Retrievers-and-How-to-Train-Them-mxbai-edge-colbert-v0-Tech-Report/index.html"
+          title="Fantastic (small) Retrievers and How to Train Them: mxbai-edge-colbert-v0 Tech
+Report"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/265_aabfbffb-ab8e-4172-a9bd-ebda1f8c4118.jpg" class="card-img-top" alt="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Cheng Cui
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/252-PaddleOCR-VL-Boosting-Multilingual-Document-Parsing-via-a-09B-Ultra-Compact-Vision-Language-Mode/index.html"  title="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model">
+          <h3 class="card-title pb-2" itemprop="headline">PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/252-PaddleOCR-VL-Boosting-Multilingual-Document-Parsing-via-a-09B-Ultra-Compact-Vision-Language-Mode/index.html"
+          title="PaddleOCR-VL: Boosting Multilingual Document Parsing via a 0.9B Ultra-Compact
+Vision-Language Model"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
