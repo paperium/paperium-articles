@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Efficient Long-context Language Model Training by Core Atten</title>
+
+<meta name="keywords" content="Core Attention Disaggregation (CAD),  Long-Context LLM Training Optimization,  Large Language Model Training Throughput,  Distributed Attention Comput">
+
+<meta name="description" content="Core Attention Disaggregation (CAD),  Long-Context LLM Training Optimization,  Large Language Model Training Throughput,  Distributed Attention Comput">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Efficient Long-context Language Model Training by Core Attention Disaggregation
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yonghao Zhuang, Junda Chen, Bo Pang, Yi Gu, Yibo Zhu, Yimin Jiang, Ion Stoica, Eric Xing, Hao Zhang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              23 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/484_7eb54011-0535-465c-ac39-b62cabc86d0b.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How a Clever AI Trick Makes Chatbots Faster and Smarter</h3>
+<p>
+Ever wondered why some AI models seem to stall when they try to read a whole book? <strong>Scientists have discovered</strong> a simple trick called core attention disaggregation that splits the hardest part of the model into its own “attention servers.” Think of it like a kitchen where the chef (the AI) hands off the chopping to a dedicated cutting board, keeping the rest of the cooking smooth and fast. By moving this heavy‑lifting step to separate devices, the whole system stays balanced, so no one has to wait for a slow cooker to finish. The result? Training huge language models on massive texts becomes up to <strong>35 % quicker</strong>, using the same hardware more efficiently. This means future chatbots could understand longer conversations, summarize lengthy articles, or help with research without the lag we see today. <strong>It’s a breakthrough</strong> that brings us closer to AI that can keep up with the endless flow of information around us. The next time you chat with a bot, it might just be thanks to this hidden teamwork behind the scenes. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Optimizing Long-Context LLM Training with Core Attention Disaggregation</h2>
+<p>This article introduces <strong>Core Attention Disaggregation (CAD)</strong>, a novel technique to enhance <strong>long-context Large Language Model (LLM) training efficiency</strong>. It addresses workload imbalance and stragglers caused by core attention's quadratic computational growth compared to other model components. CAD decouples core attention computation, executing it on a separate pool of dedicated devices to optimize resource utilization. The proposed <strong>DistCA system</strong> implements CAD via innovative mechanisms like ping-pong execution and dynamic rebatching of token-level tasks. This approach achieves up to a <strong>1.35x speedup</strong> in end-to-end training throughput on large-scale GPU clusters, effectively eliminating data and pipeline parallel stragglers and ensuring near-perfect compute and memory balance.</p>
+
+<h3>Critical Evaluation of Core Attention Disaggregation</h3>
+<h4>Strengths</h4>
+<p>This research offers a highly impactful solution to a significant bottleneck in <strong>LLM training at scale</strong>. The core idea of <strong>Core Attention Disaggregation (CAD)</strong> is conceptually elegant, leveraging core attention's stateless and composable nature for independent scheduling. The DistCA system's robust implementation incorporates <strong>ping-pong execution</strong> to fully overlap communication with computation and in-place execution for memory efficiency. Its dynamic rebatching of token-level tasks and communication-aware greedy scheduling ensure optimal load balancing and minimal overhead. Experimental results on <strong>512 H200 GPUs</strong>, demonstrating up to <strong>1.35x throughput improvement</strong> and straggler elimination, provide strong evidence of its practical efficacy, mitigating the quadratic compute growth challenge.</p>
+
+<h4>Weaknesses</h4>
+<p>While highly effective, the study notes that <strong>memory fragmentation</strong> can cause Central Processing Unit (CPU) overhead, particularly in larger 34B parameter models. This suggests potential scalability challenges or efficiency trade-offs with even larger models or different hardware configurations. The complexity introduced by disaggregating core attention into a separate server pool, while beneficial, could also add to overall system management overhead. Further exploration into DistCA's generalizability across a wider range of LLM architectures beyond LLaMA, and its performance implications for models with varying attention mechanisms, would be valuable.</p>
+
+<h4>Implications</h4>
+<p>The implications of <strong>Core Attention Disaggregation</strong> are substantial for advancing <strong>large-scale AI research</strong> and development. By significantly improving long-context LLM training efficiency, this work enables researchers to train more capable models with extended context windows, pushing the boundaries of LLM capabilities. It offers a pathway to more economically viable training of next-generation models, reducing immense computational costs. This innovation could accelerate the development of sophisticated applications requiring deep contextual understanding, fostering greater innovation in the broader AI ecosystem.</p>
+
+<h3>Conclusion: Advancing Large Language Model Efficiency</h3>
+<p>In conclusion, this article presents a groundbreaking advancement in <strong>large language model training infrastructure</strong>. The <strong>Core Attention Disaggregation (CAD)</strong> technique, implemented in the <strong>DistCA system</strong>, offers a robust and highly effective solution to load imbalance and stragglers in long-context training. Its demonstrated ability to achieve significant throughput improvements and near-perfect resource balance positions it as a critical innovation, promising to accelerate the development of more powerful and efficient AI systems.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Core Attention Disaggregation (CAD)</li><li> Long-Context LLM Training Optimization</li><li> Large Language Model Training Throughput</li><li> Distributed Attention Computation</li><li> LLM Load Balancing</li><li> Straggler Elimination in Distributed Training</li><li> Attention Mechanism Efficiency</li><li> DistCA System</li><li> Attention Servers for LLMs</li><li> 512k Token Context Length Training</li><li> GPU Cluster LLM Training</li><li> Memory Optimization for Large Language Models</li><li> Quadratic Compute Growth Mitigation</li><li> Stateless Attention Processing</li><li> Composable Attention Kernels</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/489/efficient-long-context-language-model-training-by-core-attention-disaggregation" target="_blank" title=" Efficient Long-context Language Model Training by Core Attention Disaggregation">
+    Efficient Long-context Language Model Training by Core Attention Disaggregation
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/464_754e78ab-d575-445d-a27d-e87386e67f35.jpg" class="card-img-top" alt="EvoSyn: Generalizable Evolutionary Data Synthesis for Verifiable Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            He Du
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/468-EvoSyn-Generalizable-Evolutionary-Data-Synthesis-for-Verifiable-Learning/index.html"  title="EvoSyn: Generalizable Evolutionary Data Synthesis for Verifiable Learning">
+          <h3 class="card-title pb-2" itemprop="headline">EvoSyn: Generalizable Evolutionary Data Synthesis for Verifiable Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/468-EvoSyn-Generalizable-Evolutionary-Data-Synthesis-for-Verifiable-Learning/index.html"
+          title="EvoSyn: Generalizable Evolutionary Data Synthesis for Verifiable Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/458_cddf2082-b21d-4cc5-9f42-cde0fe313ff1.jpg" class="card-img-top" alt="Video Reasoning without Training" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Deepak Sridhar
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/445-Video-Reasoning-without-Training/index.html"  title="Video Reasoning without Training">
+          <h3 class="card-title pb-2" itemprop="headline">Video Reasoning without Training</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/445-Video-Reasoning-without-Training/index.html"
+          title="Video Reasoning without Training"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/362_59b67aae-ff58-47d3-8179-4afe2a7030d8.jpg" class="card-img-top" alt="Skyfall-GS: Synthesizing Immersive 3D Urban Scenes from Satellite Imagery" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jie-Ying Lee
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/342-Skyfall-GS-Synthesizing-Immersive-3D-Urban-Scenes-from-Satellite-Imagery/index.html"  title="Skyfall-GS: Synthesizing Immersive 3D Urban Scenes from Satellite Imagery">
+          <h3 class="card-title pb-2" itemprop="headline">Skyfall-GS: Synthesizing Immersive 3D Urban Scenes from Satellite Imagery</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/342-Skyfall-GS-Synthesizing-Immersive-3D-Urban-Scenes-from-Satellite-Imagery/index.html"
+          title="Skyfall-GS: Synthesizing Immersive 3D Urban Scenes from Satellite Imagery"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/428_f56bfafb-b16c-4aab-b1ac-87c0fa7bf0b9.jpg" class="card-img-top" alt="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuhao Yang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/401-UltraCUA-A-Foundation-Model-for-Computer-Use-Agents-with-Hybrid-Action/index.html"  title="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action">
+          <h3 class="card-title pb-2" itemprop="headline">UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/401-UltraCUA-A-Foundation-Model-for-Computer-Use-Agents-with-Hybrid-Action/index.html"
+          title="UltraCUA: A Foundation Model for Computer Use Agents with Hybrid Action"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/766_4c3fa034-61a4-4e8a-9f0b-41c2f3ab73de.jpg" class="card-img-top" alt="Exploring Conditions for Diffusion models in Robotic Control" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Heeseong Shin
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/863-Exploring-Conditions-for-Diffusion-models-in-Robotic-Control/index.html"  title="Exploring Conditions for Diffusion models in Robotic Control">
+          <h3 class="card-title pb-2" itemprop="headline">Exploring Conditions for Diffusion models in Robotic Control</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/863-Exploring-Conditions-for-Diffusion-models-in-Robotic-Control/index.html"
+          title="Exploring Conditions for Diffusion models in Robotic Control"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/416_c28e2a69-7a11-46f4-a8fc-ec58d4fe5dd0.jpg" class="card-img-top" alt="QueST: Incentivizing LLMs to Generate Difficult Problems" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hanxu Hu
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/389-QueST-Incentivizing-LLMs-to-Generate-Difficult-Problems/index.html"  title="QueST: Incentivizing LLMs to Generate Difficult Problems">
+          <h3 class="card-title pb-2" itemprop="headline">QueST: Incentivizing LLMs to Generate Difficult Problems</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/389-QueST-Incentivizing-LLMs-to-Generate-Difficult-Problems/index.html"
+          title="QueST: Incentivizing LLMs to Generate Difficult Problems"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
