@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Text or Pixels? It Takes Half: On the Token Efficiency of Vi</title>
+
+<meta name="keywords" content="large language models,  multimodal input processing,  visual text representation,  input compression techniques,  token usage reduction,  text-as-imag">
+
+<meta name="description" content="large language models,  multimodal input processing,  visual text representation,  input compression techniques,  token usage reduction,  text-as-imag">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yanhong Li, Zixuan Lan, Jiawei Zhou
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              24 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/544_c6350bc9-7949-4e26-828e-8d5bb26f2c08.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Half the Tokens: Turning Text into Pictures to Supercharge AI</h3>
+<p>
+Ever wondered if a picture could carry the same story as a long paragraph? <strong>Scientists discovered</strong> that feeding AI a snapshot of text can cut the amount of “reading bits” it needs by almost half—without losing meaning. Imagine writing a whole essay, then snapping a photo of the page and showing it to a friend; they still get every idea, but you’ve saved the effort of typing each word. By turning lengthy documents into a single image, modern AI models understand the content just as well while using far fewer internal tokens. Tests on tasks like summarizing news articles and searching long documents showed the same quality results, but with a dramatic reduction in processing load. This clever shortcut means faster responses and lower costs for the services we use every day. <strong>It’s a simple trick</strong> that could make AI assistants more efficient for everyone, and <strong>the future might just look a little more visual.</strong>
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>This article explores an innovative approach to input compression for <strong>multimodal large language models</strong> (MLLMs) by converting long text inputs into images. The primary goal is to determine whether this method can significantly reduce the number of decoder tokens required while maintaining performance levels. Through rigorous experimentation on two benchmarks, RULER and CNN/DailyMail, the authors demonstrate that this <strong>text-as-image</strong> technique can achieve nearly 50% token savings without compromising task accuracy, thus enhancing the efficiency of LLMs.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The article presents a compelling case for the effectiveness of the <strong>text-as-image</strong> compression method, showcasing substantial token savings and improved inference speed. The use of two distinct benchmarks, RULER and CNN/DailyMail, adds robustness to the findings, allowing for a comprehensive evaluation of the method's applicability across different tasks. Additionally, the results indicate that this approach not only reduces the computational load but also enhances the quality of generated outputs, particularly in document summarization, where it outperforms traditional token-pruning methods.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study has some limitations. The reliance on specific models, such as GPT-4.1-mini and Qwen2.5-VL-72B-Instruct, may restrict the generalizability of the findings to other architectures or configurations. Furthermore, while the results are promising, the long-term implications of using images as inputs in various contexts remain unexplored. The potential for loss of nuanced information in the image conversion process could also pose challenges in certain applications, warranting further investigation.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the field of natural language processing and <strong>machine learning</strong>. By demonstrating that visual representations can serve as an effective means of input compression, the study opens new avenues for optimizing LLMs, particularly in scenarios where computational resources are limited. This could lead to faster processing times and broader accessibility of advanced language models in real-world applications.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, this article makes a valuable contribution to the ongoing discourse on input efficiency in <strong>large language models</strong>. The innovative <strong>text-as-image</strong> method not only reduces token usage but also preserves performance, suggesting a promising direction for future research. As the demand for more efficient and capable LLMs continues to grow, this approach could play a crucial role in shaping the next generation of multimodal AI systems.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>large language models</li><li> multimodal input processing</li><li> visual text representation</li><li> input compression techniques</li><li> token usage reduction</li><li> text-as-image method</li><li> decoder token efficiency</li><li> long-context retrieval benchmarks</li><li> document summarization strategies</li><li> performance preservation in LLMs</li><li> image-based text encoding</li><li> experimental results in NLP</li><li> RULER benchmark analysis</li><li> CNN/DailyMail summarization</li><li> effective input methods for LLMs</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/653/text-or-pixels-it-takes-half-on-the-token-efficiency-of-visual-text-inputs-inmultimodal-llms" target="_blank" title=" Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs">
+    Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/544_c6350bc9-7949-4e26-828e-8d5bb26f2c08.jpg" class="card-img-top" alt="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yanhong Li
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"  title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/653-Text-or-Pixels-It-Takes-Half-On-the-Token-Efficiency-of-Visual-Text-Inputs-in-Multimodal-LLMs/index.html"
+          title="Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in
+Multimodal LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/553_c831e856-154c-44b3-8ad6-c27d6ee4a99f.jpg" class="card-img-top" alt="ImpossibleBench: Measuring LLMs' Propensity of Exploiting Test Cases" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ziqian Zhong
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/613-ImpossibleBench-Measuring-LLMs-Propensity-of-Exploiting-Test-Cases/index.html"  title="ImpossibleBench: Measuring LLMs' Propensity of Exploiting Test Cases">
+          <h3 class="card-title pb-2" itemprop="headline">ImpossibleBench: Measuring LLMs' Propensity of Exploiting Test Cases</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/613-ImpossibleBench-Measuring-LLMs-Propensity-of-Exploiting-Test-Cases/index.html"
+          title="ImpossibleBench: Measuring LLMs' Propensity of Exploiting Test Cases"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/670_6b2b8879-3a0b-4a3b-94c2-cdeb10dff7d8.jpg" class="card-img-top" alt="Omni-Reward: Towards Generalist Omni-Modal Reward Modeling with Free-Form
+Preferences" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhuoran Jin
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/768-Omni-Reward-Towards-Generalist-Omni-Modal-Reward-Modeling-with-Free-Form-Preferences/index.html"  title="Omni-Reward: Towards Generalist Omni-Modal Reward Modeling with Free-Form
+Preferences">
+          <h3 class="card-title pb-2" itemprop="headline">Omni-Reward: Towards Generalist Omni-Modal Reward Modeling with Free-Form
+Preferences</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/768-Omni-Reward-Towards-Generalist-Omni-Modal-Reward-Modeling-with-Free-Form-Preferences/index.html"
+          title="Omni-Reward: Towards Generalist Omni-Modal Reward Modeling with Free-Form
+Preferences"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/731_a2d2a6ff-433b-4100-aca7-35f23201b1ee.jpg" class="card-img-top" alt="PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Penghao Wang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/815-PartNeXt-A-Next-Generation-Dataset-for-Fine-Grained-and-Hierarchical-3D-Part-Understanding/index.html"  title="PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding">
+          <h3 class="card-title pb-2" itemprop="headline">PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/815-PartNeXt-A-Next-Generation-Dataset-for-Fine-Grained-and-Hierarchical-3D-Part-Understanding/index.html"
+          title="PartNeXt: A Next-Generation Dataset for Fine-Grained and Hierarchical 3D Part
+Understanding"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/622_c2453e59-35d1-4825-843d-83b6dde16536.jpg" class="card-img-top" alt="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yifu Luo
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/726-Sample-By-Step-Optimize-By-Chunk-Chunk-Level-GRPO-For-Text-to-Image-Generation/index.html"  title="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation">
+          <h3 class="card-title pb-2" itemprop="headline">Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/726-Sample-By-Step-Optimize-By-Chunk-Chunk-Level-GRPO-For-Text-to-Image-Generation/index.html"
+          title="Sample By Step, Optimize By Chunk: Chunk-Level GRPO For Text-to-Image Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/651_eec9c8a6-3a92-4fa7-98dd-6fefb86bc9cc.jpg" class="card-img-top" alt="ReCode: Unify Plan and Action for Universal Granularity Control" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhaoyang Yu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/751-ReCode-Unify-Plan-and-Action-for-Universal-Granularity-Control/index.html"  title="ReCode: Unify Plan and Action for Universal Granularity Control">
+          <h3 class="card-title pb-2" itemprop="headline">ReCode: Unify Plan and Action for Universal Granularity Control</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/751-ReCode-Unify-Plan-and-Action-for-Universal-Granularity-Control/index.html"
+          title="ReCode: Unify Plan and Action for Universal Granularity Control"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
