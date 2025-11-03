@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>From Charts to Code: A Hierarchical Benchmark for Multimodal</title>
+
+<meta name="keywords" content="Chart2Code,  multimodal models,  chart understanding benchmark,  code generation evaluation,  hierarchical benchmark,  chart reproduction tasks,  char">
+
+<meta name="description" content="Chart2Code,  multimodal models,  chart understanding benchmark,  code generation evaluation,  hierarchical benchmark,  chart reproduction tasks,  char">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                From Charts to Code: A Hierarchical Benchmark for Multimodal Models
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Jiahao Tang, Henry Hengyuan Zhao, Lijian Wu, Yifei Tao, Dongxing Mao, Yang Wan, Jingru Tan, Min Zeng, Min Li, Alex Jinpeng Wang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              24 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/530_d9d95751-d54b-4dcd-a468-8799ccc672e2.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>From Charts to Code: Meet the New Test That Challenges AI</h3>
+<p>
+Ever wondered if a computer can turn a messy spreadsheet into a beautiful graph just by listening to your instructions? <strong>Chart2Code</strong> is the latest <strong>benchmark</strong> that puts that question to the test. Imagine giving a friend a pile of Lego bricks and asking them to build a castle, a spaceship, or a bridge—each step harder than the last. That’s exactly what researchers did, creating three levels of tasks: copying a chart, editing it, and finally turning a long table into a perfect visual. Even the most powerful <strong>AI</strong> models, like GPT‑5, struggled, scoring barely above half on the coding part and even lower on the visual quality. This shows that while AI can write code, making it look right is still a big challenge. The hope? By pushing these limits, we’ll soon have assistants that can instantly turn data into clear, share‑ready graphics, saving us hours of work. The future of data storytelling is just beginning—and it’s more exciting than ever. 
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>This article presents <strong>Chart2Code</strong>, a novel benchmark designed to evaluate the capabilities of <strong>Large Multimodal Models</strong> (LMMs) in understanding charts and generating corresponding code. The benchmark is structured into three progressive levels: Level 1 focuses on <strong>chart reproduction</strong>, Level 2 on <strong>chart editing</strong>, and Level 3 on transforming long tables into charts. The study encompasses 2,023 tasks across 22 chart types, employing multi-level evaluation metrics to assess both code correctness and visual fidelity. Experimental results indicate that even the leading model, GPT-5, struggles with these complex tasks, achieving low scores in both code execution and chart quality, thereby highlighting significant challenges in the field.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The primary strength of this study lies in its comprehensive approach to benchmarking LMMs, particularly through the hierarchical structure of <strong>Chart2Code</strong>. By incorporating user-driven scenarios and progressively increasing task difficulty, the benchmark effectively mirrors real-world applications. The inclusion of diverse tasks and multi-dimensional evaluation metrics enhances the robustness of the findings, providing a clear picture of model performance across various complexities. Furthermore, the empirical analysis of 25 state-of-the-art models, including both proprietary and open-source options, offers valuable insights into the current landscape of multimodal reasoning.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study presents several weaknesses. The low execution rates observed, particularly in complex tasks, suggest that even advanced models like GPT-5 may not be adequately equipped for high-fidelity chart generation. This raises questions about the benchmark's sensitivity and the potential limitations of the evaluation metrics employed. Additionally, the reliance on long-context inputs may further complicate the performance of LMMs, particularly for open-source models, which tend to exhibit a more pronounced gap in visual fidelity compared to proprietary counterparts.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the development of future LMMs. By identifying the challenges associated with <strong>chart-to-code generation</strong>, the study paves the way for targeted improvements in model architecture and training methodologies. The findings underscore the necessity for enhanced multimodal reasoning capabilities, which could lead to more robust and general-purpose models in the future.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the introduction of <strong>Chart2Code</strong> marks a pivotal advancement in the evaluation of LMMs, revealing critical insights into their current limitations in chart understanding and code generation. The benchmark's structured approach and comprehensive task design provide a valuable framework for future research, while the empirical findings highlight the pressing need for improvements in model performance. As the field progresses, the insights gained from this study will be instrumental in guiding the development of more effective multimodal models.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Chart2Code</li><li> multimodal models</li><li> chart understanding benchmark</li><li> code generation evaluation</li><li> hierarchical benchmark</li><li> chart reproduction tasks</li><li> chart editing complexity</li><li> long-table to chart transformation</li><li> visual fidelity assessment</li><li> state-of-the-art LMMs</li><li> GPT-5 performance metrics</li><li> user-driven chart tasks</li><li> task complexity scaling</li><li> real-world chart scenarios</li><li> multimodal reasoning advancements</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/640/from-charts-to-code-a-hierarchical-benchmark-for-multimodal-models" target="_blank" title=" From Charts to Code: A Hierarchical Benchmark for Multimodal Models">
+    From Charts to Code: A Hierarchical Benchmark for Multimodal Models
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/509_168bc175-79c3-401e-8f95-4394c338f76e.jpg" class="card-img-top" alt="BAPO: Stabilizing Off-Policy Reinforcement Learning for LLMs via Balanced Policy
+Optimization with Adaptive Clipping" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhiheng Xi
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/505-BAPO-Stabilizing-Off-Policy-Reinforcement-Learning-for-LLMs-via-Balanced-Policy-Optimization-wit/index.html"  title="BAPO: Stabilizing Off-Policy Reinforcement Learning for LLMs via Balanced Policy
+Optimization with Adaptive Clipping">
+          <h3 class="card-title pb-2" itemprop="headline">BAPO: Stabilizing Off-Policy Reinforcement Learning for LLMs via Balanced Policy
+Optimization with Adaptive Clipping</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/505-BAPO-Stabilizing-Off-Policy-Reinforcement-Learning-for-LLMs-via-Balanced-Policy-Optimization-wit/index.html"
+          title="BAPO: Stabilizing Off-Policy Reinforcement Learning for LLMs via Balanced Policy
+Optimization with Adaptive Clipping"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/488_0788b4bf-a7c9-47af-978f-a1d07ec954c0.jpg" class="card-img-top" alt="DeepSeek-OCR: Contexts Optical Compression" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Haoran Wei
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/492-DeepSeek-OCR-Contexts-Optical-Compression/index.html"  title="DeepSeek-OCR: Contexts Optical Compression">
+          <h3 class="card-title pb-2" itemprop="headline">DeepSeek-OCR: Contexts Optical Compression</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/492-DeepSeek-OCR-Contexts-Optical-Compression/index.html"
+          title="DeepSeek-OCR: Contexts Optical Compression"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/532_c3823834-974f-46d5-bbb9-699434b3da56.jpg" class="card-img-top" alt="Steering Autoregressive Music Generation with Recursive Feature Machines" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Daniel Zhao
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/642-Steering-Autoregressive-Music-Generation-with-Recursive-Feature-Machines/index.html"  title="Steering Autoregressive Music Generation with Recursive Feature Machines">
+          <h3 class="card-title pb-2" itemprop="headline">Steering Autoregressive Music Generation with Recursive Feature Machines</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/642-Steering-Autoregressive-Music-Generation-with-Recursive-Feature-Machines/index.html"
+          title="Steering Autoregressive Music Generation with Recursive Feature Machines"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/563_f67fac08-355c-42bd-80b6-6e86f00d413e.jpg" class="card-img-top" alt="Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiashi Feng
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/670-Seed3D-10-From-Images-to-High-Fidelity-Simulation-Ready-3D-Assets/index.html"  title="Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets">
+          <h3 class="card-title pb-2" itemprop="headline">Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/670-Seed3D-10-From-Images-to-High-Fidelity-Simulation-Ready-3D-Assets/index.html"
+          title="Seed3D 1.0: From Images to High-Fidelity Simulation-Ready 3D Assets"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/508_6cfbfc36-f709-4b4f-9a59-4ff7d97bf4dc.jpg" class="card-img-top" alt="Every Attention Matters: An Efficient Hybrid Architecture for Long-Context
+Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ling Team
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/504-Every-Attention-Matters-An-Efficient-Hybrid-Architecture-for-Long-Context-Reasoning/index.html"  title="Every Attention Matters: An Efficient Hybrid Architecture for Long-Context
+Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">Every Attention Matters: An Efficient Hybrid Architecture for Long-Context
+Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/504-Every-Attention-Matters-An-Efficient-Hybrid-Architecture-for-Long-Context-Reasoning/index.html"
+          title="Every Attention Matters: An Efficient Hybrid Architecture for Long-Context
+Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/557_2143d8e2-3422-460d-a53d-288807017be8.jpg" class="card-img-top" alt="The Massive Legal Embedding Benchmark (MLEB)" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Umar Butler
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/664-The-Massive-Legal-Embedding-Benchmark-MLEB/index.html"  title="The Massive Legal Embedding Benchmark (MLEB)">
+          <h3 class="card-title pb-2" itemprop="headline">The Massive Legal Embedding Benchmark (MLEB)</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/664-The-Massive-Legal-Embedding-Benchmark-MLEB/index.html"
+          title="The Massive Legal Embedding Benchmark (MLEB)"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
