@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>IVEBench: Modern Benchmark Suite for Instruction-Guided Vide</title>
+
+<meta name="keywords" content="instruction-guided video editing,  IVEBench benchmark suite,  video editing assessment,  semantic dimensions in video editing,  high-quality source vi">
+
+<meta name="description" content="instruction-guided video editing,  IVEBench benchmark suite,  video editing assessment,  semantic dimensions in video editing,  high-quality source vi">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yinan Chen, Jiangning Zhang, Teng Hu, Yuxiang Zeng, Zhucun Xue, Qingdong He, Chengjie Wang, Yong Liu, Xiaobin Hu, Shuicheng Yan
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/194_79a6cdca-a014-44fe-9804-a0aef4af8789.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>IVEBench: The New Playground for Smarter Video Editing</h3>
+<p>Ever wondered how your phone could turn a simple clip into a movie just by following a short instruction? <strong>Scientists have built</strong> a fresh testing ground called IVEBench that lets AI master <strong>instruction‑guided video editing</strong> exactly the way you ask. Imagine a kitchen where chefs practice recipes on 600 different ingredients—IVEBench offers 600 varied video “ingredients,” from a few seconds to longer scenes, covering everything from sports to sunsets. The suite challenges AI with 8 big editing categories and 35 tiny tasks, like “add a dramatic zoom” or “swap the background,” all written and polished by smart language models and human experts. To judge the results, IVEBench looks at three things: how good the video looks, whether it followed the instruction, and if it stayed true to the original footage. This three‑point check is like a movie critic, a teacher, and a detective rolled into one. <strong>With this tool, developers can create video editors that feel more natural and reliable, bringing professional‑grade magic to everyday creators.</strong> The future of storytelling is just a command away.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents IVEBench, a novel benchmark suite designed for <strong>instruction-guided video editing</strong> (IVE). It addresses significant shortcomings in existing benchmarks, such as limited source diversity and inadequate evaluation metrics. IVEBench features a comprehensive dataset of 600 high-quality videos across seven semantic dimensions and includes eight categories of editing tasks. The evaluation framework integrates traditional metrics with multimodal assessments, focusing on video quality, instruction compliance, and fidelity. The findings indicate that IVEBench effectively aligns with human perception, enhancing the evaluation of IVE methods.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of IVEBench is its extensive and diverse dataset, which significantly enhances the <strong>robustness</strong> of evaluations in video editing research. The inclusion of various editing tasks and the three-dimensional evaluation protocol provide a comprehensive framework that addresses the limitations of previous benchmarks. Furthermore, the integration of large language models for prompt generation ensures that the tasks are relevant and challenging, reflecting real-world editing scenarios.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, IVEBench is not without limitations. The article notes that while the benchmark demonstrates good frame-to-frame consistency, there are issues with per-frame quality and instruction compliance. These weaknesses suggest that while IVEBench is a step forward, there is still room for improvement in the fidelity of the editing outputs. Additionally, the reliance on specific models for evaluation may introduce biases that could affect the generalizability of the findings.</p>
+
+<h3>Implications</h3>
+<p>The introduction of IVEBench has significant implications for the field of video editing research. By providing a more comprehensive and human-aligned evaluation framework, it sets a new standard for assessing IVE methods. This benchmark not only facilitates better comparisons among state-of-the-art models but also encourages future research to focus on enhancing <strong>fidelity</strong> and expanding the range of editing capabilities.</p>
+
+<h3>Conclusion</h3>
+<p>In summary, IVEBench represents a critical advancement in the evaluation of instruction-guided video editing. Its comprehensive dataset and innovative evaluation metrics offer a valuable resource for researchers and practitioners alike. As the field continues to evolve, the insights gained from IVEBench will be instrumental in guiding future developments and improving the overall quality of video editing technologies.</p>
+
+<h3>Readability</h3>
+<p>The article is well-structured and presents its findings in a clear and engaging manner. The use of concise paragraphs and straightforward language enhances readability, making it accessible to a broad audience. By focusing on key terms and concepts, the text effectively communicates the significance of IVEBench in advancing the field of video editing.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>instruction-guided video editing</li><li> IVEBench benchmark suite</li><li> video editing assessment</li><li> semantic dimensions in video editing</li><li> high-quality source videos</li><li> editing task categories</li><li> multimodal evaluation metrics</li><li> large language models in video editing</li><li> video quality assessment</li><li> instruction compliance evaluation</li><li> video fidelity metrics</li><li> comprehensive benchmarking methods</li><li> human-aligned evaluation outcomes</li><li> systematic evaluation challenges</li><li> diverse video editing benchmarks</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/183/ivebench-modern-benchmark-suite-for-instruction-guided-video-editing-assessment" target="_blank" title=" IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment">
+    IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/249_3e54fa4e-6fa3-47bc-a71e-d8b0c9b63f11.jpg" class="card-img-top" alt="CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoji Zheng
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/237-CoIRL-AD-Collaborative-Competitive-Imitation-Reinforcement-Learning-in-Latent-World-Models-for-A/index.html"  title="CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving">
+          <h3 class="card-title pb-2" itemprop="headline">CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/237-CoIRL-AD-Collaborative-Competitive-Imitation-Reinforcement-Learning-in-Latent-World-Models-for-A/index.html"
+          title="CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent
+World Models for Autonomous Driving"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/202_6902829d-2e9c-4a02-bd4b-62f5628c751e.jpg" class="card-img-top" alt="MultiCOIN: Multi-Modal COntrollable Video INbetweening" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Maham Tanveer
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/191-MultiCOIN-Multi-Modal-COntrollable-Video-INbetweening/index.html"  title="MultiCOIN: Multi-Modal COntrollable Video INbetweening">
+          <h3 class="card-title pb-2" itemprop="headline">MultiCOIN: Multi-Modal COntrollable Video INbetweening</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/191-MultiCOIN-Multi-Modal-COntrollable-Video-INbetweening/index.html"
+          title="MultiCOIN: Multi-Modal COntrollable Video INbetweening"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/368_5fdf687a-6395-4b65-9409-15390877e963.jpg" class="card-img-top" alt="Language Models Model Language" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Łukasz Borchmann
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"  title="Language Models Model Language">
+          <h3 class="card-title pb-2" itemprop="headline">Language Models Model Language</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/348-Language-Models-Model-Language/index.html"
+          title="Language Models Model Language"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/253_4dda5bde-63d0-4172-a3f2-c2bb8beea476.jpg" class="card-img-top" alt="GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Heng Zhang
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/241-GraphTracer-Graph-Guided-Failure-Tracing-in-LLM-Agents-for-Robust-Multi-Turn-Deep-Search/index.html"  title="GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search">
+          <h3 class="card-title pb-2" itemprop="headline">GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/241-GraphTracer-Graph-Guided-Failure-Tracing-in-LLM-Agents-for-Robust-Multi-Turn-Deep-Search/index.html"
+          title="GraphTracer: Graph-Guided Failure Tracing in LLM Agents for Robust Multi-Turn
+Deep Search"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/245_4555a08d-b1c8-47cb-a5e0-2803ac1b9db9.jpg" class="card-img-top" alt="Revisiting Model Interpolation for Efficient Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Taiqiang Wu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/233-Revisiting-Model-Interpolation-for-Efficient-Reasoning/index.html"  title="Revisiting Model Interpolation for Efficient Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">Revisiting Model Interpolation for Efficient Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/233-Revisiting-Model-Interpolation-for-Efficient-Reasoning/index.html"
+          title="Revisiting Model Interpolation for Efficient Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/375_debd8343-c39a-4e8a-ad94-36eb783d07a3.jpg" class="card-img-top" alt="Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Nikita Afonin
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/355-Emergent-Misalignment-via-In-Context-Learning-Narrow-in-context-examples-can-produce-broadly-mis/index.html"  title="Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/355-Emergent-Misalignment-via-In-Context-Learning-Narrow-in-context-examples-can-produce-broadly-mis/index.html"
+          title="Emergent Misalignment via In-Context Learning: Narrow in-context examples can
+produce broadly misaligned LLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
