@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Track, Inpaint, Resplat: Subject-driven 3D and 4D Generation</title>
+
+<meta name="keywords" content="subject-driven 3D generation,  personalized 3D asset creation,  semantic identity preservation in 4D,  video tracking for 3D modification,  2D inpaint">
+
+<meta name="description" content="subject-driven 3D generation,  personalized 3D asset creation,  semantic identity preservation in 4D,  video tracking for 3D modification,  2D inpaint">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Track, Inpaint, Resplat: Subject-driven 3D and 4D Generation with Progressive
+Texture Infilling
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Shuhong Zheng, Ashkan Mirzaei, Igor Gilitschenski
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              29 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/687_0f75b6e8-1954-4286-8624-465ee0c94fb7.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Keeps Your 3D Characters Looking Exactly Like You</h3>
+<p>
+Ever wondered why a 3D avatar sometimes looks like a stranger when you turn it? <strong>Scientists have discovered</strong> a clever trick called TIRE—short for <strong>Track, Inpaint, REsplat</strong>—that lets computers keep the true look of a person or object across every angle and even through motion. First, the system watches a short video and <strong>tracks</strong> the parts that need fixing, just like a camera following a dancer. Then a smart “painting” tool fills in those spots with the right textures, similar to a tailor stitching a perfect patch onto a favorite jacket. Finally, the updated images are woven back into the 3D model, so the virtual version stays faithful to the original subject. This breakthrough means your digital twins, game characters, or AR filters will retain their unique identity, no matter how you spin them. Imagine a world where every virtual replica feels as personal as the real thing—because now, technology can keep up with the details that make us who we are. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Subject-Driven 3D/4D Generation with TIRE</h2>
+<p>Current methods for <strong>3D/4D content generation</strong> often prioritize photorealism and aesthetics but frequently struggle with maintaining the semantic identity of a subject across diverse viewpoints. This limitation hinders the creation of personalized visual content that truly aligns with a specific subject's identity. Addressing this critical challenge, a novel approach named <strong>TIRE (Track, Inpaint, REsplat)</strong> is introduced, offering a robust solution for subject-driven 3D/4D generation. TIRE takes an initial 3D asset and employs a sophisticated three-stage pipeline: video tracking to pinpoint regions needing modification, followed by subject-driven 2D inpainting for progressive texture infilling, and finally, 3D resplatting to ensure multi-view consistency. Extensive experiments demonstrate that TIRE significantly enhances <strong>identity preservation</strong> and geometric accuracy, setting a new benchmark in the field.</p>
+
+<h2>Critical Evaluation of TIRE's Impact on 3D/4D Synthesis</h2>
+<h3>Strengths of the TIRE Framework</h3>
+<p>The TIRE method presents several compelling strengths, primarily its innovative three-stage architecture designed to tackle the complex problem of <strong>identity preservation</strong> in personalized 3D/4D generation. The integration of <strong>video tracking</strong>, specifically using backward tracking with CoTracker, proves highly effective in generating accurate masks for progressive texture infilling, a crucial step for maintaining subject consistency. Furthermore, the "Inpaint" stage leverages <strong>personalized stable diffusion</strong> and progressive techniques with anchor viewpoints, enabling robust identity preservation even for far-viewpoint generation. The comprehensive evaluation, encompassing qualitative comparisons, <strong>Vision-Language Model (VLM)</strong> based metrics, and rigorous user studies, strongly validates TIRE's superior performance in both identity preservation and geometry, underscoring its practical effectiveness. Ablation studies further confirm the efficacy of its progressive texture infilling strategy and optimized inpainting denoising schedule, highlighting the thoughtful design of its components.</p>
+
+<h3>Areas for Further Exploration</h3>
+<p>While TIRE marks a significant advancement, the evaluation revealed certain areas warranting further exploration. The authors noted limitations with <strong>DINO similarity metrics</strong>, suggesting that traditional quantitative measures may not fully capture the nuanced aspects of identity preservation in complex 3D/4D scenarios. This points to a need for developing more sophisticated and context-aware evaluation metrics. Additionally, the method's reliance on an <strong>initial 3D asset</strong> generated by existing models could potentially inherit biases or quality constraints from these upstream processes. Although TIRE significantly improves upon existing methods, the field of personalized 3D/4D generation still faces <strong>remaining challenges</strong>, indicating that continuous innovation in areas like robustness to diverse subject types and real-time performance will be crucial for broader adoption.</p>
+
+<h2>Conclusion: A New Benchmark in Personalized 3D/4D Content Creation</h2>
+<p>In conclusion, TIRE represents a substantial and valuable contribution to the evolving landscape of <strong>subject-driven 3D/4D generation</strong>. By meticulously addressing the critical issue of identity preservation through its novel Track, Inpaint, and Resplat pipeline, the method establishes a new benchmark for generating consistent and high-fidelity personalized visual content. Its demonstrated superiority over state-of-the-art techniques, validated through diverse evaluation methodologies, positions TIRE as a foundational step towards more realistic and controllable <strong>digital content creation</strong>. This work not only offers a practical solution but also illuminates pathways for future research in enhancing the fidelity and consistency of generated 3D/4D assets.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>subject-driven 3D generation</li><li> personalized 3D asset creation</li><li> semantic identity preservation in 4D</li><li> video tracking for 3D modification</li><li> 2D inpainting for multi-view consistency</li><li> resplatting 2D observations to 3D</li><li> TIRE (Track‑Inpaint‑Resplat) pipeline</li><li> few‑shot subject personalization</li><li> identity‑aware 3D generative models</li><li> multi‑view inpainting for 3D assets</li><li> 3D/4D generation with identity consistency</li><li> state‑of‑the‑art subject‑driven generation methods</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/781/track-inpaint-resplat-subject-driven-3d-and-4d-generation-with-progressivetexture-infilling" target="_blank" title=" Track, Inpaint, Resplat: Subject-driven 3D and 4D Generation with Progressive
+Texture Infilling">
+    Track, Inpaint, Resplat: Subject-driven 3D and 4D Generation with Progressive
+Texture Infilling
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/726_6ecc6668-aa22-406c-bc4b-61affa67312b.jpg" class="card-img-top" alt="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zengzhuang Xu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/810-FunReason-MT-Technical-Report-Overcoming-the-Complexity-Barrier-in-Multi-Turn-Function-Calling/index.html"  title="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling">
+          <h3 class="card-title pb-2" itemprop="headline">FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/810-FunReason-MT-Technical-Report-Overcoming-the-Complexity-Barrier-in-Multi-Turn-Function-Calling/index.html"
+          title="FunReason-MT Technical Report: Overcoming the Complexity Barrier in Multi-Turn
+Function Calling"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/788_4aa49059-a2b1-4b9c-8c41-650fc1a733fd.jpg" class="card-img-top" alt="Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Gagan Bansal
+          </div>
+          <div class="article-meta-text">
+            01 Nov 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/883-Magentic-Marketplace-An-Open-Source-Environment-for-Studying-Agentic-Markets/index.html"  title="Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets">
+          <h3 class="card-title pb-2" itemprop="headline">Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/883-Magentic-Marketplace-An-Open-Source-Environment-for-Studying-Agentic-Markets/index.html"
+          title="Magentic Marketplace: An Open-Source Environment for Studying Agentic Markets"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/699_2137e348-bd2e-409c-ab7c-9c13031c37cc.jpg" class="card-img-top" alt="RoboOmni: Proactive Robot Manipulation in Omni-modal Context" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Siyin Wang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"  title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context">
+          <h3 class="card-title pb-2" itemprop="headline">RoboOmni: Proactive Robot Manipulation in Omni-modal Context</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/790-RoboOmni-Proactive-Robot-Manipulation-in-Omni-modal-Context/index.html"
+          title="RoboOmni: Proactive Robot Manipulation in Omni-modal Context"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/652_cc9f93aa-e852-41b6-890a-a1161a80f6e6.jpg" class="card-img-top" alt="Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yujia Zhang
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/820-Concerto-Joint-2D-3D-Self-Supervised-Learning-Emerges-Spatial-Representations/index.html"  title="Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations">
+          <h3 class="card-title pb-2" itemprop="headline">Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/820-Concerto-Joint-2D-3D-Self-Supervised-Learning-Emerges-Spatial-Representations/index.html"
+          title="Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/713_3730c521-17bc-407d-9cb7-d626cd7e3a43.jpg" class="card-img-top" alt="Latent Sketchpad: Sketching Visual Thoughts to Elicit Multimodal Reasoning in
+MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Huanyu Zhang
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/798-Latent-Sketchpad-Sketching-Visual-Thoughts-to-Elicit-Multimodal-Reasoning-in-MLLMs/index.html"  title="Latent Sketchpad: Sketching Visual Thoughts to Elicit Multimodal Reasoning in
+MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Latent Sketchpad: Sketching Visual Thoughts to Elicit Multimodal Reasoning in
+MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/798-Latent-Sketchpad-Sketching-Visual-Thoughts-to-Elicit-Multimodal-Reasoning-in-MLLMs/index.html"
+          title="Latent Sketchpad: Sketching Visual Thoughts to Elicit Multimodal Reasoning in
+MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/681_28d43207-fdea-45e7-a6eb-ed59d46393f4.jpg" class="card-img-top" alt="Code Aesthetics with Agentic Reward Feedback" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bang Xiao
+          </div>
+          <div class="article-meta-text">
+            31 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/823-Code-Aesthetics-with-Agentic-Reward-Feedback/index.html"  title="Code Aesthetics with Agentic Reward Feedback">
+          <h3 class="card-title pb-2" itemprop="headline">Code Aesthetics with Agentic Reward Feedback</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/823-Code-Aesthetics-with-Agentic-Reward-Feedback/index.html"
+          title="Code Aesthetics with Agentic Reward Feedback"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
