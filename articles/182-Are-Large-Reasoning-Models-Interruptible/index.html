@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>Are Large Reasoning Models Interruptible?</title>
+
+<meta name="keywords" content="Large Reasoning Models,  dynamic reasoning evaluation,  frozen world assumption,  assistive programming challenges,  model robustness testing,  interr">
+
+<meta name="description" content="Large Reasoning Models,  dynamic reasoning evaluation,  frozen world assumption,  assistive programming challenges,  model robustness testing,  interr">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Are Large Reasoning Models Interruptible?
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Tsung-Han Wu, Mihran Miroyan, David M. Chan, Trevor Darrell, Narges Norouzi, Joseph E. Gonzalez
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/193_d35db8fe-8db4-40c1-a72b-d670a1af495a.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Can AI Think When the World Keeps Changing?</h3>
+<p>
+What if your smartest AI assistant could forget mid‑thought? <strong>Researchers discovered</strong> that huge language models, praised for solving tough puzzles, usually assume everything stays the same while they think. In real life, however, code updates, new data, or a sudden “stop” can appear at any moment. The team tested two everyday‑like situations: being cut off early and receiving fresh information while reasoning. Even the most advanced models, which ace static tests, can stumble dramatically—dropping up to 60 % in accuracy when interrupted late in the process. They uncovered quirky failure modes: “leakage,” where the AI hides unfinished steps inside its final answer; “panic,” where it abandons reasoning and guesses; and “self‑doubt,” where new facts make it even less reliable. Imagine a student writing an essay while the teacher keeps changing the question—hard to finish correctly. <strong>This breakthrough shows</strong> why we must design AI that stays steady in a moving world, and <strong>the insight is crucial</strong> for future assistants that help us every day. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>This article critically examines the evaluation of <strong>Large Reasoning Models</strong> (LRMs) in dynamic contexts, challenging the traditional "frozen world" assumption that models operate in static environments. The authors introduce a novel framework to assess LRM robustness under realistic scenarios, including interruptions and dynamic context changes. Key findings reveal that performance can drop by up to 60% when models are faced with new information during reasoning tasks. The study identifies three primary failure modes: reasoning leakage, panic, and self-doubt, which significantly impact model accuracy.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The article's strength lies in its innovative approach to evaluating LRMs under conditions that closely mimic real-world applications. By focusing on dynamic scenarios, the authors provide a more accurate assessment of model performance, highlighting the limitations of existing static evaluations. The introduction of a new dataset and evaluation metrics enhances the study's relevance and applicability, making it a valuable contribution to the field of <strong>artificial intelligence</strong> and machine learning.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study has limitations, particularly its narrow focus on mathematical and programming tasks. This specificity may not fully capture the diverse challenges faced by LRMs in broader contexts. Additionally, while the article identifies critical failure modes, it could benefit from a more extensive exploration of potential solutions to enhance model adaptability and robustness.</p>
+
+<h3>Implications</h3>
+<p>The findings of this research have significant implications for the development and deployment of LRMs in practical applications. Understanding the fragility of these models under interruptions can inform strategies for improving their performance in real-time scenarios. The study encourages further exploration into adaptive techniques that can mitigate the identified failure modes, ultimately leading to more reliable and effective reasoning models.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, this article presents a compelling critique of traditional LRM evaluations, emphasizing the need for assessments that reflect dynamic reasoning environments. By revealing the substantial performance drops associated with interruptions and contextual changes, the authors underscore the importance of developing more resilient models. This work not only advances our understanding of LRM limitations but also sets the stage for future research aimed at enhancing model robustness in real-world applications.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and accessible, making it easy for readers to grasp complex concepts. The use of clear language and concise paragraphs enhances engagement, ensuring that key findings and implications are readily understood. This approach not only improves user interaction but also encourages further exploration of the topic within the scientific community.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Large Reasoning Models</li><li> dynamic reasoning evaluation</li><li> frozen world assumption</li><li> assistive programming challenges</li><li> model robustness testing</li><li> interruptions in reasoning</li><li> dynamic context adaptation</li><li> long-form reasoning benchmarks</li><li> reasoning leakage failure mode</li><li> panic response in models</li><li> self-doubt in AI performance</li><li> accuracy in dynamic scenarios</li><li> model performance degradation</li><li> real-time reasoning challenges</li><li> adaptive reasoning strategies</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/182/are-large-reasoning-models-interruptible" target="_blank" title=" Are Large Reasoning Models Interruptible?">
+    Are Large Reasoning Models Interruptible?
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/181_d6d9d59c-fdd7-4d55-9a70-01a1d56d5cc6.jpg" class="card-img-top" alt="LikePhys: Evaluating Intuitive Physics Understanding in Video Diffusion Models
+via Likelihood Preference" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jianhao Yuan
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/170-LikePhys-Evaluating-Intuitive-Physics-Understanding-in-Video-Diffusion-Models-via-Likelihood-Pre/index.html"  title="LikePhys: Evaluating Intuitive Physics Understanding in Video Diffusion Models
+via Likelihood Preference">
+          <h3 class="card-title pb-2" itemprop="headline">LikePhys: Evaluating Intuitive Physics Understanding in Video Diffusion Models
+via Likelihood Preference</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/170-LikePhys-Evaluating-Intuitive-Physics-Understanding-in-Video-Diffusion-Models-via-Likelihood-Pre/index.html"
+          title="LikePhys: Evaluating Intuitive Physics Understanding in Video Diffusion Models
+via Likelihood Preference"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/241_4c467b3d-1495-40e6-9825-597ec64ee06a.jpg" class="card-img-top" alt="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tiancheng Gu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/229-UniME-V2-MLLM-as-a-Judge-for-Universal-Multimodal-Embedding-Learning/index.html"  title="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning">
+          <h3 class="card-title pb-2" itemprop="headline">UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/229-UniME-V2-MLLM-as-a-Judge-for-Universal-Multimodal-Embedding-Learning/index.html"
+          title="UniME-V2: MLLM-as-a-Judge for Universal Multimodal Embedding Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/49_7b075104-8ea4-4e08-8654-05625a71b853.jpg" class="card-img-top" alt="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiangyu Peng
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/40-UNIDOC-BENCH-A-Unified-Benchmark-for-Document-Centric-Multimodal-RAG/index.html"  title="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG">
+          <h3 class="card-title pb-2" itemprop="headline">UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/40-UNIDOC-BENCH-A-Unified-Benchmark-for-Document-Centric-Multimodal-RAG/index.html"
+          title="UNIDOC-BENCH: A Unified Benchmark for Document-Centric Multimodal RAG"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/196_6f142900-a549-4b2d-b199-d871c17ba49c.jpg" class="card-img-top" alt="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqi Liu
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"  title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/185-ViSurf-Visual-Supervised-and-Reinforcement-Fine-Tuning-for-Large-Vision-and-Language-Models/index.html"
+          title="ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large
+Vision-and-Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/246_f86dfd37-9da4-48fe-a232-47cace4813d1.jpg" class="card-img-top" alt="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhenyu Liu
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"  title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE">
+          <h3 class="card-title pb-2" itemprop="headline">UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/234-UniMoE-Audio-Unified-Speech-and-Music-Generation-with-Dynamic-Capacity-MoE/index.html"
+          title="UniMoE-Audio: Unified Speech and Music Generation with Dynamic-Capacity MoE"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/92_8fca9457-a912-47f9-bb0b-fff470e0cf6f.jpg" class="card-img-top" alt="Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chi Yan
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/88-Progressive-Gaussian-Transformer-with-Anisotropy-aware-Sampling-for-Open-Vocabulary-Occupancy-Pre/index.html"  title="Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction">
+          <h3 class="card-title pb-2" itemprop="headline">Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/88-Progressive-Gaussian-Transformer-with-Anisotropy-aware-Sampling-for-Open-Vocabulary-Occupancy-Pre/index.html"
+          title="Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open
+Vocabulary Occupancy Prediction"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
