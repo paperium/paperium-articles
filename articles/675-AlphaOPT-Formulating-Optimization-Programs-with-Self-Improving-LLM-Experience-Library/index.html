@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>AlphaOPT: Formulating Optimization Programs with Self-Improv</title>
+
+<meta name="keywords" content="AlphaOPT self-improving experience library,  LLM-based optimization modeling,  continual library learning phase,  solver‑verified structured insights,">
+
+<meta name="description" content="AlphaOPT self-improving experience library,  LLM-based optimization modeling,  continual library learning phase,  solver‑verified structured insights,">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience
+Library
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Minwei Kong, Ao Qu, Xiaotong Guo, Wenbin Ouyang, Chonghe Jiang, Han Zheng, Yining Ma, Dingyi Zhuang, Yuhan Tang, Junyi Li, Hai Wang, Cathy Wu, Jinhua Zhao
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              26 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/534_348f02d8-2df0-4011-9f13-007df727be65.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>AlphaOPT: How AI Learns to Solve Real‑World Problems Faster</h3>
+<p>
+Ever wondered how a computer could turn a casual request like “find the cheapest way to ship goods” into a perfect math recipe? <strong>Scientists have created</strong> a clever system called AlphaOPT that lets an AI improve itself simply by watching where it goes wrong and listening to a solver’s hints. Imagine teaching a child to bake by letting them try, taste the result, and then adjust the recipe without writing down every step—AlphaOPT does the same with complex decision‑making tasks. It stores tiny “lessons” from each mistake, then refines them so future problems are solved more smoothly, all without costly retraining. This <strong>self‑improving</strong> approach means the AI gets better the more it works, much like a musician who gets sharper after each practice session. The result? Faster, more reliable solutions for everything from logistics to energy planning, helping businesses make smarter choices every day. <strong>It’s a breakthrough</strong> that shows how AI can keep learning on the job, turning everyday challenges into opportunities for growth. 🌟</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview of AlphaOPT: Advancing LLM-Driven Optimization Modeling</h2>
+<p>This article introduces AlphaOPT, an innovative self-improving experience library designed to enhance Large Language Models' (LLMs) capabilities in optimization modeling. It addresses the challenge of automating the translation of informal language into precise mathematical formulations and executable solver code, where prior LLM approaches struggled with brittle prompting or costly retraining. AlphaOPT operates through a continuous two-phase cycle: Library Learning extracts solver-verified, structured insights from failures, while Library Evolution refines their applicability for improved transfer. This enables LLMs to learn efficiently from limited demonstrations, even answers alone, without parameter updates. The research demonstrates AlphaOPT's steady improvement with more data and its superior out-of-distribution generalization.</p>
+
+<h2>Critical Evaluation of AlphaOPT's Approach</h2>
+<h3>Strengths: Efficient Learning and Generalization</h3>
+<p>AlphaOPT presents compelling strengths, significantly advancing LLM-driven optimization. Its core innovation is the self-improving experience library design, enabling efficient learning from minimal data, including just answers, without extensive gold-standard programs or costly model retraining. This iterative, two-phase cycle—Library Learning and Library Evolution—is robust, continually expanding knowledge by reflecting on failures and refining insights. The framework generates solver-verified, structured insights and organizes them into a hierarchical taxonomy, making acquired knowledge explicit and interpretable. Crucially, AlphaOPT demonstrates state-of-the-art out-of-distribution generalization, outperforming fine-tuned models on complex operations research datasets, a critical achievement for real-world applicability.</p>
+
+<h3>Weaknesses and Future Directions</h3>
+<p>While AlphaOPT marks a substantial leap, the research highlights areas for further development. The system, like other LLM approaches, still faces challenges in handling highly nonlinear constraints and exceptionally complex out-of-distribution optimization tasks. A case study revealed varied success rates across different insight categories, indicating LLMs continue to struggle with consistently applying retrieved knowledge effectively. The paper suggests future work on enhancing retrieval mechanisms, improving pedagogical clarity of insights, and expanding Operations Research (OR) datasets. Addressing these limitations will be crucial for AlphaOPT's broader and more robust applicability in diverse industrial settings.</p>
+
+<h2>Conclusion: Impact and Value of AlphaOPT</h2>
+<p>AlphaOPT represents a significant and promising advancement in automating optimization modeling using Large Language Models. Its novel self-improving experience library learns efficiently and generalizes effectively without costly retraining, directly tackling key LLM limitations. The framework's emphasis on interpretable knowledge and continual learning positions it as a valuable tool for bridging informal problem descriptions and precise mathematical formulations. AlphaOPT's demonstrated superior performance on out-of-distribution tasks underscores its potential to empower critical decision-making across various industries. It offers a practical solution and lays a strong foundation for future research into more robust, adaptable, and human-interpretable AI systems for complex problem-solving.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>AlphaOPT self-improving experience library</li><li> LLM-based optimization modeling</li><li> continual library learning phase</li><li> solver‑verified structured insights</li><li> retrieval misalignment diagnosis</li><li> limited demonstration learning for solvers</li><li> out‑of‑distribution OptiBench benchmark</li><li> explicit interpretable optimization knowledge</li><li> taxonomy‑condition‑explanation‑example extraction</li><li> zero‑shot program synthesis from answers</li><li> library evolution without model weight updates</li><li> scalable LLM optimization without annotated reasoning traces</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/675/alphaopt-formulating-optimization-programs-with-self-improving-llm-experiencelibrary" target="_blank" title=" AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience
+Library">
+    AlphaOPT: Formulating Optimization Programs with Self-Improving LLM Experience
+Library
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/456_cb46a42d-464d-45f3-941c-65ad3e060d1a.jpg" class="card-img-top" alt="DSI-Bench: A Benchmark for Dynamic Spatial Intelligence" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ziang Zhang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/439-DSI-Bench-A-Benchmark-for-Dynamic-Spatial-Intelligence/index.html"  title="DSI-Bench: A Benchmark for Dynamic Spatial Intelligence">
+          <h3 class="card-title pb-2" itemprop="headline">DSI-Bench: A Benchmark for Dynamic Spatial Intelligence</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/439-DSI-Bench-A-Benchmark-for-Dynamic-Spatial-Intelligence/index.html"
+          title="DSI-Bench: A Benchmark for Dynamic Spatial Intelligence"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/487_5c2c540d-0218-45b7-9c20-e6e9847228ea.jpg" class="card-img-top" alt="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Asim Mohamed
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/491-Is-Multilingual-LLM-Watermarking-Truly-Multilingual-A-Simple-Back-Translation-Solution/index.html"  title="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution">
+          <h3 class="card-title pb-2" itemprop="headline">Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/491-Is-Multilingual-LLM-Watermarking-Truly-Multilingual-A-Simple-Back-Translation-Solution/index.html"
+          title="Is Multilingual LLM Watermarking Truly Multilingual? A Simple Back-Translation
+Solution"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/524_241890e9-9539-40a8-b07b-7262435b13df.jpg" class="card-img-top" alt="KORE: Enhancing Knowledge Injection for Large Multimodal Models via
+Knowledge-Oriented Augmentations and Constraints" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Kailin Jiang
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/634-KORE-Enhancing-Knowledge-Injection-for-Large-Multimodal-Models-via-Knowledge-Oriented-Augmentati/index.html"  title="KORE: Enhancing Knowledge Injection for Large Multimodal Models via
+Knowledge-Oriented Augmentations and Constraints">
+          <h3 class="card-title pb-2" itemprop="headline">KORE: Enhancing Knowledge Injection for Large Multimodal Models via
+Knowledge-Oriented Augmentations and Constraints</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/634-KORE-Enhancing-Knowledge-Injection-for-Large-Multimodal-Models-via-Knowledge-Oriented-Augmentati/index.html"
+          title="KORE: Enhancing Knowledge Injection for Large Multimodal Models via
+Knowledge-Oriented Augmentations and Constraints"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/527_c5602bdd-d839-4e41-9162-09da1e0c0fd9.jpg" class="card-img-top" alt="ColorAgent: Building A Robust, Personalized, and Interactive OS Agent" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ning Li
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/637-ColorAgent-Building-A-Robust-Personalized-and-Interactive-OS-Agent/index.html"  title="ColorAgent: Building A Robust, Personalized, and Interactive OS Agent">
+          <h3 class="card-title pb-2" itemprop="headline">ColorAgent: Building A Robust, Personalized, and Interactive OS Agent</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/637-ColorAgent-Building-A-Robust-Personalized-and-Interactive-OS-Agent/index.html"
+          title="ColorAgent: Building A Robust, Personalized, and Interactive OS Agent"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/532_c3823834-974f-46d5-bbb9-699434b3da56.jpg" class="card-img-top" alt="Steering Autoregressive Music Generation with Recursive Feature Machines" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Daniel Zhao
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/642-Steering-Autoregressive-Music-Generation-with-Recursive-Feature-Machines/index.html"  title="Steering Autoregressive Music Generation with Recursive Feature Machines">
+          <h3 class="card-title pb-2" itemprop="headline">Steering Autoregressive Music Generation with Recursive Feature Machines</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/642-Steering-Autoregressive-Music-Generation-with-Recursive-Feature-Machines/index.html"
+          title="Steering Autoregressive Music Generation with Recursive Feature Machines"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/450_f3da7954-8d64-44be-8a1f-763fc8817b1f.jpg" class="card-img-top" alt="Towards Faithful and Controllable Personalization via Critique-Post-Edit
+Reinforcement Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chenghao Zhu
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/624-Towards-Faithful-and-Controllable-Personalization-via-Critique-Post-Edit-Reinforcement-Learning/index.html"  title="Towards Faithful and Controllable Personalization via Critique-Post-Edit
+Reinforcement Learning">
+          <h3 class="card-title pb-2" itemprop="headline">Towards Faithful and Controllable Personalization via Critique-Post-Edit
+Reinforcement Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/624-Towards-Faithful-and-Controllable-Personalization-via-Critique-Post-Edit-Reinforcement-Learning/index.html"
+          title="Towards Faithful and Controllable Personalization via Critique-Post-Edit
+Reinforcement Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
