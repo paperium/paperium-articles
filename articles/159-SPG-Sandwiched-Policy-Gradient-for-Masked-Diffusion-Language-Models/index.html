@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=1"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=1" >
+
+<title>SPG: Sandwiched Policy Gradient for Masked Diffusion Languag</title>
+
+<meta name="keywords" content="Diffusion large language models,  autoregressive models,  reinforcement learning,  policy gradient methods,  evidence lower bound,  Sandwiched Policy ">
+
+<meta name="description" content="Diffusion large language models,  autoregressive models,  reinforcement learning,  policy gradient methods,  evidence lower bound,  Sandwiched Policy ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Chenyu Wang, Paria Rashidinejad, DiJia Su, Song Jiang, Sid Wang, Siyan Zhao, Cai Zhou, Shannon Zejiang Shen, Feiyu Chen, Tommi Jaakkola, Yuandong Tian, Bo Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              14 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/170_9d28d9b0-eff7-40d5-96ae-6795e70661c8.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New AI Trick Makes Chatbots Smarter and Faster</h3>
+<p>
+Ever wondered how a robot could finish a sentence in the blink of an eye? <strong>Scientists have discovered</strong> a clever shortcut called the <strong>Sandwiched Policy Gradient</strong> that helps the newest generation of AI—called diffusion language models—think more like us. Imagine trying to guess a word while holding two clues, one that says “it’s not too high” and another that says “it’s not too low.” By squeezing the answer between these two hints, the AI finds the right answer faster and with fewer mistakes. This new method gave the AI a noticeable boost: it solved math puzzles 3‑4% better and tackled tricky games like Sudoku up to 27% more accurately. <strong>That’s a big leap</strong> for technology that powers everything from virtual assistants to educational apps. As these smarter bots become part of our daily lives, we’ll see more reliable help, quicker answers, and a future where machines understand us a little better every day. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents a novel approach to enhancing <strong>diffusion large language models</strong> (dLLMs) through a new reinforcement learning (RL) algorithm known as the <strong>Sandwiched Policy Gradient</strong> (SPG). This method addresses the challenges of aligning dLLMs with human preferences by optimizing both upper and lower bounds of log-likelihood, which is crucial for effective model training. The authors demonstrate that SPG significantly outperforms existing RL methods, achieving notable accuracy improvements across various benchmarks, including GSM8K, MATH500, Countdown, and Sudoku. The study emphasizes the importance of a block-wise masking strategy and a mixture of evidence upper and lower bounds for enhancing model performance.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>The SPG method represents a significant advancement in the field of <strong>reinforcement learning</strong> for dLLMs, effectively addressing the limitations of traditional policy gradient methods. By leveraging both upper and lower bounds of log-likelihood, the authors provide a more stable and accurate optimization framework. The experimental results are compelling, showcasing substantial performance gains over baseline models, which underscores the robustness of the proposed approach. Additionally, the incorporation of a block-wise masking strategy enhances the model's generalization capabilities, making it a valuable contribution to the literature.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article does have some limitations. The reliance on complex mathematical formulations may pose challenges for practitioners seeking to implement the SPG method in real-world applications. Furthermore, while the experimental results are promising, the study could benefit from a broader range of benchmarks to validate the generalizability of the findings. Potential biases in the selection of datasets and evaluation metrics should also be considered, as they may influence the perceived effectiveness of the SPG approach.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the development of <strong>language models</strong> that align more closely with human preferences. The SPG method not only enhances the performance of dLLMs but also opens avenues for further exploration in RL applications within natural language processing. As the field continues to evolve, the insights gained from this study could inform future research directions and practical implementations.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article makes a noteworthy contribution to the field of <strong>reinforcement learning</strong> for diffusion models, particularly through the introduction of the SPG algorithm. The demonstrated improvements in accuracy and the innovative approach to log-likelihood optimization highlight the potential of this method to advance the capabilities of dLLMs. Overall, the findings underscore the importance of continued research in this area, paving the way for more effective and human-aligned language models.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and presents complex concepts in a clear and accessible manner. The use of concise paragraphs and straightforward language enhances readability, making it easier for a professional audience to engage with the content. By focusing on key findings and implications, the authors effectively communicate the significance of their research, encouraging further exploration and discussion within the scientific community.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Diffusion large language models</li><li> autoregressive models</li><li> reinforcement learning</li><li> policy gradient methods</li><li> evidence lower bound</li><li> Sandwiched Policy Gradient</li><li> log-likelihood approximation</li><li> policy gradient bias</li><li> task-specific rewards</li><li> accuracy improvement in RL</li><li> state-of-the-art RL methods</li><li> dLLM performance metrics</li><li> parallel token decoding</li><li> experimental results in AI</li><li> optimization techniques for language models</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/159/spg-sandwiched-policy-gradient-for-masked-diffusion-language-models" target="_blank" title=" SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models">
+    SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/151_5173514d-0145-472b-adb2-663a4848ec62.jpg" class="card-img-top" alt="Diffusion Transformers with Representation Autoencoders" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Boyang Zheng
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/140-Diffusion-Transformers-with-Representation-Autoencoders/index.html"  title="Diffusion Transformers with Representation Autoencoders">
+          <h3 class="card-title pb-2" itemprop="headline">Diffusion Transformers with Representation Autoencoders</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/140-Diffusion-Transformers-with-Representation-Autoencoders/index.html"
+          title="Diffusion Transformers with Representation Autoencoders"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/167_ab0088fc-71db-4218-b907-30020449e1b4.jpg" class="card-img-top" alt="GIR-Bench: Versatile Benchmark for Generating Images with Reasoning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hongxiang Li
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/156-GIR-Bench-Versatile-Benchmark-for-Generating-Images-with-Reasoning/index.html"  title="GIR-Bench: Versatile Benchmark for Generating Images with Reasoning">
+          <h3 class="card-title pb-2" itemprop="headline">GIR-Bench: Versatile Benchmark for Generating Images with Reasoning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/156-GIR-Bench-Versatile-Benchmark-for-Generating-Images-with-Reasoning/index.html"
+          title="GIR-Bench: Versatile Benchmark for Generating Images with Reasoning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/71_d54d24ac-4c35-4cc8-8769-14ec01f3f359.jpg" class="card-img-top" alt="Beyond Outliers: A Study of Optimizers Under Quantization" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Georgios Vlassis
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/58-Beyond-Outliers-A-Study-of-Optimizers-Under-Quantization/index.html"  title="Beyond Outliers: A Study of Optimizers Under Quantization">
+          <h3 class="card-title pb-2" itemprop="headline">Beyond Outliers: A Study of Optimizers Under Quantization</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/58-Beyond-Outliers-A-Study-of-Optimizers-Under-Quantization/index.html"
+          title="Beyond Outliers: A Study of Optimizers Under Quantization"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/252_177dc007-22d9-41b5-b3f3-0e1b24aa2c76.jpg" class="card-img-top" alt="HyperAgent: Leveraging Hypergraphs for Topology Optimization in Multi-Agent
+Communication" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Heng Zhang
+          </div>
+          <div class="article-meta-text">
+            16 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/240-HyperAgent-Leveraging-Hypergraphs-for-Topology-Optimization-in-Multi-Agent-Communication/index.html"  title="HyperAgent: Leveraging Hypergraphs for Topology Optimization in Multi-Agent
+Communication">
+          <h3 class="card-title pb-2" itemprop="headline">HyperAgent: Leveraging Hypergraphs for Topology Optimization in Multi-Agent
+Communication</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/240-HyperAgent-Leveraging-Hypergraphs-for-Topology-Optimization-in-Multi-Agent-Communication/index.html"
+          title="HyperAgent: Leveraging Hypergraphs for Topology Optimization in Multi-Agent
+Communication"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/178_8c4e64e8-985e-40bd-9ccc-5c675baf25ec.jpg" class="card-img-top" alt="FastHMR: Accelerating Human Mesh Recovery via Token and Layer Merging with
+Diffusion Decoding" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Soroush Mehraban
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/167-FastHMR-Accelerating-Human-Mesh-Recovery-via-Token-and-Layer-Merging-with-Diffusion-Decoding/index.html"  title="FastHMR: Accelerating Human Mesh Recovery via Token and Layer Merging with
+Diffusion Decoding">
+          <h3 class="card-title pb-2" itemprop="headline">FastHMR: Accelerating Human Mesh Recovery via Token and Layer Merging with
+Diffusion Decoding</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/167-FastHMR-Accelerating-Human-Mesh-Recovery-via-Token-and-Layer-Merging-with-Diffusion-Decoding/index.html"
+          title="FastHMR: Accelerating Human Mesh Recovery via Token and Layer Merging with
+Diffusion Decoding"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/170_9d28d9b0-eff7-40d5-96ae-6795e70661c8.jpg" class="card-img-top" alt="SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Chenyu Wang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/159-SPG-Sandwiched-Policy-Gradient-for-Masked-Diffusion-Language-Models/index.html"  title="SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models">
+          <h3 class="card-title pb-2" itemprop="headline">SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/159-SPG-Sandwiched-Policy-Gradient-for-Masked-Diffusion-Language-Models/index.html"
+          title="SPG: Sandwiched Policy Gradient for Masked Diffusion Language Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
