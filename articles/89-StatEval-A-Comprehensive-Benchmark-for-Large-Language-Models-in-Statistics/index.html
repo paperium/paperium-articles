@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css" >
+
+<title>StatEval: A Comprehensive Benchmark for Large Language Model</title>
+
+<meta name="keywords" content="StatEval benchmark,  large language models statistics,  mathematical reasoning in LLMs,  statistical reasoning challenges,  multi-agent pipeline for p">
+
+<meta name="description" content="StatEval benchmark,  large language models statistics,  mathematical reasoning in LLMs,  statistical reasoning challenges,  multi-agent pipeline for p">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                StatEval: A Comprehensive Benchmark for Large Language Models in Statistics
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yuchen Lu, Run Yang, Yichen Zhang, Shuguang Yu, Runpeng Dai, Ziwei Wang, Jiayi Xiang, Wenxin E, Siran Gao, Xinyao Ruan, Yirui Huang, Chenjing Xi, Haibo Hu, Yueming Fu, Qinglan Yu, Xiaobing Wei, Jiani Gu, Rui Sun, Jiaxuan Jia, Fan Zhou
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/93_33d76140-cc30-4ebf-9a84-f0c360b03c96.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>StatEval: The New Test That Puts AI’s Stats Skills to the Challenge</h3>
+<p>
+Ever wondered if a chatbot can truly understand numbers the way a statistician does? <strong>Researchers have built</strong> a fresh benchmark called <strong>StatEval</strong> to find out. Imagine a giant quiz with more than 13,000 everyday data problems and another 2,300 tough puzzles taken straight from scientific journals—like a “Jeopardy!” for statistics. By feeding these questions to popular AI models, the team discovered that even the most advanced systems score below 60% on the hardest items, meaning they still stumble on real‑world data reasoning. Think of it like a car that can drive fast on a highway but gets lost on a winding country road; the engine works, but the navigation needs work. This simple test shines a light on where AI falls short and gives developers a clear road map to improve. As we rely more on smart assistants for everything from health advice to business forecasts, <strong>understanding their limits</strong> becomes crucial. <strong>StatEval</strong> is the first step toward AI that truly gets the numbers that shape our lives. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article introduces <strong>StatEval</strong>, a pioneering benchmark designed to evaluate the performance of large language models (LLMs) in the domain of statistical reasoning. Addressing a significant gap in existing assessments, StatEval encompasses nearly 20,000 curated problems that span various difficulty levels, including foundational knowledge and advanced research tasks. The authors employ a scalable multi-agent pipeline for problem extraction and quality control, ensuring academic rigor throughout the process. Preliminary findings reveal that current LLMs, particularly closed-source models, struggle with statistical reasoning tasks, highlighting the necessity for enhanced statistical intelligence in these models.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of the article is its comprehensive approach to benchmarking, as it categorizes problems into distinct domains and subdomains, thereby facilitating a nuanced evaluation of LLMs. The integration of a <strong>human-in-the-loop</strong> validation process enhances the reliability of the dataset, ensuring that the problems are not only relevant but also of high quality. Furthermore, the article provides a robust evaluation framework that allows for fine-grained assessments of reasoning abilities, which is crucial for advancing the field of statistical reasoning in LLMs.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article has some limitations. The focus on closed-source models may introduce a bias, as the performance metrics could overshadow the potential of open-source alternatives. Additionally, while the benchmark aims to cover a wide range of statistical problems, the complexity of statistical reasoning may not be fully captured by the current dataset, potentially limiting the generalizability of the findings.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant, as StatEval sets a new standard for evaluating statistical reasoning in LLMs. By highlighting the challenges faced by these models, the study encourages further exploration and development of statistical intelligence, which is essential for applications in various fields, including data science and artificial intelligence.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article presents a valuable contribution to the field of statistical reasoning in LLMs through the introduction of StatEval. By addressing existing gaps in benchmarking, it lays the groundwork for future research aimed at enhancing the statistical capabilities of these models. The findings underscore the need for ongoing improvements in <strong>statistical intelligence</strong>, making this work a critical reference for researchers and practitioners alike.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and accessible, making it easy for readers to grasp complex concepts. The use of clear language and concise paragraphs enhances engagement, ensuring that the content is scannable and user-friendly. This approach not only improves readability but also encourages interaction, reducing bounce rates and increasing the likelihood of further exploration of the topic.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>StatEval benchmark</li><li> large language models statistics</li><li> mathematical reasoning in LLMs</li><li> statistical reasoning challenges</li><li> multi-agent pipeline for problem extraction</li><li> human-in-the-loop validation</li><li> undergraduate and graduate statistics curriculum</li><li> research-level proof tasks</li><li> computational evaluation framework</li><li> statistical intelligence in AI</li><li> automated problem rewriting</li><li> quality control in benchmarks</li><li> LLM performance on statistics</li><li> open-source model limitations</li><li> advanced statistical reasoning tasks</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/89/stateval-a-comprehensive-benchmark-for-large-language-models-in-statistics" target="_blank" title=" StatEval: A Comprehensive Benchmark for Large Language Models in Statistics">
+    StatEval: A Comprehensive Benchmark for Large Language Models in Statistics
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/168_93ab7fe2-620f-4b65-ba71-d20f6b70e9ee.jpg" class="card-img-top" alt="AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yu Li
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/157-AdaViewPlanner-Adapting-Video-Diffusion-Models-for-Viewpoint-Planning-in-4D-Scenes/index.html"  title="AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes">
+          <h3 class="card-title pb-2" itemprop="headline">AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/157-AdaViewPlanner-Adapting-Video-Diffusion-Models-for-Viewpoint-Planning-in-4D-Scenes/index.html"
+          title="AdaViewPlanner: Adapting Video Diffusion Models for Viewpoint Planning in 4D
+Scenes"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/81_2e893ed5-6e34-42f2-9aff-58f4fe3e73d3.jpg" class="card-img-top" alt="Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yumin Choi
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/77-Multimodal-Prompt-Optimization-Why-Not-Leverage-Multiple-Modalities-for-MLLMs/index.html"  title="Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/77-Multimodal-Prompt-Optimization-Why-Not-Leverage-Multiple-Modalities-for-MLLMs/index.html"
+          title="Multimodal Prompt Optimization: Why Not Leverage Multiple Modalities for MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/113_2b4764e1-7c22-4b28-b3eb-5a4c56e24c46.jpg" class="card-img-top" alt="LightReasoner: Can Small Language Models Teach Large Language Models Reasoning?" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jingyuan Wang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/109-LightReasoner-Can-Small-Language-Models-Teach-Large-Language-Models-Reasoning/index.html"  title="LightReasoner: Can Small Language Models Teach Large Language Models Reasoning?">
+          <h3 class="card-title pb-2" itemprop="headline">LightReasoner: Can Small Language Models Teach Large Language Models Reasoning?</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/109-LightReasoner-Can-Small-Language-Models-Teach-Large-Language-Models-Reasoning/index.html"
+          title="LightReasoner: Can Small Language Models Teach Large Language Models Reasoning?"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/182_a7914638-761b-49ed-a54a-11b5f9673c9c.jpg" class="card-img-top" alt="HUME: Measuring the Human-Model Performance Gap in Text Embedding Task" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Adnan El Assadi
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/171-HUME-Measuring-the-Human-Model-Performance-Gap-in-Text-Embedding-Task/index.html"  title="HUME: Measuring the Human-Model Performance Gap in Text Embedding Task">
+          <h3 class="card-title pb-2" itemprop="headline">HUME: Measuring the Human-Model Performance Gap in Text Embedding Task</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/171-HUME-Measuring-the-Human-Model-Performance-Gap-in-Text-Embedding-Task/index.html"
+          title="HUME: Measuring the Human-Model Performance Gap in Text Embedding Task"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/199_9b96188a-2775-4ceb-aca4-4cbfdf5ec6c6.jpg" class="card-img-top" alt="The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against Llm
+Jailbreaks and Prompt Injections" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Milad Nasr
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/188-The-Attacker-Moves-Second-Stronger-Adaptive-Attacks-Bypass-Defenses-Against-Llm-Jailbreaks-and-P/index.html"  title="The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against Llm
+Jailbreaks and Prompt Injections">
+          <h3 class="card-title pb-2" itemprop="headline">The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against Llm
+Jailbreaks and Prompt Injections</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/188-The-Attacker-Moves-Second-Stronger-Adaptive-Attacks-Bypass-Defenses-Against-Llm-Jailbreaks-and-P/index.html"
+          title="The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against Llm
+Jailbreaks and Prompt Injections"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/152_2169cb1e-aa85-41de-95f7-9ff923cf2074.jpg" class="card-img-top" alt="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Caorui Li
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/141-OmniVideoBench-Towards-Audio-Visual-Understanding-Evaluation-for-Omni-MLLMs/index.html"  title="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs">
+          <h3 class="card-title pb-2" itemprop="headline">OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/141-OmniVideoBench-Towards-Audio-Visual-Understanding-Evaluation-for-Omni-MLLMs/index.html"
+          title="OmniVideoBench: Towards Audio-Visual Understanding Evaluation for Omni MLLMs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
