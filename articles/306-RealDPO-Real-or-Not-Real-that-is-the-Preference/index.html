@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>RealDPO: Real or Not Real, that is the Preference</title>
+
+<meta name="keywords" content="Video generative models,  Motion synthesis,  Complex motion generation,  Motion realism enhancement,  RealDPO,  Direct Preference Optimization (DPO), ">
+
+<meta name="description" content="Video generative models,  Motion synthesis,  Complex motion generation,  Motion realism enhancement,  RealDPO,  Direct Preference Optimization (DPO), ">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                RealDPO: Real or Not Real, that is the Preference
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Guo Cheng, Danni Yang, Ziqi Huang, Jianlou Si, Chenyang Si, Ziwei Liu
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              18 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/322_215c3e8a-afc2-479f-995e-8196d5c0f455.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>RealDPO: Turning Computer‑Made Motions into Real‑Life Moves</h3>
+<p>Ever watched a robot dance and felt something was off? <strong>Scientists have introduced RealDPO</strong>, a new trick that teaches video‑making AIs to copy the smooth flow of real human motion. Imagine teaching a child to walk by showing them countless videos of people strolling—the AI does the same, comparing its clumsy attempts with real footage until it gets it right. By using a massive collection called RealAction‑5K, packed with everyday activities like cooking, jogging, and waving, the system learns the subtle twists and turns we do without thinking. The result? Videos where the generated movements feel as natural as a friend waving hello, and the captions match the action perfectly. This breakthrough means future apps could create lifelike tutorials, immersive games, or personalized fitness guides without the awkward jerks we see today. <strong>RealDPO brings us closer to truly realistic digital worlds</strong>, reminding us that even machines can learn the art of moving like us. <strong>Imagine the possibilities when every virtual motion feels genuinely human</strong>.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview: Advancing Video Generation with RealDPO</h2>
+<p>The field of video generative models has seen significant progress, yet generating complex, natural, and contextually consistent motions remains a substantial challenge. Existing models often struggle to produce movements that truly mimic real-world dynamics, limiting their practical utility. This article introduces <strong>RealDPO</strong>, a novel alignment paradigm designed to overcome these limitations by leveraging <strong>Direct Preference Optimization (DPO)</strong>. RealDPO utilizes real-world data as positive samples for preference learning, enabling more accurate and realistic motion synthesis. The framework also proposes <strong>RealAction-5K</strong>, a meticulously curated dataset of high-quality videos capturing diverse human daily activities, specifically tailored to support post-training in complex motion synthesis. Through extensive experimentation, RealDPO demonstrates significant improvements in video quality, text alignment, and motion realism compared to current state-of-the-art models and existing preference optimization techniques.</p>
+
+<h2>Critical Evaluation: RealDPO's Strengths, Challenges, and Future</h2>
+<h3>Strengths: A Novel Approach to Motion Realism</h3>
+<p>RealDPO presents a compelling advancement by addressing critical shortcomings in video generation, particularly concerning motion realism. Its innovative use of <strong>real-world data</strong> as positive samples for DPO training offers a robust alternative to traditional supervised fine-tuning (SFT) and explicit reward models, which often suffer from limited corrective feedback or issues like reward hacking. The tailored DPO loss function, combined with iterative self-correction by contrasting real-world videos with erroneous model outputs, effectively refines motion quality. Furthermore, the introduction of the <strong>RealAction-5K dataset</strong>, curated with the aid of Video Large Language Models (VideoLLMs) for quality control, provides a valuable resource for training models in complex human motion synthesis. Quantitative evaluations, including user studies and Multimodal Large Language Model (MLLM) assessments across metrics like Visual Alignment, Text Alignment, and Motion Quality, consistently highlight RealDPO's superior performance.</p>
+
+<h3>Potential Considerations: Addressing Scope and Resource Demands</h3>
+<p>While RealDPO marks a significant leap, certain aspects warrant further consideration. The reliance on a curated dataset like RealAction-5K, while beneficial for quality, might present challenges in terms of <strong>scalability</strong> and generalizability to an even broader spectrum of complex motions beyond human daily activities. The computational demands of DPO training, especially when leveraging extensive real-world data and a reference model updated via Exponential Moving Average (EMA), could be substantial. Future research might explore optimizing the training process for greater efficiency or investigating the framework's performance on highly diverse, less structured motion scenarios. Understanding the full implications of data curation and computational resources will be key to RealDPO's widespread adoption and application.</p>
+
+<h2>Conclusion: RealDPO's Impact on Generative Video Models</h2>
+<p>RealDPO represents a pivotal contribution to the field of video generative models, effectively bridging the gap between synthesized and real-world motions. By introducing a novel DPO paradigm that leverages <strong>real-world data</strong> and a dedicated dataset, the framework significantly enhances motion realism, video quality, and text alignment. This innovative approach not only outperforms existing methods but also offers a robust solution to long-standing challenges in generating natural and consistent movements. RealDPO's methodology and empirical success pave the way for more sophisticated and practically applicable video generation technologies, promising to unlock new possibilities in areas ranging from content creation to virtual reality. Its impact on advancing <strong>generative AI</strong> for video is undeniable, setting a new benchmark for motion synthesis.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Video generative models</li><li> Motion synthesis</li><li> Complex motion generation</li><li> Motion realism enhancement</li><li> RealDPO</li><li> Direct Preference Optimization (DPO)</li><li> Preference learning for video</li><li> Real-world data alignment</li><li> RealAction-5K dataset</li><li> Human motion synthesis</li><li> AI video generation challenges</li><li> Video quality improvement</li><li> Text-to-video alignment</li><li> Generative AI for complex movements</li><li> Iterative self-correction in generative models</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/306/realdpo-real-or-not-real-that-is-the-preference" target="_blank" title=" RealDPO: Real or Not Real, that is the Preference">
+    RealDPO: Real or Not Real, that is the Preference
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/259_338ff469-6e9c-4638-8748-9705cdd3e8f1.jpg" class="card-img-top" alt="WithAnyone: Towards Controllable and ID Consistent Image Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hengyuan Xu
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/247-WithAnyone-Towards-Controllable-and-ID-Consistent-Image-Generation/index.html"  title="WithAnyone: Towards Controllable and ID Consistent Image Generation">
+          <h3 class="card-title pb-2" itemprop="headline">WithAnyone: Towards Controllable and ID Consistent Image Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/247-WithAnyone-Towards-Controllable-and-ID-Consistent-Image-Generation/index.html"
+          title="WithAnyone: Towards Controllable and ID Consistent Image Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/273_4e506bbc-3749-43b4-9986-042659bc1ff9.jpg" class="card-img-top" alt="Learning an Image Editing Model without Image Editing Pairs" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Nupur Kumari
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/260-Learning-an-Image-Editing-Model-without-Image-Editing-Pairs/index.html"  title="Learning an Image Editing Model without Image Editing Pairs">
+          <h3 class="card-title pb-2" itemprop="headline">Learning an Image Editing Model without Image Editing Pairs</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/260-Learning-an-Image-Editing-Model-without-Image-Editing-Pairs/index.html"
+          title="Learning an Image Editing Model without Image Editing Pairs"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/278_e484f8da-7831-45ba-86ca-8ec4a96176b8.jpg" class="card-img-top" alt="Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Weijie Shen
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/265-Expertise-need-not-monopolize-Action-Specialized-Mixture-of-Experts-for-Vision-Language-Action-L/index.html"  title="Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning">
+          <h3 class="card-title pb-2" itemprop="headline">Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/265-Expertise-need-not-monopolize-Action-Specialized-Mixture-of-Experts-for-Vision-Language-Action-L/index.html"
+          title="Expertise need not monopolize: Action-Specialized Mixture of Experts for
+Vision-Language-Action Learning"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/309_c53c10e6-f176-4cce-8e7a-94fdb132bf5a.jpg" class="card-img-top" alt="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Meiqi Wu
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/293-ImagerySearch-Adaptive-Test-Time-Search-for-Video-Generation-Beyond-Semantic-Dependency-Constrai/index.html"  title="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints">
+          <h3 class="card-title pb-2" itemprop="headline">ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/293-ImagerySearch-Adaptive-Test-Time-Search-for-Video-Generation-Beyond-Semantic-Dependency-Constrai/index.html"
+          title="ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/269_3084249e-a3bd-4eb5-9760-e35e6386b34b.jpg" class="card-img-top" alt="TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yinxi Li
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/256-TokDrift-When-LLM-Speaks-in-Subwords-but-Code-Speaks-in-Grammar/index.html"  title="TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar">
+          <h3 class="card-title pb-2" itemprop="headline">TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/256-TokDrift-When-LLM-Speaks-in-Subwords-but-Code-Speaks-in-Grammar/index.html"
+          title="TokDrift: When LLM Speaks in Subwords but Code Speaks in Grammar"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/319_b414f611-c3dd-4624-a20e-37d18e511c55.jpg" class="card-img-top" alt="DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yu Zhou
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/303-DialectGen-Benchmarking-and-Improving-Dialect-Robustness-in-Multimodal-Generation/index.html"  title="DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation">
+          <h3 class="card-title pb-2" itemprop="headline">DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/303-DialectGen-Benchmarking-and-Improving-Dialect-Robustness-in-Multimodal-Generation/index.html"
+          title="DialectGen: Benchmarking and Improving Dialect Robustness in Multimodal
+Generation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
