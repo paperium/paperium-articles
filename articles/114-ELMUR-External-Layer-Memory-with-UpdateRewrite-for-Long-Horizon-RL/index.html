@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+
+<title>ELMUR: External Layer Memory with Update/Rewrite for Long-Ho</title>
+
+<meta name="keywords" content="partial observability,  long-term dependencies,  ELMUR architecture,  external layer memory,  bidirectional cross-attention,  LRU memory module,  stru">
+
+<meta name="description" content="partial observability,  long-term dependencies,  ELMUR architecture,  external layer memory,  bidirectional cross-attention,  LRU memory module,  stru">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Egor Cherepanov, Alexey K. Kovalev, Aleksandr I. Panov
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/118_12942bf9-544d-43f0-9cb7-25eeb526df0a.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Robots Get a Memory Boost: How New AI Helps Machines Remember the Past</h3>
+<p>
+Ever wondered why a robot sometimes seems to forget what it saw minutes ago? <strong>Scientists have created</strong> a clever memory system called ELMUR that lets robots keep important clues for a very long time. Imagine a notebook that automatically updates its pages, erasing the oldest notes only when it’s full – that’s how ELMUR’s “external layer memory” works, keeping the most useful information at hand.  
+This new trick lets robots plan actions far into the future, like navigating a maze that stretches for miles or handling a delicate object after spotting it a long time earlier. In tests, robots using ELMUR solved a maze with a million‑step corridor and doubled their success on real‑world tasks, all without getting confused.  
+The breakthrough shows that giving machines a simple, scalable memory can turn fleeting observations into lasting knowledge, making them more reliable in everyday settings. <strong>It’s a step toward smarter, more attentive robots</strong> that remember what truly matters, just like we do.<br><br>
+The future may soon be filled with helpers that never lose track of the important details that shape our lives. <strong>Imagine the possibilities.</strong>
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents ELMUR, a novel transformer architecture aimed at enhancing long-horizon decision-making in environments characterized by partial observability. By integrating structured external memory and a Least Recently Used (LRU) update mechanism, ELMUR addresses the limitations of existing models that rely solely on instantaneous information. Empirical evaluations reveal that ELMUR achieves a remarkable 100% success rate on synthetic T-Maze tasks and significantly outperforms baseline models in various manipulation tasks. These findings underscore the model's potential for robust memory retention and effective generalization in robotic applications.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of ELMUR is its innovative use of <strong>structured external memory</strong>, which allows for efficient long-term reasoning. The incorporation of a dual-track system for processing and storing information, along with bidirectional token-memory cross-attention, enhances the model's ability to retain relevant information over extended decision-making tasks. The empirical results demonstrate ELMUR's superior performance across diverse tasks, indicating its potential for real-world applications in robotics.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, ELMUR may face challenges related to computational efficiency, particularly in scenarios with high-dimensional data. While the model shows promise in memory management, the reliance on LRU policies could introduce biases in memory retention, potentially affecting performance in dynamic environments. Additionally, the complexity of the architecture may limit its accessibility for practitioners who are less familiar with advanced machine learning techniques.</p>
+
+<h3>Implications</h3>
+<p>The implications of ELMUR's findings are significant for the field of robotics and artificial intelligence. By demonstrating that structured memory can effectively extend decision-making horizons, this research paves the way for more sophisticated robotic agents capable of operating in complex, partially observable environments. The model's success in manipulation tasks suggests that it could be applied to a variety of real-world scenarios, enhancing the capabilities of autonomous systems.</p>
+
+<h3>Conclusion</h3>
+<p>In summary, ELMUR represents a substantial advancement in the realm of decision-making under partial observability. Its innovative architecture and impressive empirical results highlight the importance of <strong>memory retention</strong> in enhancing the performance of robotic agents. As the field continues to evolve, ELMUR's approach may serve as a foundational model for future research, driving further innovations in memory-augmented learning systems.</p>
+
+<h3>Readability</h3>
+<p>The article is well-structured and presents complex concepts in a clear and engaging manner. The use of concise paragraphs and straightforward language enhances readability, making it accessible to a broad audience. By focusing on key findings and implications, the text encourages further exploration of ELMUR and its applications in robotics.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>partial observability</li><li> long-term dependencies</li><li> ELMUR architecture</li><li> external layer memory</li><li> bidirectional cross-attention</li><li> LRU memory module</li><li> structured memory embeddings</li><li> decision making in robotics</li><li> synthetic T-Maze task</li><li> POPGym performance metrics</li><li> MIKASA-Robo manipulation tasks</li><li> scalable memory solutions</li><li> transformer models in robotics</li><li> effective horizon extension</li><li> sparse-reward tasks</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/114/elmur-external-layer-memory-with-updaterewrite-for-long-horizon-rl" target="_blank" title=" ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL">
+    ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5">
+       <h2 class="lead text-center mb-5">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3>More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/69_c2b1dbc1-2466-4d59-a442-ae5cb4a935d3.jpg" class="card-img-top" alt="R2RGEN: Real-to-Real 3D Data Generation for Spatially Generalized Manipulation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiuwei Xu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/56-R2RGEN-Real-to-Real-3D-Data-Generation-for-Spatially-Generalized-Manipulation/index.html"  title="R2RGEN: Real-to-Real 3D Data Generation for Spatially Generalized Manipulation">
+          <h3 class="card-title pb-2" itemprop="headline">R2RGEN: Real-to-Real 3D Data Generation for Spatially Generalized Manipulation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/56-R2RGEN-Real-to-Real-3D-Data-Generation-for-Spatially-Generalized-Manipulation/index.html"
+          title="R2RGEN: Real-to-Real 3D Data Generation for Spatially Generalized Manipulation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/103_6d67cf09-2d02-4cb6-923e-ae1ce0caa7b3.jpg" class="card-img-top" alt="A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Shuzheng Si
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/99-A-Goal-Without-a-Plan-Is-Just-a-Wish-Efficient-and-Effective-Global-Planner-Training-for-Long-Hor/index.html"  title="A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks">
+          <h3 class="card-title pb-2" itemprop="headline">A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/99-A-Goal-Without-a-Plan-Is-Just-a-Wish-Efficient-and-Effective-Global-Planner-Training-for-Long-Hor/index.html"
+          title="A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner
+Training for Long-Horizon Agent Tasks"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/44_a7bf4d82-985e-475d-9e7d-83be4ec0b7a9.jpg" class="card-img-top" alt="LLMs Learn to Deceive Unintentionally: Emergent Misalignment in Dishonesty from
+Misaligned Samples to Biased Human-AI Interactions" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            XuHao Hu
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/35-LLMs-Learn-to-Deceive-Unintentionally-Emergent-Misalignment-in-Dishonesty-from-Misaligned-Samples/index.html"  title="LLMs Learn to Deceive Unintentionally: Emergent Misalignment in Dishonesty from
+Misaligned Samples to Biased Human-AI Interactions">
+          <h3 class="card-title pb-2" itemprop="headline">LLMs Learn to Deceive Unintentionally: Emergent Misalignment in Dishonesty from
+Misaligned Samples to Biased Human-AI Interactions</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/35-LLMs-Learn-to-Deceive-Unintentionally-Emergent-Misalignment-in-Dishonesty-from-Misaligned-Samples/index.html"
+          title="LLMs Learn to Deceive Unintentionally: Emergent Misalignment in Dishonesty from
+Misaligned Samples to Biased Human-AI Interactions"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/61_3b50c7c6-6769-4fdd-ba3a-efb459c7a4bb.jpg" class="card-img-top" alt="Recycling Pretrained Checkpoints: Orthogonal Growth of Mixture-of-Experts for
+Efficient Large Language Model Pre-Training" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ruizhe Wang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/48-Recycling-Pretrained-Checkpoints-Orthogonal-Growth-of-Mixture-of-Experts-for-Efficient-Large-Lang/index.html"  title="Recycling Pretrained Checkpoints: Orthogonal Growth of Mixture-of-Experts for
+Efficient Large Language Model Pre-Training">
+          <h3 class="card-title pb-2" itemprop="headline">Recycling Pretrained Checkpoints: Orthogonal Growth of Mixture-of-Experts for
+Efficient Large Language Model Pre-Training</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/48-Recycling-Pretrained-Checkpoints-Orthogonal-Growth-of-Mixture-of-Experts-for-Efficient-Large-Lang/index.html"
+          title="Recycling Pretrained Checkpoints: Orthogonal Growth of Mixture-of-Experts for
+Efficient Large Language Model Pre-Training"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/118_12942bf9-544d-43f0-9cb7-25eeb526df0a.jpg" class="card-img-top" alt="ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Egor Cherepanov
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/114-ELMUR-External-Layer-Memory-with-UpdateRewrite-for-Long-Horizon-RL/index.html"  title="ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL">
+          <h3 class="card-title pb-2" itemprop="headline">ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/114-ELMUR-External-Layer-Memory-with-UpdateRewrite-for-Long-Horizon-RL/index.html"
+          title="ELMUR: External Layer Memory with Update/Rewrite for Long-Horizon RL"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/70_d30bbd15-96df-4401-a71b-ad9d9035cffc.jpg" class="card-img-top" alt="Drive&Gen: Co-Evaluating End-to-End Driving and Video Generation Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiahao Wang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/57-DriveGen-Co-Evaluating-End-to-End-Driving-and-Video-Generation-Models/index.html"  title="Drive&Gen: Co-Evaluating End-to-End Driving and Video Generation Models">
+          <h3 class="card-title pb-2" itemprop="headline">Drive&Gen: Co-Evaluating End-to-End Driving and Video Generation Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/57-DriveGen-Co-Evaluating-End-to-End-Driving-and-Video-Generation-Models/index.html"
+          title="Drive&Gen: Co-Evaluating End-to-End Driving and Video Generation Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <link rel="stylesheet" href="/paperium-articles/assets/script1.js"> 
+ 
+</body>
+</html>
