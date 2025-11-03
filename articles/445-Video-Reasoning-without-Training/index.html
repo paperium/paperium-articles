@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Video Reasoning without Training</title>
+
+<meta name="keywords" content="Video reasoning LMMs,  Large Multimodal Models inference,  Entropy-based model tuning,  Micro-exploration exploitation,  V-Reason approach,  Computati">
+
+<meta name="description" content="Video reasoning LMMs,  Large Multimodal Models inference,  Entropy-based model tuning,  Micro-exploration exploitation,  V-Reason approach,  Computati">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Video Reasoning without Training
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Deepak Sridhar, Kartikeya Bhardwaj, Jeya Pradha Jeyaraj, Nuno Vasconcelos, Ankita Nayak, Harris Teague
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              22 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/458_cddf2082-b21d-4cc5-9f42-cde0fe313ff1.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Can Reason About Videos Without Heavy Training</h3>
+<p>
+Ever wondered how a computer can “watch” a video and answer questions without endless training? <strong>Scientists discovered</strong> a clever shortcut: by watching the AI’s own uncertainty, they guide it to think smarter, not harder. Imagine a detective who first sketches many possible clues (micro‑explorations) and then zeroes in on the most likely answer (micro‑exploitation). Using this “uncertainty signal,” the new method called <strong>V‑Reason</strong> fine‑tunes the AI on the fly, without any extra data or costly reinforcement learning. The result? The model reaches the right conclusion faster, cutting the number of words it generates by more than half while staying almost as accurate as the heavyweight versions. This breakthrough means future video‑based apps—like smart home assistants or educational tools—can run faster, use less power, and still give you reliable answers. <strong>It’s a big step toward making AI both clever and efficient</strong>, showing that sometimes a little self‑reflection is all the training an AI needs. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Comprehensive Analysis of V-Reason: Enhancing Video Reasoning in LMMs</h2>
+
+<p>The article introduces V-Reason, a novel, training-free method to enhance <strong>video reasoning</strong> in <strong>Large Multimodal Models (LMMs)</strong>. It tackles the computational overhead and limited control of existing reinforcement learning (RL) and chain-of-thought approaches. By analyzing output entropy, the research identifies crucial micro-exploration and micro-exploitation phases for grounded reasoning. V-Reason optimizes LMMs directly at inference time, adapting the model's value cache via a small, trainable controller. This uses an <strong>entropy-based objective</strong>, avoiding costly supervised fine-tuning or RL, promising enhanced accuracy and remarkable efficiency in video understanding.</p>
+
+<h3>Critical Evaluation of V-Reason's Approach</h3>
+
+<h3>Strengths</h3>
+<p>A primary strength is V-Reason's innovative <strong>training-free, inference-time optimization</strong>, dramatically reducing resource demands compared to intensive training paradigms. Its theoretical grounding, based on modulating output entropy to guide <strong>micro-exploration and exploitation cycles</strong>, offers a novel mechanism for controlling model reasoning. This approach achieves significant accuracy improvements, narrowing the gap with RL-trained models to within 0.6% average accuracy, while delivering massive efficiency benefits, including a 58.6% reduction in output tokens. V-Reason also demonstrates impressive <strong>scalability and robustness</strong> across various model sizes and decoding methods.</p>
+
+<h3>Weaknesses</h3>
+<p>While V-Reason presents a compelling advancement, a minor limitation is its performance on specific <strong>regression tasks</strong>, where it did not consistently outperform all baselines, suggesting edge cases where explicit RL supervision might retain a slight advantage. The reliance on modulating the <strong>value cache</strong> of the last decoder layer, while effective, might also imply a specific architectural dependency, potentially limiting direct transferability to all LMM architectures without adaptation.</p>
+
+<h3>Implications</h3>
+<p>The implications of V-Reason are substantial for the future of <strong>Large Multimodal Models</strong> and AI reasoning. By demonstrating that significant performance gains and efficiency can be achieved without extensive retraining, this research opens new avenues for developing more agile and sustainable AI systems. It provides a blueprint for enhancing model control and interpretability by directly influencing the internal "thinking" process via an <strong>entropy-based objective</strong>. This paradigm shift could accelerate the deployment of high-performing LMMs in resource-constrained real-world applications.</p>
+
+<h2>Conclusion: V-Reason's Impact on LMM Efficiency and Control</h2>
+<p>In conclusion, V-Reason represents a highly impactful contribution to the field of <strong>Large Multimodal Models</strong>, offering an elegant and efficient solution to video reasoning challenges. Its novel, training-free approach, grounded in theoretical understanding of model entropy dynamics, provides a powerful mechanism for enhancing both accuracy and computational efficiency. This work pushes the boundaries of LMM optimization, setting a new standard for developing more controllable and resource-conscious AI systems.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Video reasoning LMMs</li><li> Large Multimodal Models inference</li><li> Entropy-based model tuning</li><li> Micro-exploration exploitation</li><li> V-Reason approach</li><li> Computational efficiency AI</li><li> Reinforcement learning alternatives</li><li> Chain-of-thought optimization</li><li> Value cache adaptation</li><li> Inference-time model optimization</li><li> Grounded reasoning AI</li><li> Reduced output tokens LMMs</li><li> Video understanding AI</li><li> Zero-shot inference tuning</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/445/video-reasoning-without-training" target="_blank" title=" Video Reasoning without Training">
+    Video Reasoning without Training
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/455_b3cb6b46-415d-4119-83bd-ef1fc4f02276.jpg" class="card-img-top" alt="MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yongshun Zhang
+          </div>
+          <div class="article-meta-text">
+            22 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/434-MUG-V-10B-High-efficiency-Training-Pipeline-for-Large-Video-Generation-Models/index.html"  title="MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models">
+          <h3 class="card-title pb-2" itemprop="headline">MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/434-MUG-V-10B-High-efficiency-Training-Pipeline-for-Large-Video-Generation-Models/index.html"
+          title="MUG-V 10B: High-efficiency Training Pipeline for Large Video Generation Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/369_bc05be24-9c44-4779-b4fb-78dca8d88cfc.jpg" class="card-img-top" alt="InfiMed-ORBIT: Aligning LLMs on Open-Ended Complex Tasks via Rubric-Based
+Incremental Training" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Pengkai Wang
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/349-InfiMed-ORBIT-Aligning-LLMs-on-Open-Ended-Complex-Tasks-via-Rubric-Based-Incremental-Training/index.html"  title="InfiMed-ORBIT: Aligning LLMs on Open-Ended Complex Tasks via Rubric-Based
+Incremental Training">
+          <h3 class="card-title pb-2" itemprop="headline">InfiMed-ORBIT: Aligning LLMs on Open-Ended Complex Tasks via Rubric-Based
+Incremental Training</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/349-InfiMed-ORBIT-Aligning-LLMs-on-Open-Ended-Complex-Tasks-via-Rubric-Based-Incremental-Training/index.html"
+          title="InfiMed-ORBIT: Aligning LLMs on Open-Ended Complex Tasks via Rubric-Based
+Incremental Training"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/613_1cd9673a-4795-41e8-99d2-6778060a85b4.jpg" class="card-img-top" alt="Long-Context Attention Benchmark: From Kernel Efficiency to Distributed Context
+Parallelism" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Tao Bu
+          </div>
+          <div class="article-meta-text">
+            26 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/717-Long-Context-Attention-Benchmark-From-Kernel-Efficiency-to-Distributed-Context-Parallelism/index.html"  title="Long-Context Attention Benchmark: From Kernel Efficiency to Distributed Context
+Parallelism">
+          <h3 class="card-title pb-2" itemprop="headline">Long-Context Attention Benchmark: From Kernel Efficiency to Distributed Context
+Parallelism</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/717-Long-Context-Attention-Benchmark-From-Kernel-Efficiency-to-Distributed-Context-Parallelism/index.html"
+          title="Long-Context Attention Benchmark: From Kernel Efficiency to Distributed Context
+Parallelism"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/361_2862b600-1dd5-46b6-9183-aad9a92dc4c5.jpg" class="card-img-top" alt="Scaling Instruction-Based Video Editing with a High-Quality Synthetic Dataset" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qingyan Bai
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/341-Scaling-Instruction-Based-Video-Editing-with-a-High-Quality-Synthetic-Dataset/index.html"  title="Scaling Instruction-Based Video Editing with a High-Quality Synthetic Dataset">
+          <h3 class="card-title pb-2" itemprop="headline">Scaling Instruction-Based Video Editing with a High-Quality Synthetic Dataset</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/341-Scaling-Instruction-Based-Video-Editing-with-a-High-Quality-Synthetic-Dataset/index.html"
+          title="Scaling Instruction-Based Video Editing with a High-Quality Synthetic Dataset"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/373_95ec6c1c-0325-4f72-9def-f8cb5888828b.jpg" class="card-img-top" alt="VISTA: A Test-Time Self-Improving Video Generation Agent" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Do Xuan Long
+          </div>
+          <div class="article-meta-text">
+            20 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/353-VISTA-A-Test-Time-Self-Improving-Video-Generation-Agent/index.html"  title="VISTA: A Test-Time Self-Improving Video Generation Agent">
+          <h3 class="card-title pb-2" itemprop="headline">VISTA: A Test-Time Self-Improving Video Generation Agent</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/353-VISTA-A-Test-Time-Self-Improving-Video-Generation-Agent/index.html"
+          title="VISTA: A Test-Time Self-Improving Video Generation Agent"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/539_c5bb5e63-a5dd-498d-8af9-c74b52996d0c.jpg" class="card-img-top" alt="What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Lennart Wachowiak
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/648-What-Questions-Should-Robots-Be-Able-to-Answer-A-Dataset-of-User-Questions-for-Explainable-Robot/index.html"  title="What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics">
+          <h3 class="card-title pb-2" itemprop="headline">What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/648-What-Questions-Should-Robots-Be-Able-to-Answer-A-Dataset-of-User-Questions-for-Explainable-Robot/index.html"
+          title="What Questions Should Robots Be Able to Answer? A Dataset of User Questions for
+Explainable Robotics"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
