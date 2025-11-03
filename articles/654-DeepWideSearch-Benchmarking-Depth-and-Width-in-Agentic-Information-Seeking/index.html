@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>DeepWideSearch: Benchmarking Depth and Width in Agentic Info</title>
+
+<meta name="keywords" content="DeepWideSearch,  multi-hop retrieval,  deep reasoning in search agents,  wide-scale information collection,  market analysis tools,  business developm">
+
+<meta name="description" content="DeepWideSearch,  multi-hop retrieval,  deep reasoning in search agents,  wide-scale information collection,  market analysis tools,  business developm">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                DeepWideSearch: Benchmarking Depth and Width in Agentic Information Seeking
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Tian Lan, Bin Zhu, Qianghuai Jia, Junyang Ren, Haijun Li, Longyue Wang, Zhao Xu, Weihua Luo, Kaifu Zhang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              24 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/545_ae9cb8b1-9cbd-4e25-904a-a80862891988.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>DeepWideSearch: Why Search Bots Still Miss the Mark</h3>
+<p>
+Ever wondered why your digital assistant sometimes gives you a vague answer instead of the exact detail you need? <strong>DeepWideSearch</strong> shines a light on this mystery. Researchers built a new test where a smart agent must both “dig deep” into complex facts and “scan wide” across tons of information—think of a detective who has to read dozens of books while solving a tricky case. The test includes 220 real‑world questions from 15 different fields, from market trends to everyday curiosities. Even the most advanced bots managed to answer correctly only about 2 % of the time, revealing a huge <strong>challenge</strong> in combining deep reasoning with broad searching. The study also uncovered four common slip‑ups: not pausing to reflect, relying too much on what they already “know,” missing key sources, and getting overwhelmed by too much context. This <strong>breakthrough</strong> shows we still have a long road ahead before AI can truly think like a human researcher. As we keep improving these agents, the day may come when a simple chat can give you a full, accurate picture in an instant. 🌟</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article introduces <strong>DeepWideSearch</strong>, a pioneering benchmark designed to evaluate the capabilities of information-seeking agents in performing both <strong>deep reasoning</strong> and <strong>wide-scale information collection</strong>. This benchmark addresses a critical gap in current agent architectures, particularly in real-world applications such as market analysis and business development. Through the development of two innovative methods, Deep2Wide and Wide2Deep, the authors curated a dataset comprising 220 questions across 15 diverse domains. Experimental results reveal that even state-of-the-art agents achieve a mere 2.39% average success rate, underscoring significant challenges in integrating depth and width in information-seeking tasks.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>One of the primary strengths of this study is the introduction of a comprehensive benchmark that effectively combines <strong>depth</strong> and <strong>width</strong> in information retrieval. The use of two distinct methods for dataset construction enhances the robustness of the evaluation, allowing for a nuanced assessment of agent performance. Additionally, the incorporation of new evaluation metrics, such as <strong>Column-F1</strong> and <strong>Core Entity Accuracy</strong>, provides a more detailed understanding of agent capabilities, particularly in complex tasks.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the study has notable weaknesses. The low success rate of 2.39% indicates that current agents struggle significantly with the benchmark's demands, revealing a potential overreliance on internal knowledge and insufficient retrieval capabilities. Furthermore, the high computational costs associated with the evaluation process may limit accessibility for broader research applications. The identified failure modes, including lack of reflection and context overflow, suggest that existing architectures may require substantial redesign to meet the benchmark's challenges.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are profound, as it sets a new standard for evaluating information-seeking agents. By publicly releasing the DeepWideSearch benchmark, the authors aim to catalyze future research focused on developing more capable and robust agents. This could lead to significant advancements in various fields, including artificial intelligence and data science, where effective information retrieval is crucial.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article presents a valuable contribution to the field of information retrieval through the introduction of DeepWideSearch. By highlighting the limitations of current agent architectures and proposing a rigorous evaluation framework, it paves the way for future innovations in <strong>information-seeking technologies</strong>. The findings underscore the need for ongoing research to enhance agent performance, ultimately aiming for more effective solutions in real-world applications.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>DeepWideSearch</li><li> multi-hop retrieval</li><li> deep reasoning in search agents</li><li> wide-scale information collection</li><li> market analysis tools</li><li> business development research</li><li> information-seeking tasks</li><li> agent architecture limitations</li><li> error analysis in AI</li><li> data processing challenges</li><li> curated question datasets</li><li> performance evaluation benchmarks</li><li> search agent success rates</li><li> context overflow in AI</li><li> retrieval failure modes</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/654/deepwidesearch-benchmarking-depth-and-width-in-agentic-information-seeking" target="_blank" title=" DeepWideSearch: Benchmarking Depth and Width in Agentic Information Seeking">
+    DeepWideSearch: Benchmarking Depth and Width in Agentic Information Seeking
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/559_08dda6b4-a014-45ff-ab0e-978d2b06d609.jpg" class="card-img-top" alt="DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Noam Issachar
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/666-DyPE-Dynamic-Position-Extrapolation-for-Ultra-High-Resolution-Diffusion/index.html"  title="DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion">
+          <h3 class="card-title pb-2" itemprop="headline">DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/666-DyPE-Dynamic-Position-Extrapolation-for-Ultra-High-Resolution-Diffusion/index.html"
+          title="DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/632_95824998-9c58-4b3a-ad19-4312243720e8.jpg" class="card-img-top" alt="PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yu Yang
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/738-PhysWorld-From-Real-Videos-to-World-Models-of-Deformable-Objects-via-Physics-Aware-Demonstration/index.html"  title="PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis">
+          <h3 class="card-title pb-2" itemprop="headline">PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/738-PhysWorld-From-Real-Videos-to-World-Models-of-Deformable-Objects-via-Physics-Aware-Demonstration/index.html"
+          title="PhysWorld: From Real Videos to World Models of Deformable Objects via
+Physics-Aware Demonstration Synthesis"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/636_aeb4db54-a2b2-4f8b-bfeb-cb8dc9a54456.jpg" class="card-img-top" alt="AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jonathan Bragg
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/742-AstaBench-Rigorous-Benchmarking-of-AI-Agents-with-a-Scientific-Research-Suite/index.html"  title="AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite">
+          <h3 class="card-title pb-2" itemprop="headline">AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/742-AstaBench-Rigorous-Benchmarking-of-AI-Agents-with-a-Scientific-Research-Suite/index.html"
+          title="AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/618_61e800eb-c35c-49cd-94a5-3dadd3b404ec.jpg" class="card-img-top" alt="DeepAgent: A General Reasoning Agent with Scalable Toolsets" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Xiaoxi Li
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/723-DeepAgent-A-General-Reasoning-Agent-with-Scalable-Toolsets/index.html"  title="DeepAgent: A General Reasoning Agent with Scalable Toolsets">
+          <h3 class="card-title pb-2" itemprop="headline">DeepAgent: A General Reasoning Agent with Scalable Toolsets</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/723-DeepAgent-A-General-Reasoning-Agent-with-Scalable-Toolsets/index.html"
+          title="DeepAgent: A General Reasoning Agent with Scalable Toolsets"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/562_b7f03141-c477-45af-bdb2-944a0be31403.jpg" class="card-img-top" alt="From Masks to Worlds: A Hitchhiker's Guide to World Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jinbin Bai
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/669-From-Masks-to-Worlds-A-Hitchhikers-Guide-to-World-Models/index.html"  title="From Masks to Worlds: A Hitchhiker's Guide to World Models">
+          <h3 class="card-title pb-2" itemprop="headline">From Masks to Worlds: A Hitchhiker's Guide to World Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/669-From-Masks-to-Worlds-A-Hitchhikers-Guide-to-World-Models/index.html"
+          title="From Masks to Worlds: A Hitchhiker's Guide to World Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/682_9b077f4d-d00a-4a0e-9f9e-17a113c28170.jpg" class="card-img-top" alt="LongCat-Video Technical Report" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Meituan LongCat Team
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/777-LongCat-Video-Technical-Report/index.html"  title="LongCat-Video Technical Report">
+          <h3 class="card-title pb-2" itemprop="headline">LongCat-Video Technical Report</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/777-LongCat-Video-Technical-Report/index.html"
+          title="LongCat-Video Technical Report"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
