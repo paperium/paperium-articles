@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>ImagerySearch: Adaptive Test-Time Search for Video Generatio</title>
+
+<meta name="keywords" content="Imaginative video generation,  Long-distance semantic prompts,  ImagerySearch,  Adaptive test-time search,  Dynamic inference search space,  Prompt-gu">
+
+<meta name="description" content="Imaginative video generation,  Long-distance semantic prompts,  ImagerySearch,  Adaptive test-time search,  Dynamic inference search space,  Prompt-gu">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Meiqi Wu, Jiashu Zhu, Xiaokun Feng, Chubin Chen, Chen Zhu, Bingze Song, Fangyuan Mao, Jiahong Wu, Xiangxiang Chu, Kaiqi Huang
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              18 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/309_c53c10e6-f176-4cce-8e7a-94fdb132bf5a.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>New AI Trick Makes Dreamy Videos Come to Life</h3>
+<p>
+Imagine telling a computer to create a video of “a dragon playing chess on a moonlit beach” and actually getting a smooth, believable clip. <strong>Scientists have unveiled</strong> a clever method called ImagerySearch that lets AI adjust its own settings while it’s generating the video, just like a chef tasting and tweaking a dish on the fly. This adaptive approach reads the whole prompt, understands how far‑apart ideas relate, and then expands its search for the best visual details, making even the wildest combos look coherent. To prove it works, the team built a special test set called LDT‑Bench, packed with thousands of unusual concept pairs, and the results showed a clear boost over older techniques. <strong>This breakthrough</strong> means future video tools could turn our most imaginative stories into reality, opening doors for creators, educators, and anyone who loves a good visual fantasy. <strong>Get ready</strong> to see your wildest ideas come alive on screen—one frame at a time. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Advancing Imaginative Video Generation with ImagerySearch</h2>
+
+<p>This article addresses a significant challenge in current video generation models: their notable performance degradation when handling <strong>imaginative scenarios</strong> involving rarely co-occurring concepts and long-distance semantic relationships. To overcome this, the authors introduce ImagerySearch, a novel prompt-guided adaptive test-time search strategy. This innovative approach dynamically adjusts both the inference search space and the reward function based on the semantic relationships within the prompt, enabling the creation of more coherent and visually plausible videos in complex settings. The research also presents LDT-Bench, the first dedicated benchmark for evaluating models on long-distance semantic prompts, alongside an automated protocol for assessing creative generation capabilities. Extensive experiments demonstrate that ImagerySearch consistently outperforms existing baselines, marking a substantial step forward in the field.</p>
+
+<h2>Evaluating ImagerySearch: A Critical Perspective</h2>
+
+<h3>Key Strengths of ImagerySearch and LDT-Bench</h3>
+<p>A primary strength of this work lies in the introduction of <strong>ImagerySearch</strong>, an adaptive test-time scaling strategy that effectively tackles the limitations of video generation in imaginative contexts. Its dynamic adjustment of inference search space via SaDSS (Semantic-distance-aware Dynamic Search Space) and reward function through AIR (Adaptive Imagery Reward) represents a sophisticated solution for achieving better semantic alignment and visual quality. The development of <strong>LDT-Bench</strong> is another pivotal contribution, providing a much-needed, standardized benchmark for evaluating models on complex, long-distance semantic prompts. Furthermore, the ImageryQA evaluation framework, leveraging Multimodal Large Language Models (MLLMs), offers a robust and automated method for assessing generation fidelity and quality, enhancing the reliability of experimental results. The consistent outperformance of ImagerySearch against strong baselines on both LDT-Bench and VBench underscores its efficacy and robustness.</p>
+
+<h3>Potential Limitations and Future Directions</h3>
+<p>While ImagerySearch presents a significant advancement, potential areas for further exploration exist. The dynamic adjustment mechanism, while effective, might introduce increased <strong>computational overhead</strong> compared to static methods, which could be a consideration for real-time applications. Additionally, while MLLMs are powerful for evaluation, their inherent biases or limitations in fully capturing subjective aspects of "creativity" could warrant further investigation into human-centric evaluation metrics. Future research could also explore the generalizability of ImagerySearch to an even broader spectrum of imaginative scenarios beyond the current LDT-Bench dataset, potentially incorporating more abstract or highly nuanced semantic relationships to push the boundaries of <strong>creative AI generation</strong>.</p>
+
+<h3>Broader Implications for Video Generation</h3>
+<p>The implications of this research are substantial for the field of <strong>text-to-video generation</strong>. ImagerySearch's ability to produce coherent and plausible videos from challenging imaginative prompts opens new avenues for creative content creation, from entertainment to educational tools. The introduction of LDT-Bench and the ImageryQA framework provides essential tools for researchers, fostering standardized evaluation and accelerating progress in handling complex semantic relationships. This work not only pushes the technical boundaries of AI-driven video synthesis but also lays a strong foundation for developing more sophisticated and context-aware generative models, ultimately enhancing the capabilities of <strong>AI in creative industries</strong>.</p>
+
+<h2>Overall Assessment and Future Impact</h2>
+<p>This article makes a <strong>pivotal contribution</strong> to the evolving landscape of video generation, particularly in addressing the challenging domain of imaginative content. By proposing ImagerySearch and establishing the LDT-Bench benchmark, the authors have provided both an innovative solution and the necessary tools for its rigorous evaluation. The demonstrated superior performance of ImagerySearch positions it as a state-of-the-art method, poised to significantly influence <strong>future research</strong> and development in creative AI applications. The commitment to releasing LDT-Bench and the code further solidifies its potential to catalyze advancements in the community.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Imaginative video generation</li><li> Long-distance semantic prompts</li><li> ImagerySearch</li><li> Adaptive test-time search</li><li> Dynamic inference search space</li><li> Prompt-guided video generation</li><li> LDT-Bench</li><li> Creative video generation capabilities</li><li> Out-of-distribution video generation</li><li> Semantic relationships in prompts</li><li> Video generation benchmarks</li><li> Coherent video synthesis</li><li> Test-time scaling for video</li><li> Rarely co-occurring concepts</li><li> Dynamic reward function</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/293/imagerysearch-adaptive-test-time-search-for-video-generation-beyond-semanticdependency-constraints" target="_blank" title=" ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints">
+    ImagerySearch: Adaptive Test-Time Search for Video Generation Beyond Semantic
+Dependency Constraints
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/262_37c6832a-e443-432c-babe-0ec334662c1f.jpg" class="card-img-top" alt="AI for Service: Proactive Assistance with AI Glasses" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zichen Wen
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/250-AI-for-Service-Proactive-Assistance-with-AI-Glasses/index.html"  title="AI for Service: Proactive Assistance with AI Glasses">
+          <h3 class="card-title pb-2" itemprop="headline">AI for Service: Proactive Assistance with AI Glasses</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/250-AI-for-Service-Proactive-Assistance-with-AI-Glasses/index.html"
+          title="AI for Service: Proactive Assistance with AI Glasses"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/316_d7b9eceb-58bc-4d12-93e4-b970a031a703.jpg" class="card-img-top" alt="VLA-0: Building State-of-the-Art VLAs with Zero Modification" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ankit Goyal
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/300-VLA-0-Building-State-of-the-Art-VLAs-with-Zero-Modification/index.html"  title="VLA-0: Building State-of-the-Art VLAs with Zero Modification">
+          <h3 class="card-title pb-2" itemprop="headline">VLA-0: Building State-of-the-Art VLAs with Zero Modification</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/300-VLA-0-Building-State-of-the-Art-VLAs-with-Zero-Modification/index.html"
+          title="VLA-0: Building State-of-the-Art VLAs with Zero Modification"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/315_2b923e84-ccfd-4b15-bd90-842304e3f756.jpg" class="card-img-top" alt="Agentic Design of Compositional Machines" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wenqian Zhang
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/299-Agentic-Design-of-Compositional-Machines/index.html"  title="Agentic Design of Compositional Machines">
+          <h3 class="card-title pb-2" itemprop="headline">Agentic Design of Compositional Machines</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/299-Agentic-Design-of-Compositional-Machines/index.html"
+          title="Agentic Design of Compositional Machines"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/275_41c47847-c58b-4c63-a92d-b7565f1098ec.jpg" class="card-img-top" alt="pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Hansheng Chen
+          </div>
+          <div class="article-meta-text">
+            17 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/262-pi-Flow-Policy-Based-Few-Step-Generation-via-Imitation-Distillation/index.html"  title="pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation">
+          <h3 class="card-title pb-2" itemprop="headline">pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/262-pi-Flow-Policy-Based-Few-Step-Generation-via-Imitation-Distillation/index.html"
+          title="pi-Flow: Policy-Based Few-Step Generation via Imitation Distillation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/462_c4d5fa9f-6801-4a72-9f3f-7bda711f0939.jpg" class="card-img-top" alt="AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zheye Deng
+          </div>
+          <div class="article-meta-text">
+            23 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/460-AlphaQuanter-An-End-to-End-Tool-Orchestrated-Agentic-Reinforcement-Learning-Framework-for-Stock/index.html"  title="AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading">
+          <h3 class="card-title pb-2" itemprop="headline">AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/460-AlphaQuanter-An-End-to-End-Tool-Orchestrated-Agentic-Reinforcement-Learning-Framework-for-Stock/index.html"
+          title="AlphaQuanter: An End-to-End Tool-Orchestrated Agentic Reinforcement Learning
+Framework for Stock Trading"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/310_d85e7e45-972e-466c-ab02-a5e1678b58d3.jpg" class="card-img-top" alt="COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yunwen Li
+          </div>
+          <div class="article-meta-text">
+            18 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/294-COIG-Writer-A-High-Quality-Dataset-for-Chinese-Creative-Writing-with-Thought-Processes/index.html"  title="COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes">
+          <h3 class="card-title pb-2" itemprop="headline">COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/294-COIG-Writer-A-High-Quality-Dataset-for-Chinese-Creative-Writing-with-Thought-Processes/index.html"
+          title="COIG-Writer: A High-Quality Dataset for Chinese Creative Writing with Thought
+Processes"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
