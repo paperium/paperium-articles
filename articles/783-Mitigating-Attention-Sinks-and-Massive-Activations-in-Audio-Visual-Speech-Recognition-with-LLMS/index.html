@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css?ver=2"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css?ver=2" >
+
+<title>Mitigating Attention Sinks and Massive Activations in Audio-</title>
+
+<meta name="keywords" content="audio-visual speech recognition (AVSR),  attention sink tokens in multimodal LLMs,  massive activation patterns in MLP layers,  BOS token cosine simil">
+
+<meta name="description" content="audio-visual speech recognition (AVSR),  attention sink tokens in multimodal LLMs,  massive activation patterns in MLP layers,  BOS token cosine simil">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech
+Recognition with LLMS
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Anand, Umberto Cappellazzo, Stavros Petridis, Maja Pantic
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              29 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/689_dde75879-f30d-4bc6-82f4-b62285a007c8.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>How AI Beats “Attention Overload” to Hear and See Speech Better</h3>
+<p>
+Ever wonder why a smart assistant sometimes stumbles when you talk and gesture at the same time? <strong>Researchers discovered</strong> that inside large language models a few “attention sinks” act like noisy magnets, pulling too much focus and causing huge spikes of activity—think of a crowded room where everyone keeps shouting at the same person. This overload makes the AI miss important words or lip movements. By studying audio‑visual speech systems, scientists found that these noisy magnets appear not only at the start of a sentence but also in the middle, confusing the model. They introduced a simple “decorrelation” trick that gently nudges the AI to spread its attention more evenly, like turning down the volume on that one loud voice. The result? The system understands spoken words and lip‑reading even when the video quality is low, cutting errors dramatically. <strong>This breakthrough</strong> shows that a tiny tweak can make AI listen and see more like a human, keeping conversations smooth and reliable. <strong>Imagine</strong> future devices that never miss a word, no matter how busy the scene gets.</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Unpacking Attention Sinks in Multimodal Speech Recognition LLMs</h2>
+<p>This scientific analysis delves into the intricate internal dynamics of <strong>Large Language Models</strong> (LLMs) when applied to <strong>multimodal speech recognition</strong> tasks, including Auditory (ASR), Visual (VSR), and Audio-Visual (AVSR) modalities. The primary objective is to comprehensively investigate the emergence and characteristics of previously observed <strong>attention sinks</strong> and associated <strong>massive activations</strong> within these sophisticated models during fine-tuning. A key finding reveals these phenomena are not solely confined to the Beginning Of Sentence (BOS) token but also manifest significantly at intermediate, low-semantic tokens across all examined speech recognition modalities. The research meticulously traces the origin of these massive activations to the Multi-Layer Perceptron (MLP) layers, demonstrating their correspondence to fixed feature indices consistently observed across all identified sink tokens. Building upon these critical insights, the authors introduce a novel and straightforward <strong>decorrelation loss</strong> designed to effectively mitigate these problematic intermediate sinks and massive activations.</p>
+
+<h2>Critical Evaluation of LLM Internal Dynamics</h2>
+<h3>Strengths</h3>
+<p>This study pioneers the investigation of <strong>attention sinks</strong> and <strong>massive activations</strong> in multimodal speech recognition LLMs, offering crucial insights into internal dynamics previously underexplored in this domain. The proposed <strong>decorrelation loss</strong> is a practical and effective solution, demonstrating tangible improvements in <strong>Word Error Rate (WER)</strong> under high audio-visual feature downsampling while maintaining stability at lower rates.</p>
+
+<h3>Weaknesses</h3>
+<p>While highly insightful, the analysis could benefit from deeper theoretical exploration into why specific feature indices become fixed or how the BOS token alignment mechanism develops. Further investigation into the generalizability of the decorrelation loss across diverse LLM architectures or other multimodal tasks beyond speech recognition warrants additional study.</p>
+
+<h3>Implications</h3>
+<p>This research significantly enhances our understanding of <strong>LLM robustness</strong> and internal processing for speech recognition, paving the way for more stable and efficient models. Improving WER under high downsampling suggests considerable potential for deploying LLMs in <strong>resource-constrained environments</strong>, making advanced speech technologies more accessible and practical.</p>
+
+<h2>Conclusion</h2>
+<p>Overall, this article presents a compelling and meticulously conducted investigation into critical internal dynamics of multimodal speech recognition LLMs. By identifying the origins of attention sinks and massive activations and proposing an effective <strong>decorrelation loss</strong>, the work offers a <strong>significant advancement</strong> in both theoretical understanding and practical application. Its findings are invaluable for researchers and practitioners aiming to develop more robust, efficient, and interpretable <strong>speech AI systems</strong>.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>audio-visual speech recognition (AVSR)</li><li> attention sink tokens in multimodal LLMs</li><li> massive activation patterns in MLP layers</li><li> BOS token cosine similarity reduction</li><li> decorrelation loss for speech models</li><li> intermediate low-semantic token analysis</li><li> word error rate improvement under feature downsampling</li><li> multimodal large language model fine-tuning</li><li> token-level attention dynamics in ASR and VSR</li><li> high downsampling audio-visual feature robustness</li><li> MLP-driven activation hotspots</li><li> low-semantic token attention amplification</li><li> speech recognition token sink mitigation</li><li> cross-modal attention sink detection</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/783/mitigating-attention-sinks-and-massive-activations-in-audio-visual-speechrecognition-with-llms" target="_blank" title=" Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech
+Recognition with LLMS">
+    Mitigating Attention Sinks and Massive Activations in Audio-Visual Speech
+Recognition with LLMS
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/625_2b6be9af-bcf7-4947-8b55-585498220bc6.jpg" class="card-img-top" alt="RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Bowen Wang
+          </div>
+          <div class="article-meta-text">
+            27 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/731-RECALL-REpresentation-aligned-Catastrophic-forgetting-ALLeviation-via-Hierarchical-Model-Merging/index.html"  title="RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging">
+          <h3 class="card-title pb-2" itemprop="headline">RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/731-RECALL-REpresentation-aligned-Catastrophic-forgetting-ALLeviation-via-Hierarchical-Model-Merging/index.html"
+          title="RECALL: REpresentation-aligned Catastrophic-forgetting ALLeviation via
+Hierarchical Model Merging"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/549_fd25b33f-1de6-4704-9698-c9f1832ce3d1.jpg" class="card-img-top" alt="Every Question Has Its Own Value: Reinforcement Learning with Explicit Human
+Values" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Dian Yu
+          </div>
+          <div class="article-meta-text">
+            24 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/658-Every-Question-Has-Its-Own-Value-Reinforcement-Learning-with-Explicit-Human-Values/index.html"  title="Every Question Has Its Own Value: Reinforcement Learning with Explicit Human
+Values">
+          <h3 class="card-title pb-2" itemprop="headline">Every Question Has Its Own Value: Reinforcement Learning with Explicit Human
+Values</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/658-Every-Question-Has-Its-Own-Value-Reinforcement-Learning-with-Explicit-Human-Values/index.html"
+          title="Every Question Has Its Own Value: Reinforcement Learning with Explicit Human
+Values"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/644_f26d1e40-90ce-435b-a3a7-edf1d040d535.jpg" class="card-img-top" alt="Foley Control: Aligning a Frozen Latent Text-to-Audio Model to Video" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Ciara Rowles
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/763-Foley-Control-Aligning-a-Frozen-Latent-Text-to-Audio-Model-to-Video/index.html"  title="Foley Control: Aligning a Frozen Latent Text-to-Audio Model to Video">
+          <h3 class="card-title pb-2" itemprop="headline">Foley Control: Aligning a Frozen Latent Text-to-Audio Model to Video</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/763-Foley-Control-Aligning-a-Frozen-Latent-Text-to-Audio-Model-to-Video/index.html"
+          title="Foley Control: Aligning a Frozen Latent Text-to-Audio Model to Video"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/665_72f6bdde-d496-46d1-a07e-d55e9eb349f3.jpg" class="card-img-top" alt="ACG: Action Coherence Guidance for Flow-based VLA models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Minho Park
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/762-ACG-Action-Coherence-Guidance-for-Flow-based-VLA-models/index.html"  title="ACG: Action Coherence Guidance for Flow-based VLA models">
+          <h3 class="card-title pb-2" itemprop="headline">ACG: Action Coherence Guidance for Flow-based VLA models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/762-ACG-Action-Coherence-Guidance-for-Flow-based-VLA-models/index.html"
+          title="ACG: Action Coherence Guidance for Flow-based VLA models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/676_7bb1a029-9235-476e-9182-ea359e5922c0.jpg" class="card-img-top" alt="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yuqian Yuan
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/773-PixelRefer-A-Unified-Framework-for-Spatio-Temporal-Object-Referring-with-Arbitrary-Granularity/index.html"  title="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity">
+          <h3 class="card-title pb-2" itemprop="headline">PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/773-PixelRefer-A-Unified-Framework-for-Spatio-Temporal-Object-Referring-with-Arbitrary-Granularity/index.html"
+          title="PixelRefer: A Unified Framework for Spatio-Temporal Object Referring with
+Arbitrary Granularity"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/651_eec9c8a6-3a92-4fa7-98dd-6fefb86bc9cc.jpg" class="card-img-top" alt="ReCode: Unify Plan and Action for Universal Granularity Control" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Zhaoyang Yu
+          </div>
+          <div class="article-meta-text">
+            29 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/751-ReCode-Unify-Plan-and-Action-for-Universal-Granularity-Control/index.html"  title="ReCode: Unify Plan and Action for Universal Granularity Control">
+          <h3 class="card-title pb-2" itemprop="headline">ReCode: Unify Plan and Action for Universal Granularity Control</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/751-ReCode-Unify-Plan-and-Action-for-Universal-Granularity-Control/index.html"
+          title="ReCode: Unify Plan and Action for Universal Granularity Control"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
