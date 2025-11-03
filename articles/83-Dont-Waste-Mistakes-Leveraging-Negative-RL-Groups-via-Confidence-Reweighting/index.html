@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/paperium-articles/assets/article_detail.css"> 
+    <link rel="stylesheet" href="/paperium-articles/assets/StyleSheet.css" >
+
+<title>Don't Waste Mistakes: Leveraging Negative RL-Groups via Conf</title>
+
+<meta name="keywords" content="Reinforcement learning with verifiable rewards,  Group Relative Policy Optimization,  negative groups in RL,  confidence-weighted penalty,  Likelihood">
+
+<meta name="description" content="Reinforcement learning with verifiable rewards,  Group Relative Policy Optimization,  negative groups in RL,  confidence-weighted penalty,  Likelihood">
+
+</head>
+<body>
+    <div class="container my-5">
+        <div class="row">
+    <div class="header-nav text-center">
+        <a href="/paperium-articles/">Home</a> 
+        <span class="separator">|</span> 
+        <a href="#">Article</a> 
+    </div>
+
+    <div class="article-container">
+        <div class="article-tags-row">
+            <span class="article-category-badge ">Artificial Intelligence</span>
+            <span class="article-category-badge">arXiv</span>
+        </div>
+        <article id="MainArticle" class="details-body customeArticle" itemscope itemtype="https://schema.org/Article">
+            <h1 itemprop="headline" class="article-title">
+                Don't Waste Mistakes: Leveraging Negative RL-Groups via Confidence Reweighting
+            </h1> 
+
+            <div class="article-author-row">
+                <span class="author-name">
+                    <img src="/paperium-articles/assets/avatar.png" alt="Author" class="author-icon"> 
+                    <span class="authorList">
+                        Yunzhen Feng, Parag Jain, Anthony Hartshorn, Yaqi Duan, Julia Kempe
+                    </span>
+                </span>
+            </div>
+            <p class="publish-date">
+                              13 Oct 2025&nbsp;&nbsp;&nbsp;&nbsp;  3 min read 
+            </p>
+                            <div class="article-image-wrapper">
+                                <figure id="authorsImage"  >
+                                    <img class="article-main-image" itemprop="image" src="https://paperium.net/Media/Articles/img/87_a9bfeeb9-7c5e-416f-92e4-47fc546aca84.jpg" class="object-center object-cover" 
+                                    alt="undefined" >
+                                </figure>
+                                 <p class="image-caption">AI-generated image, based on the article abstract</p>
+                            </div>
+
+            <div id="QuickInsightWapper" class="mb-4"  itemprop="abstract">
+               <h2>
+     
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Quick Insight
+       </h2>
+            <h3>Turning AI Mistakes into Super‑Powerful Learning Boosts</h3>
+<p>
+Ever wondered if a wrong answer can actually help a smart robot get smarter? <strong>Scientists have discovered</strong> a clever trick that lets large language models learn from their own blunders, without any extra human help.  
+Instead of throwing away the “negative groups” – batches where the AI got everything wrong – the new method, called <strong>LENS</strong>, treats each mistake like a traffic sign: the more confident the AI was, the bigger the gentle “slow down” penalty it receives. Think of it as a coach who not only praises good moves but also points out the risky ones, especially when the player was sure they were right.  
+By re‑weighting confidence, LENS turns wasted compute into useful feedback, making the model sharper on tough math problems and reasoning tasks. The result? Faster, cheaper training that pushes AI performance ahead of the usual approach.  
+So the next time your chatbot slips up, remember: that slip might just be the secret fuel for its next breakthrough. <strong>Learning from errors</strong> is now a real advantage. 🌟
+</p>
+           </div> 
+           <hr/>
+  <div id="ShortReviewWapper" class="mb-4" itemprop="articleBody">
+ <h2>
+     <svg fill="#000000" width="30px" height="30px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>paper-plane</title>
+<path d="M0 14.016l9.216 6.912 18.784-16.928-14.592 20.064 10.592 7.936 8-32zM8 32l6.016-4-6.016-4v8z"></path>
+</svg>
+   Short Review
+       </h2>
+        <h2>Overview</h2>
+<p>The article presents a novel approach known as <strong>Likelihood Estimation with Negative Samples</strong> (LENS) aimed at enhancing <strong>reinforcement learning with verifiable rewards</strong> (RLVR). It addresses the inefficiencies associated with the <strong>Group Relative Policy Optimization</strong> (GRPO) framework, particularly in managing negative groups during training. By introducing confidence-weighted penalties for incorrect responses, LENS transforms previously wasted samples into valuable gradient updates. Empirical evaluations demonstrate that LENS consistently outperforms GRPO on the MATH benchmark, especially in more challenging tasks.</p>
+
+<h3>Critical Evaluation</h3>
+<h3>Strengths</h3>
+<p>A significant strength of the article lies in its innovative approach to utilizing negative samples, which are often overlooked in traditional reinforcement learning frameworks. The introduction of confidence-weighted penalties not only enhances the learning process but also optimizes computational resources by converting negative group data into informative updates. The empirical results presented are robust, showcasing LENS's superior performance over GRPO, particularly in complex reasoning tasks.</p>
+
+<h3>Weaknesses</h3>
+<p>Despite its strengths, the article could benefit from a more detailed exploration of the limitations associated with the LENS algorithm. For instance, the reliance on confidence-weighted penalties may introduce biases if the confidence estimates are inaccurate. Additionally, the implications of using negative samples in broader contexts beyond mathematical reasoning tasks remain underexplored, which could limit the generalizability of the findings.</p>
+
+<h3>Implications</h3>
+<p>The implications of this research are significant for the field of machine learning, particularly in enhancing the efficiency of language models. By effectively leveraging negative samples, LENS provides a framework that could lead to improved accuracy and performance in various applications. Future research could explore the integration of preference-aware variants and nonbinary reward signals, further expanding the utility of this approach.</p>
+
+<h2>Conclusion</h2>
+<p>In summary, the article makes a valuable contribution to the field of reinforcement learning by introducing LENS, a method that optimizes the use of negative samples. The findings underscore the potential for improved model performance and efficiency, marking a step forward in the development of more sophisticated language models. Overall, LENS represents a promising avenue for future research and application in machine learning.</p>
+
+<h2>Readability</h2>
+<p>The article is well-structured and presents complex ideas in a clear and accessible manner. The use of concise paragraphs and straightforward language enhances readability, making it easier for a professional audience to engage with the content. By focusing on key concepts and findings, the article effectively communicates its significance in the realm of reinforcement learning.</p>
+  </div>
+  <div id = "keywordsWapper" class="mb-4">
+    <h3>Keywords</h3>
+    <ul>
+  <li>Reinforcement learning with verifiable rewards</li><li> Group Relative Policy Optimization</li><li> negative groups in RL</li><li> confidence-weighted penalty</li><li> Likelihood Estimation with Negative Samples</li><li> LENS algorithm</li><li> policy gradient methods</li><li> reward modeling in LLMs</li><li> MATH benchmark performance</li><li> efficiency in reinforcement learning</li><li> large language models optimization</li><li> gradient updates from negative samples</li><li> improving reasoning tasks in AI</li><li> Llama-3.1-8B model</li><li> Qwen-2.5-3B model.</li>
+</ul>
+
+  </div>
+  <div id="linktoWebsiteWrapper">
+   <p>
+Read article comprehensive review in Paperium.net:
+<a href="https://paperium.net/article/en/83/dont-waste-mistakes-leveraging-negative-rl-groups-via-confidence-reweighting" target="_blank" title=" Don't Waste Mistakes: Leveraging Negative RL-Groups via Confidence Reweighting">
+    Don't Waste Mistakes: Leveraging Negative RL-Groups via Confidence Reweighting
+</a>
+</p> 
+ 
+</div>
+
+<p class="mt-5">
+    🤖 This analysis and review was primarily generated and structured by an AI . The content is provided for informational and quick-review purposes.
+</p>
+            <div class="my-5" id=similarWrapper>
+       <h2 class="lead text-center mb-5" id="similarh2">Paperium AI Analysis & Review of Latest Scientific Research Articles </h2>
+<h3 id="similarh3"> More Artificial Intelligence Article Reviews </h3>
+       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="articles-container" itemscope itemtype="https://schema.org/ItemList" >
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/82_be5a8299-d340-41ec-880b-fe370b805a59.jpg" class="card-img-top" alt="AutoPR: Let's Automate Your Academic Promotion!" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Qiguang Chen
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/78-AutoPR-Lets-Automate-Your-Academic-Promotion/index.html"  title="AutoPR: Let's Automate Your Academic Promotion!">
+          <h3 class="card-title pb-2" itemprop="headline">AutoPR: Let's Automate Your Academic Promotion!</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/78-AutoPR-Lets-Automate-Your-Academic-Promotion/index.html"
+          title="AutoPR: Let's Automate Your Academic Promotion!"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/114_8601622f-4906-497f-864d-aec361ea0260.jpg" class="card-img-top" alt="ACE: Attribution-Controlled Knowledge Editing for Multi-hop Factual Recall" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Jiayu Yang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/110-ACE-Attribution-Controlled-Knowledge-Editing-for-Multi-hop-Factual-Recall/index.html"  title="ACE: Attribution-Controlled Knowledge Editing for Multi-hop Factual Recall">
+          <h3 class="card-title pb-2" itemprop="headline">ACE: Attribution-Controlled Knowledge Editing for Multi-hop Factual Recall</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/110-ACE-Attribution-Controlled-Knowledge-Editing-for-Multi-hop-Factual-Recall/index.html"
+          title="ACE: Attribution-Controlled Knowledge Editing for Multi-hop Factual Recall"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/110_06975113-62d4-40e3-a82c-111c916e4118.jpg" class="card-img-top" alt="Hybrid-grained Feature Aggregation with Coarse-to-fine Language Guidance for
+Self-supervised Monocular Depth Estimation" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Wenyao Zhang
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/106-Hybrid-grained-Feature-Aggregation-with-Coarse-to-fine-Language-Guidance-for-Self-supervised-Mon/index.html"  title="Hybrid-grained Feature Aggregation with Coarse-to-fine Language Guidance for
+Self-supervised Monocular Depth Estimation">
+          <h3 class="card-title pb-2" itemprop="headline">Hybrid-grained Feature Aggregation with Coarse-to-fine Language Guidance for
+Self-supervised Monocular Depth Estimation</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/106-Hybrid-grained-Feature-Aggregation-with-Coarse-to-fine-Language-Guidance-for-Self-supervised-Mon/index.html"
+          title="Hybrid-grained Feature Aggregation with Coarse-to-fine Language Guidance for
+Self-supervised Monocular Depth Estimation"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/161_61570f6e-c2dc-4556-9d9f-07f86154e85f.jpg" class="card-img-top" alt="Building a Foundational Guardrail for General Agentic Systems via Synthetic Data" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yue Huang
+          </div>
+          <div class="article-meta-text">
+            14 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/150-Building-a-Foundational-Guardrail-for-General-Agentic-Systems-via-Synthetic-Data/index.html"  title="Building a Foundational Guardrail for General Agentic Systems via Synthetic Data">
+          <h3 class="card-title pb-2" itemprop="headline">Building a Foundational Guardrail for General Agentic Systems via Synthetic Data</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/150-Building-a-Foundational-Guardrail-for-General-Agentic-Systems-via-Synthetic-Data/index.html"
+          title="Building a Foundational Guardrail for General Agentic Systems via Synthetic Data"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/87_a9bfeeb9-7c5e-416f-92e4-47fc546aca84.jpg" class="card-img-top" alt="Don't Waste Mistakes: Leveraging Negative RL-Groups via Confidence Reweighting" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Yunzhen Feng
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/83-Dont-Waste-Mistakes-Leveraging-Negative-RL-Groups-via-Confidence-Reweighting/index.html"  title="Don't Waste Mistakes: Leveraging Negative RL-Groups via Confidence Reweighting">
+          <h3 class="card-title pb-2" itemprop="headline">Don't Waste Mistakes: Leveraging Negative RL-Groups via Confidence Reweighting</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/83-Dont-Waste-Mistakes-Leveraging-Negative-RL-Groups-via-Confidence-Reweighting/index.html"
+          title="Don't Waste Mistakes: Leveraging Negative RL-Groups via Confidence Reweighting"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+ <article data-ns-animate="" data-delay="0.3" class="group"
+             itemscope itemtype="https://schema.org/Article">
+  <div class="col">
+    <div class="article-card">
+      <img src="https://paperium.net/Media/Articles/img/112_1c7e1ac6-740c-42f5-a8c2-2cd7b719536f.jpg" class="card-img-top" alt="Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal
+Models" itemprop="image">
+      <div class="article-card-body">
+        <div class="article-meta">
+          <div>
+            <span class="article-category-badge">
+              Artificial Intelligence
+            </span>
+          </div>
+          <div class="article-meta-text">
+            Sharut Gupta
+          </div>
+          <div class="article-meta-text">
+            13 Oct 2025
+          </div>
+        </div>
+        <a href="/paperium-articles/articles/108-Better-Together-Leveraging-Unpaired-Multimodal-Data-for-Stronger-Unimodal-Models/index.html"  title="Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal
+Models">
+          <h3 class="card-title pb-2" itemprop="headline">Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal
+Models</h3>
+        </a>
+        <a 
+          href="/paperium-articles/articles/108-Better-Together-Leveraging-Unpaired-Multimodal-Data-for-Stronger-Unimodal-Models/index.html"
+          title="Better Together: Leveraging Unpaired Multimodal Data for Stronger Unimodal
+Models"
+          target="_blank"
+          class="btn btn-read-more mt-2"
+          role="button" itemprop="url">
+          Read Article
+        </a>
+      </div>
+    </div>
+  </div>
+  </article>
+
+       </div>
+   </div>
+        </article>
+        
+ 
+
+     
+    </div>
+    </div>
+    </div>
+  <script src="/paperium-articles/assets/script1.js"></script>
+ 
+</body>
+</html>
