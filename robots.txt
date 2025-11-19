@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-
+Allow: /paperium-articles/
 Sitemap: https://paperium.github.io/paperium-articles/sitemap.xml
 
 # Optional: AI bots
@@ -12,3 +12,4 @@ Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
