@@ -1,0 +1,3 @@
+# Add sitemap.xml to the files that Jekyll should process and serve
+include:
+  - sitemap.xml
